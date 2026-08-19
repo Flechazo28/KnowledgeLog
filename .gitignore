@@ -1,0 +1,66 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+openai_key.txt
+*.pem
+*.key
+
+# Python caches and virtual environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Editor and local agent state
+.vscode/
+.idea/
+.agents/
+.codex/
+.DS_Store
+
+# Runtime logs, caches, and temporary files
+*.log
+*.out
+*.pid
+*.tmp
+temp/
+tmp/
+cache/
+cached_log.txt
+
+# Generated experiment/evaluation outputs
+result/
+results/
+output/
+outputs/
+runs/
+checkpoints/
+
+# Local datasets and generated tabular artifacts
+/2k_datasets/
+/full_dataset/
+*.csv
+*.parquet
+*.npy
+*.npz
+*.pkl
+
+# Model weights and archives
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+*.zip
+*.tar
+*.tar.gz
+
+# Papers and local research notes (not source code)
+/others/paper_files/
+/others/md_files/
+/历史问题/
