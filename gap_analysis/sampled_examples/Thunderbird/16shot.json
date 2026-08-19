@@ -1,0 +1,16 @@
+{"query": "cd /usr ; /usr/bin/mysqld_safe &", "answer": "cd {variables} ; {variables} &"}
+{"query": "connection lost: 'Connection closed.'", "answer": "connection lost: '{variables}'"}
+{"query": "syslog-ng startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "Invalid user #57# from ::ffff:10.100.248.3", "answer": "Invalid user {variables} from {variables}"}
+{"query": "LustreError: 30415:0:(echo_client.c:1382:echo_client_cleanup()) ASSERTION(eco->eco_refcount == 0) failed", "answer": "LustreError: {variables} ASSERTION({variables}) failed"}
+{"query": "UDP: short packet: From 10.100.14.113:32771 48/16 to #112#:8649", "answer": "UDP: short packet: From {variables} {variables} to {variables}"}
+{"query": "messagebus startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "[trip Temperature is 68 Celsius]", "answer": "[trip Temperature is {variables} Celsius]"}
+{"query": "uhci_hcd 0000:00:1d.0: UHCI Host Controller", "answer": "uhci_hcd {variables}: UHCI Host Controller"}
+{"query": "[ib_sm_bringup.c:781]: Failed to bring port to ARMED for node=5ad00000278ee, port= 23, state= 1, hop_count=5, mad status 0x1c", "answer": "[{variables}]: Failed to bring port to ARMED for node={variables}, port={variables}, state={variables}, hop_count={variables}, mad status {variables}"}
+{"query": "ehci_hcd 0000:00:1d.7: irq 193, pci mem ffffff00106dc000", "answer": "ehci_hcd {variables}: irq {variables}, pci mem {variables}"}
+{"query": "session opened for user #47# by (uid=0)", "answer": "session opened for user {variables} by {variables}(uid={variables})"}
+{"query": "Lustre: Echo OBD driver; #10#@#11#", "answer": "Lustre: Echo OBD driver; {variables}"}
+{"query": "Kickstart Install: Dell OMSA Package", "answer": "Kickstart Install: {variables}"}
+{"query": "512 (order 0, 4096 bytes)", "answer": "{variables} (order {variables}, {variables} bytes)"}
+{"query": "ACPI: Local APIC address 0xfee00000", "answer": "ACPI: Local APIC address {variables}"}

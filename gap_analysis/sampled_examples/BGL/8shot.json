@@ -1,0 +1,8 @@
+{"query": "BglIdoChip table has 2 IDOs with the same IP address (10.0.1.8)", "answer": "BglIdoChip table has {variables} IDOs with the same IP address {variables}"}
+{"query": "machine check status register: 0x81000000", "answer": "machine check status register: {variables}"}
+{"query": "L3 global control register: 0x001249f0", "answer": "L3 global control register: {variables}"}
+{"query": "ddr: excessive soft failures, consider replacing the card", "answer": "ddr: excessive soft failures, consider replacing the card"}
+{"query": "critical input interrupt enable...0", "answer": "critical input interrupt enable...{variables}"}
+{"query": "41738669 L3 EDRAM error(s) (dcr 0x0157) detected and corrected", "answer": "{variables} L3 {variables} error(s) (dcr {variables}) detected and corrected"}
+{"query": "ciod: LOGIN chdir(/p/gb2/draeger/benchmark/dat32k_060205) failed: No such file or directory", "answer": "ciod: LOGIN chdir({variables}) failed: No such file or directory"}
+{"query": "ciod: cpu 0 at treeaddr 209 sent unrecognized message 0xffffffff", "answer": "ciod: cpu {variables} at treeaddr {variables} sent unrecognized message {variables}"}

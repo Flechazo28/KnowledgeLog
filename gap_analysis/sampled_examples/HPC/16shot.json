@@ -1,0 +1,16 @@
+{"query": "Command has completed successfully", "answer": "Command has completed successfully"}
+{"query": "ClusterFileSystem: ServerFileSystem domain cluster_var_backup is no longer served by node node-96", "answer": "ClusterFileSystem: ServerFileSystem domain {variables} is no longer served by node {variables}"}
+{"query": "not responding", "answer": "not responding"}
+{"query": "1 failed to configure resourcemgmt subsystem err = 10", "answer": "{variables} failed to configure resourcemgmt subsystem err = {variables}"}
+{"query": "Temperature (41C) exceeds warning threshold", "answer": "Temperature {variables} exceeds warning threshold"}
+{"query": "power/control ok", "answer": "power/control ok"}
+{"query": "member_delete (command 2846)", "answer": "member_delete (command {variables})"}
+{"query": "Fan speeds ( 3534 3534 3375 4090 3497 3479 )", "answer": "Fan speeds ( {variables} )"}
+{"query": "fan failure\\ ambient=27", "answer": "fan failure\\ ambient={variables}"}
+{"query": "Failed subcommands 3923\\ 3925\\ 3927\\ 3931\\ 3937\\ 3941", "answer": "Failed subcommands {variables}"}
+{"query": "haltcluster (command 2121)", "answer": "haltcluster (command {variables})"}
+{"query": "Command Failed on: node-238\\ node-253\\ node-255", "answer": "Command Failed on: {variables}"}
+{"query": "inconsistent nodesets node-32 0x00000002 <ok> node-35 0x0000003e <ok> node-34 0x0000003e <ok> node-36 0x0000003e <ok> node-33 0x0000003e <ok>", "answer": "inconsistent nodesets {variables} {variables} <ok> {variables} {variables} <ok>"}
+{"query": "Fan speeds ( 3552 3534 3375 **** 3515 3479 )", "answer": "Fan speeds ( {variables} )"}
+{"query": "Command has been aborted", "answer": "Command has been aborted"}
+{"query": "Link error on broadcast tree Interconnect-1T00:00:2:0", "answer": "Link error on broadcast tree {variables}"}

@@ -1,0 +1,8 @@
+{"query": "Got allocated containers 1", "answer": "Got allocated containers {variables}"}
+{"query": "Moved tmp to done: hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging", "answer": "Moved tmp to done: {variables}"}
+{"query": "ReduceTask metrics system started", "answer": "{variables} metrics system started"}
+{"query": "Kind: mapreduce.job, Service: job_1445062781478_0016, Ident: (org.apache.hadoop.mapreduce.security.token.JobTokenIdentifier@2ec441bf)", "answer": "Kind: {variables}, Service: {variables}, Ident: ({variables})"}
+{"query": "Merging 7 sorted segments", "answer": "Merging {variables} sorted segments"}
+{"query": "Stopping JobHistoryEventHandler. Size of the outstanding queue size is 0", "answer": "Stopping JobHistoryEventHandler. Size of the outstanding queue size is {variables}"}
+{"query": "nodeBlacklistingEnabled:true", "answer": "nodeBlacklistingEnabled:{variables}"}
+{"query": "Recalculating schedule, headroom=<memory:0, vCores:-35>", "answer": "Recalculating schedule, headroom=<memory:{variables}, vCores:{variables}"}

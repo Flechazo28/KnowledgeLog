@@ -1,0 +1,32 @@
+{"query": "Start changing datasize ...", "answer": "Start changing datasize ..."}
+{"query": "Connecting to Application History server at manager.cuhk.com/10.26.10.201:10200", "answer": "Connecting to Application History server at {variables}"}
+{"query": "Generating 128000 using 3", "answer": "Generating {variables} using {variables}"}
+{"query": "Start changing mapper and reducer ...", "answer": "Start changing mapper and reducer ..."}
+{"query": "/home/team7/HiBench3/bin/functions/workload_functions.sh: line 38: .: filename argument required", "answer": "{variables}: line {variables}: .: filename argument required"}
+{"query": "please set `hibench.masters.hostnames` and `hibench.slaves.hostnames` manually", "answer": "please set {variables} and {variables} manually"}
+{"query": "New token received: (Kind: kms-dt, Service: 10.26.10.201:9292, Ident: (kms-dt owner=team7, renewer=yarn, realUser=, issueDate=1668938139216, maxDate=1669542939216, sequenceNumber=78283, masterKeyId=653))", "answer": "New token received: (Kind: {variables} Service: {variables} Ident: (kms-dt owner={variables}, renewer={variables}, realUser={variables}, issueDate={variables}, maxDate={variables}, sequenceNumber={variables}, masterKeyId={variables}))"}
+{"query": "==================== Start execute hibench test ======================", "answer": "==================== Start execute hibench test ======================"}
+{"query": "Total input files to process : 3", "answer": "Total input files to process : {variables}"}
+{"query": "Running job: job_1668496639954_6829", "answer": "Running job: {variables}"}
+{"query": "Submitting tokens for job: job_1668496639954_6833", "answer": "Submitting tokens for job: {variables}"}
+{"query": "top: failed tty get", "answer": "top: failed tty get"}
+{"query": "Computing parititions took 378ms", "answer": "Computing parititions took {variables}"}
+{"query": "Deleted hdfs://cuhkcluster/dataspace/team7/HiBench/Terasort/Output", "answer": "Deleted {variables}"}
+{"query": "Spent 836ms computing partitions.", "answer": "Spent {variables} computing partitions."}
+{"query": "patching args=", "answer": "patching args={variables}"}
+{"query": "Got dt for hdfs://cuhkcluster; Kind: HDFS_DELEGATION_TOKEN, Service: ha-hdfs:cuhkcluster, Ident: (token for team7: HDFS_DELEGATION_TOKEN owner=team7@BIGDATA, renewer=yarn, realUser=, issueDate=1668938322107, maxDate=1669543122107, sequenceNumber=8531712, masterKeyId=1042)", "answer": "Got dt for {variables}; Kind: {variables} Service: {variables} Ident: (token for team7: {variables} owner={variables}, renewer={variables}, realUser={variables}, issueDate={variables}, maxDate={variables}, sequenceNumber={variables}, masterKeyId={variables})"}
+{"query": "start HadoopPrepareTerasort bench", "answer": "start {variables} bench"}
+{"query": "The url to track the job: http://master1.cuhk.com:8088/proxy/application_1668496639954_6832/", "answer": "The url to track the job: {variables}"}
+{"query": "hdfs rm -r: /usr/hdp/3.0.1.0-187/hadoop/bin/hadoop --config /usr/hdp/3.0.1.0-187/hadoop/etc/hadoop fs -rm -r -skipTrash hdfs://cuhkcluster/dataspace/team7/HiBench/Terasort/Output", "answer": "hdfs rm -r: {variables} --config {variables} fs -rm -r -skipTrash {variables}"}
+{"query": "Executing with tokens: [Kind: HDFS_DELEGATION_TOKEN, Service: ha-hdfs:cuhkcluster, Ident: (token for team7: HDFS_DELEGATION_TOKEN owner=team7@BIGDATA, renewer=yarn, realUser=, issueDate=1668938139140, maxDate=1669542939140, sequenceNumber=8531685, masterKeyId=1042), Kind: kms-dt, Service: 10.26.10.201:9292, Ident: (kms-dt owner=team7, renewer=yarn, realUser=, issueDate=1668938139216, maxDate=1669542939216, sequenceNumber=78283, masterKeyId=653)]", "answer": "Executing with tokens: [Kind: {variables} Service: {variables} Ident: (token for team7: {variables} owner={variables}, renewer={variables}, realUser={variables}, issueDate={variables}, maxDate={variables}, sequenceNumber={variables}, masterKeyId={variables}), Kind: kms-dt, Service: {variables} Ident: (kms-dt owner={variables}, renewer={variables}, realUser={variables}, issueDate={variables}, maxDate={variables}, sequenceNumber={variables}, masterKeyId={variables})]"}
+{"query": "Running terasort test ...", "answer": "Running {variables} test ..."}
+{"query": "finish HadoopTerasort bench", "answer": "finish {variables} bench"}
+{"query": "Submitted application application_1668496639954_6833", "answer": "Submitted application {variables}"}
+{"query": "Spent 451ms computing base-splits.", "answer": "Spent {variables} computing base-splits."}
+{"query": "Timeline service address: manager.cuhk.com:8188", "answer": "Timeline service address: {variables}"}
+{"query": "Creating terasort data ...", "answer": "Creating {variables} data ..."}
+{"query": "Getting new token from http://manager.cuhk.com:9292/kms/v1/, renewer:rm/master1.cuhk.com@BIGDATA", "answer": "Getting new token from {variables} renewer:{variables}"}
+{"query": "Password for team7@BIGDATA:", "answer": "Password for {variables}:"}
+{"query": "Job job_1668496639954_6829 running in uber mode : false", "answer": "Job {variables} running in uber mode : {variables}"}
+{"query": "Spent 1ms computing TeraScheduler splits.", "answer": "Spent {variables} computing TeraScheduler splits."}
+{"query": "number of splits:3", "answer": "number of splits:{variables}"}

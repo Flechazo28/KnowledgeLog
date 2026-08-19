@@ -1,0 +1,16 @@
+{"query": "Starting quorum peer", "answer": "Starting quorum peer"}
+{"query": "Server environment:java.version=1.7.0_79", "answer": "Server environment:java.version={variables}"}
+{"query": "Reading configuration from: /etc/zookeeper/conf/zoo.cfg", "answer": "Reading configuration from: {variables}"}
+{"query": "Server environment:os.name=Linux", "answer": "Server environment:os.name={variables}"}
+{"query": "Received connection request /10.10.34.11:47752", "answer": "Received connection request {variables}"}
+{"query": "Server environment:os.version=3.16.0-30-generic", "answer": "Server environment:os.version={variables}"}
+{"query": "Purge task is not scheduled.", "answer": "Purge task is not scheduled."}
+{"query": "FOLLOWING - LEADER ELECTION TOOK - 46837", "answer": "FOLLOWING - LEADER ELECTION TOOK - {variables}"}
+{"query": "Server environment:os.arch=amd64", "answer": "Server environment:os.arch={variables}"}
+{"query": "tickTime set to 2000", "answer": "tickTime set to {variables}"}
+{"query": "Getting a diff from the leader 0x0", "answer": "Getting a diff from the leader {variables}"}
+{"query": "Server environment:java.class.path=/etc/zookeeper/conf:/usr/share/java/jline.jar:/usr/share/java/log4j-1.2.jar:/usr/share/java/xercesImpl.jar:/usr/share/java/xmlParserAPIs.jar:/usr/share/java/netty.jar:/usr/share/java/slf4j-api.jar:/usr/share/java/slf4j-log4j12.jar:/usr/share/java/zookeeper.jar", "answer": "Server environment:java.class.path={variables}"}
+{"query": "autopurge.snapRetainCount set to 3", "answer": "autopurge.snapRetainCount set to {variables}"}
+{"query": "New election. My id = 1, proposed zxid=0x0", "answer": "New election. My id = {variables}, proposed {variables}"}
+{"query": "Send worker leaving thread", "answer": "Send worker leaving thread"}
+{"query": "Cannot open channel to 3 at election address /10.10.34.13:3888", "answer": "Cannot open channel to {variables} at election address {variables}"}

@@ -1,0 +1,8 @@
+{"query": "boot (command 3700)", "answer": "boot (command {variables})"}
+{"query": "ClusterFileSystem: ServerFileSystem domain root7_tmp is no longer served by node node-6", "answer": "ClusterFileSystem: ServerFileSystem domain {variables} is no longer served by node {variables}"}
+{"query": "Link ok", "answer": "Link ok"}
+{"query": "Fan speeds ( 3552 3534 3391 **** 3515 3479 )", "answer": "Fan speeds ( {variables} )"}
+{"query": "not responding", "answer": "not responding"}
+{"query": "NIFF: node node-182 detected a failed network connection on network 5.5.226.0 via interface alt0", "answer": "NIFF: node {variables} detected a failed network connection on network {variables} via interface {variables}"}
+{"query": "risBoot (command 1903)", "answer": "risBoot (command {variables})"}
+{"query": "Command has been aborted", "answer": "Command has been aborted"}

@@ -1,0 +1,16 @@
+{"query": "User id is not exists. userId = 2289b9845e4942a4adc4e2e1351a2056", "answer": "User id is not exists. userId = {variables}"}
+{"query": "ResponseEntity return httpCode is 400. requestEntity's type is POST. requestEntity's url is /e2e1351a2056. requestEntity's header is 400, please check!", "answer": "ResponseEntity return httpCode is {variables} requestEntity's type is {variables} requestEntity's url is {variables} requestEntity's header is {variables} please check!"}
+{"query": "ConsumeUrlDetectionSubTask: recordList size:1", "answer": "ConsumeUrlDetectionSubTask: recordList size:{variables}"}
+{"query": "registerkafkaforuserchangenotify Exception occurs.", "answer": "{variables} Exception occurs."}
+{"query": "type: list index out of range", "answer": "type: list index out of range"}
+{"query": "enter createJob with extend request, jobName=jobName", "answer": "enter createJob with extend request, jobName={variables}"}
+{"query": "get devices from agentMgmt return httpcode:503", "answer": "get devices from {variables} return httpcode:{variables}"}
+{"query": "Cant not load file. fileConfiguration.properties", "answer": "Cant not load file. {variables}"}
+{"query": "Subsequent logs will be printed to the root log of each microservice. Please see the logs of each microservice.", "answer": "Subsequent logs will be printed to the root log of each microservice. Please see the logs of each microservice."}
+{"query": "registermqforupdateepsresourcerules Exception occurs.", "answer": "{variables} Exception occurs."}
+{"query": "start batchDeleteMgmtTasks, task number: 1", "answer": "start batchDeleteMgmtTasks, task number: {variables}"}
+{"query": "step into upload node operation", "answer": "step into upload node operation"}
+{"query": "from db error name = name", "answer": "from db error name = {variables}"}
+{"query": "Start init spring", "answer": "Start init spring"}
+{"query": "end registerkafkaforuserchangenotify", "answer": "end {variables}"}
+{"query": "templatehelper getsoftwareurlmap start", "answer": "templatehelper getsoftwareurlmap {variables}"}

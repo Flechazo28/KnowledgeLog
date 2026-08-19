@@ -1,0 +1,128 @@
+{"query": "please set `CPTS.masters.hostnames` and `CPTS.slaves.hostnames` manually", "answer": "please set {variables} and {variables} manually"}
+{"query": "please set `CPTS.masters.hostnames` and `CPTS.slaves.hostnames` manually", "answer": "please set {variables} and {variables} manually"}
+{"query": "please set `CPTS.masters.hostnames` and `CPTS.slaves.hostnames` manually", "answer": "please set {variables} and {variables} manually"}
+{"query": "please set `CPTS.masters.hostnames` and `CPTS.slaves.hostnames` manually", "answer": "please set {variables} and {variables} manually"}
+{"query": "please set `CPTS.masters.hostnames` and `CPTS.slaves.hostnames` manually", "answer": "please set {variables} and {variables} manually"}
+{"query": "display slot 7 chipisolate state", "answer": "display slot {variables} chipisolate state"}
+{"query": "display slot 7 chipisolate state", "answer": "display slot {variables} chipisolate state"}
+{"query": "display slot 7 chipisolate state", "answer": "display slot {variables} chipisolate state"}
+{"query": "display slot 7 chipisolate state", "answer": "display slot {variables} chipisolate state"}
+{"query": "display slot 7 chipisolate state", "answer": "display slot {variables} chipisolate state"}
+{"query": "Password for USER0:", "answer": "Password for {variables}"}
+{"query": "Password for USER0:", "answer": "Password for {variables}"}
+{"query": "Password for USER0:", "answer": "Password for {variables}"}
+{"query": "Password for USER0:", "answer": "Password for {variables}"}
+{"query": "Password for USER0:", "answer": "Password for {variables}"}
+{"query": "display vrcb", "answer": "display vrcb"}
+{"query": "display vrcb", "answer": "display vrcb"}
+{"query": "display vrcb", "answer": "display vrcb"}
+{"query": "display vrcb", "answer": "display vrcb"}
+{"query": "display vrcb", "answer": "display vrcb"}
+{"query": "display startup", "answer": "display startup"}
+{"query": "display startup", "answer": "display startup"}
+{"query": "display startup", "answer": "display startup"}
+{"query": "display startup", "answer": "display startup"}
+{"query": "display startup", "answer": "display startup"}
+{"query": "====== Start Process ======", "answer": "====== Start Process ======"}
+{"query": "====== Start Process ======", "answer": "====== Start Process ======"}
+{"query": "====== Start Process ======", "answer": "====== Start Process ======"}
+{"query": "====== Start Process ======", "answer": "====== Start Process ======"}
+{"query": "====== Start Process ======", "answer": "====== Start Process ======"}
+{"query": "Password for user@BIGDATA:", "answer": "Password for {variables}"}
+{"query": "Password for user@BIGDATA:", "answer": "Password for {variables}"}
+{"query": "Password for user@BIGDATA:", "answer": "Password for {variables}"}
+{"query": "Password for user@BIGDATA:", "answer": "Password for {variables}"}
+{"query": "Password for user@BIGDATA:", "answer": "Password for {variables}"}
+{"query": "ipn = Router", "answer": "ipn = {variables}"}
+{"query": "ipn = Router", "answer": "ipn = {variables}"}
+{"query": "ipn = Router", "answer": "ipn = {variables}"}
+{"query": "ipn = Router", "answer": "ipn = {variables}"}
+{"query": "ipn = Router", "answer": "ipn = {variables}"}
+{"query": "==================== Start execute CPTS test ======================", "answer": "==================== Start execute CPTS test ======================"}
+{"query": "==================== Start execute CPTS test ======================", "answer": "==================== Start execute CPTS test ======================"}
+{"query": "==================== Start execute CPTS test ======================", "answer": "==================== Start execute CPTS test ======================"}
+{"query": "==================== Start execute CPTS test ======================", "answer": "==================== Start execute CPTS test ======================"}
+{"query": "==================== Start execute CPTS test ======================", "answer": "==================== Start execute CPTS test ======================"}
+{"query": "patching args=", "answer": "patching args={variables}"}
+{"query": "patching args=", "answer": "patching args={variables}"}
+{"query": "patching args=", "answer": "patching args={variables}"}
+{"query": "patching args=", "answer": "patching args={variables}"}
+{"query": "patching args=", "answer": "patching args={variables}"}
+{"query": "display patch verbose", "answer": "display patch verbose"}
+{"query": "display patch verbose", "answer": "display patch verbose"}
+{"query": "display patch verbose", "answer": "display patch verbose"}
+{"query": "display patch verbose", "answer": "display patch verbose"}
+{"query": "display patch verbose", "answer": "display patch verbose"}
+{"query": "display ip pool", "answer": "display ip pool"}
+{"query": "display ip pool", "answer": "display ip pool"}
+{"query": "display ip pool", "answer": "display ip pool"}
+{"query": "display ip pool", "answer": "display ip pool"}
+{"query": "display ip pool", "answer": "display ip pool"}
+{"query": "--------precondition:end--------", "answer": "--------precondition:end--------"}
+{"query": "--------precondition:end--------", "answer": "--------precondition:end--------"}
+{"query": "--------precondition:end--------", "answer": "--------precondition:end--------"}
+{"query": "--------precondition:end--------", "answer": "--------precondition:end--------"}
+{"query": "--------precondition:end--------", "answer": "--------precondition:end--------"}
+{"query": "display access-user", "answer": "display access-user"}
+{"query": "display access-user", "answer": "display access-user"}
+{"query": "display access-user", "answer": "display access-user"}
+{"query": "display access-user", "answer": "display access-user"}
+{"query": "display access-user", "answer": "display access-user"}
+{"query": "display device", "answer": "display device"}
+{"query": "display device", "answer": "display device"}
+{"query": "display device", "answer": "display device"}
+{"query": "display device", "answer": "display device"}
+{"query": "display device", "answer": "display device"}
+{"query": "display version", "answer": "display version"}
+{"query": "display version", "answer": "display version"}
+{"query": "display version", "answer": "display version"}
+{"query": "display version", "answer": "display version"}
+{"query": "display version", "answer": "display version"}
+{"query": "display license", "answer": "display license"}
+{"query": "display license", "answer": "display license"}
+{"query": "display license", "answer": "display license"}
+{"query": "display license", "answer": "display license"}
+{"query": "display data-channel", "answer": "display data-channel"}
+{"query": "display data-channel", "answer": "display data-channel"}
+{"query": "display data-channel", "answer": "display data-channel"}
+{"query": "display data-channel", "answer": "display data-channel"}
+{"query": "/home/user/CPTS3/bin/functions/workload_functions.sh: line 38: filename argument required", "answer": "{variables}: line {variables}: filename argument required"}
+{"query": "/home/user/CPTS3/bin/functions/workload_functions.sh: line 38: filename argument required", "answer": "{variables}: line {variables}: filename argument required"}
+{"query": "/home/user/CPTS3/bin/functions/workload_functions.sh: line 38: filename argument required", "answer": "{variables}: line {variables}: filename argument required"}
+{"query": "/home/user/CPTS3/bin/functions/workload_functions.sh: line 38: filename argument required", "answer": "{variables}: line {variables}: filename argument required"}
+{"query": "display clock", "answer": "display clock"}
+{"query": "display clock", "answer": "display clock"}
+{"query": "display clock", "answer": "display clock"}
+{"query": "display clock", "answer": "display clock"}
+{"query": "display ptn-mode", "answer": "display ptn-mode"}
+{"query": "display ptn-mode", "answer": "display ptn-mode"}
+{"query": "display ptn-mode", "answer": "display ptn-mode"}
+{"query": "display ptn-mode", "answer": "display ptn-mode"}
+{"query": "display ipv6 prefix", "answer": "display ipv6 prefix"}
+{"query": "display ipv6 prefix", "answer": "display ipv6 prefix"}
+{"query": "display ipv6 prefix", "answer": "display ipv6 prefix"}
+{"query": "display ipv6 prefix", "answer": "display ipv6 prefix"}
+{"query": "display anti-theft status", "answer": "display anti-theft status"}
+{"query": "display anti-theft status", "answer": "display anti-theft status"}
+{"query": "display anti-theft status", "answer": "display anti-theft status"}
+{"query": "display anti-theft status", "answer": "display anti-theft status"}
+{"query": "Creating CPTS process.", "answer": "Creating CPTS process."}
+{"query": "Creating CPTS process.", "answer": "Creating CPTS process."}
+{"query": "Creating CPTS process.", "answer": "Creating CPTS process."}
+{"query": "Creating CPTS process.", "answer": "Creating CPTS process."}
+{"query": "nohup: ignoring input", "answer": "nohup: ignoring input"}
+{"query": "nohup: ignoring input", "answer": "nohup: ignoring input"}
+{"query": "nohup: ignoring input", "answer": "nohup: ignoring input"}
+{"query": "nohup: ignoring input", "answer": "nohup: ignoring input"}
+{"query": "display module-information", "answer": "display module-information"}
+{"query": "display module-information", "answer": "display module-information"}
+{"query": "display module-information", "answer": "display module-information"}
+{"query": "display module-information", "answer": "display module-information"}
+{"query": "mkdir: cannot create directory '/home/user/results/job1': File exists", "answer": "mkdir: cannot create directory '{variables}': File exists"}
+{"query": "mkdir: cannot create directory '/home/user/results/job1': File exists", "answer": "mkdir: cannot create directory '{variables}': File exists"}
+{"query": "mkdir: cannot create directory '/home/user/results': File exists", "answer": "mkdir: cannot create directory '{variables}': File exists"}
+{"query": "mkdir: cannot create directory '/home/user/results': File exists", "answer": "mkdir: cannot create directory '{variables}': File exists"}
+{"query": "--------precondition:begin--------", "answer": "--------precondition:begin--------"}
+{"query": "--------precondition:begin--------", "answer": "--------precondition:begin--------"}
+{"query": "--------precondition:begin--------", "answer": "--------precondition:begin--------"}
+{"query": "--------precondition:begin--------", "answer": "--------precondition:begin--------"}

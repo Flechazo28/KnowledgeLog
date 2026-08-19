@@ -1,0 +1,16 @@
+{"query": "Starting hpoj: succeeded", "answer": "Starting hpoj: succeeded"}
+{"query": "crond startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "Adding 262072k swap on /dev/hda3. Priority:-1 extents:1", "answer": "Adding {variables} swap on {variables}. Priority:{variables} extents:{variables}"}
+{"query": "*** info [startup.c(95)]:", "answer": "*** info [startup.c({variables})]:"}
+{"query": "USB Universal Host Controller Interface driver v2.2", "answer": "USB Universal Host Controller Interface driver {variables}"}
+{"query": "3c59x: Donald Becker and others. www.scyld.com/network/vortex.html", "answer": "{variables}: Donald Becker and others. {variables}"}
+{"query": "Intel machine check architecture supported.", "answer": "Intel machine check architecture supported."}
+{"query": "ACPI: ACPI tables contain no PCI IRQ routing entries", "answer": "ACPI: ACPI tables contain no PCI IRQ routing entries"}
+{"query": "Home page is http://smartmontools.sourceforge.net/", "answer": "Home page is {variables}"}
+{"query": "Starting MySQL: succeeded", "answer": "Starting MySQL: succeeded"}
+{"query": "zapping low mappings.", "answer": "zapping low mappings."}
+{"query": "Charge: * * * (-1% unknown)", "answer": "Charge: * * * ({variables} unknown)"}
+{"query": "xinetd Version 2.3.13 started with libwrap loadavg options compiled in.", "answer": "xinetd Version {variables} started with {variables} options compiled in."}
+{"query": "selinux_register_security: Registering secondary module capability", "answer": "selinux_register_security: Registering secondary module capability"}
+{"query": "POSIX conformance testing by UNIFIX", "answer": "POSIX conformance testing by UNIFIX"}
+{"query": "Transparent bridge - 0000:00:1e.0", "answer": "Transparent bridge - {variables}"}

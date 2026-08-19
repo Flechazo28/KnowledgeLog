@@ -1,0 +1,128 @@
+{"query": "smartd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=210.127.68.18 user=webmaster", "answer": "authentication failure; logname={variables} uid={variables} euid={variables} tty={variables} ruser={variables} rhost={variables} user={variables}"}
+{"query": "RAMDISK driver initialized: 16 RAM disks of 16384K size 1024 blocksize", "answer": "RAMDISK driver initialized: {variables} RAM disks of {variables} size {variables} blocksize"}
+{"query": "cupsd shutdown succeeded", "answer": "{variables} shutdown succeeded"}
+{"query": "Service telnet failed to start and is deactivated.", "answer": "Service telnet failed to start and is deactivated."}
+{"query": "PCI: PCI BIOS revision 2.10 entry at 0xfc0ce, last bus=1", "answer": "PCI: PCI BIOS revision {variables} entry at {variables}, last bus={variables}"}
+{"query": "PCI: Using IRQ router PIIX/ICH [8086/2410] at 0000:00:1f.0", "answer": "PCI: Using IRQ router PIIX/ICH [{variables}] at {variables}"}
+{"query": "xfs startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "apm: BIOS version 1.2 Flags 0x03 (Driver version 1.16ac)", "answer": "apm: BIOS version {variables} Flags {variables} (Driver version {variables})"}
+{"query": "isapnp: Scanning for PnP cards...", "answer": "isapnp: Scanning for PnP cards..."}
+{"query": "parport0: PC-style at 0x378 (0x778) [PCSPP,TRISTATE,EPP]", "answer": "parport0: PC-style at {variables} ({variables}) [{variables}]"}
+{"query": "RAMDISK: Compressed image found at block 0", "answer": "RAMDISK: Compressed image found at block {variables}"}
+{"query": "select reported EBADF but no bad file descriptors were found", "answer": "select reported EBADF but no bad file descriptors were found"}
+{"query": "VFS: Mounted root (ext2 filesystem).", "answer": "VFS: Mounted root (ext2 filesystem)."}
+{"query": "No such internal service: services/stream - DISABLING", "answer": "No such internal service: {variables} - DISABLING"}
+{"query": "hcid startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "sm-client startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "connection from 61.218.67.60 (mail.net-star.com.tw) at Mon Jun 13 02:01:27 2005", "answer": "connection from {variables} ({variables}) at {variables}"}
+{"query": "kjournald starting. Commit interval 5 seconds", "answer": "kjournald starting. Commit interval {variables} seconds"}
+{"query": "bind failed (Address already in use (errno = 98)). service = telnet", "answer": "bind failed (Address already in use (errno = {variables})). service = {variables}"}
+{"query": "Initializing IPsec netlink socket", "answer": "Initializing IPsec netlink socket"}
+{"query": "Stopping MySQL: succeeded", "answer": "Stopping MySQL: succeeded"}
+{"query": "xinetd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "*** info [startup.c(95)]:", "answer": "*** info [startup.c({variables})]:"}
+{"query": "htt startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "Jun 09 06:06:44 Privoxy(-150093696) Info: loading configuration file '/etc/privoxy/config':", "answer": "{variables} Privoxy({variables}) Info: loading configuration file {variables}"}
+{"query": "Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2", "answer": "Uniform Multi-Platform E-IDE driver Revision: {variables}"}
+{"query": "BIOS-provided physical RAM map:", "answer": "BIOS-provided physical RAM map:"}
+{"query": "parport0: irq 7 detected", "answer": "parport0: irq {variables} detected"}
+{"query": "Started working: 30 available services", "answer": "Started working: {variables} available services"}
+{"query": "Floppy drive(s): fd0 is 1.44M", "answer": "Floppy drive(s): {variables} is {variables}"}
+{"query": "EXT3 FS on hda2, internal journal", "answer": "EXT3 FS on {variables}, internal journal"}
+{"query": "connection from 68.143.90.52 (iis.willowtec.com) at Tue Aug 16 03:59:57 2005", "answer": "connection from {variables} ({variables}) at {variables}"}
+{"query": "Linux version 2.6.5-1.358 (bhcompile@bugs.build.redhat.com) (gcc version 3.3.3 20040412 (Red Hat Linux 3.3.3-7)) #1 Sat May 8 09:04:50 EDT 2004", "answer": "Linux version {variables} ({variables}) (gcc version {variables} (Red Hat Linux {variables})) {variables}"}
+{"query": "126MB LOWMEM available.", "answer": "{variables} LOWMEM available."}
+{"query": "There is already a security framework initialized, register_security failed.", "answer": "There is already a security framework initialized, register_security failed."}
+{"query": "Authentication failed from 163.27.187.39 (163.27.187.39): Software caused connection abort", "answer": "Authentication failed from {variables} ({variables}): Software caused connection abort"}
+{"query": "ICH: chipset revision 2", "answer": "ICH: chipset revision {variables}"}
+{"query": "spamd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "Bringing up loopback interface: succeeded", "answer": "Bringing up loopback interface: succeeded"}
+{"query": "ACPI: Interpreter disabled.", "answer": "ACPI: Interpreter disabled."}
+{"query": "Configuration file /etc/smartd.conf parsed.", "answer": "Configuration file {variables} parsed."}
+{"query": "kernel time sync status 0040", "answer": "kernel time sync status {variables}"}
+{"query": "PCI: Using configuration type 1", "answer": "PCI: Using configuration type {variables}"}
+{"query": "getpeername (ftpd): Transport endpoint is not connected", "answer": "getpeername (ftpd): Transport endpoint is not connected"}
+{"query": "Total HugeTLB memory allocated, 0", "answer": "Total HugeTLB memory allocated, {variables}"}
+{"query": "input: ImPS/2 Logitech Wheel Mouse on isa0060/serio1", "answer": "input: {variables} on {variables}"}
+{"query": "Home page is http://smartmontools.sourceforge.net/", "answer": "Home page is {variables}"}
+{"query": "3c59x: Donald Becker and others. www.scyld.com/network/vortex.html", "answer": "{variables}: Donald Becker and others. {variables}"}
+{"query": "ICH: IDE controller at PCI slot 0000:00:1f.1", "answer": "ICH: IDE controller at PCI slot {variables}"}
+{"query": "microcode: No suitable data for cpu 0", "answer": "microcode: No suitable data for cpu {variables}"}
+{"query": "snmpd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "starting BIND 9.2.3 -u named -t /var/named/chroot", "answer": "starting BIND {variables} -u {variables} -t {variables}"}
+{"query": "httpd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "cupsd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "BIOS-e820: 0000000000000000 - 00000000000a0000 (usable)", "answer": "BIOS-e820: {variables} - {variables} (usable)"}
+{"query": "crond startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "Opened configuration file /etc/smartd.conf", "answer": "Opened configuration file {variables}"}
+{"query": "notify question section contains no SOA", "answer": "notify question section contains no SOA"}
+{"query": "session closed for user test", "answer": "session closed for user {variables}"}
+{"query": "ip_tables: (C) 2000-2002 Netfilter core team", "answer": "ip_tables: (C) {variables} Netfilter core team"}
+{"query": "imps2: Auto-detected intellimouse PS/2", "answer": "imps2: Auto-detected intellimouse PS/2"}
+{"query": "rpc.idmapd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "Mounting other filesystems: succeeded", "answer": "Mounting other filesystems: succeeded"}
+{"query": "CPU: L2 cache: 256K", "answer": "CPU: L2 cache: {variables}"}
+{"query": "FDC 0 is a National Semiconductor PC87306", "answer": "FDC {variables} is a National Semiconductor {variables}"}
+{"query": "using 1 CPU", "answer": "using {variables} CPU"}
+{"query": "Device: /dev/hda, found in smartd database.", "answer": "Device: {variables}, found in smartd database."}
+{"query": "Initializing Cryptographic API", "answer": "Initializing Cryptographic API"}
+{"query": "bad username []", "answer": "bad username [{variables}]"}
+{"query": "session opened for user root by (uid=0)", "answer": "session opened for user {variables} by {variables}"}
+{"query": "Starting background readahead:", "answer": "Starting background readahead:"}
+{"query": "You can enable it with acpi=force", "answer": "You can enable it with {variables}"}
+{"query": "listening on IPv4 interface eth0:19, 63.126.79.110#53", "answer": "listening on IPv4 interface {variables}, {variables}"}
+{"query": "*** info [client.c(275)]:", "answer": "*** info [client.c({variables})]:"}
+{"query": "Couldn't authenticate user", "answer": "Couldn't authenticate user"}
+{"query": "couldn't add command channel 127.0.0.1#953: not found", "answer": "couldn't add command channel {variables} not found"}
+{"query": "session closed for user root", "answer": "session closed for user {variables}"}
+{"query": "ttloop: peer died: Invalid or incomplete multibyte or wide character", "answer": "ttloop: peer died: Invalid or incomplete multibyte or wide character"}
+{"query": "Squid Parent: child process 2264 started", "answer": "Squid Parent: child process {variables} started"}
+{"query": "smartd has fork()ed into background mode. New PID=1757.", "answer": "smartd has fork()ed into background mode. New PID={variables}."}
+{"query": "warning: can't get client address: Connection reset by peer", "answer": "warning: can't get client address: Connection reset by peer"}
+{"query": "serio: i8042 KBD port at 0x60,0x64 irq 1", "answer": "serio: i8042 KBD port at {variables},{variables} irq {variables}"}
+{"query": "Initializing random number generator: succeeded", "answer": "Initializing random number generator: succeeded"}
+{"query": "Disabled Privacy Extensions on device 022db720(lo)", "answer": "Disabled Privacy Extensions on device {variables}({variables})"}
+{"query": "PCI: Probing PCI hardware (bus 00)", "answer": "PCI: Probing PCI hardware (bus {variables})"}
+{"query": "klogd 1.4.1, log source = /proc/kmsg started.", "answer": "klogd {variables}, log source = {variables} started."}
+{"query": "uhci_hcd 0000:00:1f.2: UHCI Host Controller", "answer": "uhci_hcd {variables}: UHCI Host Controller"}
+{"query": "Linux Plug and Play Support v0.97 (c) Adam Belay", "answer": "Linux Plug and Play Support {variables} (c) Adam Belay"}
+{"query": "Detected 731.219 MHz processor.", "answer": "Detected {variables} MHz processor."}
+{"query": "*** info [mice.c(1766)]:", "answer": "*** info [mice.c({variables})]:"}
+{"query": "privoxy startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "SELinux: Starting in permissive mode", "answer": "SELinux: Starting in permissive mode"}
+{"query": "VFS: Disk quotas dquot_6.5.1", "answer": "VFS: Disk quotas {variables}"}
+{"query": "ACPI disabled because your bios is from 2000 and too old", "answer": "ACPI disabled because your bios is from {variables} and too old"}
+{"query": "hda: max request size: 128KiB", "answer": "hda: max request size: {variables}"}
+{"query": "ide1 at 0x170-0x177,0x376 on irq 15", "answer": "ide1 at {variables} on irq {variables}"}
+{"query": "configure: keyword \"authenticate\" unknown, line ignored", "answer": "configure: keyword {variables} unknown, line ignored"}
+{"query": "Starting MySQL: succeeded", "answer": "Starting MySQL: succeeded"}
+{"query": "Failure registering capabilities with the kernel", "answer": "Failure registering capabilities with the kernel"}
+{"query": "agpgart: Maximum main memory to use for agp memory: 93M", "answer": "agpgart: Maximum main memory to use for agp memory: {variables}"}
+{"query": "Setting network parameters: succeeded", "answer": "Setting network parameters: succeeded"}
+{"query": "agpgart: AGP aperture is 64M @ 0xf4000000", "answer": "agpgart: AGP aperture is {variables} @ {variables}"}
+{"query": "loading configuration from '/etc/named.conf'", "answer": "loading configuration from {variables}"}
+{"query": "Version 3.0.2 (APM BIOS 1.2, Linux driver 1.16ac)", "answer": "Version {variables} (APM BIOS {variables}, Linux driver {variables})"}
+{"query": "audit(1122475266.4294965305:0): initialized", "answer": "audit({variables}): initialized"}
+{"query": "input: AT Translated Set 2 keyboard on isa0060/serio0", "answer": "input: {variables} on {variables}"}
+{"query": "Using tsc for high-res timesource", "answer": "Using tsc for high-res timesource"}
+{"query": "Device: /dev/hda, is SMART capable. Adding to \"monitor\" list.", "answer": "Device: {variables}, is SMART capable. Adding to \"monitor\" list."}
+{"query": "Starting pcmcia: succeeded", "answer": "Starting pcmcia: succeeded"}
+{"query": "PCI: Probing PCI hardware", "answer": "PCI: Probing PCI hardware"}
+{"query": "Starting hpoj: succeeded", "answer": "Starting hpoj: succeeded"}
+{"query": "ACPI: Subsystem revision 20040326", "answer": "ACPI: Subsystem revision {variables}"}
+{"query": "EXT3-fs: hda2: 4 orphan inodes deleted", "answer": "EXT3-fs: {variables}: {variables} orphan inodes deleted"}
+{"query": "ALERT exited abnormally with [1]", "answer": "ALERT exited abnormally with {variables}"}
+{"query": "cdrom: open failed.", "answer": "cdrom: open failed."}
+{"query": "uhci_hcd 0000:00:1f.2: new USB bus registered, assigned bus number 1", "answer": "uhci_hcd {variables}: new USB bus registered, assigned bus number {variables}"}
+{"query": "portmap startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "checking if image is initramfs...it isn't (no cpio magic); looks like an initrd", "answer": "checking if image is initramfs...it isn't (no cpio magic); looks like an initrd"}
+{"query": "DMI 2.3 present.", "answer": "DMI {variables} present."}
+{"query": "irqbalance startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "BIOS-e820: 00000000000f0000 - 0000000000100000 (reserved)", "answer": "BIOS-e820: {variables} - {variables} (reserved)"}
+{"query": "kernel time sync disabled 0041", "answer": "kernel time sync disabled {variables}"}
+{"query": "SELinux: Unregistering netfilter hooks", "answer": "SELinux: Unregistering netfilter hooks"}
+{"query": "EXT3-fs: mounted filesystem with ordered data mode.", "answer": "EXT3-fs: mounted filesystem with ordered data mode."}
+{"query": "Serial: 8250/16550 driver $Revision: 1.90 $ 8 ports, IRQ sharing enabled", "answer": "Serial: {variables} driver $Revision: {variables} $ {variables} ports, IRQ sharing enabled"}
+{"query": "service(sshd) ignoring max retries; 8 > 3", "answer": "service({variables}) ignoring max retries; {variables} > {variables}"}
+{"query": "NET: Registered protocol family 10", "answer": "NET: Registered protocol family {variables}"}

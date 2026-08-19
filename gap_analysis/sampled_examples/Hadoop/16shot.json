@@ -1,0 +1,16 @@
+{"query": "Number of reduces for job job_1445087491445_0002 = 1", "answer": "Number of reduces for job {variables} = {variables}"}
+{"query": "Merging 0 segments, 0 bytes from memory into reduce", "answer": "Merging {variables} segments, {variables} bytes from memory into reduce"}
+{"query": "Container complete event for unknown container id container_1445062781478_0018_01_000012", "answer": "Container complete event for unknown container id {variables}"}
+{"query": "task_1445087491445_0002_r_000000 Task Transitioned from RUNNING to SUCCEEDED", "answer": "{variables} Task Transitioned from {variables} to {variables}"}
+{"query": "Created MRAppMaster for application appattempt_1445175094696_0005_000001", "answer": "Created MRAppMaster for application {variables}"}
+{"query": "Runnning cleanup for the task", "answer": "Runnning cleanup for the task"}
+{"query": "Scheduling a redundant attempt for task task_1445062781478_0018_m_000007", "answer": "Scheduling a redundant attempt for task {variables}"}
+{"query": "JVM with ID : jvm_1445087491445_0002_m_000009 asked for a task", "answer": "JVM with ID : {variables} asked for a task"}
+{"query": "Copied to done location: hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging", "answer": "Copied to done location: {variables}"}
+{"query": "Kind: mapreduce.job, Service: job_1445062781478_0011, Ident: (org.apache.hadoop.mapreduce.security.token.JobTokenIdentifier@1623b78d)", "answer": "Kind: {variables}, Service: {variables}, Ident: ({variables})"}
+{"query": "Issuing kill to other attempt attempt_1445144423722_0020_m_000009_1001", "answer": "Issuing kill to other attempt {variables}"}
+{"query": "bufstart = 0; bufvoid = 104857600", "answer": "bufstart = {variables}; bufvoid = {variables}"}
+{"query": "Merging 10 sorted segments", "answer": "Merging {variables} sorted segments"}
+{"query": "Diagnostics report from attempt_1445062781478_0017_m_000003_0: Container killed by the ApplicationMaster.", "answer": "Diagnostics report from {variables}: Container killed by the ApplicationMaster."}
+{"query": "Event Writer setup for JobId: job_1445175094696_0005, File: hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445175094696_0005/job_1445175094696_0005_1.jhist", "answer": "Event Writer setup for JobId: {variables}, File: {variables}"}
+{"query": "In stop, writing event MAP_ATTEMPT_FAILED", "answer": "In stop, writing event {variables}"}

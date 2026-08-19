@@ -1,0 +1,64 @@
+{"query": "zapping low mappings.", "answer": "zapping low mappings."}
+{"query": "kernel time sync status 0040", "answer": "kernel time sync status {variables}"}
+{"query": "RAMDISK driver initialized: 16 RAM disks of 16384K size 1024 blocksize", "answer": "RAMDISK driver initialized: {variables} RAM disks of {variables} size {variables} blocksize"}
+{"query": "Disabled Privacy Extensions on device 022db720(lo)", "answer": "Disabled Privacy Extensions on device {variables}({variables})"}
+{"query": "ide1: BM-DMA at 0xffa8-0xffaf, BIOS settings: hdc:DMA, hdd:pio", "answer": "ide1: BM-DMA at {variables}, BIOS settings: hdc:{variables}, hdd:{variables}"}
+{"query": "Bluetooth: RFCOMM socket layer initialized", "answer": "Bluetooth: RFCOMM socket layer initialized"}
+{"query": "126MB LOWMEM available.", "answer": "{variables} LOWMEM available."}
+{"query": "Enabling fast FPU save and restore... done.", "answer": "Enabling fast FPU save and restore... done."}
+{"query": "VFS: Disk quotas dquot_6.5.1", "answer": "VFS: Disk quotas {variables}"}
+{"query": "Service telnet failed to start and is deactivated.", "answer": "Service telnet failed to start and is deactivated."}
+{"query": "agpgart: AGP aperture is 64M @ 0xf4000000", "answer": "agpgart: AGP aperture is {variables} @ {variables}"}
+{"query": "xinetd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "SELinux: Starting in permissive mode", "answer": "SELinux: Starting in permissive mode"}
+{"query": "creating device node '/udev/vcs7'", "answer": "creating device node {variables}"}
+{"query": "Home page is http://smartmontools.sourceforge.net/", "answer": "Home page is {variables}"}
+{"query": "session opened for user news by (uid=0)", "answer": "session opened for user {variables} by {variables}"}
+{"query": "mapped 4G/4G trampoline to ffff3000.", "answer": "mapped {variables} trampoline to {variables}."}
+{"query": "Started working: 30 available services", "answer": "Started working: {variables} available services"}
+{"query": "Linux Plug and Play Support v0.97 (c) Adam Belay", "answer": "Linux Plug and Play Support {variables} (c) Adam Belay"}
+{"query": "xfs startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "sdpd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "PCI: Found IRQ 11 for device 0000:00:1f.2", "answer": "PCI: Found IRQ {variables} for device {variables}"}
+{"query": "FAILED LOGIN 1 FROM (null) FOR , Authentication failure", "answer": "FAILED LOGIN {variables} FROM ({variables}) FOR , Authentication failure"}
+{"query": "getpeername (ftpd): Transport endpoint is not connected", "answer": "getpeername (ftpd): Transport endpoint is not connected"}
+{"query": "select reported EBADF but no bad file descriptors were found", "answer": "select reported EBADF but no bad file descriptors were found"}
+{"query": "audit(1118297138.4294965368:0): initialized", "answer": "audit({variables}): initialized"}
+{"query": "couldn't add command channel 127.0.0.1#953: not found", "answer": "couldn't add command channel {variables} not found"}
+{"query": "Mounting other filesystems: succeeded", "answer": "Mounting other filesystems: succeeded"}
+{"query": "apm: BIOS version 1.2 Flags 0x03 (Driver version 1.16ac)", "answer": "apm: BIOS version {variables} Flags {variables} (Driver version {variables})"}
+{"query": "Device: /dev/hda, opened", "answer": "Device: {variables}, opened"}
+{"query": "CPU 0 irqstacks, hard=02345000 soft=02344000", "answer": "CPU {variables} irqstacks, hard={variables} soft={variables}"}
+{"query": "Bluetooth: RFCOMM ver 1.2", "answer": "Bluetooth: {variables} ver {variables}"}
+{"query": "syslogd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "irqbalance startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)", "answer": "Dentry cache hash table entries: {variables} (order: {variables}, {variables} bytes)"}
+{"query": "VFS: Mounted root (ext2 filesystem).", "answer": "VFS: Mounted root (ext2 filesystem)."}
+{"query": "BIOS-e820: 00000000ffb00000 - 0000000100000000 (reserved)", "answer": "BIOS-e820: {variables} - {variables} (reserved)"}
+{"query": "*** info [client.c(275)]:", "answer": "*** info [client.c({variables})]:"}
+{"query": "Bluetooth: L2CAP ver 2.1", "answer": "Bluetooth: {variables} ver {variables}"}
+{"query": "CPU: L1 I cache: 16K, L1 D cache: 16K", "answer": "CPU: L1 I cache: {variables}, L1 D cache: {variables}"}
+{"query": "Freeing unused kernel memory: 144k freed", "answer": "Freeing unused kernel memory: {variables} freed"}
+{"query": "CPU: Intel Pentium III (Coppermine) stepping 06", "answer": "CPU: Intel Pentium III (Coppermine) stepping {variables}"}
+{"query": "BIOS-provided physical RAM map:", "answer": "BIOS-provided physical RAM map:"}
+{"query": "anacron startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "USB Universal Host Controller Interface driver v2.2", "answer": "USB Universal Host Controller Interface driver {variables}"}
+{"query": "Serial: 8250/16550 driver $Revision: 1.90 $ 8 ports, IRQ sharing enabled", "answer": "Serial: {variables} driver $Revision: {variables} $ {variables} ports, IRQ sharing enabled"}
+{"query": "synchronized to LOCAL(0), stratum=10", "answer": "synchronized to LOCAL({variables}), stratum={variables}"}
+{"query": "*** info [startup.c(95)]:", "answer": "*** info [startup.c({variables})]:"}
+{"query": "session closed for user root", "answer": "session closed for user {variables}"}
+{"query": "hcid startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "using 1 CPU", "answer": "using {variables} CPU"}
+{"query": "Setting network parameters: succeeded", "answer": "Setting network parameters: succeeded"}
+{"query": "apmd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "htt startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "Intel machine check architecture supported.", "answer": "Intel machine check architecture supported."}
+{"query": "Detected 731.219 MHz processor.", "answer": "Detected {variables} MHz processor."}
+{"query": "Starting background readahead:", "answer": "Starting background readahead:"}
+{"query": "crond startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "checking if image is initramfs...it isn't (no cpio magic); looks like an initrd", "answer": "checking if image is initramfs...it isn't (no cpio magic); looks like an initrd"}
+{"query": "ttloop: read: Connection reset by peer", "answer": "ttloop: read: Connection reset by peer"}
+{"query": "isapnp: Scanning for PnP cards...", "answer": "isapnp: Scanning for PnP cards..."}
+{"query": "configure: keyword \"authenticate\" unknown, line ignored", "answer": "configure: keyword {variables} unknown, line ignored"}
+{"query": "Initializing IPsec netlink socket", "answer": "Initializing IPsec netlink socket"}
+{"query": "privoxy startup succeeded", "answer": "{variables} startup succeeded"}

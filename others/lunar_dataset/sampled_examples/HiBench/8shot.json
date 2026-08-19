@@ -1,0 +1,8 @@
+{"query": "probe sleep jar: /usr/hdp/3.0.1.0-187/hadoop/../hadoop-mapreduce/hadoop-mapreduce-client-jobclient-tests.jar", "answer": "probe sleep jar: {variables}"}
+{"query": "finish HadoopTerasort bench", "answer": "finish {variables} bench"}
+{"query": "hdfs du -s: /usr/hdp/3.0.1.0-187/hadoop/bin/hadoop --config /usr/hdp/3.0.1.0-187/hadoop/etc/hadoop fs -du -s hdfs://cuhkcluster/dataspace/team7/HiBench/Terasort/Input", "answer": "hdfs du -s: {variables} --config {variables} fs -du -s {variables}"}
+{"query": "Running terasort test ...", "answer": "Running {variables} test ..."}
+{"query": "Job job_1668496639954_6833 completed successfully", "answer": "Job {variables} completed successfully"}
+{"query": "Spent 1ms computing TeraScheduler splits.", "answer": "Spent {variables} computing TeraScheduler splits."}
+{"query": "mkdir: cannot create directory '/home/team7/results/pagerank': File exists", "answer": "mkdir: cannot create directory {variables}: File exists"}
+{"query": "Got dt for hdfs://cuhkcluster; Kind: HDFS_DELEGATION_TOKEN, Service: ha-hdfs:cuhkcluster, Ident: (token for team7: HDFS_DELEGATION_TOKEN owner=team7@BIGDATA, renewer=yarn, realUser=, issueDate=1668938322107, maxDate=1669543122107, sequenceNumber=8531712, masterKeyId=1042)", "answer": "Got dt for {variables}; Kind: {variables} Service: {variables} Ident: (token for team7: {variables} owner={variables}, renewer={variables}, realUser={variables}, issueDate={variables}, maxDate={variables}, sequenceNumber={variables}, masterKeyId={variables})"}

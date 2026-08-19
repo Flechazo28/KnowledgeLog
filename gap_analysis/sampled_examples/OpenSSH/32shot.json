@@ -1,0 +1,32 @@
+{"query": "Received disconnect from 119.137.63.195: 11: disconnected by user", "answer": "Received disconnect from {variables}: {variables}: disconnected by user"}
+{"query": "Received disconnect from 119.137.63.195: 11: disconnected by user", "answer": "Received disconnect from {variables}: {variables}: disconnected by user"}
+{"query": "Address 94.229.73.156 maps to hosted-by.enoctus.com, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!", "answer": "Address {variables} maps to {variables} but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!"}
+{"query": "Address 94.229.73.156 maps to hosted-by.enoctus.com, but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!", "answer": "Address {variables} maps to {variables} but this does not map back to the address - POSSIBLE BREAK-IN ATTEMPT!"}
+{"query": "Did not receive identification string from 195.154.63.158", "answer": "Did not receive identification string from {variables}"}
+{"query": "PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=222.89.21.254 user=root", "answer": "PAM {variables} more authentication failures; logname={variables} uid={variables} euid={variables} tty={variables} ruser={variables} rhost={variables} user={variables}"}
+{"query": "Disconnecting: Too many authentication failures for admin [preauth]", "answer": "Disconnecting: Too many authentication failures for {variables} [preauth]"}
+{"query": "error: Received disconnect from 195.154.45.62: 3: com.jcraft.jsch.JSchException: timeout in waiting for rekeying process. [preauth]", "answer": "error: Received disconnect from {variables}: {variables}: {variables}: timeout in waiting for rekeying process. [preauth]"}
+{"query": "Failed password for git from 118.97.104.142 port 53939 ssh2", "answer": "Failed password for {variables} from {variables} port {variables} ssh2"}
+{"query": "PAM service(sshd) ignoring max retries; 5 > 3", "answer": "PAM service(sshd) ignoring max retries; {variables} > {variables}"}
+{"query": "reverse mapping checking getaddrinfo for 223-196-15-51.rev.cloud.scaleway.com [51.15.196.223] failed - POSSIBLE BREAK-IN ATTEMPT!", "answer": "reverse mapping checking getaddrinfo for {variables} [{variables}] failed - POSSIBLE BREAK-IN ATTEMPT!"}
+{"query": "Failed password for root from 183.238.178.195 port 5394 ssh2", "answer": "Failed password for {variables} from {variables} port {variables} ssh2"}
+{"query": "Failed password for sshd from 103.99.0.122 port 51502 ssh2", "answer": "Failed password for {variables} from {variables} port {variables} ssh2"}
+{"query": "input_userauth_request: invalid user test [preauth]", "answer": "input_userauth_request: invalid user {variables} [preauth]"}
+{"query": "Disconnecting: Too many authentication failures for root [preauth]", "answer": "Disconnecting: Too many authentication failures for {variables} [preauth]"}
+{"query": "Disconnecting: Packet corrupt [preauth]", "answer": "Disconnecting: Packet corrupt [preauth]"}
+{"query": "error: Received disconnect from 195.154.37.122: 3: com.jcraft.jsch.JSchException: Auth fail [preauth]", "answer": "error: Received disconnect from {variables}: {variables}: {variables}: Auth fail [preauth]"}
+{"query": "pam_unix(sshd:session): session closed for user curi", "answer": "pam_unix(sshd:session): session closed for user {variables}"}
+{"query": "Disconnecting: Too many authentication failures for user [preauth]", "answer": "Disconnecting: Too many authentication failures for {variables} [preauth]"}
+{"query": "error: Received disconnect from 103.99.0.122: 14: No more user authentication methods available. [preauth]", "answer": "error: Received disconnect from {variables}: {variables}: No more user authentication methods available. [preauth]"}
+{"query": "Received disconnect from 82.209.247.10: 11: [preauth]", "answer": "Received disconnect from {variables}: {variables}: [preauth]"}
+{"query": "Connection closed by 183.238.178.195 [preauth]", "answer": "Connection closed by {variables} [preauth]"}
+{"query": "Bad packet length 1819045217. [preauth]", "answer": "Bad packet length {variables}. [preauth]"}
+{"query": "Received disconnect from 183.62.140.253: 11: Bye Bye [preauth]", "answer": "Received disconnect from {variables}: {variables}: Bye Bye [preauth]"}
+{"query": "fatal: no hostkey alg [preauth]", "answer": "fatal: no hostkey alg [preauth]"}
+{"query": "Invalid user caffe from 175.102.13.6", "answer": "Invalid user {variables} from {variables}"}
+{"query": "Failed password for invalid user admin from 5.188.10.182 port 57320 ssh2", "answer": "Failed password for invalid user {variables} from {variables} port {variables} ssh2"}
+{"query": "pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=183.238.178.195 user=root", "answer": "pam_unix(sshd:auth): authentication failure; logname={variables} uid={variables} euid={variables} tty={variables} ruser={variables} rhost={variables} user={variables}"}
+{"query": "fatal: Write failed: Connection reset by peer [preauth]", "answer": "fatal: Write failed: Connection reset by peer [preauth]"}
+{"query": "Bad protocol version identification 'SSH-2.0_CoreLab-1.0' from 193.201.224.232 port 8864", "answer": "Bad protocol version identification {variables} from {variables} port {variables}"}
+{"query": "fatal: Read from socket failed: Connection reset by peer [preauth]", "answer": "fatal: Read from socket failed: Connection reset by peer [preauth]"}
+{"query": "pam_unix(sshd:auth): check pass; user unknown", "answer": "pam_unix(sshd:auth): check pass; user unknown"}

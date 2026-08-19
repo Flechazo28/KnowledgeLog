@@ -1,0 +1,64 @@
+{"query": "run failed, cause:exception.id: systemerror; vapp-00001.", "answer": "run failed, cause:exception.id: {variables}; {variables}."}
+{"query": "return empty!", "answer": "return empty!"}
+{"query": "urlpath(\"/url334\") not find, and method is POST.", "answer": "urlpath(\"{variables}\") not find, and method is POST."}
+{"query": "getWorkflows total :446", "answer": "getWorkflows total :{variables}"}
+{"query": "JobHistory process finish, id:9906, name:name, status:failed, jobId:05D99C51901F47329D5C2BAAB535C69F", "answer": "JobHistory process finish, id:{variables}, name:{variables}, status:{variables}, jobId:{variables}"}
+{"query": "createservice registryserviceoperation: end.", "answer": "createservice registryserviceoperation: end."}
+{"query": "\"GET /url-tt HTTP/1.1\" 200 281 RouteID-service-5-0-230209170038-3309", "answer": "\"GET {variables} HTTP/1.{variables}\" {variables}"}
+{"query": "modifyUserPassword start", "answer": "modifyUserPassword start"}
+{"query": "start init job dir: CHECK_SFTP_CON.", "answer": "start init job dir: {variables}."}
+{"query": "Caused by: Exception: No qualifying bean of type 'java.lang.String' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}", "answer": "Caused by: Exception: No qualifying bean of type {variables} available: expected at least {variables} bean which qualifies as autowire candidate. Dependency annotations: {variables}"}
+{"query": "get pod size: 0, app is: B682D787F9B533619B6CD244858221FC.", "answer": "get pod size: {variables} app is: {variables}."}
+{"query": "create user error! useName=useName. var= exception.id: vdc;", "answer": "create user error! useName={variables}. var= exception.id: {variables};"}
+{"query": "queried agent info by agents id successful, agent id: c923d4a5-cfdd-5ff2-9440-3a090151b4e4, result number: 1", "answer": "queried agent info by agents id successful, agent id: {variables} result number: {variables}"}
+{"query": "failed to get endpoints from obj4, error is exception.id: systemerror;", "answer": "failed to get endpoints from {variables} error is exception.id: {variables};"}
+{"query": "x-trace-id:-99, x-request-id:routeid, internal server error, traceid is -99, requestid is routeid, opname:queryserviceparams, error code:vapp-09033, error message:the service does not exist. serviceid = serviceid", "answer": "x-trace-id:{variables}, x-request-id:{variables}, internal server error, traceid is {variables} requestid is {variables} opname:{variables}, error code:{variables}, error message:{variables}. serviceid = {variables}"}
+{"query": "ResponseEntity return httpCode is 400. requestEntity's type is POST. requestEntity's url is /e2e1351a2056. requestEntity's header is 400, please check!", "answer": "ResponseEntity return httpCode is {variables} requestEntity's type is {variables} requestEntity's url is {variables} requestEntity's header is {variables} please check!"}
+{"query": "cannot get topicInfo for consumer by topic: topic", "answer": "cannot get topicInfo for consumer by topic: {variables}"}
+{"query": "response code is 400! [url=/url4533], [msg={\"exceptionId\":\"illegal\", \"exceptionType\":\"EXCEPTION\", \"descArgs\":null, \"reasonArgs\":[\"DataStore type\"], \"detailArgs\":null, \"adviceArgs\":null}]", "answer": "response code is {variables}! [url={variables}], [msg={variables}]"}
+{"query": "project is not exist: projectId = b27a0664ba434693a320b7a212c77df8", "answer": "project is not exist: projectId = {variables}"}
+{"query": "Subsequent logs will be printed to the root log of each microservice. Please see the logs of each microservice.", "answer": "Subsequent logs will be printed to the root log of each microservice. Please see the logs of each microservice."}
+{"query": "end update db!", "answer": "end update db!"}
+{"query": "ServiceException ServiceException: exception.id: vapp-09033;", "answer": "ServiceException ServiceException: exception.id: {variables};"}
+{"query": "executeToGetResponse is not good response. response:{\"exceptionId\":\"apr\", \"exceptionType\":\"EXCEPTION\", \"descArgs\":null, \"reasonArgs\":null, \"detailArgs\":null, \"adviceArgs\":null}, httpCode:400", "answer": "executeToGetResponse is not good response. response:{variables}, httpCode:{variables}"}
+{"query": "Create user task status is finish, release lock.", "answer": "Create user task status is finish, release lock."}
+{"query": "\"GET /core/v3 HTTP/1.1\" 200 226 -", "answer": "\"GET {variables} HTTP/1.{variables}\" {variables}"}
+{"query": "retryInitOperation retry thread is running .InitDefinetions is success", "answer": "retryInitOperation retry thread is running .InitDefinetions is success"}
+{"query": "cache not exists in redis for appId :B682D787F9B533619B6CD244858221FC", "answer": "cache not exists in redis for appId :{variables}"}
+{"query": "User:preset_username_001 login auth enter!", "answer": "User:{variables} login auth enter!"}
+{"query": "workflowType: custom, queryWorkflowsRequest: {\"limit\":10, \"offset\":0, \"sceneType\":\"all\", \"sort\":\"-updateTime\", \"status\":\"all\", \"version\":-1}.", "answer": "workflowType: {variables} queryWorkflowsRequest: {variables} \"offset\":{variables}, \"sceneType\":{variables}, \"sort\":{variables}, \"status\":{variables}, \"version\":{variables}}."}
+{"query": "save app related resources to redis, appIs:B682D787F9B533619B6CD244858221FC", "answer": "save app related resources to redis, appIs:{variables}"}
+{"query": "logpath=/path, processname=service-3-0", "answer": "logpath={variables}, processname={variables}"}
+{"query": "start handle communication message, sender: Service-File-Actions", "answer": "start handle communication message, sender: {variables}"}
+{"query": "get devices from agentMgmt return httpcode:503", "answer": "get devices from {variables} return httpcode:{variables}"}
+{"query": "step into ping ip: 127.0.0.1", "answer": "step into ping ip: {variables}"}
+{"query": "executeWorkflow: workflowId: 6BE9EDB34D6247169CAE433B8687F4EE", "answer": "executeWorkflow: workflowId: {variables}"}
+{"query": "updatePasswordPolicy success with authId = objId", "answer": "updatePasswordPolicy success with authId = {variables}"}
+{"query": "get app related resources from redis, appIs:B682D787F9B533619B6CD244858221FC", "answer": "get app related resources from redis, appIs:{variables}"}
+{"query": "commit communication message successful, sender: Service-File-Actions", "answer": "commit communication message successful, sender: {variables}"}
+{"query": "consumerexecutor receive data, datasize=20", "answer": "consumerexecutor receive data, datasize={variables}"}
+{"query": "internal server error, opname:parseobject, error code:vapp-00027, error message:parse json to object fail, pls check json string, traceid is -99, requestid is", "answer": "internal server error, opname:{variables}, error code:{variables}, error message:parse json to object fail, pls check json string, traceid is {variables}, requestid is"}
+{"query": "task info: {\"id\":\"id\", \"name\":\"task0\"}", "answer": "task info: {variables}\", \"name\":\"{variables}\"}"}
+{"query": "init policy start.", "answer": "init policy start."}
+{"query": "the data size of sending is 2", "answer": "the data size of sending is {variables}"}
+{"query": "get clusterIp failed when create consumer, return null", "answer": "get clusterIp failed when create consumer, return null"}
+{"query": "queryUserDetail failed, userId=userId, type=id, domainName=null, error=exception.id: vdc;", "answer": "queryUserDetail failed, userId={variables}, type=id, domainName=null, error=exception.id: vdc;"}
+{"query": "ServiceException ServiceException: exception.id: Paramerror; class ApplicationReq; projectId may not be null;", "answer": "ServiceException ServiceException: exception.id: {variables}; class {variables}; projectId may not be null;"}
+{"query": "isRunTimeReported:false, ops taskId:agentTaskId", "answer": "isRunTimeReported:{variables}, ops taskId:{variables}"}
+{"query": "start to query resources.", "answer": "start to query resources."}
+{"query": "syndic report agents status, syndic is: 618f0656-1fa7-4326-92fa-367aceb2486a, region_syndic_role: _public, online agent count: 0, offline agent count: 1, all online agents count: 0", "answer": "syndic report agents status, syndic is: {variables} region_syndic_role: {variables} online agent count: {variables} offline agent count: {variables} all online agents count: {variables}"}
+{"query": "step into upload node operation", "answer": "step into upload node operation"}
+{"query": "start read job infocheck_sftp_con.yaml.", "answer": "start read job {variables}."}
+{"query": "url delecttion Task is not exist or dup, taskId is b6a2eaff-58e2-3daa-b3e7-d24fccdae701", "answer": "url delecttion Task is not exist or dup, taskId is {variables}"}
+{"query": "query resources for app", "answer": "query resources for app"}
+{"query": "send Mgmt dail result to kafka success.", "answer": "send Mgmt dail result to kafka success."}
+{"query": "isRunTimeReported:true, ops taskId:00000000000000000000000000000", "answer": "isRunTimeReported:{variables}, ops taskId:{variables}"}
+{"query": "start batchDeleteMgmtTasks, task number: 1", "answer": "start batchDeleteMgmtTasks, task number: {variables}"}
+{"query": "templatehelper getsoftwareurlmap start", "answer": "templatehelper getsoftwareurlmap {variables}"}
+{"query": "No policy match in currentTime: 1677239481418 .", "answer": "No policy match in currentTime: {variables} ."}
+{"query": "url detection result, agentTaskId:agentTaskId, taskName:taskName, cloudService:service, taskId:taskid, type:PING, url:127.0.0.1, latencyTime:0.055, responseCode:null, packetLossRate:0, isTest:false", "answer": "url detection result, agentTaskId:{variables}, taskName:{variables}, cloudService:{variables}, taskId:{variables}, type:{variables}, url:{variables}, latencyTime:{variables}, responseCode:{variables}, packetLossRate:{variables}, isTest:{variables}"}
+{"query": "x-trace-id:61d26ce16aa21d7e61d26ce16aa21d7e, x-request-id:routeid, internal server error, opname:openname@createmodel, error code:openname_0011, error message:create model failed, traceid is 61d26ce16aa21d7e61d26ce16aa21d7e, requestid is routeid", "answer": "x-trace-id:{variables}, x-request-id:{variables}, internal server error, opname:{variables}, error code:{variables}, error message:create model failed, traceid is {variables} requestid is {variables}"}
+{"query": "check string is json exception, ignore this exception...", "answer": "check string is json exception, ignore this exception..."}
+{"query": "get system instance info from db catch a service exception", "answer": "get system instance info from db catch a service exception"}
+{"query": "Response status code is 500, expected is 200, path is /url113, method is get", "answer": "Response status code is {variables} expected is {variables} path is {variables} method is get"}
+{"query": "registermqforupdateepsresourcerules Exception occurs.", "answer": "{variables} Exception occurs."}

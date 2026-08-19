@@ -1,0 +1,64 @@
+{"query": "sda: asking for cache data failed", "answer": "{variables}: asking for cache data failed"}
+{"query": "Keyboard on isa0060/serio0 reports too many keys pressed.", "answer": "Keyboard on {variables} reports too many keys pressed."}
+{"query": "[ib_sm_assign.c:122]: Failed to get PortInfo - GUID=66a000400017e, port=4", "answer": "[{variables}]: Failed to get PortInfo - GUID={variables}, port={variables}"}
+{"query": "syslog-ng version 1.6.7 going down", "answer": "syslog-ng version {variables} going down"}
+{"query": "process_limit: processing hard nofile 32768 for DEFAULT", "answer": "process_limit: processing hard nofile {variables} for DEFAULT"}
+{"query": "Instrumentation Service EventID: 1404 Memory device status is critical Memory device location: DIMM1_B Possible memory module event cause:Single bit error logging disabled", "answer": "Instrumentation Service EventID: {variables} Memory device status is critical Memory device location: {variables} Possible memory module event cause:{variables}"}
+{"query": "Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2", "answer": "Uniform Multi-Platform E-IDE driver Revision: {variables}"}
+{"query": "sda: assuming drive cache: write through", "answer": "{variables}: assuming drive cache: write through"}
+{"query": "Brought up 2 CPUs", "answer": "Brought up {variables} CPUs"}
+{"query": "DHCPREQUEST for 10.100.4.251 (10.100.0.250) from 00:11:43:e3:ba:c3 via eth1: unknown lease 10.100.4.251.", "answer": "DHCPREQUEST for {variables} from {variables} via {variables}: unknown lease {variables}."}
+{"query": "BIOS-e820: 00000000bffc0000 - 00000000bffcfc00 (ACPI data)", "answer": "BIOS-{variables}: {variables} - {variables} (ACPI data)"}
+{"query": "jAAB24FD021623: 3: fl=0x2, mode=140777: SOCK localhost->[[UNIX: /dev/log]]", "answer": "{variables}: {variables}: fl={variables}, mode={variables}: SOCK localhost->[[UNIX: {variables}]]"}
+{"query": "Node 0 HighMem per-cpu: empty", "answer": "Node {variables} HighMem per-cpu: empty"}
+{"query": "#47# : TTY=pts/8 ; PWD=/mnt_projects/sysapps/#117#/largerun ; USER=root ; COMMAND=/apps/contrib/ccmd.sh all /apps/#117#/prepnode", "answer": "{variables} : TTY={variables} ; PWD={variables} ; USER={variables} ; COMMAND={variables}"}
+{"query": "kjournald starting. Commit interval 5 seconds", "answer": "{variables} starting. Commit interval {variables} seconds"}
+{"query": "pan_ips: error -- real init, 0x5 (Out of memory), err_loc=3, rhel_4_amd64/release/build/panfs/ips/pan_ips.c:143", "answer": "pan_ips: error -- real init, {variables} (Out of memory), err_loc={variables}, {variables}"}
+{"query": "xinetd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "Lustre: Echo OBD driver; #10#@#11#", "answer": "Lustre: Echo OBD driver; {variables}"}
+{"query": "RNG not detected", "answer": "RNG not detected"}
+{"query": "Kickstart: setup firstboot for ganglia client software", "answer": "Kickstart: setup firstboot for ganglia client software"}
+{"query": "removing chargen", "answer": "removing chargen"}
+{"query": "PCI0 PALO PBLO VPR0 PBHI PICH", "answer": "PCI0 PALO PBLO VPR0 PBHI PICH"}
+{"query": "VFS: Disk quotas dquot_6.5.1", "answer": "VFS: Disk quotas {variables}"}
+{"query": "mount.panfs warning: couldn't ping address #27#:3095", "answer": "mount.panfs warning: couldn't ping address {variables}"}
+{"query": "Warning: we failed to resolve data source name dn526 dn527 dn528 dn529 dn530 dn531 dn532 dn533 dn534 dn535 dn536 dn537 dn538 dn539 dn540 dn541 dn542 dn543 dn544 dn545 dn546 dn547 dn548 dn549 dn550 dn551 dn552 dn553 dn554 dn555 dn556 dn557 dn558 dn559 dn560 dn561 dn562 dn563 dn564 dn565 dn566 dn567 dn568 dn569 dn570 dn571 dn572 dn573 dn574 dn575 dn576 dn577 dn578 dn579 dn580 dn581 dn582 dn583 dn584 dn585 dn586 dn587 dn588 dn589 dn590 dn591 dn592 dn593 dn594 dn595 dn596 dn597 dn598 dn599 dn600 dn601 dn602 dn603 dn604 dn605 dn606 dn607 dn608 dn609 dn610 dn611 dn612 dn613 dn614 dn615 dn616 dn617 dn618 dn619 dn620 dn621 dn622 dn623 dn624 dn625 dn626 dn627 dn628 dn629 dn630 dn631 dn632 dn633 dn634 dn635 dn636 dn637 dn638 dn639 dn640", "answer": "Warning: we failed to resolve data source name {variables}"}
+{"query": "wall: user root broadcasted 5 lines (114 chars)", "answer": "wall: user {variables} broadcasted {variables} lines ({variables} chars)"}
+{"query": "cd /usr ; /usr/bin/mysqld_safe &", "answer": "cd {variables} ; {variables} &"}
+{"query": "WARNING: Setting tty modes failed: Invalid argument", "answer": "WARNING: Setting tty modes failed: Invalid argument"}
+{"query": "THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/hob_comm.c[781]: XHH_hob_register_mr: Device in FATAL state", "answer": "THH({variables}): {variables}[{variables}]: XHH_hob_register_mr: Device in FATAL state"}
+{"query": "[ib_sm_sweep.c:1264]: Rediscover the subnet", "answer": "[{variables}]: Rediscover the subnet"}
+{"query": "Installing all prepared tables", "answer": "Installing all prepared tables"}
+{"query": "(root) CMD (run-parts /etc/cron.hourly)", "answer": "({variables}) CMD ({variables})"}
+{"query": "[ib_sm_discovery.c:739]: switch lid change, node - GUID=66a00010001e7, port=0, neighbor (nil), changing lid from 0, back to original 128", "answer": "[{variables}]: switch lid change, node - GUID={variables}, port={variables}, neighbor (nil), changing lid from {variables}, back to original {variables}"}
+{"query": "SELinux: Starting in permissive mode", "answer": "SELinux: Starting in permissive mode"}
+{"query": "Checking root filesystem succeeded", "answer": "Checking {variables} filesystem succeeded"}
+{"query": "Remote host disconnected: Disconnect requested by Windows SSH Client.", "answer": "Remote host disconnected: Disconnect requested by Windows SSH Client."}
+{"query": "VIPKL(16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/hob_comm.c[781]: XHH_hob_register_mr: Device in FATAL state", "answer": "VIPKL({variables}[{variables}]: XHH_hob_register_mr: Device in FATAL state"}
+{"query": "NET: Registered protocol family 26", "answer": "NET: Registered protocol family {variables}"}
+{"query": "(root) CMD (/home/#57#/GetVolts.sh b)", "answer": "({variables}) CMD ({variables})"}
+{"query": "syslog-ng startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "smartd version 5.33 [x86_64-redhat-linux-gnu] Copyright (C) 2002-4 Bruce Allen", "answer": "smartd version {variables} [{variables}] Copyright (C) {variables} Bruce Allen"}
+{"query": "Aborting journal on device sda5.", "answer": "Aborting journal on device {variables}."}
+{"query": "The latest information about MySQL is available on the web at", "answer": "The latest information about {variables} is available on the web at"}
+{"query": "ntpd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "THH(1): OUT MAILBOX dump, starting at addr 0x00000101bcfc7000, size=64:", "answer": "THH({variables}): OUT MAILBOX dump, starting at addr {variables}, size={variables}:"}
+{"query": "Compressed image found at block 0", "answer": "Compressed image found at block {variables}"}
+{"query": "ROOT LOGIN ON tty2", "answer": "{variables} LOGIN ON {variables}"}
+{"query": "Entering runlevel: 3", "answer": "Entering runlevel: {variables}"}
+{"query": "THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/hob_comm.c[2452]: XHH_hob_fatal_error: device=InfiniHost0, err_type=5, syndrome=12", "answer": "THH({variables}): {variables}[{variables}]: XHH_hob_fatal_error: device={variables}, err_type={variables}, syndrome={variables}"}
+{"query": "usb 3-1: device not accepting address 2, error -71", "answer": "usb {variables}: device not accepting address {variables}, error {variables}"}
+{"query": "Node 0 DMA free:11592kB min:4kB low:8kB high:12kB active:0kB inactive:0kB present:16384kB pages_scanned:69350 all_unreclaimable? yes", "answer": "Node {variables} {variables} {variables} min:{variables} low:{variables} high:{variables} active:{variables} inactive:{variables} present:{variables} pages_scanned:{variables} all_unreclaimable? {variables}"}
+{"query": "lockd -KILL succeeded", "answer": "lockd -KILL succeeded"}
+{"query": "Copyright (c) 1999-2005 LSI Logic Corporation", "answer": "Copyright (c) {variables} LSI Logic Corporation"}
+{"query": "pan_common: got -16 registering panasas at 250", "answer": "pan_common: got {variables} registering panasas at {variables}"}
+{"query": "bad username [\\\\\\\\\\\\\\\\\\\\\\\\\\\\]", "answer": "bad username {variables}"}
+{"query": "mount.panfs: failed local addresses: 10.100.144.6:1", "answer": "mount.panfs: failed local addresses: {variables}"}
+{"query": "Kickstart Install: SNL COE Legal Banner", "answer": "Kickstart Install: {variables}"}
+{"query": "VIPKL(1): [MM_create_mr]:MM_mr_get_keys failed", "answer": "VIPKL({variables}): [MM_create_mr]:MM_mr_get_keys failed"}
+{"query": "[/sbin/fsck.ext3 (1) -- /] fsck.ext3 -a /dev/sda3", "answer": "[{variables} ({variables}) -- {variables}] {variables} -a {variables}"}
+{"query": "session opened for user #47# by (uid=0)", "answer": "session opened for user {variables} by {variables}(uid={variables})"}
+{"query": "smartd shutdown failed", "answer": "{variables} shutdown failed"}
+{"query": "precision = 1.000 usec", "answer": "precision = {variables} usec"}
+{"query": "No mptable found.", "answer": "No mptable found."}
+{"query": "call_verify: RPC call version mismatch!", "answer": "call_verify: RPC call version mismatch!"}

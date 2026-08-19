@@ -1,0 +1,64 @@
+{"query": "ServerFileSystem: ServerFileSystem domain cluster_root is full", "answer": "ServerFileSystem: ServerFileSystem domain {variables} is full"}
+{"query": "ServerFileSystem: ServerFileSystem domain storage733 is full", "answer": "ServerFileSystem: ServerFileSystem domain {variables} is full"}
+{"query": "member_delete (command 3914)", "answer": "member_delete (command {variables})"}
+{"query": "member_delete (command 3912)", "answer": "member_delete (command {variables})"}
+{"query": "ambient=40 threshold exceeded", "answer": "ambient={variables}"}
+{"query": "ambient=41 threshold exceeded", "answer": "ambient={variables}"}
+{"query": "clusterAddMember (command 1904)", "answer": "clusterAddMember (command {variables})"}
+{"query": "clusterAddMember (command 1900)", "answer": "clusterAddMember (command {variables})"}
+{"query": "not responding", "answer": "not responding"}
+{"query": "not responding", "answer": "not responding"}
+{"query": "Link error", "answer": "Link error"}
+{"query": "Link error", "answer": "Link error"}
+{"query": "NIFF: node node-128 detected a failed network connection on network 5.5.226.0 via interface alt0", "answer": "NIFF: node {variables} detected a failed network connection on network {variables} via interface {variables}"}
+{"query": "NIFF: node node-239 detected a failed network connection on network 5.5.224.0 via interface alt0", "answer": "NIFF: node {variables} detected a failed network connection on network {variables} via interface {variables}"}
+{"query": "Fan speeds ( 3552 3534 3375 4326 3515 3479 )", "answer": "Fan speeds ( {variables} )"}
+{"query": "Fan speeds ( 3552 3534 3375 4245 3515 3479 )", "answer": "Fan speeds ( {variables} )"}
+{"query": "no recent update", "answer": "no recent update"}
+{"query": "no recent update", "answer": "no recent update"}
+{"query": "Command Failed on: node-128\\ node-129\\ node-134\\ node-130\\ node-131\\ node-132\\ node-133\\ node-135", "answer": "Command Failed on: {variables}"}
+{"query": "Command Failed on: node-194", "answer": "Command Failed on: {variables}"}
+{"query": "fan failure\\ ambient=26", "answer": "fan failure\\ ambient={variables}"}
+{"query": "fan failure\\ ambient=26", "answer": "fan failure\\ ambient={variables}"}
+{"query": "Command has completed successfully", "answer": "Command has completed successfully"}
+{"query": "Command has completed successfully", "answer": "Command has completed successfully"}
+{"query": "PSU status ( on off )", "answer": "PSU status ({variables} {variables})"}
+{"query": "PSU status ( on off )", "answer": "PSU status ({variables} {variables})"}
+{"query": "Failed subcommands 3923\\ 3927\\ 3939", "answer": "Failed subcommands {variables}"}
+{"query": "Failed subcommands 3934", "answer": "Failed subcommands {variables}"}
+{"query": "1 failed to configure resourcemgmt subsystem err = 10", "answer": "{variables} failed to configure resourcemgmt subsystem err = {variables}"}
+{"query": "1 failed to configure resourcemgmt subsystem err = 10", "answer": "{variables} failed to configure resourcemgmt subsystem err = {variables}"}
+{"query": "Link in reset", "answer": "Link in reset"}
+{"query": "Link in reset", "answer": "Link in reset"}
+{"query": "Temperature (41C) exceeds warning threshold", "answer": "Temperature {variables} exceeds warning threshold"}
+{"query": "Temperature (42C) exceeds warning threshold", "answer": "Temperature {variables} exceeds warning threshold"}
+{"query": "boot (command 1973)", "answer": "boot (command {variables})"}
+{"query": "boot (command 3515)", "answer": "boot (command {variables})"}
+{"query": "ClusterFileSystem: ServerFileSystem domain root_domain is no longer served by node node-128", "answer": "ClusterFileSystem: ServerFileSystem domain {variables} is no longer served by node {variables}"}
+{"query": "ClusterFileSystem: There is no server for ServerFileSystem domain storage1231", "answer": "ClusterFileSystem: There is no server for ServerFileSystem domain {variables}"}
+{"query": "psu failure\\ ambient=26", "answer": "psu failure\\ ambient={variables}"}
+{"query": "psu failure\\ ambient=37", "answer": "psu failure\\ ambient={variables}"}
+{"query": "risBoot (command 1918)", "answer": "risBoot (command {variables})"}
+{"query": "risBoot (command 1899)", "answer": "risBoot (command {variables})"}
+{"query": "bootGenvmunix (command 1906)", "answer": "bootGenvmunix (command {variables})"}
+{"query": "bootGenvmunix (command 1902)", "answer": "bootGenvmunix (command {variables})"}
+{"query": "update received", "answer": "update received"}
+{"query": "update received", "answer": "update received"}
+{"query": "inconsistent nodesets node-127 0x1fffffffa <ok> node-96 0x1fffffffe <ok> node-98 0x1fffffffa <ok>", "answer": "inconsistent nodesets {variables} {variables} <ok> {variables} {variables} <ok>"}
+{"query": "inconsistent nodesets node-96 0x00000002 <ok> node-99 0x0000003e <ok> node-98 0x0000003e <ok> node-97 0x0000003e <ok> node-100 0x0000003e <ok>", "answer": "inconsistent nodesets {variables} {variables} <ok> {variables} {variables} <ok>"}
+{"query": "Link error on broadcast tree Interconnect-1T00:00:0:0", "answer": "Link error on broadcast tree {variables}"}
+{"query": "Link error on broadcast tree Interconnect-1T00:00:2:0", "answer": "Link error on broadcast tree {variables}"}
+{"query": "halt (command 2107)", "answer": "halt (command {variables})"}
+{"query": "halt (command 2992)", "answer": "halt (command {variables})"}
+{"query": "configured out", "answer": "configured out"}
+{"query": "configured out", "answer": "configured out"}
+{"query": "power/control ok", "answer": "power/control ok"}
+{"query": "haltcluster (command 2376)", "answer": "haltcluster (command {variables})"}
+{"query": "Fan speeds ( 3552 3534 3375 **** 3515 3479 )", "answer": "Fan speeds ( {variables} )"}
+{"query": "Targeting domains:node-D0 and nodes:node-12", "answer": "Targeting domains:{variables} and nodes:{variables}"}
+{"query": "Command has been aborted", "answer": "Command has been aborted"}
+{"query": "wait (command 2426)", "answer": "wait (command {variables})"}
+{"query": "ServerFileSystem: An ServerFileSystem domain panic has occurred on storage1544", "answer": "ServerFileSystem: An ServerFileSystem domain panic has occurred on {variables}"}
+{"query": "power/control problem", "answer": "power/control problem"}
+{"query": "Link ok", "answer": "Link ok"}
+{"query": "Targeting domains:node-D7 and nodes:node-[224-255] child of command 2667", "answer": "Targeting domains:{variables} and nodes:{variables}"}

@@ -1,0 +1,8 @@
+{"query": "SCSI subsystem initialized", "answer": "SCSI subsystem initialized"}
+{"query": "TCP: Hash tables configured (established 8192 bind 16384)", "answer": "TCP: Hash tables configured (established {variables} bind {variables})"}
+{"query": "microcode: No suitable data for cpu 0", "answer": "microcode: No suitable data for cpu {variables}"}
+{"query": "Floppy drive(s): fd0 is 1.44M", "answer": "Floppy drive(s): {variables} is {variables}"}
+{"query": "couldn't add command channel 127.0.0.1#953: not found", "answer": "couldn't add command channel {variables} not found"}
+{"query": "session opened for user root by (uid=0)", "answer": "session opened for user {variables} by {variables}"}
+{"query": "checking if image is initramfs...it isn't (no cpio magic); looks like an initrd", "answer": "checking if image is initramfs...it isn't (no cpio magic); looks like an initrd"}
+{"query": "ide0: BM-DMA at 0xffa0-0xffa7, BIOS settings: hda:DMA, hdb:pio", "answer": "ide0: BM-DMA at {variables}, BIOS settings: hda:{variables}, hdb:{variables}"}

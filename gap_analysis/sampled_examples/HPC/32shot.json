@@ -1,0 +1,32 @@
+{"query": "haltcluster (command 2983)", "answer": "haltcluster (command {variables})"}
+{"query": "ambient=40 threshold exceeded", "answer": "ambient={variables}"}
+{"query": "Fan speeds ( 3552 3534 3375 4166 3515 3479 )", "answer": "Fan speeds ( {variables} )"}
+{"query": "Link error", "answer": "Link error"}
+{"query": "ClusterFileSystem: ServerFileSystem domain root9_tmp is no longer served by node node-200", "answer": "ClusterFileSystem: ServerFileSystem domain {variables} is no longer served by node {variables}"}
+{"query": "Targeting domains:node-D6 and nodes:node-193", "answer": "Targeting domains:{variables} and nodes:{variables}"}
+{"query": "Command has completed successfully", "answer": "Command has completed successfully"}
+{"query": "Temperature (42C) exceeds warning threshold", "answer": "Temperature {variables} exceeds warning threshold"}
+{"query": "update received", "answer": "update received"}
+{"query": "psu failure\\ ambient=30", "answer": "psu failure\\ ambient={variables}"}
+{"query": "Link error on broadcast tree Interconnect-1T00:00:2:0", "answer": "Link error on broadcast tree {variables}"}
+{"query": "1 failed to configure resourcemgmt subsystem err = 10", "answer": "{variables} failed to configure resourcemgmt subsystem err = {variables}"}
+{"query": "configured out", "answer": "configured out"}
+{"query": "NIFF: node node-249 detected a failed network connection on network 5.5.224.0 via interface alt0", "answer": "NIFF: node {variables} detected a failed network connection on network {variables} via interface {variables}"}
+{"query": "Link ok", "answer": "Link ok"}
+{"query": "Command Failed on: node-224\\ node-225\\ node-226\\ node-227\\ node-228\\ node-229\\ node-230\\ node-231", "answer": "Command Failed on: {variables}"}
+{"query": "Fan speeds ( 3552 3534 3375 **** 3515 3479 )", "answer": "Fan speeds ( {variables} )"}
+{"query": "power/control ok", "answer": "power/control ok"}
+{"query": "not responding", "answer": "not responding"}
+{"query": "no recent update", "answer": "no recent update"}
+{"query": "power/control problem", "answer": "power/control problem"}
+{"query": "bootGenvmunix (command 1903)", "answer": "bootGenvmunix (command {variables})"}
+{"query": "ServerFileSystem: ServerFileSystem domain root19_local is full", "answer": "ServerFileSystem: ServerFileSystem domain {variables} is full"}
+{"query": "ServerFileSystem: An ServerFileSystem domain panic has occurred on storage911", "answer": "ServerFileSystem: An ServerFileSystem domain panic has occurred on {variables}"}
+{"query": "wait (command 2577)", "answer": "wait (command {variables})"}
+{"query": "Command has been aborted", "answer": "Command has been aborted"}
+{"query": "Targeting domains:node-D0 and nodes:node-[0-31] child of command 4159", "answer": "Targeting domains:{variables} and nodes:{variables}"}
+{"query": "halt (command 2991)", "answer": "halt (command {variables})"}
+{"query": "member_delete (command 2848)", "answer": "member_delete (command {variables})"}
+{"query": "risBoot (command 1904)", "answer": "risBoot (command {variables})"}
+{"query": "Failed subcommands 3923\\ 3925\\ 3927\\ 3931\\ 3937\\ 3941", "answer": "Failed subcommands {variables}"}
+{"query": "boot (command 2896)", "answer": "boot (command {variables})"}

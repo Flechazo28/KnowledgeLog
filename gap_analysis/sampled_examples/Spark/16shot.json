@@ -1,0 +1,16 @@
+{"query": "Connection to mesos-master-1/10.10.34.11:51096 has been quiet for 120000 ms while there are outstanding requests. Assuming connection is dead; please adjust spark.network.timeout if this is wrong.", "answer": "Connection to {variables} has been quiet for {variables} ms while there are outstanding requests. Assuming connection is dead; please adjust spark.network.timeout if this is wrong."}
+{"query": "Using REPL class URI: http://10.10.18.32:65475", "answer": "Using REPL class URI: {variables}"}
+{"query": "Starting the user application in a separate Thread", "answer": "Starting the user application in a separate Thread"}
+{"query": "Registering RDD 83 (reduceByKey at pnmf4.py:295)", "answer": "Registering RDD {variables} (reduceByKey at {variables})"}
+{"query": "Submitting ResultStage 104 (MapPartitionsRDD[235] at saveAsTextFile at null:-1), which has no missing parents", "answer": "Submitting ResultStage {variables} ({variables} at {variables}), which has no missing parents"}
+{"query": "Final app status: FAILED, exitCode: 10, (reason: Uncaught exception: org.apache.spark.rpc.RpcTimeoutException: Cannot receive any reply in 120 seconds. This timeout is controlled by spark.rpc.askTimeout)", "answer": "Final app status: {variables}, exitCode: {variables}, (reason: {variables})"}
+{"query": "Launching ExecutorRunnable. driverUrl: spark://CoarseGrainedScheduler@10.10.34.30:60510, executorHostname: mesos-slave-27", "answer": "Launching ExecutorRunnable. driverUrl: {variables}, executorHostname: {variables}"}
+{"query": "Cancelling stage 1", "answer": "Cancelling stage {variables}"}
+{"query": "Cleaned RDD 117", "answer": "Cleaned RDD {variables}"}
+{"query": "Final stage: ResultStage 137 (collect at IPLoM.py:673)", "answer": "Final stage: ResultStage {variables} (collect at {variables})"}
+{"query": "Got told to re-register updating block broadcast_11_piece0", "answer": "Got told to re-register updating block {variables}"}
+{"query": "Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@10.10.34.25:36782)", "answer": "Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://{variables})"}
+{"query": "ensureFreeSpace(338816) called with curMem=22983, maxMem=556038881", "answer": "ensureFreeSpace({variables}) called with curMem={variables}, maxMem={variables}"}
+{"query": "Updating epoch to 16 and clearing cache", "answer": "Updating epoch to {variables} and clearing cache"}
+{"query": "Job 123 finished: collect at IPLoM.py:674, took 0.105032 s", "answer": "Job {variables} finished: collect at {variables}, took {variables} s"}
+{"query": "Don't have map outputs for shuffle 22, fetching them", "answer": "Don't have map outputs for shuffle {variables}, fetching them"}

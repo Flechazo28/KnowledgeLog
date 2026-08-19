@@ -1,0 +1,8 @@
+{"query": "display startup", "answer": "display startup"}
+{"query": "====== Start Process ======", "answer": "====== Start Process ======"}
+{"query": "patching args=", "answer": "patching args={variables}"}
+{"query": "display clock", "answer": "display clock"}
+{"query": "display patch verbose", "answer": "display patch verbose"}
+{"query": "--------precondition:end--------", "answer": "--------precondition:end--------"}
+{"query": "==================== Start execute CPTS test ======================", "answer": "==================== Start execute CPTS test ======================"}
+{"query": "please set `CPTS.masters.hostnames` and `CPTS.slaves.hostnames` manually", "answer": "please set {variables} and {variables} manually"}

@@ -1,0 +1,853 @@
+{
+  "summary": {
+    "current": {
+      "correct": 0,
+      "total": 0,
+      "per_case": {
+        "missing_account": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        },
+        "named_invalid_account": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        },
+        "ordinary_account": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        },
+        "accepted_account": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        },
+        "fixed_auth_result": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        }
+      }
+    },
+    "generic_principal_role": {
+      "correct": 0,
+      "total": 0,
+      "per_case": {
+        "missing_account": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        },
+        "named_invalid_account": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        },
+        "ordinary_account": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        },
+        "accepted_account": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        },
+        "fixed_auth_result": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        }
+      }
+    },
+    "password_principal_span": {
+      "correct": 0,
+      "total": 0,
+      "per_case": {
+        "missing_account": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        },
+        "named_invalid_account": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        },
+        "ordinary_account": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        },
+        "accepted_account": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        },
+        "fixed_auth_result": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        }
+      }
+    },
+    "concise_authentication_grammar": {
+      "correct": 0,
+      "total": 0,
+      "per_case": {
+        "missing_account": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        },
+        "named_invalid_account": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        },
+        "ordinary_account": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        },
+        "accepted_account": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        },
+        "fixed_auth_result": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        }
+      }
+    },
+    "strict_authentication_precedence": {
+      "correct": 0,
+      "total": 0,
+      "per_case": {
+        "missing_account": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        },
+        "named_invalid_account": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        },
+        "ordinary_account": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        },
+        "accepted_account": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        },
+        "fixed_auth_result": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        }
+      }
+    },
+    "unresolved_principal_value": {
+      "correct": 0,
+      "total": 0,
+      "per_case": {
+        "missing_account": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        },
+        "named_invalid_account": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        },
+        "ordinary_account": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        },
+        "accepted_account": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        },
+        "fixed_auth_result": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        }
+      }
+    },
+    "explicit_authentication_boundary": {
+      "correct": 0,
+      "total": 0,
+      "per_case": {
+        "missing_account": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        },
+        "named_invalid_account": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        },
+        "ordinary_account": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        },
+        "accepted_account": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        },
+        "fixed_auth_result": {
+          "correct": 0,
+          "total": 0,
+          "templates": {}
+        }
+      }
+    },
+    "no_phantom_account_placeholder": {
+      "correct": 4,
+      "total": 13,
+      "per_case": {
+        "missing_account": {
+          "correct": 0,
+          "total": 5,
+          "templates": {
+            "Failed password for invalid user from <*> port <*> ssh2": 5
+          }
+        },
+        "named_invalid_account": {
+          "correct": 0,
+          "total": 2,
+          "templates": {
+            "Failed password for invalid user webmaster from <*> port <*> ssh2": 2
+          }
+        },
+        "ordinary_account": {
+          "correct": 2,
+          "total": 2,
+          "templates": {
+            "Failed password for <*> from <*> port <*> ssh2": 2
+          }
+        },
+        "accepted_account": {
+          "correct": 2,
+          "total": 2,
+          "templates": {
+            "Accepted password for <*> from <*> port <*> ssh2": 2
+          }
+        },
+        "fixed_auth_result": {
+          "correct": 0,
+          "total": 2,
+          "templates": {
+            "pam_unix(sshd:auth): check pass; user <*>": 2
+          }
+        }
+      }
+    },
+    "existing_principal_span": {
+      "correct": 4,
+      "total": 13,
+      "per_case": {
+        "missing_account": {
+          "correct": 0,
+          "total": 5,
+          "templates": {
+            "Failed password for invalid user from <*> port <*> ssh2": 5
+          }
+        },
+        "named_invalid_account": {
+          "correct": 0,
+          "total": 2,
+          "templates": {
+            "Failed password for invalid user webmaster from <*> port <*> ssh2": 2
+          }
+        },
+        "ordinary_account": {
+          "correct": 2,
+          "total": 2,
+          "templates": {
+            "Failed password for <*> from <*> port <*> ssh2": 2
+          }
+        },
+        "accepted_account": {
+          "correct": 2,
+          "total": 2,
+          "templates": {
+            "Accepted password for <*> from <*> port <*> ssh2": 2
+          }
+        },
+        "fixed_auth_result": {
+          "correct": 0,
+          "total": 2,
+          "templates": {
+            "pam_unix(sshd:auth): check pass; user <*>": 2
+          }
+        }
+      }
+    },
+    "explicit_boundary_counterexample": {
+      "correct": 6,
+      "total": 13,
+      "per_case": {
+        "missing_account": {
+          "correct": 0,
+          "total": 5,
+          "templates": {
+            "Failed password for invalid user from <*> port <*> ssh2": 5
+          }
+        },
+        "named_invalid_account": {
+          "correct": 2,
+          "total": 2,
+          "templates": {
+            "Failed password for invalid user <*> from <*> port <*> ssh2": 2
+          }
+        },
+        "ordinary_account": {
+          "correct": 2,
+          "total": 2,
+          "templates": {
+            "Failed password for <*> from <*> port <*> ssh2": 2
+          }
+        },
+        "accepted_account": {
+          "correct": 2,
+          "total": 2,
+          "templates": {
+            "Accepted password for <*> from <*> port <*> ssh2": 2
+          }
+        },
+        "fixed_auth_result": {
+          "correct": 0,
+          "total": 2,
+          "templates": {
+            "pam_unix(<*>): check pass; user unknown": 2
+          }
+        }
+      }
+    }
+  },
+  "records": [
+    {
+      "variant": "no_phantom_account_placeholder",
+      "case_id": "missing_account",
+      "log": "Failed password for invalid user from 103.204.177.144 port 2223 ssh2",
+      "preprocessed_log": "Failed password for invalid user from {variables} port 2223 ssh2",
+      "expected": "Failed password for <*> from <*> port <*> ssh2",
+      "account_rule": "Never create {variables} for a token that is absent from the original log. In a password-authentication event, abstract the existing text that occupies the principal field between 'for' and 'from'. If the field contains only 'invalid user' and no account identity, replace that complete existing phrase with {variables}; do not preserve it and append an empty placeholder. If an account follows 'invalid user', preserve the qualifier and abstract the account.",
+      "raw_response": "Log template: `Failed password for invalid user from {variables} port {variables} ssh2`",
+      "final_template": "Failed password for invalid user from <*> port <*> ssh2",
+      "valid": true,
+      "correct": false,
+      "repetition": 1
+    },
+    {
+      "variant": "no_phantom_account_placeholder",
+      "case_id": "missing_account",
+      "log": "Failed password for invalid user from 103.204.177.144 port 2223 ssh2",
+      "preprocessed_log": "Failed password for invalid user from {variables} port 2223 ssh2",
+      "expected": "Failed password for <*> from <*> port <*> ssh2",
+      "account_rule": "Never create {variables} for a token that is absent from the original log. In a password-authentication event, abstract the existing text that occupies the principal field between 'for' and 'from'. If the field contains only 'invalid user' and no account identity, replace that complete existing phrase with {variables}; do not preserve it and append an empty placeholder. If an account follows 'invalid user', preserve the qualifier and abstract the account.",
+      "raw_response": "Log template: `Failed password for invalid user from {variables} port {variables} ssh2`",
+      "final_template": "Failed password for invalid user from <*> port <*> ssh2",
+      "valid": true,
+      "correct": false,
+      "repetition": 2
+    },
+    {
+      "variant": "no_phantom_account_placeholder",
+      "case_id": "missing_account",
+      "log": "Failed password for invalid user from 103.204.177.144 port 2223 ssh2",
+      "preprocessed_log": "Failed password for invalid user from {variables} port 2223 ssh2",
+      "expected": "Failed password for <*> from <*> port <*> ssh2",
+      "account_rule": "Never create {variables} for a token that is absent from the original log. In a password-authentication event, abstract the existing text that occupies the principal field between 'for' and 'from'. If the field contains only 'invalid user' and no account identity, replace that complete existing phrase with {variables}; do not preserve it and append an empty placeholder. If an account follows 'invalid user', preserve the qualifier and abstract the account.",
+      "raw_response": "Log template: `Failed password for invalid user from {variables} port {variables} ssh2`",
+      "final_template": "Failed password for invalid user from <*> port <*> ssh2",
+      "valid": true,
+      "correct": false,
+      "repetition": 3
+    },
+    {
+      "variant": "no_phantom_account_placeholder",
+      "case_id": "missing_account",
+      "log": "Failed password for invalid user from 103.204.177.144 port 2223 ssh2",
+      "preprocessed_log": "Failed password for invalid user from {variables} port 2223 ssh2",
+      "expected": "Failed password for <*> from <*> port <*> ssh2",
+      "account_rule": "Never create {variables} for a token that is absent from the original log. In a password-authentication event, abstract the existing text that occupies the principal field between 'for' and 'from'. If the field contains only 'invalid user' and no account identity, replace that complete existing phrase with {variables}; do not preserve it and append an empty placeholder. If an account follows 'invalid user', preserve the qualifier and abstract the account.",
+      "raw_response": "Log template: `Failed password for invalid user from {variables} port {variables} ssh2`",
+      "final_template": "Failed password for invalid user from <*> port <*> ssh2",
+      "valid": true,
+      "correct": false,
+      "repetition": 4
+    },
+    {
+      "variant": "no_phantom_account_placeholder",
+      "case_id": "missing_account",
+      "log": "Failed password for invalid user from 103.204.177.144 port 2223 ssh2",
+      "preprocessed_log": "Failed password for invalid user from {variables} port 2223 ssh2",
+      "expected": "Failed password for <*> from <*> port <*> ssh2",
+      "account_rule": "Never create {variables} for a token that is absent from the original log. In a password-authentication event, abstract the existing text that occupies the principal field between 'for' and 'from'. If the field contains only 'invalid user' and no account identity, replace that complete existing phrase with {variables}; do not preserve it and append an empty placeholder. If an account follows 'invalid user', preserve the qualifier and abstract the account.",
+      "raw_response": "Log template: `Failed password for invalid user from {variables} port {variables} ssh2`",
+      "final_template": "Failed password for invalid user from <*> port <*> ssh2",
+      "valid": true,
+      "correct": false,
+      "repetition": 5
+    },
+    {
+      "variant": "no_phantom_account_placeholder",
+      "case_id": "named_invalid_account",
+      "log": "Failed password for invalid user webmaster from 173.234.31.186 port 38926 ssh2",
+      "preprocessed_log": "Failed password for invalid user webmaster from {variables} port 38926 ssh2",
+      "expected": "Failed password for invalid user <*> from <*> port <*> ssh2",
+      "account_rule": "Never create {variables} for a token that is absent from the original log. In a password-authentication event, abstract the existing text that occupies the principal field between 'for' and 'from'. If the field contains only 'invalid user' and no account identity, replace that complete existing phrase with {variables}; do not preserve it and append an empty placeholder. If an account follows 'invalid user', preserve the qualifier and abstract the account.",
+      "raw_response": "Log template: `Failed password for invalid user webmaster from {variables} port {variables} ssh2`",
+      "final_template": "Failed password for invalid user webmaster from <*> port <*> ssh2",
+      "valid": true,
+      "correct": false,
+      "repetition": 1
+    },
+    {
+      "variant": "no_phantom_account_placeholder",
+      "case_id": "named_invalid_account",
+      "log": "Failed password for invalid user webmaster from 173.234.31.186 port 38926 ssh2",
+      "preprocessed_log": "Failed password for invalid user webmaster from {variables} port 38926 ssh2",
+      "expected": "Failed password for invalid user <*> from <*> port <*> ssh2",
+      "account_rule": "Never create {variables} for a token that is absent from the original log. In a password-authentication event, abstract the existing text that occupies the principal field between 'for' and 'from'. If the field contains only 'invalid user' and no account identity, replace that complete existing phrase with {variables}; do not preserve it and append an empty placeholder. If an account follows 'invalid user', preserve the qualifier and abstract the account.",
+      "raw_response": "Log template: `Failed password for invalid user webmaster from {variables} port {variables} ssh2`",
+      "final_template": "Failed password for invalid user webmaster from <*> port <*> ssh2",
+      "valid": true,
+      "correct": false,
+      "repetition": 2
+    },
+    {
+      "variant": "no_phantom_account_placeholder",
+      "case_id": "ordinary_account",
+      "log": "Failed password for root from 5.36.59.76 port 42393 ssh2",
+      "preprocessed_log": "Failed password for {variables} from {variables} port 42393 ssh2",
+      "expected": "Failed password for <*> from <*> port <*> ssh2",
+      "account_rule": "Never create {variables} for a token that is absent from the original log. In a password-authentication event, abstract the existing text that occupies the principal field between 'for' and 'from'. If the field contains only 'invalid user' and no account identity, replace that complete existing phrase with {variables}; do not preserve it and append an empty placeholder. If an account follows 'invalid user', preserve the qualifier and abstract the account.",
+      "raw_response": "Log template: `Failed password for {variables} from {variables} port {variables} ssh2`",
+      "final_template": "Failed password for <*> from <*> port <*> ssh2",
+      "valid": true,
+      "correct": true,
+      "repetition": 1
+    },
+    {
+      "variant": "no_phantom_account_placeholder",
+      "case_id": "ordinary_account",
+      "log": "Failed password for root from 5.36.59.76 port 42393 ssh2",
+      "preprocessed_log": "Failed password for {variables} from {variables} port 42393 ssh2",
+      "expected": "Failed password for <*> from <*> port <*> ssh2",
+      "account_rule": "Never create {variables} for a token that is absent from the original log. In a password-authentication event, abstract the existing text that occupies the principal field between 'for' and 'from'. If the field contains only 'invalid user' and no account identity, replace that complete existing phrase with {variables}; do not preserve it and append an empty placeholder. If an account follows 'invalid user', preserve the qualifier and abstract the account.",
+      "raw_response": "Log template: `Failed password for {variables} from {variables} port {variables} ssh2`",
+      "final_template": "Failed password for <*> from <*> port <*> ssh2",
+      "valid": true,
+      "correct": true,
+      "repetition": 2
+    },
+    {
+      "variant": "no_phantom_account_placeholder",
+      "case_id": "accepted_account",
+      "log": "Accepted password for fztu from 119.137.62.142 port 49116 ssh2",
+      "preprocessed_log": "Accepted password for fztu from {variables} port 49116 ssh2",
+      "expected": "Accepted password for <*> from <*> port <*> ssh2",
+      "account_rule": "Never create {variables} for a token that is absent from the original log. In a password-authentication event, abstract the existing text that occupies the principal field between 'for' and 'from'. If the field contains only 'invalid user' and no account identity, replace that complete existing phrase with {variables}; do not preserve it and append an empty placeholder. If an account follows 'invalid user', preserve the qualifier and abstract the account.",
+      "raw_response": "Log template: `Accepted password for {variables} from {variables} port {variables} ssh2`",
+      "final_template": "Accepted password for <*> from <*> port <*> ssh2",
+      "valid": true,
+      "correct": true,
+      "repetition": 1
+    },
+    {
+      "variant": "no_phantom_account_placeholder",
+      "case_id": "accepted_account",
+      "log": "Accepted password for fztu from 119.137.62.142 port 49116 ssh2",
+      "preprocessed_log": "Accepted password for fztu from {variables} port 49116 ssh2",
+      "expected": "Accepted password for <*> from <*> port <*> ssh2",
+      "account_rule": "Never create {variables} for a token that is absent from the original log. In a password-authentication event, abstract the existing text that occupies the principal field between 'for' and 'from'. If the field contains only 'invalid user' and no account identity, replace that complete existing phrase with {variables}; do not preserve it and append an empty placeholder. If an account follows 'invalid user', preserve the qualifier and abstract the account.",
+      "raw_response": "Log template: `Accepted password for {variables} from {variables} port {variables} ssh2`",
+      "final_template": "Accepted password for <*> from <*> port <*> ssh2",
+      "valid": true,
+      "correct": true,
+      "repetition": 2
+    },
+    {
+      "variant": "no_phantom_account_placeholder",
+      "case_id": "fixed_auth_result",
+      "log": "pam_unix(sshd:auth): check pass; user unknown",
+      "preprocessed_log": "pam_unix(sshd:auth): check pass; user unknown",
+      "expected": "pam_unix(sshd:auth): check pass; user unknown",
+      "account_rule": "Never create {variables} for a token that is absent from the original log. In a password-authentication event, abstract the existing text that occupies the principal field between 'for' and 'from'. If the field contains only 'invalid user' and no account identity, replace that complete existing phrase with {variables}; do not preserve it and append an empty placeholder. If an account follows 'invalid user', preserve the qualifier and abstract the account.",
+      "raw_response": "Log template: `pam_unix(sshd:auth): check pass; user {variables}`",
+      "final_template": "pam_unix(sshd:auth): check pass; user <*>",
+      "valid": true,
+      "correct": false,
+      "repetition": 1
+    },
+    {
+      "variant": "no_phantom_account_placeholder",
+      "case_id": "fixed_auth_result",
+      "log": "pam_unix(sshd:auth): check pass; user unknown",
+      "preprocessed_log": "pam_unix(sshd:auth): check pass; user unknown",
+      "expected": "pam_unix(sshd:auth): check pass; user unknown",
+      "account_rule": "Never create {variables} for a token that is absent from the original log. In a password-authentication event, abstract the existing text that occupies the principal field between 'for' and 'from'. If the field contains only 'invalid user' and no account identity, replace that complete existing phrase with {variables}; do not preserve it and append an empty placeholder. If an account follows 'invalid user', preserve the qualifier and abstract the account.",
+      "raw_response": "Log template: `pam_unix(sshd:auth): check pass; user {variables}`",
+      "final_template": "pam_unix(sshd:auth): check pass; user <*>",
+      "valid": true,
+      "correct": false,
+      "repetition": 2
+    },
+    {
+      "variant": "existing_principal_span",
+      "case_id": "missing_account",
+      "log": "Failed password for invalid user from 103.204.177.144 port 2223 ssh2",
+      "preprocessed_log": "Failed password for invalid user from {variables} port 2223 ssh2",
+      "expected": "Failed password for <*> from <*> port <*> ssh2",
+      "account_rule": "A placeholder must replace existing log text and must never represent a missing token. For password authentication, the existing span between 'for' and 'from' is the principal field. Abstract that complete span when it has no concrete account identity; otherwise abstract the identity and preserve any fixed qualifier that precedes it.",
+      "raw_response": "Log template: `Failed password for invalid user from {variables} port {variables} ssh2`",
+      "final_template": "Failed password for invalid user from <*> port <*> ssh2",
+      "valid": true,
+      "correct": false,
+      "repetition": 1
+    },
+    {
+      "variant": "existing_principal_span",
+      "case_id": "missing_account",
+      "log": "Failed password for invalid user from 103.204.177.144 port 2223 ssh2",
+      "preprocessed_log": "Failed password for invalid user from {variables} port 2223 ssh2",
+      "expected": "Failed password for <*> from <*> port <*> ssh2",
+      "account_rule": "A placeholder must replace existing log text and must never represent a missing token. For password authentication, the existing span between 'for' and 'from' is the principal field. Abstract that complete span when it has no concrete account identity; otherwise abstract the identity and preserve any fixed qualifier that precedes it.",
+      "raw_response": "Log template: `Failed password for invalid user from {variables} port {variables} ssh2`",
+      "final_template": "Failed password for invalid user from <*> port <*> ssh2",
+      "valid": true,
+      "correct": false,
+      "repetition": 2
+    },
+    {
+      "variant": "existing_principal_span",
+      "case_id": "missing_account",
+      "log": "Failed password for invalid user from 103.204.177.144 port 2223 ssh2",
+      "preprocessed_log": "Failed password for invalid user from {variables} port 2223 ssh2",
+      "expected": "Failed password for <*> from <*> port <*> ssh2",
+      "account_rule": "A placeholder must replace existing log text and must never represent a missing token. For password authentication, the existing span between 'for' and 'from' is the principal field. Abstract that complete span when it has no concrete account identity; otherwise abstract the identity and preserve any fixed qualifier that precedes it.",
+      "raw_response": "Log template: `Failed password for invalid user from {variables} port {variables} ssh2`",
+      "final_template": "Failed password for invalid user from <*> port <*> ssh2",
+      "valid": true,
+      "correct": false,
+      "repetition": 3
+    },
+    {
+      "variant": "existing_principal_span",
+      "case_id": "missing_account",
+      "log": "Failed password for invalid user from 103.204.177.144 port 2223 ssh2",
+      "preprocessed_log": "Failed password for invalid user from {variables} port 2223 ssh2",
+      "expected": "Failed password for <*> from <*> port <*> ssh2",
+      "account_rule": "A placeholder must replace existing log text and must never represent a missing token. For password authentication, the existing span between 'for' and 'from' is the principal field. Abstract that complete span when it has no concrete account identity; otherwise abstract the identity and preserve any fixed qualifier that precedes it.",
+      "raw_response": "Log template: `Failed password for invalid user from {variables} port {variables} ssh2`",
+      "final_template": "Failed password for invalid user from <*> port <*> ssh2",
+      "valid": true,
+      "correct": false,
+      "repetition": 4
+    },
+    {
+      "variant": "existing_principal_span",
+      "case_id": "missing_account",
+      "log": "Failed password for invalid user from 103.204.177.144 port 2223 ssh2",
+      "preprocessed_log": "Failed password for invalid user from {variables} port 2223 ssh2",
+      "expected": "Failed password for <*> from <*> port <*> ssh2",
+      "account_rule": "A placeholder must replace existing log text and must never represent a missing token. For password authentication, the existing span between 'for' and 'from' is the principal field. Abstract that complete span when it has no concrete account identity; otherwise abstract the identity and preserve any fixed qualifier that precedes it.",
+      "raw_response": "Log template: `Failed password for invalid user from {variables} port {variables} ssh2`",
+      "final_template": "Failed password for invalid user from <*> port <*> ssh2",
+      "valid": true,
+      "correct": false,
+      "repetition": 5
+    },
+    {
+      "variant": "existing_principal_span",
+      "case_id": "named_invalid_account",
+      "log": "Failed password for invalid user webmaster from 173.234.31.186 port 38926 ssh2",
+      "preprocessed_log": "Failed password for invalid user webmaster from {variables} port 38926 ssh2",
+      "expected": "Failed password for invalid user <*> from <*> port <*> ssh2",
+      "account_rule": "A placeholder must replace existing log text and must never represent a missing token. For password authentication, the existing span between 'for' and 'from' is the principal field. Abstract that complete span when it has no concrete account identity; otherwise abstract the identity and preserve any fixed qualifier that precedes it.",
+      "raw_response": "Log template: `Failed password for invalid user webmaster from {variables} port {variables} ssh2`",
+      "final_template": "Failed password for invalid user webmaster from <*> port <*> ssh2",
+      "valid": true,
+      "correct": false,
+      "repetition": 1
+    },
+    {
+      "variant": "existing_principal_span",
+      "case_id": "named_invalid_account",
+      "log": "Failed password for invalid user webmaster from 173.234.31.186 port 38926 ssh2",
+      "preprocessed_log": "Failed password for invalid user webmaster from {variables} port 38926 ssh2",
+      "expected": "Failed password for invalid user <*> from <*> port <*> ssh2",
+      "account_rule": "A placeholder must replace existing log text and must never represent a missing token. For password authentication, the existing span between 'for' and 'from' is the principal field. Abstract that complete span when it has no concrete account identity; otherwise abstract the identity and preserve any fixed qualifier that precedes it.",
+      "raw_response": "Log template: `Failed password for invalid user webmaster from {variables} port {variables} ssh2`",
+      "final_template": "Failed password for invalid user webmaster from <*> port <*> ssh2",
+      "valid": true,
+      "correct": false,
+      "repetition": 2
+    },
+    {
+      "variant": "existing_principal_span",
+      "case_id": "ordinary_account",
+      "log": "Failed password for root from 5.36.59.76 port 42393 ssh2",
+      "preprocessed_log": "Failed password for {variables} from {variables} port 42393 ssh2",
+      "expected": "Failed password for <*> from <*> port <*> ssh2",
+      "account_rule": "A placeholder must replace existing log text and must never represent a missing token. For password authentication, the existing span between 'for' and 'from' is the principal field. Abstract that complete span when it has no concrete account identity; otherwise abstract the identity and preserve any fixed qualifier that precedes it.",
+      "raw_response": "Log template: `Failed password for {variables} from {variables} port {variables} ssh2`",
+      "final_template": "Failed password for <*> from <*> port <*> ssh2",
+      "valid": true,
+      "correct": true,
+      "repetition": 1
+    },
+    {
+      "variant": "existing_principal_span",
+      "case_id": "ordinary_account",
+      "log": "Failed password for root from 5.36.59.76 port 42393 ssh2",
+      "preprocessed_log": "Failed password for {variables} from {variables} port 42393 ssh2",
+      "expected": "Failed password for <*> from <*> port <*> ssh2",
+      "account_rule": "A placeholder must replace existing log text and must never represent a missing token. For password authentication, the existing span between 'for' and 'from' is the principal field. Abstract that complete span when it has no concrete account identity; otherwise abstract the identity and preserve any fixed qualifier that precedes it.",
+      "raw_response": "Log template: `Failed password for {variables} from {variables} port {variables} ssh2`",
+      "final_template": "Failed password for <*> from <*> port <*> ssh2",
+      "valid": true,
+      "correct": true,
+      "repetition": 2
+    },
+    {
+      "variant": "existing_principal_span",
+      "case_id": "accepted_account",
+      "log": "Accepted password for fztu from 119.137.62.142 port 49116 ssh2",
+      "preprocessed_log": "Accepted password for fztu from {variables} port 49116 ssh2",
+      "expected": "Accepted password for <*> from <*> port <*> ssh2",
+      "account_rule": "A placeholder must replace existing log text and must never represent a missing token. For password authentication, the existing span between 'for' and 'from' is the principal field. Abstract that complete span when it has no concrete account identity; otherwise abstract the identity and preserve any fixed qualifier that precedes it.",
+      "raw_response": "Log template: `Accepted password for {variables} from {variables} port {variables} ssh2`",
+      "final_template": "Accepted password for <*> from <*> port <*> ssh2",
+      "valid": true,
+      "correct": true,
+      "repetition": 1
+    },
+    {
+      "variant": "existing_principal_span",
+      "case_id": "accepted_account",
+      "log": "Accepted password for fztu from 119.137.62.142 port 49116 ssh2",
+      "preprocessed_log": "Accepted password for fztu from {variables} port 49116 ssh2",
+      "expected": "Accepted password for <*> from <*> port <*> ssh2",
+      "account_rule": "A placeholder must replace existing log text and must never represent a missing token. For password authentication, the existing span between 'for' and 'from' is the principal field. Abstract that complete span when it has no concrete account identity; otherwise abstract the identity and preserve any fixed qualifier that precedes it.",
+      "raw_response": "Log template: `Accepted password for {variables} from {variables} port {variables} ssh2`",
+      "final_template": "Accepted password for <*> from <*> port <*> ssh2",
+      "valid": true,
+      "correct": true,
+      "repetition": 2
+    },
+    {
+      "variant": "existing_principal_span",
+      "case_id": "fixed_auth_result",
+      "log": "pam_unix(sshd:auth): check pass; user unknown",
+      "preprocessed_log": "pam_unix(sshd:auth): check pass; user unknown",
+      "expected": "pam_unix(sshd:auth): check pass; user unknown",
+      "account_rule": "A placeholder must replace existing log text and must never represent a missing token. For password authentication, the existing span between 'for' and 'from' is the principal field. Abstract that complete span when it has no concrete account identity; otherwise abstract the identity and preserve any fixed qualifier that precedes it.",
+      "raw_response": "Log template: `pam_unix(sshd:auth): check pass; user {variables}`",
+      "final_template": "pam_unix(sshd:auth): check pass; user <*>",
+      "valid": true,
+      "correct": false,
+      "repetition": 1
+    },
+    {
+      "variant": "existing_principal_span",
+      "case_id": "fixed_auth_result",
+      "log": "pam_unix(sshd:auth): check pass; user unknown",
+      "preprocessed_log": "pam_unix(sshd:auth): check pass; user unknown",
+      "expected": "pam_unix(sshd:auth): check pass; user unknown",
+      "account_rule": "A placeholder must replace existing log text and must never represent a missing token. For password authentication, the existing span between 'for' and 'from' is the principal field. Abstract that complete span when it has no concrete account identity; otherwise abstract the identity and preserve any fixed qualifier that precedes it.",
+      "raw_response": "Log template: `pam_unix(sshd:auth): check pass; user {variables}`",
+      "final_template": "pam_unix(sshd:auth): check pass; user <*>",
+      "valid": true,
+      "correct": false,
+      "repetition": 2
+    },
+    {
+      "variant": "explicit_boundary_counterexample",
+      "case_id": "missing_account",
+      "log": "Failed password for invalid user from 103.204.177.144 port 2223 ssh2",
+      "preprocessed_log": "Failed password for invalid user from {variables} port 2223 ssh2",
+      "expected": "Failed password for <*> from <*> port <*> ssh2",
+      "account_rule": "Authentication boundary rule: when the original text is 'for invalid user from', output 'for {variables} from'; never output 'for invalid user {variables} from' because no account token exists there. When the original text is 'for invalid user ACCOUNT from', preserve 'invalid user' and replace ACCOUNT with {variables}.",
+      "raw_response": "Log template: `Failed password for invalid user from {variables} port {variables} ssh2`",
+      "final_template": "Failed password for invalid user from <*> port <*> ssh2",
+      "valid": true,
+      "correct": false,
+      "repetition": 1
+    },
+    {
+      "variant": "explicit_boundary_counterexample",
+      "case_id": "missing_account",
+      "log": "Failed password for invalid user from 103.204.177.144 port 2223 ssh2",
+      "preprocessed_log": "Failed password for invalid user from {variables} port 2223 ssh2",
+      "expected": "Failed password for <*> from <*> port <*> ssh2",
+      "account_rule": "Authentication boundary rule: when the original text is 'for invalid user from', output 'for {variables} from'; never output 'for invalid user {variables} from' because no account token exists there. When the original text is 'for invalid user ACCOUNT from', preserve 'invalid user' and replace ACCOUNT with {variables}.",
+      "raw_response": "Log template: `Failed password for invalid user from {variables} port {variables} ssh2`",
+      "final_template": "Failed password for invalid user from <*> port <*> ssh2",
+      "valid": true,
+      "correct": false,
+      "repetition": 2
+    },
+    {
+      "variant": "explicit_boundary_counterexample",
+      "case_id": "missing_account",
+      "log": "Failed password for invalid user from 103.204.177.144 port 2223 ssh2",
+      "preprocessed_log": "Failed password for invalid user from {variables} port 2223 ssh2",
+      "expected": "Failed password for <*> from <*> port <*> ssh2",
+      "account_rule": "Authentication boundary rule: when the original text is 'for invalid user from', output 'for {variables} from'; never output 'for invalid user {variables} from' because no account token exists there. When the original text is 'for invalid user ACCOUNT from', preserve 'invalid user' and replace ACCOUNT with {variables}.",
+      "raw_response": "Log template: `Failed password for invalid user from {variables} port {variables} ssh2`",
+      "final_template": "Failed password for invalid user from <*> port <*> ssh2",
+      "valid": true,
+      "correct": false,
+      "repetition": 3
+    },
+    {
+      "variant": "explicit_boundary_counterexample",
+      "case_id": "missing_account",
+      "log": "Failed password for invalid user from 103.204.177.144 port 2223 ssh2",
+      "preprocessed_log": "Failed password for invalid user from {variables} port 2223 ssh2",
+      "expected": "Failed password for <*> from <*> port <*> ssh2",
+      "account_rule": "Authentication boundary rule: when the original text is 'for invalid user from', output 'for {variables} from'; never output 'for invalid user {variables} from' because no account token exists there. When the original text is 'for invalid user ACCOUNT from', preserve 'invalid user' and replace ACCOUNT with {variables}.",
+      "raw_response": "Log template: `Failed password for invalid user from {variables} port {variables} ssh2`",
+      "final_template": "Failed password for invalid user from <*> port <*> ssh2",
+      "valid": true,
+      "correct": false,
+      "repetition": 4
+    },
+    {
+      "variant": "explicit_boundary_counterexample",
+      "case_id": "missing_account",
+      "log": "Failed password for invalid user from 103.204.177.144 port 2223 ssh2",
+      "preprocessed_log": "Failed password for invalid user from {variables} port 2223 ssh2",
+      "expected": "Failed password for <*> from <*> port <*> ssh2",
+      "account_rule": "Authentication boundary rule: when the original text is 'for invalid user from', output 'for {variables} from'; never output 'for invalid user {variables} from' because no account token exists there. When the original text is 'for invalid user ACCOUNT from', preserve 'invalid user' and replace ACCOUNT with {variables}.",
+      "raw_response": "Log template: `Failed password for invalid user from {variables} port {variables} ssh2`",
+      "final_template": "Failed password for invalid user from <*> port <*> ssh2",
+      "valid": true,
+      "correct": false,
+      "repetition": 5
+    },
+    {
+      "variant": "explicit_boundary_counterexample",
+      "case_id": "named_invalid_account",
+      "log": "Failed password for invalid user webmaster from 173.234.31.186 port 38926 ssh2",
+      "preprocessed_log": "Failed password for invalid user webmaster from {variables} port 38926 ssh2",
+      "expected": "Failed password for invalid user <*> from <*> port <*> ssh2",
+      "account_rule": "Authentication boundary rule: when the original text is 'for invalid user from', output 'for {variables} from'; never output 'for invalid user {variables} from' because no account token exists there. When the original text is 'for invalid user ACCOUNT from', preserve 'invalid user' and replace ACCOUNT with {variables}.",
+      "raw_response": "Log template: `Failed password for invalid user {variables} from {variables} port {variables} ssh2`",
+      "final_template": "Failed password for invalid user <*> from <*> port <*> ssh2",
+      "valid": true,
+      "correct": true,
+      "repetition": 1
+    },
+    {
+      "variant": "explicit_boundary_counterexample",
+      "case_id": "named_invalid_account",
+      "log": "Failed password for invalid user webmaster from 173.234.31.186 port 38926 ssh2",
+      "preprocessed_log": "Failed password for invalid user webmaster from {variables} port 38926 ssh2",
+      "expected": "Failed password for invalid user <*> from <*> port <*> ssh2",
+      "account_rule": "Authentication boundary rule: when the original text is 'for invalid user from', output 'for {variables} from'; never output 'for invalid user {variables} from' because no account token exists there. When the original text is 'for invalid user ACCOUNT from', preserve 'invalid user' and replace ACCOUNT with {variables}.",
+      "raw_response": "Log template: `Failed password for invalid user {variables} from {variables} port {variables} ssh2`",
+      "final_template": "Failed password for invalid user <*> from <*> port <*> ssh2",
+      "valid": true,
+      "correct": true,
+      "repetition": 2
+    },
+    {
+      "variant": "explicit_boundary_counterexample",
+      "case_id": "ordinary_account",
+      "log": "Failed password for root from 5.36.59.76 port 42393 ssh2",
+      "preprocessed_log": "Failed password for {variables} from {variables} port 42393 ssh2",
+      "expected": "Failed password for <*> from <*> port <*> ssh2",
+      "account_rule": "Authentication boundary rule: when the original text is 'for invalid user from', output 'for {variables} from'; never output 'for invalid user {variables} from' because no account token exists there. When the original text is 'for invalid user ACCOUNT from', preserve 'invalid user' and replace ACCOUNT with {variables}.",
+      "raw_response": "Log template: `Failed password for {variables} from {variables} port {variables} ssh2`",
+      "final_template": "Failed password for <*> from <*> port <*> ssh2",
+      "valid": true,
+      "correct": true,
+      "repetition": 1
+    },
+    {
+      "variant": "explicit_boundary_counterexample",
+      "case_id": "ordinary_account",
+      "log": "Failed password for root from 5.36.59.76 port 42393 ssh2",
+      "preprocessed_log": "Failed password for {variables} from {variables} port 42393 ssh2",
+      "expected": "Failed password for <*> from <*> port <*> ssh2",
+      "account_rule": "Authentication boundary rule: when the original text is 'for invalid user from', output 'for {variables} from'; never output 'for invalid user {variables} from' because no account token exists there. When the original text is 'for invalid user ACCOUNT from', preserve 'invalid user' and replace ACCOUNT with {variables}.",
+      "raw_response": "Log template: `Failed password for {variables} from {variables} port {variables} ssh2`",
+      "final_template": "Failed password for <*> from <*> port <*> ssh2",
+      "valid": true,
+      "correct": true,
+      "repetition": 2
+    },
+    {
+      "variant": "explicit_boundary_counterexample",
+      "case_id": "accepted_account",
+      "log": "Accepted password for fztu from 119.137.62.142 port 49116 ssh2",
+      "preprocessed_log": "Accepted password for fztu from {variables} port 49116 ssh2",
+      "expected": "Accepted password for <*> from <*> port <*> ssh2",
+      "account_rule": "Authentication boundary rule: when the original text is 'for invalid user from', output 'for {variables} from'; never output 'for invalid user {variables} from' because no account token exists there. When the original text is 'for invalid user ACCOUNT from', preserve 'invalid user' and replace ACCOUNT with {variables}.",
+      "raw_response": "Log template: `Accepted password for {variables} from {variables} port {variables} ssh2`",
+      "final_template": "Accepted password for <*> from <*> port <*> ssh2",
+      "valid": true,
+      "correct": true,
+      "repetition": 1
+    },
+    {
+      "variant": "explicit_boundary_counterexample",
+      "case_id": "accepted_account",
+      "log": "Accepted password for fztu from 119.137.62.142 port 49116 ssh2",
+      "preprocessed_log": "Accepted password for fztu from {variables} port 49116 ssh2",
+      "expected": "Accepted password for <*> from <*> port <*> ssh2",
+      "account_rule": "Authentication boundary rule: when the original text is 'for invalid user from', output 'for {variables} from'; never output 'for invalid user {variables} from' because no account token exists there. When the original text is 'for invalid user ACCOUNT from', preserve 'invalid user' and replace ACCOUNT with {variables}.",
+      "raw_response": "Log template: `Accepted password for {variables} from {variables} port {variables} ssh2`",
+      "final_template": "Accepted password for <*> from <*> port <*> ssh2",
+      "valid": true,
+      "correct": true,
+      "repetition": 2
+    },
+    {
+      "variant": "explicit_boundary_counterexample",
+      "case_id": "fixed_auth_result",
+      "log": "pam_unix(sshd:auth): check pass; user unknown",
+      "preprocessed_log": "pam_unix(sshd:auth): check pass; user unknown",
+      "expected": "pam_unix(sshd:auth): check pass; user unknown",
+      "account_rule": "Authentication boundary rule: when the original text is 'for invalid user from', output 'for {variables} from'; never output 'for invalid user {variables} from' because no account token exists there. When the original text is 'for invalid user ACCOUNT from', preserve 'invalid user' and replace ACCOUNT with {variables}.",
+      "raw_response": "Log template: `pam_unix({variables}:{variables}): check pass; user unknown`",
+      "final_template": "pam_unix(<*>): check pass; user unknown",
+      "valid": true,
+      "correct": false,
+      "repetition": 1
+    },
+    {
+      "variant": "explicit_boundary_counterexample",
+      "case_id": "fixed_auth_result",
+      "log": "pam_unix(sshd:auth): check pass; user unknown",
+      "preprocessed_log": "pam_unix(sshd:auth): check pass; user unknown",
+      "expected": "pam_unix(sshd:auth): check pass; user unknown",
+      "account_rule": "Authentication boundary rule: when the original text is 'for invalid user from', output 'for {variables} from'; never output 'for invalid user {variables} from' because no account token exists there. When the original text is 'for invalid user ACCOUNT from', preserve 'invalid user' and replace ACCOUNT with {variables}.",
+      "raw_response": "Log template: `pam_unix({variables}:{variables}): check pass; user unknown`",
+      "final_template": "pam_unix(<*>): check pass; user unknown",
+      "valid": true,
+      "correct": false,
+      "repetition": 2
+    }
+  ]
+}
