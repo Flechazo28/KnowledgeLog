@@ -4,11 +4,7 @@ import numpy as np
 import pandas as pd
 from datetime import datetime
 import json
-from .gpt_query import (
-    post_process_template,
-    query_template_from_gpt,
-    query_template_from_gpt_with_check,
-)
+from .gpt_query import query_template_from_gpt_with_check
 from .parsing_cache import ParsingCache
 from .post_process import correct_single_template
 from .utils import load_pickle, save_pickle, load_tuple_list, cache_to_file
@@ -113,7 +109,10 @@ class LogParser:
 
         num_query = 0
         total_line = len(self.df_log)
-        cache_step = total_line // 5
+        # Full datasets can take hours and make many remote calls. Persist at
+        # least every 10k lines so one bad API connection cannot discard an
+        # entire 20% partition of completed work.
+        cache_step = max(1, min(total_line // 5, 10_000))
         if idx + 1 < total_line:
             for log in list(self.df_log[idx:]['Content']):
                 flag = self.process_log(cache, [log], log_messages, log_templates, idx, regs_common, total_line)
@@ -139,68 +138,24 @@ class LogParser:
         print('Parsing done. [Time taken: {!s}]'.format(datetime.now() - start_time))
 
 
-    def query_ambiguity_candidate(self, log, regs_common):
-        template, generated = query_template_from_gpt(log, [], self.model)
-        if not generated:
-            return None
-
-        template, valid = post_process_template(template, regs_common, log)
-        if not valid:
-            return None
-
-        check_tree = ParsingCache()
-        check_tree.add_templates(template)
-        if check_tree.match_event(log)[0] == "NoMatch":
-            return None
-        return template
-
     def process_log(self, cache, logs, log_messages, log_templates, idx, regs_common, total_line):
         new_template = None
         for log in logs:
-            results = cache.match_event_with_ambiguity(log)
+            # Match LILAC's original cache semantics: a cache hit is final.
+            # Query the model only when the template tree returns NoMatch.
+            results = cache.match_event(log)
             if results[0] == "NoMatch":
                 print("===========================================")
                 print(f"Line-{idx}/{total_line}: No match. {log}")                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
-                new_template, normal = query_template_from_gpt_with_check(log, regs_common, [], self.model)
+                new_template, normal = query_template_from_gpt_with_check(log, regs_common, self.model)
                 # new_template = post_process_template(new_template)
                 print("queried_new_template: ", new_template)
-                template_id = cache.add_templates(
-                    new_template,
-                    normal,
-                    results[2],
-                    source_log=log,
-                )
+                template_id = cache.add_templates(new_template, normal, results[2])
                 log_messages.append((log, idx))
                 log_templates.append((template_id, idx))
                 # results = cache.match_event(log)
                 # log_templates.append((results[log][0], idx))
                 # print(results)
-                print("===========================================")
-                return True
-            elif results[3]:
-                cached_template, cached_id = results[:2]
-                parameter_lengths = results[4]
-                print("===========================================")
-                print(f"Line-{idx}/{total_line}: ambiguous cache match. {log}")
-                print("cached_template: ", cached_template)
-                new_template = self.query_ambiguity_candidate(log, regs_common)
-                cache.mark_ambiguity_reviewed(cached_id, parameter_lengths)
-
-                if (
-                    new_template is not None
-                    and cache.is_more_specific(new_template, cached_template)
-                ):
-                    template_id = cache.add_templates(
-                        new_template,
-                        source_log=log,
-                    )
-                    print("accepted_specific_template: ", new_template)
-                else:
-                    template_id = cached_id
-                    print("keeping_cached_template: ", cached_template)
-
-                log_messages.append((log, idx))
-                log_templates.append((template_id, idx))
                 print("===========================================")
                 return True
             else:

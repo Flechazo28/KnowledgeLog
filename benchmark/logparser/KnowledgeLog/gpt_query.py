@@ -1,10 +1,14 @@
 import openai
+import json
 import os
 import re
+import signal
 import time
 import string
+from contextlib import contextmanager
 from dataclasses import dataclass
-from typing import Callable, List, Optional, Sequence, Tuple
+from pathlib import Path
+from typing import List, Optional, Sequence, Tuple
 
 from .parsing_cache import ParsingCache
 from .post_process import correct_single_template
@@ -22,6 +26,53 @@ DEFAULT_MAX_TOKENS = 512
 DEFAULT_REQUEST_TIMEOUT = 300
 DEFAULT_RETRY_TIMES = 3
 DEFAULT_RETRY_SLEEP_SECONDS = 2
+
+
+class APICallWallClockTimeout(TimeoutError):
+    """Raised when an API attempt exceeds its wall-clock deadline."""
+
+
+@contextmanager
+def api_call_wall_clock_timeout(seconds: int):
+    """Enforce a real deadline even if requests/urllib3 stops honoring timeout.
+
+    KnowledgeLog performs model calls in the main thread of its parser child on
+    Linux, where SIGALRM can safely interrupt a stuck Python/network code path.
+    Keep a no-op fallback for platforms or threads without setitimer support.
+    """
+    if not hasattr(signal, "setitimer"):
+        yield
+        return
+
+    def handle_timeout(_signum, _frame):
+        raise APICallWallClockTimeout(
+            f"API call exceeded the {seconds}-second wall-clock deadline"
+        )
+
+    previous_handler = signal.getsignal(signal.SIGALRM)
+    signal.signal(signal.SIGALRM, handle_timeout)
+    previous_timer = signal.setitimer(signal.ITIMER_REAL, seconds)
+    try:
+        yield
+    finally:
+        signal.setitimer(signal.ITIMER_REAL, 0)
+        signal.signal(signal.SIGALRM, previous_handler)
+        if previous_timer[0] > 0:
+            signal.setitimer(signal.ITIMER_REAL, *previous_timer)
+
+
+def reset_openai_http_session():
+    """Discard OpenAI 0.x's thread-local requests session before each attempt."""
+    try:
+        from openai.api_requestor import _thread_context
+    except ImportError:
+        return
+    session = getattr(_thread_context, "session", None)
+    if session is not None:
+        session.close()
+        delattr(_thread_context, "session")
+    if hasattr(_thread_context, "session_create_time"):
+        delattr(_thread_context, "session_create_time")
 
 
 def env_list(name: str, default: Sequence[str]) -> Tuple[str, ...]:
@@ -78,59 +129,41 @@ def configure_local_api_no_proxy(api_base: str):
         os.environ[env_name] = ",".join(entries)
 
 
-openai.api_base, openai.api_key = get_openai_key("../../openai_key.txt")
-configure_local_api_no_proxy(openai.api_base)
-print(openai.api_base)
-print("OpenAI key loaded.")
-
-
 # =============================================================================
 # Curated prompt-level domain knowledge
 # =============================================================================
 
-CURATED_PROMPT_RULES = [
-    # Dynamic span boundaries and field structure.
-    "Replace a complete URL, URI, or HTTP request target with one {variables}, including its scheme, path, query, and fragment; do not retain internal prefixes.",
-    "Abstract every complete hostname:port or IP:port endpoint as one {variables} field wherever it appears; do not split or partially preserve it.",
-    "Abstract a numeric port only when its network role is explicit from a key or phrase such as port, listening on, or connected to; do not treat every short integer as a port.",
-    "Abstract a complete hostname as {variables} only when an explicit network key or phrase identifies it as a host, hostname, node, peer, source, destination, or endpoint. Do not classify an arbitrary standalone word as a hostname.",
-    "Replace a complete filesystem path with one {variables}, including its leading or trailing slash, directory prefix, file name, and extension; do not retain internal path fragments.",
-    "Preserve a package, class, module, method, file, operating-system, driver, protocol, service, component, task, or event-handler name when it is part of fixed event wording. Treat a process name paired with a process ID or introduced as the killed, started, stopped, or running process as a runtime process field and abstract it as {variables}. Abstract other complete names only when they are values of explicit fields such as class=, service:, or Function=.",
-    "Abstract a symbol-rich runtime identifier as one {variables} field when separators such as @, -, _, ::, or dots are internal to that identifier rather than template punctuation.",
-    "Abstract a complete version number, including all numeric parts, as one {variables}. Preserve an attached product name and delimiter, as in Apache/{variables}; however, in a quoted HTTP request line, replace the complete protocol/version token such as HTTP/1.1 with one {variables}. Preserve protocol names without a version, such as SOCKS5.",
-    "Abstract a process ID only when an explicit PID or process-ID field identifies it; preserve the surrounding key and punctuation.",
-    "Abstract task-attempt, stage, executor, and RPC identifiers as {variables}; preserve their fixed role names and delimiters.",
-    "Abstract an error or status code as {variables} when it appears in an explicit code or status field; preserve the surrounding event phrase.",
-    "Abstract an IRQ number as {variables} when it follows an IRQ label or interrupt-related phrase.",
-    "Abstract a device, disk, or network-interface identifier when it names the runtime object participating in an event, including values such as en0, eth0, wlan0, or sda. Preserve a device or interface name only when it is explicitly part of fixed event wording; repeated occurrence alone does not make it fixed.",
-    "Preserve a fixed range delimiter such as '-' or 'to' and replace its variable endpoints separately with {variables}. Replace the complete range with one {variables} only when the entire range is one varying field.",
-    "Replace a packed numeric sequence or variable-length repeated list with one {variables}. For a short list of separate named items, replace each variable item separately and preserve the separators; for example, users: yarn,curi becomes users: {variables},{variables}.",
-    "In a key-value field, preserve a fixed key and the '=' or ':' delimiter and replace only its variable value with {variables}. If the key also varies, replace the key and value separately while preserving the delimiter.",
-    "In an equality, comparison, ratio, or mapping expression, preserve the operator and abstract only the variable operands.",
-    "Abstract an account identifier as {variables} when the context explicitly denotes a user, login, account, authentication identity, or principal; always abstract an account identity after 'for' or 'user' in password or authentication messages, such as 'root'.",
-    "Abstract a state, lifecycle stage, or boolean only when it occupies a variable state or status field; preserve fixed action and event wording.",
-    "Abstract a timezone name or offset as {variables} when it forms the timezone field of a timestamp.",
-    "Abstract a flag, status, or directive value only when it follows an explicit field name; preserve the field name, delimiter, and fixed protocol or directive name.",
-    "Never add, delete, move, or rewrite punctuation from the original log. Preserve brackets, parentheses, and quotation marks when they are fixed template syntax; include them in {variables} only when the complete wrapped text is one variable field.",
-    # Source-supported constants and precedence.
-    "Preserve the software-agent name GoogleSoftwareUpdateAgent as literal template text.",
-    "Preserve NSMutableURLRequest as a literal class name in the template.",
-    "Preserve the device marker parport0 as literal template text in the observed event family.",
-    "Preserve the method name updateFinish as literal template text.",
-    "Preserve the protocol name SOCKS5 as literal template text.",
-    "Preserve the fixed event phrase \"Out of memory\" as literal template text.",
-    "Preserve the fixed error phrase \"Attempt to process a enum when a union was expected.\" exactly as written.",
-    "Preserve the key token lvl in a field such as [lvl={variables}]; abstract only its value.",
-    "By default, preserve GET as a fixed HTTP method token. Replace it with {variables} only when it occupies a varying method field, such as a malformed-request template.",
-    "Preserve the fixed class or component names KSAgentUploader and KSUpdateEngine as literal template text.",
-    "Preserve preauth as a literal authentication-stage token.",
-    "Preserve main as a literal entry-point function name when it denotes the fixed function in the event template.",
-    "Preserve the fixed phrase \"Bye Bye\" as literal template text.",
-    "Preserve the fixed event outcome phrase \"disconnected by user\" as literal template text.",
-    "Replace a complete slash-prefixed filesystem or topology path value with one {variables}; do not preserve any internal path segment as fixed text.",
-    "For every field named size, estimated size, or free, replace the complete number plus storage unit B, KB, MB, GB, or TB with one {variables}; output 'size: {variables}' and never 'size: {variables} MB'. Keep a fixed grammatical unit in phrases such as '{variables} bytes sent'.",
-    "A bracketed file:line marker immediately before an event, such as [module.c:123]:, is one source-location variable. Replace the entire text inside the brackets with one {variables}.",
-]
+DOMAIN_KNOWLEDGE_PATH = Path(__file__).with_name("domain_knowledge.json")
+
+def load_domain_knowledge(path: Path = DOMAIN_KNOWLEDGE_PATH):
+    """Load and validate data-only prompt and preprocessing knowledge."""
+    try:
+        with path.open("r", encoding="utf-8") as handle:
+            payload = json.load(handle)
+    except (OSError, json.JSONDecodeError) as exc:
+        raise RuntimeError(f"Unable to load domain knowledge from {path}: {exc}") from exc
+
+    if not isinstance(payload, dict):
+        raise ValueError("Domain knowledge must be a JSON object.")
+    expected_keys = {"prompt_rules", "preprocessing_rules"}
+    if set(payload) != expected_keys:
+        raise ValueError(
+            "Domain knowledge keys must be exactly "
+            f"{sorted(expected_keys)}; got {sorted(payload)}"
+        )
+    prompt_rules = payload["prompt_rules"]
+    preprocessing_rules = payload["preprocessing_rules"]
+    if not isinstance(prompt_rules, list) or not prompt_rules:
+        raise ValueError("prompt_rules must be a non-empty list.")
+    if not all(isinstance(rule, str) and rule.strip() for rule in prompt_rules):
+        raise ValueError("Every prompt rule must be a non-empty string.")
+    if not isinstance(preprocessing_rules, list) or not preprocessing_rules:
+        raise ValueError("preprocessing_rules must be a non-empty list.")
+    return payload
+
+
+_DOMAIN_KNOWLEDGE = load_domain_knowledge()
+CURATED_PROMPT_RULES = list(_DOMAIN_KNOWLEDGE["prompt_rules"])
 
 PROMPT_GROUPS = {"curated": CURATED_PROMPT_RULES}
 DEFAULT_ENABLED_PROMPT_GROUPS = env_list("LILAC_PROMPT_GROUPS", ("curated",))
@@ -170,315 +203,76 @@ class RegexRule:
         return re.sub(self.pattern, self.replacement, text, flags=self.flags)
 
 
-IPV4_PATTERN = (
-    r"(?:(?:25[0-5]|2[0-4]\d|1?\d?\d)\.){3}"
-    r"(?:25[0-5]|2[0-4]\d|1?\d?\d)"
-)
-PORT_PATTERN = (
-    r"(?:[1-9]\d{0,3}|[1-5]\d{4}|6[0-4]\d{3}|"
-    r"65[0-4]\d{2}|655[0-2]\d|6553[0-5])"
-)
-IPV4_PORT_ENDPOINT_PATTERN = rf"/?{IPV4_PATTERN}:{PORT_PATTERN}"
+SUPPORTED_REGEX_FLAGS = {
+    "IGNORECASE": re.IGNORECASE,
+}
+
+
+def build_preprocessing_rules(entries):
+    """Construct RegexRule objects from the minimal JSON representation."""
+    rules = []
+    names = set()
+    required_keys = {"name", "pattern", "replacement"}
+    allowed_keys = required_keys | {"flags"}
+    for index, entry in enumerate(entries):
+        if not isinstance(entry, dict):
+            raise ValueError(f"preprocessing_rules[{index}] must be an object.")
+        keys = set(entry)
+        missing = required_keys - keys
+        extra = keys - allowed_keys
+        if missing or extra:
+            raise ValueError(
+                f"Invalid preprocessing rule at index {index}: "
+                f"missing={sorted(missing)}, extra={sorted(extra)}"
+            )
+        name = entry["name"]
+        pattern = entry["pattern"]
+        replacement = entry["replacement"]
+        if not all(isinstance(value, str) for value in (name, pattern, replacement)):
+            raise ValueError(
+                f"name, pattern, and replacement must be strings at index {index}."
+            )
+        if not name or not pattern:
+            raise ValueError(f"Rule name and pattern cannot be empty at index {index}.")
+        if name in names:
+            raise ValueError(f"Duplicate preprocessing rule name: {name}")
+        names.add(name)
+
+        flag_name = entry.get("flags")
+        if flag_name is None:
+            flags = 0
+        elif flag_name in SUPPORTED_REGEX_FLAGS:
+            flags = SUPPORTED_REGEX_FLAGS[flag_name]
+        else:
+            raise ValueError(
+                f"Unsupported regex flag {flag_name!r} in preprocessing rule {name!r}."
+            )
+        try:
+            re.compile(pattern, flags=flags)
+        except re.error as exc:
+            raise ValueError(
+                f"Invalid regex pattern in preprocessing rule {name!r}: {exc}"
+            ) from exc
+        rules.append(
+            RegexRule(
+                name=name,
+                pattern=pattern,
+                replacement=replacement,
+                flags=flags,
+            )
+        )
+    return rules
 
 
 PREPROCESSING_RULE_GROUPS = {
-    "curated": [
-        RegexRule(
-            name="core_dump_numeric_suffix",
-            pattern=r"\bcore\.\d+\b",
-            replacement=f"core.{VARIABLE_PLACEHOLDER}",
-            flags=re.IGNORECASE,
-            note="Preserve the core-dump artifact name and abstract its numeric suffix.",
-        ),
-        RegexRule(
-            name="complete_function_field",
-            pattern=r"(\bFunction=).+$",
-            replacement=rf"\1{VARIABLE_PLACEHOLDER}",
-            note="Abstract the complete value of a trailing Function field.",
-        ),
-        RegexRule(
-            name="standalone_key_value_record",
-            pattern=(
-                r"^([A-Za-z_][A-Za-z0-9_.-]*\s*=\s*)"
-                r"(?!.*[,;])"
-                r"(?!.*\b[A-Za-z_][A-Za-z0-9_.-]*\s*=)"
-                r"\S+(?:\s+\S+){2,}$"
-            ),
-            replacement=r"\1{variables}",
-            note=(
-                "Abstract a multi-token value that occupies the complete "
-                "right-hand side of a standalone single key-value record."
-            ),
-        ),
-        RegexRule(
-            name="sendmail_queue_id",
-            pattern=r"^[A-Za-z0-9]{14}(?=:)",
-            replacement=VARIABLE_PLACEHOLDER,
-            note="Abstract a 14-character sendmail queue identifier before a colon.",
-        ),
-        RegexRule(
-            name="compound_pan_runtime_id",
-            pattern=(
-                r"(?<![A-Za-z0-9_])"
-                r"I-xD[0-9A-Fa-f]+-xG[0-9A-Fa-f]+-xU[0-9A-Fa-f]+"
-                r"(?![A-Za-z0-9_])"
-            ),
-            replacement=VARIABLE_PLACEHOLDER,
-            note="Abstract a complete compound storage runtime identifier.",
-        ),
-        RegexRule(
-            name="lifecycle_subject",
-            pattern=(
-                r"^[A-Za-z_][A-Za-z0-9_.-]*"
-                r"(?=\s+(?:startup|shutdown)\s+(?:succeeded|failed)\b)"
-            ),
-            replacement=VARIABLE_PLACEHOLDER,
-            flags=re.IGNORECASE,
-            note="Abstract the process or service name in a lifecycle result.",
-        ),
-        RegexRule(
-            name="curated_0010_process_thread_pair",
-            pattern=r"\b\d+/0[xX][0-9A-Fa-f]+\b",
-            replacement=VARIABLE_PLACEHOLDER,
-            note="Abstract a process-ID/thread-address pair as one variable.",
-        ),
-        RegexRule(
-            name="curated_0003_ipv4_port",
-            pattern=(
-                rf"(?<![A-Za-z0-9_/]){IPV4_PORT_ENDPOINT_PATTERN}"
-                rf"(?:\s+{IPV4_PORT_ENDPOINT_PATTERN})*\b"
-            ),
-            replacement=VARIABLE_PLACEHOLDER,
-            note=(
-                "Abstract one IPv4 endpoint or a whitespace-separated list of "
-                "IPv4 endpoints as one field."
-            ),
-        ),
-        RegexRule(
-            name="domain_or_ip_with_required_port",
-            pattern=(
-                r"(?<![A-Za-z0-9_./-])"
-                r"(?:"
-                r"[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)+"
-                r"|"
-                r"(?:\d{1,3}\.){3}\d{1,3}"
-                r"):\d{1,5}\b"
-            ),
-            replacement=VARIABLE_PLACEHOLDER,
-            flags=re.IGNORECASE,
-            note="Collapse domain:port or IP:port only; do not match plain dotted names.",
-        ),
-        RegexRule(
-            name="http_request_target",
-            pattern=(
-                r'("(?:GET|POST|PUT|DELETE|PATCH|HEAD|OPTIONS|CONNECT|TRACE)\s+)'
-                r'[^\s"]+'
-            ),
-            replacement=r"\1{variables}",
-            flags=re.IGNORECASE,
-            note="Abstract the complete request target after an HTTP method.",
-        ),
-        RegexRule(
-            name="http_protocol_version",
-            pattern=r"\bHTTP/\d+(?:\.\d+)+\b",
-            replacement=VARIABLE_PLACEHOLDER,
-            flags=re.IGNORECASE,
-            note="Abstract a complete HTTP protocol-version field.",
-        ),
-        RegexRule(
-            name="colon_hardware_address",
-            pattern=r"(?<![A-Za-z0-9])(?:[0-9A-Fa-f]{2}:){5,}[0-9A-Fa-f]{2}(?![A-Za-z0-9])",
-            replacement=VARIABLE_PLACEHOLDER,
-            note="Collapse a complete colon-delimited hardware address.",
-        ),
-        RegexRule(
-            name="ctime_timestamp",
-            pattern=(
-                r"\b(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s+"
-                r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+"
-                r"\d{1,2}\s+\d{2}:\d{2}:\d{2}\s+\S+\s+\d{4}\b"
-            ),
-            replacement=VARIABLE_PLACEHOLDER,
-            note="Collapse a complete ctime-style timestamp.",
-        ),
-        RegexRule(
-            name="curated_0002_ipv4",
-            pattern=(
-                r"(?<![A-Za-z0-9_./:])/?(?:::ffff:)?"
-                r"(?:(?:25[0-5]|2[0-4]\d|1?\d?\d)\.){3}"
-                r"(?:25[0-5]|2[0-4]\d|1?\d?\d)"
-                r"(?:,/?(?:::ffff:)?"
-                r"(?:(?:25[0-5]|2[0-4]\d|1?\d?\d)\.){3}"
-                r"(?:25[0-5]|2[0-4]\d|1?\d?\d))*"
-                r"(?![\d.:])"
-            ),
-            replacement=VARIABLE_PLACEHOLDER,
-            note=(
-                "Abstract one IPv4 or IPv4-mapped IPv6 address, or a complete "
-                "comma-separated address list."
-            ),
-        ),
-        RegexRule(
-            name="curated_0001_uuid",
-            pattern=r"(?i)\b[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\b",
-            replacement=VARIABLE_PLACEHOLDER,
-            note="Abstract a complete UUID.",
-        ),
-        RegexRule(
-            name="curated_0033_class_instance",
-            pattern=(
-                r"(?<![\w$])"
-                r"(?:[A-Za-z_$][A-Za-z0-9_$]*\.)+"
-                r"[A-Za-z_$][A-Za-z0-9_$]*@[0-9A-Fa-f]+"
-                r"(?![\w])"
-            ),
-            replacement=VARIABLE_PLACEHOLDER,
-            note="Abstract a complete package-qualified Class@instanceHash value.",
-        ),
-        RegexRule(
-            name="curated_0012_android_action",
-            pattern=r"\bandroid\.intent\.action\.[A-Za-z_][A-Za-z0-9_]*\b",
-            replacement=VARIABLE_PLACEHOLDER,
-            note="Abstract a complete Android intent action identifier.",
-        ),
-        RegexRule(
-            name="curated_0009_hdfs_block",
-            pattern=r"(?<![/A-Za-z0-9_])blk_-?\d+\b",
-            replacement=VARIABLE_PLACEHOLDER,
-            note="Abstract a complete HDFS block identifier.",
-        ),
-        RegexRule(
-            name="multi_component_absolute_path",
-            pattern=r"(?<![A-Za-z0-9_.-])/(?:[A-Za-z0-9._-]+/)+[A-Za-z0-9._-]+/?",
-            replacement=VARIABLE_PLACEHOLDER,
-            note="Abstract a complete multi-component absolute filesystem path.",
-        ),
-        RegexRule(
-            name="lifetime_duration_value",
-            pattern=(
-                r"(\blifetime\s+)"
-                r"(?:(?:[<>]=?)?\d+(?:\.\d+)?\s*"
-                r"(?:ms|msec|s|sec|secs|second|seconds)\b|"
-                r"\d{1,2}:\d{2}(?::\d{2})?)"
-            ),
-            replacement=f"\\1{VARIABLE_PLACEHOLDER}",
-            flags=re.IGNORECASE,
-            note=(
-                "Collapse lifetime duration values only; sampled examples map "
-                "lifetime values to one placeholder."
-            ),
-        ),
-        RegexRule(
-            name="curated_0005_timestamp",
-            pattern=r"(?<!\d)(?:[01]\d|2[0-3]):[0-5]\d:[0-5]\d\.\d{3}(?!\d)",
-            replacement=VARIABLE_PLACEHOLDER,
-            note="Abstract a timestamp in HH:MM:SS.mmm form.",
-        ),
-        RegexRule(
-            name="curated_0004_time",
-            pattern=r"(?<![\d:])(?:[01]\d|2[0-3]):[0-5]\d(?![:\d])",
-            replacement=VARIABLE_PLACEHOLDER,
-            note="Abstract a standalone time in HH:MM form.",
-        ),
-        RegexRule(
-            name="curated_0006_date",
-            pattern=r"(?<![A-Za-z0-9_/-])\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\d|3[01])(?![A-Za-z0-9_/-])",
-            replacement=VARIABLE_PLACEHOLDER,
-            note="Abstract a date in YYYY-MM-DD form.",
-        ),
-        RegexRule(
-            name="curated_0008_hexadecimal",
-            pattern=r"(?<![A-Za-z0-9/])0[xX][0-9A-Fa-f]+(?![A-Za-z0-9])",
-            replacement=VARIABLE_PLACEHOLDER,
-            note="Abstract a hexadecimal value with a 0x or 0X prefix.",
-        ),
-        RegexRule(
-            name="compact_quantity_value",
-            pattern=(
-                r"(?<![A-Za-z0-9_.-])"
-                r"[-+]?\d+(?:\.\d+)?"
-                r"(?:KiB|Kbytes|GHz|KB|kB|MB|GB|TB|ms|B|K|M|G|C)"
-                r"(?![A-Za-z0-9_])"
-            ),
-            replacement=VARIABLE_PLACEHOLDER,
-            note="Abstract a compact numeric quantity with an attached unit.",
-        ),
-        RegexRule(
-            name="parenthesized_secondary_size_value",
-            pattern=(
-                r"(\b\d+(?:\.\d+)?\s+bytes\s+)"
-                r"\(\s*\d+(?:\.\d+)?\s+"
-                r"(?:B|KB|MB|GB|TB|kB|bytes)\s*\)"
-            ),
-            replacement=rf"\1({VARIABLE_PLACEHOLDER})",
-            flags=re.IGNORECASE,
-            note="Collapse a parenthesized converted size following a primary byte count.",
-        ),
-        RegexRule(
-            name="missing_authentication_principal",
-            pattern=(
-                r"(\bFailed\s+password\s+for\s+)"
-                r"(?:(?:invalid|unknown|illegal|nonexistent|unauthorized)\s+user)"
-                r"(?=\s+from\b)"
-            ),
-            replacement=r"\1{variables}",
-            flags=re.IGNORECASE,
-            note=(
-                "Abstract a status-only authentication principal when no concrete "
-                "account name appears before the source field."
-            ),
-        ),
-        RegexRule(
-            name="curated_0032_account_allowlist",
-            pattern=(
-                r"(\buser\s*=\s*|\bfor\s+(?:user\s+)?|\buser\s+)"
-                r"(?:root|monitor|ubuntu|admin|ubnt)\b"
-            ),
-            replacement=r"\1{variables}",
-            flags=re.IGNORECASE,
-            note=(
-                "Abstract a known account name after user=, for, or user while "
-                "preserving the surrounding field label."
-            ),
-        ),
-        RegexRule(
-            name="curated_0034_labeled_numeric_sequence",
-            pattern=(
-                r"([:=]\s*)"
-                r"[+-]?(?:\d+(?:\.\d+)?|\.\d+)"
-                r"(?:[ \t]+[+-]?(?:\d+(?:\.\d+)?|\.\d+)){1,}"
-                r"(?=$|[)\]])"
-            ),
-            replacement=r"\1{variables}",
-            note=(
-                "Abstract a whitespace-separated numeric sequence after one "
-                "label as one composite value."
-            ),
-        ),
-        RegexRule(
-            name="curated_0031_key_value",
-            pattern=(
-                r"(?<![\w.-])"
-                r"([A-Za-z_][A-Za-z0-9_.-]*\s*=\s*?)"
-                r"(?:"
-                r"[A-Za-z0-9._]+(?=\s|[,;]|$)"
-                r"|"
-                r"(?=\s*(?:[A-Za-z_][A-Za-z0-9_.-]*\s*=|[,;]|$))"
-                r")"
-            ),
-            replacement=r"\1{variables}",
-            note=(
-                "Preserve the key and equals sign, and abstract a value containing "
-                "only letters, digits, dots, or underscores, including an empty value."
-            ),
-        ),
-    ],
+    "curated": build_preprocessing_rules(
+        _DOMAIN_KNOWLEDGE["preprocessing_rules"]
+    ),
 }
 
-_DEFAULT_ENABLED_PREPROCESSING_GROUPS = ("curated",)
 DEFAULT_ENABLED_PREPROCESSING_GROUPS = env_list(
     "LILAC_PREPROCESSING_GROUPS",
-    _DEFAULT_ENABLED_PREPROCESSING_GROUPS,
+    ("curated",),
 )
 
 
@@ -506,44 +300,28 @@ def apply_final_domain_preprocessing(
 # preprocessing.
 
 
-@dataclass(frozen=True)
-class PostprocessRule:
-    name: str
-    func: Callable[[str, Optional[str]], str]
-    enabled: bool = True
-    note: str = ""
-
-    def apply(self, template: str, log_message: Optional[str] = None) -> str:
-        if not self.enabled:
-            return template
-        return self.func(template, log_message)
-
-
-def normalize_template_placeholders(template: str, log_message: Optional[str] = None) -> str:
-    del log_message
+def normalize_template_placeholders(
+    template: str,
+    _log_message: Optional[str] = None,
+) -> str:
     template = re.sub(r"\{(?!variables\})[A-Za-z_][A-Za-z0-9_.-]*\}", VARIABLE_PLACEHOLDER, template)
     template = re.sub(r"\{\{\s*variables\s*\}\}", VARIABLE_PLACEHOLDER, template)
     return template
 
 
 POSTPROCESSING_RULE_GROUPS = {
-    "safe_format": [
-        PostprocessRule("normalize_template_placeholders", normalize_template_placeholders),
-    ],
+    "safe_format": [normalize_template_placeholders],
 }
 
-_DEFAULT_ENABLED_POSTPROCESSING_GROUPS = (
-    "safe_format",
-)
 DEFAULT_ENABLED_POSTPROCESSING_GROUPS = env_list(
     "LILAC_POSTPROCESSING_GROUPS",
-    _DEFAULT_ENABLED_POSTPROCESSING_GROUPS,
+    ("safe_format",),
 )
 
 
 def apply_postprocessing_group(template: str, log_message: Optional[str], group_name: str) -> str:
     for rule in POSTPROCESSING_RULE_GROUPS.get(group_name, []):
-        template = rule.apply(template, log_message)
+        template = rule(template, log_message)
     return template
 
 
@@ -579,12 +357,12 @@ def infer_llm(
     retry_times: int = DEFAULT_RETRY_TIMES,
 ):
     # Select the API credentials that correspond to the requested model.
-    global openai_api_base, openai_api_key
-    openai_api_base, openai_api_key = get_openai_key("../../openai_key.txt", model)
-    openai.api_base = openai_api_base
-    openai.api_key = openai_api_key
-    configure_local_api_no_proxy(openai_api_base)
-    if is_chat_model(model):
+    api_base, api_key = get_openai_key("../../openai_key.txt", model)
+    openai.api_base = api_base
+    openai.api_key = api_key
+    configure_local_api_no_proxy(api_base)
+    chat_model = is_chat_model(model)
+    if chat_model:
         messages = [
             {"role": "system", "content": "You are an expert of log parsing."},
             {"role": "user", "content": instruction + knowledge},
@@ -597,15 +375,19 @@ def infer_llm(
     print("model: ", model)
     for attempt in range(1, retry_times + 1):
         try:
-            if is_chat_model(model):
-                answers = openai.ChatCompletion.create(
-                    model=model,
-                    messages=messages,
-                    temperature=temperature,
-                    max_tokens=max_tokens,
-                    stream=False,
-                    request_timeout=request_timeout,
-                )
+            # A fresh connection prevents a stale keep-alive socket from
+            # spinning in CLOSE_WAIT after many sequential template queries.
+            reset_openai_http_session()
+            if chat_model:
+                with api_call_wall_clock_timeout(request_timeout):
+                    answers = openai.ChatCompletion.create(
+                        model=model,
+                        messages=messages,
+                        temperature=temperature,
+                        max_tokens=max_tokens,
+                        stream=False,
+                        request_timeout=request_timeout,
+                    )
                 choices = [
                     response["message"]["content"]
                     for response in answers["choices"]
@@ -614,13 +396,14 @@ def infer_llm(
                 if choices:
                     return choices[0]
                 raise RuntimeError("No complete response choices returned by the chat API.")
-            response = openai.Completion.create(
-                model=model,
-                prompt=messages,
-                temperature=temperature,
-                max_tokens=max_tokens,
-                request_timeout=request_timeout,
-            )
+            with api_call_wall_clock_timeout(request_timeout):
+                response = openai.Completion.create(
+                    model=model,
+                    prompt=messages,
+                    temperature=temperature,
+                    max_tokens=max_tokens,
+                    request_timeout=request_timeout,
+                )
             return response["choices"][0]["text"].strip()
         except Exception as e:
             print(f"Exception on API attempt {attempt}/{retry_times}: {e}")
@@ -692,8 +475,7 @@ def _extract_template_from_response(response: str) -> Optional[str]:
     return None
 
 
-def query_template_from_gpt(log_message, examples=None, model=DEFAULT_MODEL):
-    del examples
+def query_template_from_gpt(log_message, model=DEFAULT_MODEL):
     if len(log_message.split()) == 1:
         return log_message, False
     response = get_response_from_openai_key(log_message, model=model)
@@ -784,24 +566,20 @@ def post_process_template(
     template = re.sub(r"\{(\w+)\}", FINAL_PLACEHOLDER, template)
     for reg in regs_common:
         template = reg.sub(FINAL_PLACEHOLDER, template)
-    # Dataset-oriented path punctuation repair is retained as commented code
-    # in post_process.py, so the default pipeline uses generic processing only.
     template = correct_single_template(template)
     template = restore_fixed_role_spans(template, log_message)
     template = normalize_empty_rhs_placeholder(template, log_message)
     static_part = template.replace(FINAL_PLACEHOLDER, "")
-    punc = string.punctuation
-    for s in static_part:
-        if s != " " and s not in punc:
-            return template, True
+    if any(character != " " and character not in string.punctuation for character in static_part):
+        return template, True
     print("Get a too general template. Error.")
     return "", False
 
 
-def query_template_from_gpt_with_check(log_message, regs_common=None, examples=None, model=DEFAULT_MODEL):
+def query_template_from_gpt_with_check(log_message, regs_common=None, model=DEFAULT_MODEL):
     if regs_common is None:
         regs_common = []
-    template, flag = query_template_from_gpt(log_message, examples, model)
+    template, flag = query_template_from_gpt(log_message, model)
     if len(template) == 0 or not flag:
         print("ChatGPT error")
     else:

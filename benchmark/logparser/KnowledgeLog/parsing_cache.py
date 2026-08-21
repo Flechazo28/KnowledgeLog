@@ -1,7 +1,6 @@
 from collections import defaultdict, Counter, OrderedDict
 import re
 import sys
-from functools import lru_cache
 
 sys.setrecursionlimit(1000000)
 from datetime import datetime
@@ -35,10 +34,8 @@ class ParsingCache(object):
     def __init__(self):
         self.template_tree = {}
         self.template_list = []
-        self.template_parameter_lengths = {}
-        self.reviewed_ambiguities = set()
     
-    def add_templates(self, event_template, insert=True, relevant_templates=None, source_log=None):
+    def add_templates(self, event_template, insert=True, relevant_templates=None):
 
         if relevant_templates is None:
             relevant_templates = []
@@ -55,7 +52,6 @@ class ParsingCache(object):
         if insert or len(relevant_templates) == 0:
             id = self.insert(event_template, template_tokens, len(self.template_list))
             self.template_list.append(event_template)
-            self.remember_parameter_lengths(id, event_template, source_log)
             return id
         # print("relevant templates: ", relevant_templates)
         max_similarity = 0
@@ -73,12 +69,10 @@ class ParsingCache(object):
             if not success:
                 id = self.insert(event_template, template_tokens, len(self.template_list))
                 self.template_list.append(event_template)
-            self.remember_parameter_lengths(id, self.template_list[id], source_log)
             return id
         else:
             id = self.insert(event_template, template_tokens, len(self.template_list))
             self.template_list.append(event_template)
-            self.remember_parameter_lengths(id, event_template, source_log)
             return id
             #print("template tokens: ", template_tokens)
             
@@ -125,13 +119,6 @@ class ParsingCache(object):
             return False, -1
         self.insert(merged_template, message_split(merged_template), old_ids)
         self.template_list[old_ids] = merged_template
-        self._ensure_ambiguity_state()
-        self.template_parameter_lengths.pop(old_ids, None)
-        self.reviewed_ambiguities = {
-            signature
-            for signature in self.reviewed_ambiguities
-            if signature[0] != old_ids
-        }
         return True, old_ids
         
     
@@ -156,92 +143,6 @@ class ParsingCache(object):
 
     def match_event(self, log):
         return tree_match(self.template_tree, log)
-
-    def _ensure_ambiguity_state(self):
-        # Keep old pickled caches readable. New runs initialize these in __init__.
-        if not hasattr(self, "template_parameter_lengths"):
-            self.template_parameter_lengths = {}
-        if not hasattr(self, "reviewed_ambiguities"):
-            self.reviewed_ambiguities = set()
-
-    @staticmethod
-    def parameter_token_lengths(event_template, log):
-        """Return the number of log tokens consumed by each <*> placeholder."""
-        template_tokens = tuple(message_split(event_template))
-        log_tokens = tuple(message_split(log))
-
-        @lru_cache(maxsize=None)
-        def align(template_idx, log_idx):
-            if template_idx == len(template_tokens):
-                return () if log_idx == len(log_tokens) else None
-
-            token = template_tokens[template_idx]
-            if token != "<*>":
-                if log_idx >= len(log_tokens) or token != log_tokens[log_idx]:
-                    return None
-                return align(template_idx + 1, log_idx + 1)
-
-            for end_idx in range(log_idx, len(log_tokens) + 1):
-                remaining = align(template_idx + 1, end_idx)
-                if remaining is not None:
-                    return (end_idx - log_idx,) + remaining
-            return None
-
-        return align(0, 0)
-
-    def remember_parameter_lengths(self, template_id, event_template, source_log):
-        if source_log is None or template_id < 0:
-            return
-        self._ensure_ambiguity_state()
-        lengths = self.parameter_token_lengths(event_template, source_log)
-        if lengths is not None:
-            self.template_parameter_lengths.setdefault(template_id, lengths)
-
-    def match_event_with_ambiguity(self, log, min_token_growth=2):
-        """Match a log and flag an unreviewed, unusually wider placeholder."""
-        result = self.match_event(log)
-        if result[0] == "NoMatch":
-            return result + (False, None)
-
-        self._ensure_ambiguity_state()
-        template, template_id = result[:2]
-        lengths = self.parameter_token_lengths(template, log)
-        if lengths is None:
-            return result + (False, None)
-
-        baseline = self.template_parameter_lengths.get(template_id)
-        if baseline is None:
-            self.template_parameter_lengths[template_id] = lengths
-            return result + (False, lengths)
-
-        signature = (template_id, lengths)
-        ambiguous = (
-            len(baseline) == len(lengths)
-            and any(current - observed >= min_token_growth
-                    for current, observed in zip(lengths, baseline))
-            and signature not in self.reviewed_ambiguities
-        )
-        return result + (ambiguous, lengths)
-
-    def mark_ambiguity_reviewed(self, template_id, lengths):
-        if lengths is None:
-            return
-        self._ensure_ambiguity_state()
-        self.reviewed_ambiguities.add((template_id, tuple(lengths)))
-
-    @staticmethod
-    def is_more_specific(candidate_template, cached_template):
-        candidate_tokens = message_split(candidate_template)
-        cached_tokens = message_split(cached_template)
-        candidate_static = sum(token != "<*>" for token in candidate_tokens)
-        cached_static = sum(token != "<*>" for token in cached_tokens)
-        candidate_variables = candidate_tokens.count("<*>")
-        cached_variables = cached_tokens.count("<*>")
-        return (
-            candidate_template != cached_template
-            and candidate_static > cached_static
-            and candidate_variables >= cached_variables
-        )
 
 
     def _preprocess_template(self, template):

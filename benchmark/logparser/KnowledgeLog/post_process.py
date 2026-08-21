@@ -77,19 +77,11 @@ def correct_single_template(template, user_strings=None):
     # Treat a standalone empty parenthesized field as an omitted value.
     template = re.sub(r'(?<= )\(\)(?= )', '(<*>)', template)
 
-    # Some path fields include a terminal sentence dot that belongs to the
-    # dynamic span. This source-traced HDFS repair is intentionally disabled
-    # because enabling a dataset-oriented postprocessing branch may weaken
-    # the method's generality claim.
     # if log_message and re.search(r'(?<!\S)/\S+\.\s+blk_-?\d+\b', log_message):
     #     template = re.sub(r'<\*>\.\s+(?=<\*>)', '<*> ', template, count=1)
 
-    # Collapse over-split parenthesized lists containing four or more
-    # whitespace-separated placeholders into one logical value.
     template = re.sub(r'\(\s*<\*>(?:\s+<\*>){3,}\s*\)', '( <*> )', template)
 
-    # Collapse over-split encoded values while preserving valid two-field
-    # templates such as "<*>##<*>".
     template = re.sub(r'<\*>(?:##<\*>){2,}', '<*>', template)
 
     # Substitute consecutive variables only if separated with any delimiter including "." (DV)
