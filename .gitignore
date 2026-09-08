@@ -45,6 +45,7 @@ checkpoints/
 # Local datasets and generated tabular artifacts
 /2k_datasets/
 /full_dataset/
+/build_2k_datasets.py
 *.csv
 *.parquet
 *.npy
