@@ -16,32 +16,24 @@ Copyright (C) 2022 University of Luxembourg
 import os
 import time
 import csv
-import chardet
 from multiprocessing import Process
-from evaluation.utils.common import correct_templates_and_update_files
 from logparser.utils.evaluator import evaluate
 from evaluation.utils.template_level_analysis import evaluate_template_level, evaluate_template_level_lstm
 from evaluation.utils.PA_calculator import calculate_parsing_accuracy, calculate_parsing_accuracy_lstm
 import pandas as pd
-from .post_process import correct_single_template
 
-# TIMEOUT = 3600 * 12  # log template identification timeout (sec)
 TIMEOUT = 3600 * 48  # log template identification timeout (sec)
 
 
 def prepare_results(output_dir, otc, complex, frequent, overwrite=True):
     if not os.path.exists(output_dir):
-        # make output directory
         os.makedirs(output_dir)
 
-    # make a new summary file
     result_file = 'summary_[otc={},complex={},frequent={}].csv'.format(str(otc), str(int(complex)), str(int(frequent)))
     if not overwrite and os.path.exists(os.path.join(output_dir, result_file)):
         return result_file
     with open(os.path.join(output_dir, result_file), 'w') as csv_file:
         fw = csv.writer(csv_file, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-        # fw.writerow(['Dataset', 'GA_time', 'PA_time', 'TA_time', 'parse_time', 'identified_templates',
-        #              'ground_templates', 'GA', 'PA', 'FTA', 'PTA', 'RTA', 'OG', 'UG', 'MX'])
         fw.writerow(['Dataset', 'parse_time', 'identified_templates',
                      'ground_templates', 'GA', 'PA', 'FGA', 'PTA', 'RTA', 'FTA'])
 
@@ -84,7 +76,7 @@ def evaluator(
     parsedresult = os.path.join(output_dir, log_file_basename + '_structured.csv')
     # identify templates using Drain
     start_time = time.time()
-    if LogParser != None:
+    if LogParser is not None:
         print("start parsing.")
         parser = LogParser(**param_dict)
         p = Process(target=parser.parse, args=(log_file_basename,))
@@ -102,9 +94,6 @@ def evaluator(
         parse_time = -1
     print("parsing time: ", parse_time)
 
-    # if not os.path.exists(parsedresult):
-    #     with open(parsedresult, 'w') as fw:
-    #         pass
     print(parsedresult)
     if not os.path.exists(parsedresult) or is_file_empty(parsedresult):
         print("No output file generated.")
@@ -118,10 +107,6 @@ def evaluator(
                 "None" + ',' + \
                 "None" + ',' + \
                 "None" + '\n'
-                # "{:.1f}".format(GA_end_time) + ',' + \
-                # "{:.1f}".format(PA_end_time) + ',' + \
-                # "{:.1f}".format(TA_end_time) + ',' + \
-
         with open(os.path.join(output_dir, result_file), 'a') as summary_file:
             summary_file.write(result)
         return   
@@ -129,9 +114,6 @@ def evaluator(
     parsedresult = pd.read_csv(parsedresult, dtype=str)
     parsedresult.fillna("", inplace=True)
     groundtruth = pd.read_csv(groundtruth, dtype=str)
-    # print("Start to modify output")
-    # parsedresult['EventTemplate'] = parsedresult['EventTemplate'].apply(lambda x: correct_single_template(x))
-    # groundtruth['EventTemplate'] = groundtruth['EventTemplate'].apply(lambda x: correct_single_template(x))
     filter_templates = None
     if complex != 0:
         print("Evaluate on complex mode: ", complex)
@@ -144,17 +126,6 @@ def evaluator(
         if complex == 3:
             df = df[df['EventTemplate'].str.count('<*>') >= 5]
         filter_templates = df['EventTemplate'].tolist()
-    # if frequent != 0:
-    #     print("Evaluate on frequent mode: ", frequent)
-    #     template_file = os.path.join(indir, log_file_basename + '_templates.csv')
-    #     df = pd.read_csv(template_file)
-    #     df_sorted = df.sort_values('Occurrences')
-    #     n = int(len(df_sorted) / 5)
-    #     l, r = (frequent-1)*n, frequent*n
-    #     print("l, r:", l, r)
-    #     if frequent == 5:
-    #         r = len(df_sorted)
-    #     filter_templates = df_sorted['EventTemplate'].tolist()[l:r]
     if frequent != 0:
         print("Evaluate on frequent mode: ", frequent)
         template_file = os.path.join(indir, log_file_basename + '_templates.csv')
@@ -167,10 +138,10 @@ def evaluator(
             n = len(df_sorted) - int(len(df_sorted) / 100.0 * -frequent)
             filter_templates = df_sorted['EventTemplate'].tolist()[n:]
 
-    if filter_templates != None:
+    if filter_templates is not None:
         print("length of filter templates: ", len(filter_templates))
 
-    if filter_templates != None and len(filter_templates) == 0:
+    if filter_templates is not None and len(filter_templates) == 0:
         result = dataset + ',' + \
                 "None" + ',' + \
                 "None" + ',' + \
@@ -197,7 +168,7 @@ def evaluator(
 
     # calculate parsing accuracy
     start_time = time.time()
-    if lstm == True:
+    if lstm:
         PA = calculate_parsing_accuracy_lstm(groundtruth, parsedresult, filter_templates)
         print("Finish calculate_parsing_accuracy_lstm")
     else:
@@ -207,7 +178,7 @@ def evaluator(
 
     # calculate template-level accuracy
     start_time = time.time()
-    if lstm == True:
+    if lstm:
         tool_templates, ground_templates, FTA, PTA, RTA = evaluate_template_level_lstm(dataset, groundtruth, parsedresult, filter_templates)
     else:
         tool_templates, ground_templates, FTA, PTA, RTA = evaluate_template_level(dataset, groundtruth, parsedresult, filter_templates)
@@ -224,9 +195,6 @@ def evaluator(
              "{:.3f}".format(PTA) + ',' + \
              "{:.3f}".format(RTA) + ',' + \
              "{:.3f}".format(FTA) + '\n'
-             # "{:.1f}".format(GA_end_time) + ',' + \
-             # "{:.1f}".format(PA_end_time) + ',' + \
-             # "{:.1f}".format(TA_end_time) + ',' + \
 
     with open(os.path.join(output_dir, result_file), 'a') as summary_file:
         summary_file.write(result)

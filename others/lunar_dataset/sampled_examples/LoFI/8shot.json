@@ -1,8 +1,0 @@
-{"query": "x-trace-id:61d26ce16aa21d7e61d26ce16aa21d7e, x-request-id:routeid, parameter check error, param name:name, value:value., traceid is 61d26ce16aa21d7e61d26ce16aa21d7e, requestid is routeid", "answer": "x-trace-id:{variables}, x-request-id:{variables}, parameter check error, param name:{variables}, value:{variables}, traceid is {variables} requestid is {variables}"}
-{"query": "finished to do method of processForConsumerData", "answer": "finished to do method of processForConsumerData"}
-{"query": "MsgCallBack serviceId -> approval, exceptionId -> apr", "answer": "MsgCallBack serviceId -> {variables} exceptionId -> {variables}"}
-{"query": "commit communication message successful, sender: Service-File-Actions", "answer": "commit communication message successful, sender: {variables}"}
-{"query": "create auth user request failed. userName = testUser1987", "answer": "create auth user request failed. userName = {variables}"}
-{"query": "getWorkflows total :446", "answer": "getWorkflows total :{variables}"}
-{"query": "getStatOfResource cost:256, url:/url453", "answer": "getStatOfResource cost:{variables}, url:{variables}"}
-{"query": "get mid ware appserver size: 0", "answer": "get mid ware appserver size: {variables}"}

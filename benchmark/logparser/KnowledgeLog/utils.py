@@ -1,5 +1,4 @@
 import pickle
-import json
 
 def cache_to_file(log_tuples, cached_file):
     with open(cached_file, "w") as fw:
@@ -24,7 +23,6 @@ def save_pickle(data, file_path):
     try:
         with open(file_path, 'wb') as file:
             pickle.dump(data, file)
-        #print("Save success:", file_path)
     except Exception as e:
         print("Save error:", str(e))
 
@@ -36,12 +34,3 @@ def load_tuple_list(file_path):
         idx, s = line.strip().split(' ', 1)
         tuple_list.append((s, int(idx)))
     return tuple_list
-
-
-def read_json_file(file_path):
-    data = []
-    with open(file_path, 'r') as file:
-        for line in file:
-            json_dict = json.loads(line)
-            data.append(json_dict)
-    return data

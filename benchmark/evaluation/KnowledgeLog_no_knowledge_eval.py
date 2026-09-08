@@ -25,7 +25,7 @@ import os
 import runpy
 import sys
 from pathlib import Path
-from typing import Optional, Sequence, Tuple
+from typing import Tuple
 
 
 EVAL_DIR = Path(__file__).resolve().parent
@@ -33,9 +33,9 @@ BENCHMARK_DIR = EVAL_DIR.parent
 ORIGINAL_EVAL = EVAL_DIR / "KnowledgeLog_eval.py"
 
 # These defaults are read while gpt_query.py is imported, so set them first.
-os.environ["LILAC_PROMPT_GROUPS"] = "none"
-os.environ["LILAC_PREPROCESSING_GROUPS"] = "none"
-os.environ["LILAC_POSTPROCESSING_GROUPS"] = "none"
+os.environ["KNOWLEDGELOG_PROMPT_GROUPS"] = "none"
+os.environ["KNOWLEDGELOG_PREPROCESSING_GROUPS"] = "none"
+os.environ["KNOWLEDGELOG_POSTPROCESSING_GROUPS"] = "none"
 
 if str(BENCHMARK_DIR) not in sys.path:
     sys.path.insert(0, str(BENCHMARK_DIR))
@@ -50,14 +50,12 @@ ParsingCache = importlib.import_module(
 def query_without_postprocessing(
     log_message: str,
     regs_common=None,
-    examples: Optional[Sequence[str]] = None,
     model: str = "gpt-3.5-turbo",
 ) -> Tuple[str, bool]:
     """Query the base prompt and bypass every template post-processing rule."""
     del regs_common
     template, success = gpt_query.query_template_from_gpt(
         log_message,
-        examples,
         model,
     )
     if not success or not template:

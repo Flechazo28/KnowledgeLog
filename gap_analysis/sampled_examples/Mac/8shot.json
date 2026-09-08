@@ -1,8 +1,0 @@
-{"query": "Received Capture Event", "answer": "Received Capture Event"}
-{"query": "hibernate_setup(0) took 5078 ms", "answer": "hibernate_setup({variables}) took {variables} ms"}
-{"query": "<<<< MediaValidator >>>> mv_ValidateRFC4281CodecId: Unrecognized codec 1.(null). Failed codec specific check.", "answer": "<<<< MediaValidator >>>> mv_ValidateRFC4281CodecId: Unrecognized codec {variables}. Failed codec specific check."}
-{"query": "full wake promotion (reason 1) 368 ms", "answer": "full wake promotion (reason {variables}) {variables} ms"}
-{"query": "Wake reason: EC.LidClose (Maintenance)", "answer": "Wake reason: {variables}"}
-{"query": "2017-07-02 20:50:47.638 GoogleSoftwareUpdateAgent[32775/0x7000002a0000] [lvl=2] -[KSUpdateCheckAction(PrivateMethods) finishAction] KSUpdateCheckAction found updates: {( )}", "answer": "{variables} {variables} GoogleSoftwareUpdateAgent[{variables}] [lvl={variables}] -[KSUpdateCheckAction(PrivateMethods) finishAction] KSUpdateCheckAction found updates: {( )}"}
-{"query": "***** Received request to scan at 30ms/60ms *****", "answer": "***** Received request to scan at {variables} *****"}
-{"query": "[IOBluetoothHostController::setConfigState] calling registerService", "answer": "[IOBluetoothHostController::setConfigState] calling registerService"}

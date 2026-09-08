@@ -1,8 +1,0 @@
-{"query": "pan_kmod: registered subdev 0x78 (\"PANASAS kernel trace facility\")", "answer": "pan_kmod: registered subdev {variables} (\"{variables}\")"}
-{"query": "failed to contact portmap (errno -101).", "answer": "failed to contact portmap (errno {variables})."}
-{"query": "syslog-ng startup succeeded", "answer": "{variables} startup succeeded"}
-{"query": "[smux_accept] accepted fd 13 from 127.0.0.1:32880", "answer": "[smux_accept] accepted fd {variables} from {variables}"}
-{"query": "RNG not detected", "answer": "RNG not detected"}
-{"query": "mount.panfs warning: mount still trying to ping realm. Mount has been trying to ping for 2 seconds and may try for another 8 seconds", "answer": "mount.panfs warning: mount still trying to ping realm. Mount has been trying to ping for {variables} seconds and may try for another {variables} seconds"}
-{"query": "Enabling local filesystem quotas: succeeded", "answer": "Enabling local filesystem quotas: succeeded"}
-{"query": "Mount-cache hash table entries: 256 (order: 0, 4096 bytes)", "answer": "Mount-cache hash table entries: {variables} (order: {variables}, {variables} bytes)"}

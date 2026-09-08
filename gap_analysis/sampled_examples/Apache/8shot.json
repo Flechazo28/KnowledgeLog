@@ -1,8 +1,0 @@
-{"query": "[client 210.245.151.81] Attempt to serve directory: /var/www/html/", "answer": "[client {variables}] Attempt to serve directory: {variables}"}
-{"query": "[client 80.235.13.174] request failed: error reading the headers", "answer": "[client {variables}] request failed: error reading the headers"}
-{"query": "suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)", "answer": "suEXEC mechanism enabled (wrapper: {variables})"}
-{"query": "[client 201.17.145.38] request failed: URI too long (longer than 8190)", "answer": "[client {variables}] request failed: URI too long (longer than {variables})"}
-{"query": "mod_python: Creating 32 session mutexes based on 150 max processes and 0 max threads.", "answer": "mod_python: Creating {variables} session mutexes based on {variables} max processes and {variables} max threads."}
-{"query": "[client 61.150.85.54] Directory index forbidden by rule: /var/www/html/", "answer": "[client {variables}] Directory index forbidden by rule: {variables}"}
-{"query": "env.createBean2(): Factory error creating worker.jni:onStartup ( worker.jni, onStartup)", "answer": "env.createBean2(): Factory error creating {variables} ({variables}, {variables})"}
-{"query": "child process 18807 still did not exit, sending a SIGTERM", "answer": "child process {variables} still did not exit, sending a SIGTERM"}

@@ -1,8 +1,0 @@
-{"query": "Received 3 containers from YARN, launching executors on 3 of them.", "answer": "Received {variables} containers from YARN, launching executors on {variables} of them."}
-{"query": "Resubmitting ShuffleMapStage 4 (reduceByKey at pnmf4.py:371) because some of its tasks had failed: 0", "answer": "Resubmitting ShuffleMapStage {variables} (reduceByKey at {variables}) because some of its tasks had failed: {variables}"}
-{"query": "Will request 16 executor containers, each with 5 cores and 28160 MB memory including 2560 MB overhead", "answer": "Will request {variables} executor containers, each with {variables} cores and {variables} MB memory including {variables} MB overhead"}
-{"query": "Removed 17 successfully in removeExecutor", "answer": "Removed {variables} successfully in removeExecutor"}
-{"query": "ApplicationMaster registered as NettyRpcEndpointRef(spark://YarnAM@10.10.34.31:34500)", "answer": "ApplicationMaster registered as NettyRpcEndpointRef(spark://{variables})"}
-{"query": "Don't have map outputs for shuffle 16, fetching them", "answer": "Don't have map outputs for shuffle {variables}, fetching them"}
-{"query": "Unregistering ApplicationMaster with FAILED (diag message: Uncaught exception: org.apache.spark.rpc.RpcTimeoutException: Cannot receive any reply in 120 seconds. This timeout is controlled by spark.rpc.askTimeout)", "answer": "Unregistering ApplicationMaster with {variables}"}
-{"query": "MemoryStore started with capacity 17.7 GB", "answer": "MemoryStore started with capacity {variables}"}

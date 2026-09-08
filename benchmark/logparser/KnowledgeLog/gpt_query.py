@@ -26,6 +26,7 @@ DEFAULT_MAX_TOKENS = 512
 DEFAULT_REQUEST_TIMEOUT = 300
 DEFAULT_RETRY_TIMES = 3
 DEFAULT_RETRY_SLEEP_SECONDS = 2
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
 
 class APICallWallClockTimeout(TimeoutError):
@@ -92,7 +93,7 @@ def env_list(name: str, default: Sequence[str]) -> Tuple[str, ...]:
 def get_openai_key(file_path: str, model: str = DEFAULT_MODEL):
     candidates = [
         file_path,
-        os.path.abspath(os.path.join(os.path.dirname(__file__), "../../../openai_key.txt")),
+        PROJECT_ROOT / "openai_key.txt",
     ]
     for candidate in candidates:
         if os.path.exists(candidate):
@@ -166,7 +167,7 @@ _DOMAIN_KNOWLEDGE = load_domain_knowledge()
 CURATED_PROMPT_RULES = list(_DOMAIN_KNOWLEDGE["prompt_rules"])
 
 PROMPT_GROUPS = {"curated": CURATED_PROMPT_RULES}
-DEFAULT_ENABLED_PROMPT_GROUPS = env_list("LILAC_PROMPT_GROUPS", ("curated",))
+DEFAULT_ENABLED_PROMPT_GROUPS = env_list("KNOWLEDGELOG_PROMPT_GROUPS", ("curated",))
 
 
 def build_final_domain_knowledge(
@@ -194,12 +195,8 @@ class RegexRule:
     pattern: str
     replacement: str
     flags: int = 0
-    enabled: bool = True
-    note: str = ""
 
     def apply(self, text: str) -> str:
-        if not self.enabled:
-            return text
         return re.sub(self.pattern, self.replacement, text, flags=self.flags)
 
 
@@ -271,7 +268,7 @@ PREPROCESSING_RULE_GROUPS = {
 }
 
 DEFAULT_ENABLED_PREPROCESSING_GROUPS = env_list(
-    "LILAC_PREPROCESSING_GROUPS",
+    "KNOWLEDGELOG_PREPROCESSING_GROUPS",
     ("curated",),
 )
 
@@ -314,7 +311,7 @@ POSTPROCESSING_RULE_GROUPS = {
 }
 
 DEFAULT_ENABLED_POSTPROCESSING_GROUPS = env_list(
-    "LILAC_POSTPROCESSING_GROUPS",
+    "KNOWLEDGELOG_POSTPROCESSING_GROUPS",
     ("safe_format",),
 )
 
@@ -357,7 +354,7 @@ def infer_llm(
     retry_times: int = DEFAULT_RETRY_TIMES,
 ):
     # Select the API credentials that correspond to the requested model.
-    api_base, api_key = get_openai_key("../../openai_key.txt", model)
+    api_base, api_key = get_openai_key(PROJECT_ROOT / "openai_key.txt", model)
     openai.api_base = api_base
     openai.api_key = api_key
     configure_local_api_no_proxy(api_base)

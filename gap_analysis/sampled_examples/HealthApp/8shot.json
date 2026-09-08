@@ -1,8 +1,0 @@
-{"query": "setStepCounterStatus=true", "answer": "setStepCounterStatus={variables}"}
-{"query": "getMidWareCache result=true", "answer": "getMidWareCache result={variables}"}
-{"query": "InsertEvent success begin:25236677 end:25236677", "answer": "InsertEvent success begin:{variables} end:{variables}"}
-{"query": "startStepCounter enter...", "answer": "startStepCounter enter..."}
-{"query": "rebuild notification", "answer": "rebuild notification"}
-{"query": "getDeviceShutDownBoolean shutDown=false", "answer": "getDeviceShutDownBoolean shutDown={variables}"}
-{"query": "checkInsertStatus stepSum or calorieSum is enough", "answer": "checkInsertStatus stepSum or calorieSum is enough"}
-{"query": "flushTempCacheToDB by ext", "answer": "flushTempCacheToDB by {variables}"}

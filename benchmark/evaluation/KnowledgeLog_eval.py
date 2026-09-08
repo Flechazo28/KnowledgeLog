@@ -16,8 +16,11 @@ Copyright (C) 2022 University of Luxembourg
 import sys
 import os
 from datetime import datetime
+from pathlib import Path
 
-sys.path.append('../')
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+BENCHMARK_ROOT = PROJECT_ROOT / "benchmark"
+sys.path.insert(0, str(BENCHMARK_ROOT))
 
 from logparser.KnowledgeLog import LogParser
 from evaluation.settings import benchmark_settings
@@ -66,19 +69,16 @@ datasets_lunar = [
     "LoFI",
 ]
 
-# datasets_full = ['Proxifier']
-
-
 if __name__ == "__main__":
     args = common_args()
     data_type = "lunar" if args.lunar_data else ("full" if args.full_data else "2k")
     run_time = datetime.now().strftime("%Y%m%d_%H%M%S")
     if args.lunar_data:
-        input_dir = "../../lunar_dataset/"
+        input_dir = PROJECT_ROOT / "others" / "lunar_dataset"
     elif args.full_data:
-        input_dir = "../../full_dataset/"
+        input_dir = PROJECT_ROOT / "full_dataset"
     else:
-        input_dir = "../../2k_datasets/"
+        input_dir = PROJECT_ROOT / "2k_datasets"
     if args.lunar_data:
         datasets = datasets_lunar
     elif args.full_data:
@@ -94,7 +94,7 @@ if __name__ == "__main__":
             raise ValueError(f"Unknown datasets for {data_type} data: {unknown_datasets}")
         datasets = requested_datasets
 
-    output_dir = args.output_dir or f"../../result/{run_time}_{len(datasets)}datasets"
+    output_dir = Path(args.output_dir) if args.output_dir else PROJECT_ROOT / "result" / f"{run_time}_{len(datasets)}datasets"
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
@@ -113,7 +113,7 @@ if __name__ == "__main__":
         log_file_basename = os.path.basename(log_file)
         if os.path.exists(os.path.join(output_dir, f"{log_file_basename}_structured.csv")):
             parser = None
-            print("parseing result exist.")
+            print("Parsing result exists.")
         else:
             parser = LogParser
         # run evaluator for a dataset
@@ -124,7 +124,6 @@ if __name__ == "__main__":
             log_file=log_file,
             LogParser=parser,
             param_dict={
-                # 'log_format': setting['log_format'], 'indir': indir, 'outdir': output_dir, 'rex': setting['regex'],
                 'log_format': setting['log_format'], 'indir': indir, 'outdir': output_dir, 'rex': [],
                 'data_type': data_type,
                 'model': args.model,

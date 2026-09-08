@@ -1,8 +1,0 @@
-{"query": "[instance: 09e74992-da6d-4111-861e-6d22bbf91fdc] Attempting claim: memory 2048 MB, disk 20 GB, vcpus 1 CPU", "answer": "[instance: {variables}] Attempting claim: memory {variables} MB, disk {variables} GB, vcpus {variables} CPU"}
-{"query": "[instance: 58b8c07c-6c6d-4f46-bbb6-d58c12102892] Total vcpu: 16 VCPU, used: 0.00 VCPU", "answer": "[instance: {variables}] Total vcpu: {variables} VCPU, used: {variables} VCPU"}
-{"query": "image 0673dd71-34c5-4fbb-86c4-40623fbe45b4 at (/var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742): in use: on this node 1 local, 0 on other nodes sharing this instance storage", "answer": "image {variables} at ({variables}): in use: on this node {variables} local, {variables} on other nodes sharing this instance storage"}
-{"query": "HTTP exception thrown: No instances found for any event", "answer": "HTTP exception thrown: No instances found for any event"}
-{"query": "While synchronizing instance power states, found 1 instances in the database and 0 instances on the hypervisor.", "answer": "While synchronizing instance power states, found {variables} instances in the database and {variables} instances on the hypervisor."}
-{"query": "Total usable vcpus: 16, total allocated vcpus: 0", "answer": "Total usable vcpus: {variables}, total allocated vcpus: {variables}"}
-{"query": "[instance: e756d932-1275-4ea7-b22b-c0009e555aa6] Instance destroyed successfully.", "answer": "[instance: {variables}] Instance destroyed successfully."}
-{"query": "Removable base files: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742", "answer": "Removable base files: {variables}"}

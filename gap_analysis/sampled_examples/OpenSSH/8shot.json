@@ -1,8 +1,0 @@
-{"query": "fatal: Read from socket failed: Connection reset by peer [preauth]", "answer": "fatal: Read from socket failed: Connection reset by peer [preauth]"}
-{"query": "Received disconnect from 82.209.247.10: 11: [preauth]", "answer": "Received disconnect from {variables}: {variables}: [preauth]"}
-{"query": "error: Received disconnect from 103.99.0.122: 14: No more user authentication methods available. [preauth]", "answer": "error: Received disconnect from {variables}: {variables}: No more user authentication methods available. [preauth]"}
-{"query": "pam_unix(sshd:auth): check pass; user unknown", "answer": "pam_unix(sshd:auth): check pass; user unknown"}
-{"query": "reverse mapping checking getaddrinfo for 45-203-15-51.rev.cloud.scaleway.com [51.15.203.45] failed - POSSIBLE BREAK-IN ATTEMPT!", "answer": "reverse mapping checking getaddrinfo for {variables} [{variables}] failed - POSSIBLE BREAK-IN ATTEMPT!"}
-{"query": "pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=132.147.49.216 user=root", "answer": "pam_unix(sshd:auth): authentication failure; logname={variables} uid={variables} euid={variables} tty={variables} ruser={variables} rhost={variables} user={variables}"}
-{"query": "Received disconnect from 173.239.228.96: 11: Client disconnecting normally [preauth]", "answer": "Received disconnect from {variables}: {variables}: Client disconnecting normally [preauth]"}
-{"query": "input_userauth_request: invalid user guest [preauth]", "answer": "input_userauth_request: invalid user {variables} [preauth]"}

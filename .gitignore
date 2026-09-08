@@ -28,6 +28,7 @@ env/
 *.out
 *.pid
 *.tmp
+*.sh
 temp/
 tmp/
 cache/
@@ -61,6 +62,9 @@ checkpoints/
 *.tar.gz
 
 # Papers and local research notes (not source code)
-/others/paper_files/
-/others/md_files/
+/gap_analysis/
+/others/
 /历史问题/
+
+# Archived implementation snapshots
+/benchmark/logparser/KnowledgeLog/oldfiles/

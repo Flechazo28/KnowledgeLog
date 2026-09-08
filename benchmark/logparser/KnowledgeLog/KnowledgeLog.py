@@ -1,14 +1,15 @@
 import regex as re
 import os
-import numpy as np
 import pandas as pd
 from datetime import datetime
 import json
+from pathlib import Path
 from .gpt_query import query_template_from_gpt_with_check
 from .parsing_cache import ParsingCache
-from .post_process import correct_single_template
 from .utils import load_pickle, save_pickle, load_tuple_list, cache_to_file
-from tqdm import tqdm
+
+
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
 
 def save_results_to_csv(log_file, template_file, cache_file, output_file, output_template_file):
@@ -37,7 +38,6 @@ def save_results_to_csv(log_file, template_file, cache_file, output_file, output
         else:
             templates_set.append(str_b)
             template_id = len(templates_set)
-        # print(idx_a)
         contents[idx_a] = str_a
         event_templates[idx_a] = str_b
         eventids[idx_a] = f"E{template_id}"
@@ -63,7 +63,7 @@ def load_regs():
 
 
 class LogParser:
-    def __init__(self, log_format, indir='./', outdir='./result/', rex=[],
+    def __init__(self, log_format, indir='./', outdir='./result/', rex=None,
                  data_type='2k', model="gpt-3.5-turbo", run_id=None):
         self.path = indir
         self.outdir = outdir
@@ -80,7 +80,7 @@ class LogParser:
         dataset_name = logName.split('_')[0]
         log_file_base = os.path.splitext(logName)[0]
         run_suffix = f"_{self.run_id}" if self.run_id else ""
-        output_path = os.path.join(f"../../temp/lilac_temp_{self.data_type}_{self.model}{run_suffix}", dataset_name)
+        output_path = PROJECT_ROOT / "temp" / f"knowledgelog_temp_{self.data_type}_{self.model}{run_suffix}" / dataset_name
         evaluation_path = self.outdir
         if os.path.exists(os.path.join(evaluation_path, f"{log_file_base}.log_structured.csv")):
             print(f"{dataset_name} already exists.")
@@ -115,7 +115,7 @@ class LogParser:
         cache_step = max(1, min(total_line // 5, 10_000))
         if idx + 1 < total_line:
             for log in list(self.df_log[idx:]['Content']):
-                flag = self.process_log(cache, [log], log_messages, log_templates, idx, regs_common, total_line)
+                flag = self.process_log(cache, log, log_messages, log_templates, idx, regs_common, total_line)
                 idx += 1
                 if flag:
                     num_query += 1
@@ -138,30 +138,23 @@ class LogParser:
         print('Parsing done. [Time taken: {!s}]'.format(datetime.now() - start_time))
 
 
-    def process_log(self, cache, logs, log_messages, log_templates, idx, regs_common, total_line):
-        new_template = None
-        for log in logs:
-            # Match LILAC's original cache semantics: a cache hit is final.
-            # Query the model only when the template tree returns NoMatch.
-            results = cache.match_event(log)
-            if results[0] == "NoMatch":
-                print("===========================================")
-                print(f"Line-{idx}/{total_line}: No match. {log}")                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
-                new_template, normal = query_template_from_gpt_with_check(log, regs_common, self.model)
-                # new_template = post_process_template(new_template)
-                print("queried_new_template: ", new_template)
-                template_id = cache.add_templates(new_template, normal, results[2])
-                log_messages.append((log, idx))
-                log_templates.append((template_id, idx))
-                # results = cache.match_event(log)
-                # log_templates.append((results[log][0], idx))
-                # print(results)
-                print("===========================================")
-                return True
-            else:
-                log_messages.append((log, idx))
-                log_templates.append((results[1], idx))
-                return False
+    def process_log(self, cache, log, log_messages, log_templates, idx, regs_common, total_line):
+        # A cache hit is final; query the model only when no template matches.
+        results = cache.match_event(log)
+        if results[0] == "NoMatch":
+            print("===========================================")
+            print(f"Line-{idx}/{total_line}: No match. {log}")
+            new_template, normal = query_template_from_gpt_with_check(log, regs_common, self.model)
+            print("queried_new_template: ", new_template)
+            template_id = cache.add_templates(new_template, normal, results[2])
+            log_messages.append((log, idx))
+            log_templates.append((template_id, idx))
+            print("===========================================")
+            return True
+
+        log_messages.append((log, idx))
+        log_templates.append((results[1], idx))
+        return False
 
 
     def load_data(self):
@@ -170,10 +163,10 @@ class LogParser:
             self.df_log = pd.read_csv(csv_path, dtype=str, keep_default_na=False)
         else:
             headers, regex = self.generate_logformat_regex(self.log_format)
-            self.df_log = self.log_to_dataframe(os.path.join(self.path, self.logName), regex, headers, self.log_format)
+            self.df_log = self.log_to_dataframe(os.path.join(self.path, self.logName), regex, headers)
 
 
-    def log_to_dataframe(self, log_file, regex, headers, logformat):
+    def log_to_dataframe(self, log_file, regex, headers):
         """ Function to transform log file to dataframe 
         """
         log_messages = []
@@ -185,7 +178,7 @@ class LogParser:
                     message = [match.group(header) for header in headers]
                     log_messages.append(message)
                     linecount += 1
-                except Exception as e:
+                except Exception:
                     pass
         logdf = pd.DataFrame(log_messages, columns=headers)
         logdf.insert(0, 'LineId', None)
@@ -201,7 +194,7 @@ class LogParser:
         regex = ''
         for k in range(len(splitters)):
             if k % 2 == 0:
-                splitter = re.sub(' +', '\\\s+', splitters[k])
+                splitter = re.sub(r' +', r'\\s+', splitters[k])
                 regex += splitter
             else:
                 header = splitters[k].strip('<').strip('>')

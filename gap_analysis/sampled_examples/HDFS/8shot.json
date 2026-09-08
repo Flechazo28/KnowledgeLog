@@ -1,8 +1,0 @@
-{"query": "10.251.74.134:50010:Transmitted block blk_-4285500139106037767 to /10.250.10.223:50010", "answer": "{variables}:Transmitted block {variables} to {variables}"}
-{"query": "PacketResponder blk_-3102267849859399193 2 Exception java.io.EOFException", "answer": "PacketResponder {variables} {variables} Exception java.io.EOFException"}
-{"query": "writeBlock blk_4241467193520768333 received exception java.io.EOFException", "answer": "writeBlock {variables} received exception java.io.EOFException"}
-{"query": "Verification succeeded for blk_3493268658801325111", "answer": "Verification succeeded for {variables}"}
-{"query": "PacketResponder blk_8085135783040518166 1 Exception java.nio.channels.ClosedByInterruptException", "answer": "PacketResponder {variables} {variables} Exception java.nio.channels.ClosedByInterruptException"}
-{"query": "BLOCK* NameSystem.delete: blk_4647789308001139404 is added to invalidSet of 10.251.203.4:50010", "answer": "BLOCK* NameSystem.delete: {variables} is added to invalidSet of {variables}"}
-{"query": "PacketResponder blk_8085135783040518166 0 Exception java.io.IOException: Broken pipe", "answer": "PacketResponder {variables} {variables} Exception java.io.IOException: Broken pipe"}
-{"query": "Reopen Block blk_7008279672769077211", "answer": "Reopen Block {variables}"}
