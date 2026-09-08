@@ -35,7 +35,8 @@ cache/
 cached_log.txt
 
 # Generated experiment/evaluation outputs
-result/
+/result/*
+!/result/.gitkeep
 results/
 output/
 outputs/
@@ -44,13 +45,15 @@ checkpoints/
 
 # Local datasets and generated tabular artifacts
 /2k_datasets/
-/full_dataset/
+/full_dataset/*
 /build_2k_datasets.py
 *.csv
 *.parquet
 *.npy
 *.npz
 *.pkl
+!/full_dataset/Apache/
+!/full_dataset/Apache/**
 
 # Model weights and archives
 *.pt
