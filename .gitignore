@@ -36,7 +36,6 @@ cached_log.txt
 
 # Generated experiment/evaluation outputs
 /result/*
-!/result/.gitkeep
 results/
 output/
 outputs/
@@ -52,6 +51,10 @@ checkpoints/
 *.npy
 *.npz
 *.pkl
+!/result/20260906_200634_14datasets/
+!/result/20260906_200634_14datasets/summary_\[otc=False,complex=0,frequent=0\].csv
+!/result/summary_metrics/
+!/result/summary_metrics/20260906_200635_14datasets_KnowledgeLog_full_complex=0_frequent=0_gpt-3.5-turbo.csv
 !/full_dataset/Apache/
 !/full_dataset/Apache/**
 
