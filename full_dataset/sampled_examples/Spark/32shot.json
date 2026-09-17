@@ -1,0 +1,32 @@
+{"query": "Trying to register BlockManager", "answer": "Trying to register BlockManager"}
+{"query": "Got job 0 (collect at pnmf4.py:221) with 2 output partitions", "answer": "Got job {variables} (collect at {variables}) with {variables} output partitions"}
+{"query": "Deleting staging directory .sparkStaging/application_1485248649253_0034", "answer": "Deleting staging directory {variables}"}
+{"query": "Registered signal handlers for [TERM, HUP, INT]", "answer": "Registered signal handlers for {variables}"}
+{"query": "Starting the user application in a separate Thread", "answer": "Starting the user application in a separate Thread"}
+{"query": "File Output Committer Algorithm version is 1", "answer": "File Output Committer Algorithm version is {variables}"}
+{"query": "Block broadcast_5_piece203 stored as bytes in memory (estimated size 4.0 MB, free 1650.7 MB)", "answer": "Block {variables} stored as bytes in memory (estimated size {variables}, free {variables})"}
+{"query": "Opening proxy : mesos-slave-23:39541", "answer": "Opening proxy : {variables}"}
+{"query": "Python worker exited unexpectedly (crashed)", "answer": "Python worker exited unexpectedly (crashed)"}
+{"query": "Trying to remove executor 16 from BlockManagerMaster.", "answer": "Trying to remove executor {variables} from BlockManagerMaster."}
+{"query": "Found inactive connection to mesos-master-1/10.10.34.11:37826, creating a new one.", "answer": "Found inactive connection to {variables}, creating a new one."}
+{"query": "Exception in connection from mesos-slave-21/10.10.34.31:53449", "answer": "Exception in connection from {variables}"}
+{"query": "Removing block manager BlockManagerId(2, mesos-slave-27, 36033)", "answer": "Removing block manager BlockManagerId({variables}, {variables}, {variables})"}
+{"query": "Message RemoteProcessDisconnected(mesos-slave-18:36171) dropped.", "answer": "Message RemoteProcessDisconnected({variables}) dropped."}
+{"query": "Error sending message [message = Heartbeat(2,[Lscala.Tuple2;@2302a0df,BlockManagerId(2, mesos-slave-21, 35510))] in 1 attempts", "answer": "Error sending message [message = {variables}] in {variables} attempts"}
+{"query": "looking for newly runnable stages", "answer": "looking for newly runnable stages"}
+{"query": "Ignored failure: java.io.IOException: Connection from mesos-master-1/10.10.34.11:34641 closed", "answer": "Ignored failure: java.io.IOException: Connection from {variables} closed"}
+{"query": "RECEIVED SIGNAL 15: SIGTERM", "answer": "RECEIVED SIGNAL {variables}: SIGTERM"}
+{"query": "Starting job: collect at IPLoM.py:673", "answer": "Starting job: collect at {variables}"}
+{"query": "Add WebUI Filter. AddWebUIFilter(org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter,Map(PROXY_HOSTS -> mesos-master-1, PROXY_URI_BASES -> http://mesos-master-1:8088/proxy/application_1485248649253_0148),/proxy/application_1485248649253_0148)", "answer": "Add WebUI Filter. AddWebUIFilter({variables},Map(PROXY_HOSTS -> {variables}, PROXY_URI_BASES -> {variables}),{variables})"}
+{"query": "Shutdown hook called", "answer": "Shutdown hook called"}
+{"query": "Container marked as failed: container_1485248649253_0076_02_000002 on host: mesos-slave-08. Exit status: 143. Diagnostics: Container killed on request. Exit code is 143", "answer": "Container marked as failed: {variables} on host: {variables}. Exit status: {variables}. Diagnostics: Container killed on request. Exit code is {variables}"}
+{"query": "Registering RDD 35 (reduceByKey at pnmf4.py:295)", "answer": "Registering RDD {variables} (reduceByKey at {variables})"}
+{"query": "Setting up ContainerLaunchContext", "answer": "Setting up ContainerLaunchContext"}
+{"query": "failed: Set()", "answer": "failed: Set()"}
+{"query": "SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(yarn, yxsu); users with modify permissions: Set(yarn, yxsu)", "answer": "SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set({variables}, {variables}); users with modify permissions: Set({variables}, {variables})"}
+{"query": "ResultStage 0 (collect at pnmf4.py:247) finished in 7.688 s", "answer": "ResultStage {variables} (collect at {variables}) finished in {variables} s"}
+{"query": "Error sending message [message = RetrieveSparkProps] in 3 attempts", "answer": "Error sending message [message = {variables}] in {variables} attempts"}
+{"query": "Started 6 remote fetches in 9 ms", "answer": "Started {variables} remote fetches in {variables} ms"}
+{"query": "Unregistering ApplicationMaster with FAILED (diag message: Uncaught exception: org.apache.spark.rpc.RpcTimeoutException: Cannot receive any reply in 120 seconds. This timeout is controlled by spark.rpc.askTimeout)", "answer": "Unregistering ApplicationMaster with {variables}"}
+{"query": "Final app status: FAILED, exitCode: 1, (reason: User application exited with status 1)", "answer": "Final app status: {variables}, exitCode: {variables}, (reason: {variables})"}
+{"query": "Ignoring response for RPC 6596629245993899365 from mesos-master-1/10.10.34.11:51096 (81 bytes) since it is not outstanding", "answer": "Ignoring response for RPC {variables} from {variables} ({variables} bytes) since it is not outstanding"}

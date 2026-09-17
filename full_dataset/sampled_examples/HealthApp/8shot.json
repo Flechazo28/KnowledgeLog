@@ -1,0 +1,8 @@
+{"query": "initDataPrivacy the dataPrivacy is true", "answer": "initDataPrivacy the dataPrivacy is {variables}"}
+{"query": "new date =20171225, type=40004,48.0,old=null", "answer": "new date ={variables}, type={variables},old={variables}"}
+{"query": "startStepCounterInter mStandStepCounter = com.huawei.health.b.b.a@c83b4a6", "answer": "startStepCounterInter mStandStepCounter = {variables}"}
+{"query": "insertHiHealthData() bulkSaveDetailHiHealthData fail errorCode = 4,errorMessage = ERR_DATA_INSERT", "answer": "insertHiHealthData() bulkSaveDetailHiHealthData fail errorCode = {variables},errorMessage = {variables}"}
+{"query": "stepSyncOrNot appSynTimes is 0, statsyncTimes is 0", "answer": "stepSyncOrNot appSynTimes is {variables}, statsyncTimes is {variables}"}
+{"query": "compareMidWareCacheAndLocalCache enter...", "answer": "compareMidWareCacheAndLocalCache enter..."}
+{"query": "saveHealthDetailData() saveOneDetailData fail hiHealthData = 1514131200000,type = 40005", "answer": "saveHealthDetailData() saveOneDetailData fail hiHealthData = {variables},type = {variables}"}
+{"query": "setGoalNotifiShownRecord 1514131200374 false", "answer": "setGoalNotifiShownRecord {variables}"}

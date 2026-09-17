@@ -1,12 +1,6 @@
-# Tested with Python 3.8.20.
-# KnowledgeLog uses the OpenAI Python 0.x ChatCompletion API.
 openai==0.27.8
-regex==2022.3.2
-pandas==2.0.3
 numpy==1.24.3
-tqdm==4.66.5
+pandas==2.0.3
+regex==2022.3.2
 natsort==8.4.0
-scipy==1.10.1
-nltk==3.8.1
-scikit-learn==1.2.2
-ipython==8.12.0
+tqdm==4.66.5

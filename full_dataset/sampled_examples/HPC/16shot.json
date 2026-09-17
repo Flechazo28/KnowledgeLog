@@ -1,0 +1,16 @@
+{"query": "psu failure\\ ambient=34", "answer": "psu failure\\ ambient={variables}"}
+{"query": "ServerFileSystem: ServerFileSystem domain root7_local is full", "answer": "ServerFileSystem: ServerFileSystem domain {variables} is full"}
+{"query": "NIFF: node node-111 detected a failed network connection on network 5.5.224.0 via interface alt0", "answer": "NIFF: node {variables} detected a failed network connection on network {variables} via interface {variables}"}
+{"query": "not responding", "answer": "not responding"}
+{"query": "boot (command 3141)", "answer": "boot (command {variables})"}
+{"query": "Link error on broadcast tree Interconnect-1T00:00:2:0", "answer": "Link error on broadcast tree {variables}"}
+{"query": "Fan speeds ( 3534 3534 3375 4326 3497 3479 )", "answer": "Fan speeds ( {variables} )"}
+{"query": "haltcluster (command 2981)", "answer": "haltcluster (command {variables})"}
+{"query": "Targeting domains:node-D5 and nodes:node-163", "answer": "Targeting domains:{variables} and nodes:{variables}"}
+{"query": "Command has been aborted", "answer": "Command has been aborted"}
+{"query": "bootGenvmunix (command 1903)", "answer": "bootGenvmunix (command {variables})"}
+{"query": "inconsistent nodesets node-223 0x1fffffffe <ok> node-192 0x183fffffe <ok> node-194 0x183fffffe <ok> node-193 0x183fffffe <ok>", "answer": "inconsistent nodesets {variables} {variables} <ok> {variables} {variables} <ok>"}
+{"query": "Link in reset", "answer": "Link in reset"}
+{"query": "halt (command 2994)", "answer": "halt (command {variables})"}
+{"query": "Targeting domains:node-D4 and nodes:node-[128-159] child of command 2596", "answer": "Targeting domains:{variables} and nodes:{variables}"}
+{"query": "power/control ok", "answer": "power/control ok"}

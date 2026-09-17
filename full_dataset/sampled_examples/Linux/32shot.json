@@ -1,0 +1,32 @@
+{"query": "Bluetooth: RFCOMM ver 1.2", "answer": "Bluetooth: {variables} ver {variables}"}
+{"query": "atd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "PCI: Using IRQ router PIIX/ICH [8086/2410] at 0000:00:1f.0", "answer": "PCI: Using IRQ router PIIX/ICH [{variables}] at {variables}"}
+{"query": "bad username [ ]", "answer": "bad username [{variables}]"}
+{"query": "Service telnet failed to start and is deactivated.", "answer": "Service telnet failed to start and is deactivated."}
+{"query": "ICH: IDE controller at PCI slot 0000:00:1f.1", "answer": "ICH: IDE controller at PCI slot {variables}"}
+{"query": "hcid startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "PCI: Probing PCI hardware (bus 00)", "answer": "PCI: Probing PCI hardware (bus {variables})"}
+{"query": "Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)", "answer": "Dentry cache hash table entries: {variables} (order: {variables}, {variables} bytes)"}
+{"query": "removing device node '/udev/vcs5'", "answer": "removing device node {variables}"}
+{"query": "agpgart: detected 4MB dedicated video ram.", "answer": "agpgart: detected {variables} dedicated video ram."}
+{"query": "sm-client startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "irqbalance startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "couldn't add command channel 127.0.0.1#953: not found", "answer": "couldn't add command channel {variables} not found"}
+{"query": "CPU: L2 cache: 256K", "answer": "CPU: L2 cache: {variables}"}
+{"query": "Couldn't authenticate user", "answer": "Couldn't authenticate user"}
+{"query": "syslogd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "Device: /dev/hda, is SMART capable. Adding to \"monitor\" list.", "answer": "Device: {variables}, is SMART capable. Adding to \"monitor\" list."}
+{"query": "input: AT Translated Set 2 keyboard on isa0060/serio0", "answer": "input: {variables} on {variables}"}
+{"query": "select reported EBADF but no bad file descriptors were found", "answer": "select reported EBADF but no bad file descriptors were found"}
+{"query": "Home page is http://smartmontools.sourceforge.net/", "answer": "Home page is {variables}"}
+{"query": "Checking 'hlt' instruction... OK.", "answer": "Checking {variables} instruction... OK."}
+{"query": "ntpd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "microcode: CPU0 already at revision 0x8 (current=0x8)", "answer": "microcode: CPU0 already at revision {variables} (current={variables})"}
+{"query": "Calibrating delay loop... 1445.88 BogoMIPS", "answer": "Calibrating delay loop... {variables} BogoMIPS"}
+{"query": "httpd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "*** info [client.c(137)]:", "answer": "*** info [client.c({variables})]:"}
+{"query": "Started gpm successfully. Entered daemon mode.", "answer": "Started gpm successfully. Entered daemon mode."}
+{"query": "Linux agpgart interface v0.100 (c) Dave Jones", "answer": "Linux agpgart interface {variables} (c) Dave Jones"}
+{"query": "bind failed (Address already in use (errno = 98)). service = telnet", "answer": "bind failed (Address already in use (errno = {variables})). service = {variables}"}
+{"query": "Starting readahead: succeeded", "answer": "Starting readahead: succeeded"}
+{"query": "Jul 27 14:42:19 Privoxy(-150806400) Info: loading configuration file '/etc/privoxy/config':", "answer": "{variables} Privoxy({variables}) Info: loading configuration file {variables}"}

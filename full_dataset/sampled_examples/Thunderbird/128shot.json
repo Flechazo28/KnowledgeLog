@@ -1,0 +1,128 @@
+{"query": "Package Release ID=R106628 Package Description=Dell BMC Firmware, v.1.40, A05 Support Log path=/var/log/#26#/updatepackage/log/support/R106628.log Exit code = 1 (Failure)", "answer": "Package Release ID={variables} Package Description={variables} Support Log path={variables}"}
+{"query": "fs_client_cap: done", "answer": "fs_client_cap: done"}
+{"query": "Kickstart Install: pdsh + ssh packages", "answer": "Kickstart Install: {variables}"}
+{"query": "EXT3-fs: sda3: orphan cleanup on readonly fs", "answer": "{variables}: {variables}: orphan cleanup on readonly fs"}
+{"query": "installing panasas drivers", "answer": "installing panasas drivers"}
+{"query": "bindcache: failed init IPS: 0x5 (Out of memory)", "answer": "bindcache: failed init IPS: {variables} (Out of memory)"}
+{"query": "gmetad startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "LustreError: 13733:0:(class_obd.c:315:class_handle_ioctl()) OBD ioctl: device not setup 31", "answer": "LustreError: {variables}:({variables}) OBD ioctl: device not setup {variables}"}
+{"query": "hw_random: RNG not detected", "answer": "hw_random: RNG not detected"}
+{"query": "RPC call returned error 101", "answer": "RPC call returned error {variables}"}
+{"query": "device-mapper: 4.4.0-ioctl (2005-01-12) initialised: dm-#16#@#17#", "answer": "device-mapper: {variables} initialised: dm-{variables}"}
+{"query": "Bringing up interface ib0: succeeded", "answer": "Bringing up interface {variables}: succeeded"}
+{"query": "[ib_sm_assign.c:389]: Failed to set LID on switch=66a100400017e, because NO RESPONSE", "answer": "[{variables}]: Failed to set LID on switch={variables}, because NO RESPONSE"}
+{"query": "[ib_sm_routing.c:2458]: No spine present in chassis, splitting switch_elem", "answer": "[{variables}]: No spine present in chassis, splitting switch_elem"}
+{"query": "ACPI: PM-Timer IO Port: 0x808", "answer": "ACPI: PM-Timer IO Port: {variables}"}
+{"query": "haldaemon startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "sda: assuming drive cache: write through", "answer": "{variables}: assuming drive cache: write through"}
+{"query": "Total of 2 processors activated (14303.23 BogoMIPS).", "answer": "Total of {variables} processors activated ({variables} BogoMIPS)."}
+{"query": "/tmp: Clearing", "answer": "{variables}: Clearing"}
+{"query": "CPU: Trace cache: 12K uops, L1 D cache: 16K", "answer": "CPU: Trace cache: {variables} uops, L1 D cache: {variables}"}
+{"query": "pan_kernel: expected release: 2.6.9-15.EL.rootsmp release is: 2.6.9-1.4.5.6smp", "answer": "pan_kernel: expected release: {variables} release is: {variables}"}
+{"query": "using 10.100.160.74:1, 0x23a1 (pan_sock: timeout)", "answer": "using {variables}, {variables} (pan_sock: timeout)"}
+{"query": "SELinux: Registering netfilter hooks", "answer": "SELinux: Registering netfilter hooks"}
+{"query": "ntpd shutdown failed", "answer": "{variables} shutdown failed"}
+{"query": "mount.panfs error: mount request rejected because client-realm clock skew exceeds 10 seconds", "answer": "mount.panfs error: mount request rejected because client-realm clock skew exceeds {variables} seconds"}
+{"query": "authentication cancelled by user: 'Authentication cancelled by user.'", "answer": "authentication cancelled by user: {variables}"}
+{"query": "/sbin/ip route add 10.0.0.0/8 via 10.100.23.254 dev eth0", "answer": "{variables} route add {variables} via {variables} dev {variables}"}
+{"query": "dcdipm device driver unloaded", "answer": "{variables} device driver unloaded"}
+{"query": "Fusion MPT base driver 3.02.18", "answer": "Fusion MPT base driver {variables}"}
+{"query": "308365 reserved pages", "answer": "{variables} reserved pages"}
+{"query": "pan_common: init complete", "answer": "pan_common: init complete"}
+{"query": "Configuration file /etc/smartd.conf parsed but has no entries (like /dev/hda)", "answer": "Configuration file {variables} parsed but has no entries (like {variables})"}
+{"query": "session opened for user #47# by (uid=0)", "answer": "session opened for user {variables} by {variables}(uid={variables})"}
+{"query": "Lustre: Echo OBD driver; #10#@#11#", "answer": "Lustre: Echo OBD driver; {variables}"}
+{"query": "klogd shutdown failed", "answer": "{variables} shutdown failed"}
+{"query": "(root) BEGIN EDIT (root)", "answer": "({variables}) BEGIN EDIT ({variables})"}
+{"query": "SCSI device sda: 143114240 512-byte hdwr sectors (73274 MB)", "answer": "SCSI device {variables}: {variables} {variables}-byte hdwr sectors ({variables} MB)"}
+{"query": "DHCPOFFER on 10.100.34.100 to 00:14:22:16:8f:db via eth1", "answer": "DHCPOFFER on {variables} to {variables} via {variables}"}
+{"query": "cd /usr ; /usr/bin/mysqld_safe &", "answer": "cd {variables} ; {variables} &"}
+{"query": "checking if image is initramfs... it is", "answer": "checking if image is initramfs... it is"}
+{"query": "portmap startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "Connection broken to AF_INET(tbird-admin1:7175), reopening in 60 seconds", "answer": "Connection broken to AF_INET({variables}), reopening in {variables} seconds"}
+{"query": "0x23a1 (pan_sock: timeout)", "answer": "{variables} (pan_sock: timeout)"}
+{"query": "WARNING: Could not chdir to home directory /Net/usr/home/#95#: No such file or directory", "answer": "WARNING: Could not chdir to home directory {variables}: No such file or directory"}
+{"query": "Node 0 HighMem per-cpu: empty", "answer": "Node {variables} HighMem per-cpu: empty"}
+{"query": "Enabling local filesystem quotas: succeeded", "answer": "Enabling local filesystem quotas: succeeded"}
+{"query": "To do so, start the server, then issue the following commands:", "answer": "To do so, start the server, then issue the following commands:"}
+{"query": "PCI: Using ACPI for IRQ routing", "answer": "PCI: Using ACPI for IRQ routing"}
+{"query": "Real Time Clock Driver v1.12", "answer": "Real Time Clock Driver {variables}"}
+{"query": "lockd shutdown failed", "answer": "{variables} shutdown failed"}
+{"query": "START: tftp pid=30128 from=10.100.4.251", "answer": "START: tftp pid={variables} from={variables}"}
+{"query": "running '/usr/sbin/up2date-config' with root privileges on behalf of 'root'", "answer": "running {variables} with {variables} privileges on behalf of '{variables}'"}
+{"query": "last server has exited", "answer": "last server has exited"}
+{"query": "Setting clock (localtime): Thu Nov 10 18:19:26 MST 2005 succeeded", "answer": "Setting clock (localtime): {variables} succeeded"}
+{"query": "THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/hob_comm.c[2486]: XHH_hob_fatal_error: Fatal Event Syndrome = VAPI_CATAS_ERR_INTERNAL_PARITY_ERR (6)", "answer": "THH({variables}): {variables}[{variables}]: XHH_hob_fatal_error: Fatal Event Syndrome = {variables}"}
+{"query": "can't open /var/lib/ntp/drift.TEMP: Too many open files in system", "answer": "can't open {variables}: Too many open files in system"}
+{"query": "Processor #0 15:4 APIC version 16", "answer": "Processor {variables} {variables} APIC version {variables}"}
+{"query": "THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/cmdif_comm.c[1392]: list of outstanding tokens:", "answer": "THH({variables}): {variables}[{variables}]: list of outstanding tokens:"}
+{"query": "Timed out waiting for hotplug event 236. Rebasing to 239", "answer": "Timed out waiting for hotplug event {variables}. Rebasing to {variables}"}
+{"query": "THH(1): CMD ERROR DUMP. opcode=0xf, opc_mod = 0x1, exec_time_micro=60000000", "answer": "THH({variables}): CMD ERROR DUMP. opcode={variables}, opc_mod = {variables}, exec_time_micro={variables}"}
+{"query": "[ib_sm_sweep.c:1792]: async events require sweep", "answer": "[{variables}]: async events require sweep"}
+{"query": "Probing IDE interface ide4...", "answer": "Probing IDE interface {variables}..."}
+{"query": "Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2", "answer": "Uniform Multi-Platform E-IDE driver Revision: {variables}"}
+{"query": "Kickstart Install: SISUITE Client RPMS", "answer": "Kickstart Install: {variables}"}
+{"query": "selinux_register_security: Registering secondary module capability", "answer": "selinux_register_security: Registering secondary module capability"}
+{"query": "Unable to register SCSI device /dev/sda at line 1 of file /etc/smartd.conf", "answer": "Unable to register SCSI device {variables} at line {variables} of file {variables}"}
+{"query": "mount.panfs: panfs is not configured in the kernel", "answer": "mount.panfs: panfs is not configured in the kernel"}
+{"query": "DEVPATH is not set", "answer": "{variables} is not set"}
+{"query": "CPU: Hyper-Threading is disabled", "answer": "CPU: Hyper-Threading is disabled"}
+{"query": "EXT3-fs: recovery complete.", "answer": "EXT3-fs: recovery complete."}
+{"query": "snmpd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "ib0: no IPv6 routers present", "answer": "{variables}: no IPv6 routers present"}
+{"query": "Compressed image found at block 0", "answer": "Compressed image found at block {variables}"}
+{"query": "[smux_accept] accepted fd 13 from 127.0.0.1:34642", "answer": "[smux_accept] accepted fd {variables} from {variables}"}
+{"query": "pan_ips: error -- cfg target addresses, 0x5 (Out of memory), err_loc=1, rhel_4_amd64/release/build/panfs/ips/pan_ips_cfg.c:294", "answer": "pan_ips: error -- cfg target addresses, {variables} (Out of memory), {variables}"}
+{"query": "Wrote 0 new dynamic host decls to leases file.", "answer": "Wrote {variables} new dynamic host decls to leases file."}
+{"query": "Unable to register device /dev/sda (no Directive -d removable). Exiting.", "answer": "Unable to register device {variables} (no Directive -d {variables}). Exiting."}
+{"query": "ACPI: Processor [CPU1] (supports C1)", "answer": "ACPI: Processor [{variables}] (supports {variables})"}
+{"query": "ksign: Installing public key data", "answer": "ksign: Installing public key data"}
+{"query": "Active:764515 inactive:727169 dirty:0 writeback:0 unstable:0 free:3550 slab:8020 mapped:1490913 pagetables:9947", "answer": "Active:{variables} inactive:{variables} dirty:{variables} writeback:{variables} unstable:{variables} free:{variables} slab:{variables} mapped:{variables} pagetables:{variables}"}
+{"query": "ioc0: 53C1030: Capabilities={Initiator,Target}", "answer": "ioc0: {variables}: Capabilities={variables}"}
+{"query": "mount.panfs warning:", "answer": "mount.panfs warning:"}
+{"query": "Detected 12.469 MHz APIC timer.", "answer": "Detected {variables} MHz APIC timer."}
+{"query": "Package Release ID=R106628 Package Description=Dell BMC Firmware, v.1.40, A05 Support Log path=/var/log/#26#/updatepackage/log/support/R106628.log Exit code = 2 (Reboot required)", "answer": "Package Release ID={variables} Package Description={variables} Support Log path={variables} Exit code = {variables} (Reboot required)"}
+{"query": "rpc.statd shutdown succeeded", "answer": "{variables} shutdown succeeded"}
+{"query": "Unregistering netfilter hooks", "answer": "Unregistering netfilter hooks"}
+{"query": "[ib_sm_bringup.c:450]: Active state mismatch GUID=c66d020000ad0500, port=8, state 1, GUID=30bc030000ad0500, port=1, state 4", "answer": "[{variables}]: Active state mismatch GUID={variables}, port={variables}, state {variables}, GUID={variables}, port={variables}, state {variables}"}
+{"query": "syslog-ng version 1.6.7 starting", "answer": "syslog-ng version {variables} starting"}
+{"query": "THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/hob_comm.c[781]: XHH_hob_register_KL(1): [MM_create_mr]:MM_mr_get_keys failed", "answer": "THH({variables}): {variables}[{variables}]: XHH_hob_register_KL({variables}): [MM_create_mr]:{variables}"}
+{"query": "dcdipm device driver loaded", "answer": "{variables} device driver loaded"}
+{"query": "Intel E7520/7320/7525 detected.<6>pci_hotplug: PCI Hot Plug PCI Core version: 0.5", "answer": "Intel {variables} detected.{variables}: PCI Hot Plug PCI Core version: {variables}"}
+{"query": "Disabled Privacy Extensions on device ffffffff803fa160(lo)", "answer": "Disabled Privacy Extensions on device {variables}({variables})"}
+{"query": "Received TERM or STOP signal... shutting down...", "answer": "Received {variables} signal... shutting down..."}
+{"query": "PCI: Using configuration type 1", "answer": "PCI: Using configuration type {variables}"}
+{"query": "Please report any problems with the /usr/bin/mysqlbug script!", "answer": "Please report any problems with the {variables} script!"}
+{"query": "EXT3-fs: INFO: recovery required on readonly filesystem.", "answer": "EXT3-fs: INFO: recovery required on readonly filesystem."}
+{"query": "#26# : TTY=unknown ; PWD=/mnt_projects/sysapps/#125#-test/nodehwtest/breakfix ; USER=root ; COMMAND=/tmp/tmp.MikxcX6255", "answer": "{variables} : TTY={variables} ; PWD={variables} ; USER={variables} ; COMMAND={variables}"}
+{"query": "BIOS update verification failed. Version expected: A04, Version found: A02", "answer": "BIOS update verification failed. Version expected: {variables}, Version found: {variables}"}
+{"query": "Mounting local filesystems: succeeded", "answer": "Mounting local filesystems: succeeded"}
+{"query": "Searching for custom.cnf. . .", "answer": "Searching for custom.cnf. . ."}
+{"query": "LAPIC_NMI (acpi_id[0x01] high edge lint[0x1])", "answer": "LAPIC_NMI (acpi_id[{variables}] high edge lint[{variables}])"}
+{"query": "[ib_sm_bringup.c:422]: Skip node= 5ad0000027df8, port= 4 bringup because topology is stale, no response", "answer": "[{variables}]: Skip node= {variables}, port= {variables} bringup because topology is stale, no response"}
+{"query": "recv_rply: [127.0.0.1] RPC status 1", "answer": "recv_rply: [{variables}] RPC status {variables}"}
+{"query": "httpd shutdown succeeded", "answer": "{variables} shutdown succeeded"}
+{"query": "crond startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "hub 1-3:1.0: USB hub found", "answer": "hub {variables}: USB hub found"}
+{"query": "auths-pam: PAM subprocess returned packet SSH_PAM_OP_ERROR. (err_num: 7, err_msg: Authentication failure)", "answer": "auths-pam: PAM subprocess returned packet SSH_PAM_OP_ERROR. (err_num: {variables}, err_msg: {variables})"}
+{"query": "Aborting journal on device sda6.", "answer": "Aborting journal on device {variables}."}
+{"query": "synchronisation lost", "answer": "synchronisation lost"}
+{"query": "Trying to re-exec init", "answer": "Trying to re-exec init"}
+{"query": "authentication failure; logname=LOGIN uid=0 euid=0 tty=tty1 ruser= rhost= user=root", "answer": "authentication failure; logname={variables} uid={variables} euid={variables} tty={variables} ruser={variables} rhost={variables} user={variables}"}
+{"query": "Copyright (c) 1999-2004 Intel Corporation.", "answer": "Copyright (c) {variables}-{variables} Intel Corporation."}
+{"query": "[ib_sm_discovery.c:949]: no routing required for port guid 0x5ad000003b9fd, lid 2454", "answer": "[{variables}]: no routing required for port guid {variables}, lid {variables}"}
+{"query": "DHCPACK on 10.100.4.251 to 00:11:43:e3:ba:c3 via eth1", "answer": "DHCPACK on {variables} to {variables} via {variables}"}
+{"query": "Received signal 15; terminating.", "answer": "Received signal {variables}; terminating."}
+{"query": "PCI: Setting latency timer of device 0000:00:1d.2 to 64", "answer": "PCI: Setting latency timer of device {variables} to {variables}"}
+{"query": "Password authentication for user #76# accepted.", "answer": "Password authentication for user {variables} accepted."}
+{"query": "unexporting all filesystems", "answer": "unexporting all filesystems"}
+{"query": "Unmounting NFS filesystems: succeeded", "answer": "Unmounting {variables} filesystems: {variables}"}
+{"query": "ACPI wakeup devices:", "answer": "ACPI wakeup devices:"}
+{"query": "Listening on LPF/eth1/00:11:43:e3:ba:df/C_net", "answer": "Listening on {variables}"}
+{"query": "[INFO]: Configuration caused by previous GET/SET operation failures", "answer": "[INFO]: Configuration caused by previous GET/SET operation failures"}
+{"query": "many lost ticks.", "answer": "many lost ticks."}
+{"query": "Idle timeout exceeded.", "answer": "Idle timeout exceeded."}
+{"query": "Normal zone: 1830912 pages, LIFO batch:16", "answer": "{variables} pages, LIFO batch:{variables}"}
+{"query": "oom-killer: gfp_mask=0x1d2", "answer": "oom-killer: gfp_mask={variables}"}
+{"query": "Instrumentation Service EventID: 1306 Redundancy lost Redundancy unit: BMC Fan Redundancy Chassis location: Main System Chassis Previous redundancy state was: Unknown", "answer": "Instrumentation Service EventID: {variables} Redundancy lost Redundancy unit: {variables} Redundancy Chassis location: {variables} System Chassis Previous redundancy state was: {variables}"}
+{"query": "ACPI: IRQ0 used by override.", "answer": "ACPI: {variables} used by override."}

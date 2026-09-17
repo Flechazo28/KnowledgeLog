@@ -1,0 +1,8 @@
+{"query": "not responding", "answer": "not responding"}
+{"query": "Temperature (42C) exceeds warning threshold", "answer": "Temperature {variables} exceeds warning threshold"}
+{"query": "Command has been aborted", "answer": "Command has been aborted"}
+{"query": "Link ok", "answer": "Link ok"}
+{"query": "Command Failed on: node-199\\ node-192\\ node-193\\ node-194\\ node-195\\ node-196\\ node-197\\ node-198", "answer": "Command Failed on: {variables}"}
+{"query": "Targeting domains:node-D6 and nodes:node-208", "answer": "Targeting domains:{variables} and nodes:{variables}"}
+{"query": "ambient=41 threshold exceeded", "answer": "ambient={variables}"}
+{"query": "1 failed to configure resourcemgmt subsystem err = 10", "answer": "{variables} failed to configure resourcemgmt subsystem err = {variables}"}

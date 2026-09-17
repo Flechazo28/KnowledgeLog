@@ -1,0 +1,16 @@
+{"query": "Registered executor NettyRpcEndpointRef(null) (mesos-slave-21:44975) with ID 1", "answer": "Registered executor NettyRpcEndpointRef({variables}) ({variables}) with ID {variables}"}
+{"query": "Starting remoting", "answer": "Starting remoting"}
+{"query": "Starting job: collect at pnmf4.py:297", "answer": "Starting job: collect at {variables}"}
+{"query": "Resubmitting ShuffleMapStage 4 (reduceByKey at pnmf4.py:371) because some of its tasks had failed: 1", "answer": "Resubmitting ShuffleMapStage {variables} (reduceByKey at {variables}) because some of its tasks had failed: {variables}"}
+{"query": "Running Spark version 1.6.0", "answer": "Running Spark version {variables}"}
+{"query": "Reporting 1066 blocks to the master.", "answer": "Reporting {variables} blocks to the master."}
+{"query": "Starting executor ID 2 on host mesos-slave-26", "answer": "Starting executor ID {variables} on host {variables}"}
+{"query": "error=2, No such file or directory", "answer": "error={variables}, No such file or directory"}
+{"query": "YarnClusterScheduler.postStartHook done", "answer": "YarnClusterScheduler.postStartHook done"}
+{"query": "Cancelling stage 3", "answer": "Cancelling stage {variables}"}
+{"query": "Started 7 remote fetches in 2 ms", "answer": "Started {variables} remote fetches in {variables} ms"}
+{"query": "Got job 0 (collect at pnmf4.py:292) with 2 output partitions", "answer": "Got job {variables} (collect at {variables}) with {variables} output partitions"}
+{"query": "SparkListenerBus has already stopped! Dropping event SparkListenerBlockUpdated(BlockUpdatedInfo(BlockManagerId(21, mesos-slave-13, 57719),broadcast_5_piece323,StorageLevel(false, true, false, false, 1),4194304,0,0))", "answer": "SparkListenerBus has already stopped! Dropping event {variables}"}
+{"query": "Ignored failure: java.io.IOException: Connection from mesos-master-1/10.10.34.11:34641 closed", "answer": "Ignored failure: java.io.IOException: Connection from {variables} closed"}
+{"query": "SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8", "answer": "SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: {variables}"}
+{"query": "Invoking stop() from shutdown hook", "answer": "Invoking stop() from shutdown hook"}

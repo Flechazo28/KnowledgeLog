@@ -1,0 +1,32 @@
+{"query": "Link error on broadcast tree Interconnect-1T00:00:2:0", "answer": "Link error on broadcast tree {variables}"}
+{"query": "fan failure\\ ambient=27", "answer": "fan failure\\ ambient={variables}"}
+{"query": "Fan speeds ( 3552 3534 3391 **** 3515 3479 )", "answer": "Fan speeds ( {variables} )"}
+{"query": "Command Failed on: node-128\\ node-129\\ node-134\\ node-130\\ node-131\\ node-132\\ node-133\\ node-135", "answer": "Command Failed on: {variables}"}
+{"query": "Link in reset", "answer": "Link in reset"}
+{"query": "inconsistent nodesets node-0 0x0001effe <ok> node-1 0x0001effe <ok> node-2 0x0001effe <ok> node-15 0x01fffffe <ok> node-23 0x01fffffe <ok> node-7 0x0001fffe <ok>", "answer": "inconsistent nodesets {variables} {variables} <ok> {variables} {variables} <ok>"}
+{"query": "clusterAddMember (command 1902)", "answer": "clusterAddMember (command {variables})"}
+{"query": "not responding", "answer": "not responding"}
+{"query": "halt (command 2979)", "answer": "halt (command {variables})"}
+{"query": "member_delete (command 2794)", "answer": "member_delete (command {variables})"}
+{"query": "ServerFileSystem: ServerFileSystem domain root30_local is full", "answer": "ServerFileSystem: ServerFileSystem domain {variables} is full"}
+{"query": "Link error", "answer": "Link error"}
+{"query": "power/control problem", "answer": "power/control problem"}
+{"query": "haltcluster (command 2804)", "answer": "haltcluster (command {variables})"}
+{"query": "NIFF: node node-122 detected a failed network connection on network 5.5.224.0 via interface alt0", "answer": "NIFF: node {variables} detected a failed network connection on network {variables} via interface {variables}"}
+{"query": "psu failure\\ ambient=34", "answer": "psu failure\\ ambient={variables}"}
+{"query": "power/control ok", "answer": "power/control ok"}
+{"query": "Fan speeds ( 3552 3534 3375 4090 3515 3479 )", "answer": "Fan speeds ( {variables} )"}
+{"query": "wait (command 4215)", "answer": "wait (command {variables})"}
+{"query": "PSU status ( on off )", "answer": "PSU status ({variables} {variables})"}
+{"query": "no recent update", "answer": "no recent update"}
+{"query": "Targeting domains:node-D2 and nodes:node-90", "answer": "Targeting domains:{variables} and nodes:{variables}"}
+{"query": "Link ok", "answer": "Link ok"}
+{"query": "boot (command 2690)", "answer": "boot (command {variables})"}
+{"query": "ClusterFileSystem: ServerFileSystem domain root11_local is no longer served by node node-106", "answer": "ClusterFileSystem: ServerFileSystem domain {variables} is no longer served by node {variables}"}
+{"query": "Command has been aborted", "answer": "Command has been aborted"}
+{"query": "ServerFileSystem: An ServerFileSystem domain panic has occurred on storage911", "answer": "ServerFileSystem: An ServerFileSystem domain panic has occurred on {variables}"}
+{"query": "ambient=41 threshold exceeded", "answer": "ambient={variables}"}
+{"query": "Command has completed successfully", "answer": "Command has completed successfully"}
+{"query": "configured out", "answer": "configured out"}
+{"query": "risBoot (command 1904)", "answer": "risBoot (command {variables})"}
+{"query": "Temperature (41C) exceeds warning threshold", "answer": "Temperature {variables} exceeds warning threshold"}

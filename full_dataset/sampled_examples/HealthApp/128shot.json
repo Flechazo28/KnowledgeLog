@@ -1,0 +1,128 @@
+{"query": "initSyncModel current SyncModel is 2", "answer": "initSyncModel current SyncModel is {variables}"}
+{"query": "initSyncModel current SyncModel is 2", "answer": "initSyncModel current SyncModel is {variables}"}
+{"query": "insertHiHealthData() size = 24,app = 1,One Data Type = 2,packageName = com.huawei.health,writeStatType = 0", "answer": "insertHiHealthData() size = {variables},app = {variables},One Data Type = {variables},packageName = {variables},writeStatType = {variables}"}
+{"query": "insertHiHealthData() size = 3,app = 1,One Data Type = 40002,packageName = com.huawei.health,writeStatType = 0", "answer": "insertHiHealthData() size = {variables},app = {variables},One Data Type = {variables},packageName = {variables},writeStatType = {variables}"}
+{"query": "insertHiHealthData() end totalTime = 19", "answer": "insertHiHealthData() end totalTime = {variables}"}
+{"query": "insertHiHealthData() end totalTime = 72", "answer": "insertHiHealthData() end totalTime = {variables}"}
+{"query": "uploadStaticsToDB failed message=true", "answer": "uploadStaticsToDB failed message={variables}"}
+{"query": "uploadStaticsToDB failed message=true", "answer": "uploadStaticsToDB failed message={variables}"}
+{"query": "startInsertSportSync start auto sync,app is 1", "answer": "startInsertSportSync start auto sync,app is {variables}"}
+{"query": "startInsertSportSync start auto sync,app is 1", "answer": "startInsertSportSync start auto sync,app is {variables}"}
+{"query": "supportPrivateStandStepcounter=true,supportStandStepCounter=true", "answer": "supportPrivateStandStepcounter={variables},supportStandStepCounter={variables}"}
+{"query": "supportPrivateStandStepcounter=true,supportStandStepCounter=true", "answer": "supportPrivateStandStepcounter={variables},supportStandStepCounter={variables}"}
+{"query": "support extand step counter!,return true", "answer": "support extand step counter!,return {variables}"}
+{"query": "support extand step counter!,return true", "answer": "support extand step counter!,return {variables}"}
+{"query": "getAppContext() isAppValid health or wear, packageName = com.huawei.health", "answer": "getAppContext() isAppValid health or wear, packageName = {variables}"}
+{"query": "getAppContext() isAppValid health or wear, packageName = com.huawei.health", "answer": "getAppContext() isAppValid health or wear, packageName = {variables}"}
+{"query": "getDeviceShutDownBoolean shutDown=false", "answer": "getDeviceShutDownBoolean shutDown={variables}"}
+{"query": "getDeviceShutDownBoolean shutDown=false", "answer": "getDeviceShutDownBoolean shutDown={variables}"}
+{"query": "upLoadOneMinuteDataToEngine time=25235389,0,108,0,20002", "answer": "upLoadOneMinuteDataToEngine time={variables}"}
+{"query": "upLoadOneMinuteDataToEngine time=25235213,0,62,30,20004", "answer": "upLoadOneMinuteDataToEngine time={variables}"}
+{"query": "rebuild notification", "answer": "rebuild notification"}
+{"query": "rebuild notification", "answer": "rebuild notification"}
+{"query": "getStepCounterStatus= true", "answer": "getStepCounterStatus= {variables}"}
+{"query": "getStepCounterStatus= true", "answer": "getStepCounterStatus= {variables}"}
+{"query": "context=com.huawei.health.manager.DaemonService@c6229ff", "answer": "context={variables}"}
+{"query": "context=com.huawei.health.manager.DaemonService@c6229ff", "answer": "context={variables}"}
+{"query": "saveStatData() type =40002,time = 1514044800000,statClient = 2,who is 1", "answer": "saveStatData() type ={variables},time = {variables},statClient = {variables},who is {variables}"}
+{"query": "saveStatData() type =40003,time = 1514044800000,statClient = 2,who is 1", "answer": "saveStatData() type ={variables},time = {variables},statClient = {variables},who is {variables}"}
+{"query": "getBinderPackageName packageName = com.huawei.health", "answer": "getBinderPackageName packageName = {variables}"}
+{"query": "getBinderPackageName packageName = com.huawei.health", "answer": "getBinderPackageName packageName = {variables}"}
+{"query": "needAutoSync autoSyncSwitch is open", "answer": "needAutoSync autoSyncSwitch is {variables}"}
+{"query": "needAutoSync autoSyncSwitch is open", "answer": "needAutoSync autoSyncSwitch is {variables}"}
+{"query": "onStartCommand Intent { cmp=com.huawei.health/.manager.DaemonService }", "answer": "onStartCommand Intent { cmp={variables} }"}
+{"query": "onStartCommand Intent { cmp=com.huawei.health/.manager.DaemonService }", "answer": "onStartCommand Intent { cmp={variables} }"}
+{"query": "startStepCounter enter...", "answer": "startStepCounter enter..."}
+{"query": "startStepCounter enter...", "answer": "startStepCounter enter..."}
+{"query": "calculateCaloriesWithCache totalCalories=37690", "answer": "calculateCaloriesWithCache totalCalories={variables}"}
+{"query": "calculateCaloriesWithCache totalCalories=0", "answer": "calculateCaloriesWithCache totalCalories={variables}"}
+{"query": "initBinder() app = 1, packageName = com.huawei.health", "answer": "initBinder() app = {variables}, packageName = {variables}"}
+{"query": "initBinder() app = 1, packageName = com.huawei.health", "answer": "initBinder() app = {variables}, packageName = {variables}"}
+{"query": "Alarm uploadStaticsToDB totalSteps=3399Calories:66798Floor:60Distance:1798", "answer": "Alarm uploadStaticsToDB totalSteps={variables}"}
+{"query": "Alarm uploadStaticsToDB totalSteps=13931Calories:290647Floor:360Distance:9688", "answer": "Alarm uploadStaticsToDB totalSteps={variables}"}
+{"query": "processHandleBroadcastAction action:android.intent.action.SCREEN_ON", "answer": "processHandleBroadcastAction action:{variables}"}
+{"query": "processHandleBroadcastAction action:android.intent.action.SCREEN_ON", "answer": "processHandleBroadcastAction action:{variables}"}
+{"query": "ifCanSync not! no cloud version", "answer": "ifCanSync not! no cloud version"}
+{"query": "ifCanSync not! no cloud version", "answer": "ifCanSync not! no cloud version"}
+{"query": "userInfo changed detail", "answer": "userInfo changed detail"}
+{"query": "userInfo changed detail", "answer": "userInfo changed detail"}
+{"query": "startListenerChange subscribeList = [1]", "answer": "startListenerChange subscribeList = [{variables}]"}
+{"query": "startListenerChange subscribeList = [1]", "answer": "startListenerChange subscribeList = [{variables}]"}
+{"query": "calculateAltitudeWithCache totalAltitude=210", "answer": "calculateAltitudeWithCache totalAltitude={variables}"}
+{"query": "calculateAltitudeWithCache totalAltitude=360", "answer": "calculateAltitudeWithCache totalAltitude={variables}"}
+{"query": "supportStandStepCounter true", "answer": "supportStandStepCounter {variables}"}
+{"query": "initUserPrivacy the userPrivacy is true", "answer": "initUserPrivacy the userPrivacy is {variables}"}
+{"query": "getStepsNotificationShowStatus= false", "answer": "getStepsNotificationShowStatus= {variables}"}
+{"query": "onReceive action: android.intent.action.BOOT_COMPLETED", "answer": "onReceive action: {variables}"}
+{"query": "saveHealthDetailData() deviceID = 2,clientID=1,id=1", "answer": "saveHealthDetailData() deviceID = {variables},clientID={variables},id={variables}"}
+{"query": "new date =20171225, type=40024,14400.0,old=null", "answer": "new date ={variables}, type={variables},old={variables}"}
+{"query": "new date =20171225, type=40004,5393.556,old=5392.0", "answer": "new date ={variables}, type={variables},old={variables}"}
+{"query": "policy=/system/emui/base:/system/emui/china:/vendor/etc:/odm/etc:/product/etc:/hw_odm:/hw_oem:/data/cust:/version/region_comm/china:/cust_spec", "answer": "policy={variables}"}
+{"query": "checkCurrentDay a new day comes , reset basicSyncCondition, currentDay is 20171225 oldDay is 20171224", "answer": "checkCurrentDay a new day comes , reset basicSyncCondition, currentDay is {variables} oldDay is {variables}"}
+{"query": "onReceive action: android.intent.action.SCREEN_ON", "answer": "onReceive action: {variables}"}
+{"query": "getDeviceShutDownTime shutDownTime=0", "answer": "getDeviceShutDownTime shutDownTime={variables}"}
+{"query": "processHandleBroadcastAction action:android.intent.action.TIME_SET", "answer": "processHandleBroadcastAction action:{variables}"}
+{"query": "reload : 3786 restar 0", "answer": "reload : {variables} restar {variables}"}
+{"query": "isScreenOn true", "answer": "isScreenOn {variables}"}
+{"query": "MyGetDetailDataCallback onResult bundle == null", "answer": "MyGetDetailDataCallback onResult bundle == {variables}"}
+{"query": "insertHiHealthData() bulkSaveDetailHiHealthData fail errorCode = 4,errorMessage = ERR_DATA_INSERT", "answer": "insertHiHealthData() bulkSaveDetailHiHealthData fail errorCode = {variables},errorMessage = {variables}"}
+{"query": "startStepCounterInter mStandStepCounter = com.huawei.health.b.b.a@c83b4a6", "answer": "startStepCounterInter mStandStepCounter = {variables}"}
+{"query": "writeDataToDB size 233", "answer": "writeDataToDB size {variables}"}
+{"query": "InsertEvent success begin:25234789 end:25234793", "answer": "InsertEvent success begin:{variables} end:{variables}"}
+{"query": "target init: target10000", "answer": "target init: {variables}"}
+{"query": "next day:steps0mLastReport7214", "answer": "next day:{variables}"}
+{"query": "getStringHuid() who is com.huawei.health", "answer": "getStringHuid() who is {variables}"}
+{"query": "isScreenOn false", "answer": "isScreenOn {variables}"}
+{"query": "checkInsertStatus stepStatSum or calorieStatSum is enough", "answer": "checkInsertStatus stepStatSum or calorieStatSum is enough"}
+{"query": "readXmlIfSupportEX result=true", "answer": "readXmlIfSupportEX result={variables}"}
+{"query": "saveHealthDetailData() saveOneDetailData fail hiHealthData = 1514044800000,type = 40005", "answer": "saveHealthDetailData() saveOneDetailData fail hiHealthData = {variables},type = {variables}"}
+{"query": "getCfgFile enter...", "answer": "getCfgFile enter..."}
+{"query": "getMidWareStepCountService: pkgName = com.huawei.systemserver, service = com.huawei.systemserver.ihealth.connectivity.HwStepCounterService", "answer": "getMidWareStepCountService: pkgName = {variables}, service = {variables}"}
+{"query": "registerLogCallback com.huawei.health.c.c@d990a94 cb:com.huawei.health.b.a.g@2415283", "answer": "registerLogCallback {variables}"}
+{"query": "checkFirstSyncByType no such data in db ,type is 1 deviceCode is 0", "answer": "checkFirstSyncByType no such data in db ,type is {variables} deviceCode is {variables}"}
+{"query": "initDataPrivacy the dataPrivacy switch is open, start push health data!", "answer": "initDataPrivacy the dataPrivacy switch is {variables}, start push health data!"}
+{"query": "checkInsertStatus stepSum or calorieSum is enough", "answer": "checkInsertStatus stepSum or calorieSum is enough"}
+{"query": "getMidWareCache result=true", "answer": "getMidWareCache result={variables}"}
+{"query": "setGoalNotifiShownRecord 1514112824312 true", "answer": "setGoalNotifiShownRecord {variables}"}
+{"query": "FAILED_SCREEN_OFF block report", "answer": "{variables} block report"}
+{"query": "startSync hiSyncOption = HiSyncOption{syncAction=2, syncMethod=2, syncScope=0, syncDataType=20000, syncModel=2, pushAction=0},app = 1 who = 1", "answer": "startSync hiSyncOption = HiSyncOption{syncAction={variables}, syncMethod={variables}, syncScope={variables}, syncDataType={variables}, syncModel={variables}, pushAction={variables}},app = {variables} who = {variables}"}
+{"query": "stepSyncOrNot appSynTimes is 0, statsyncTimes is 0", "answer": "stepSyncOrNot appSynTimes is {variables}, statsyncTimes is {variables}"}
+{"query": "initDataPrivacy the dataPrivacy is true", "answer": "initDataPrivacy the dataPrivacy is {variables}"}
+{"query": "initDataManager enter...", "answer": "initDataManager enter..."}
+{"query": "getTodayNoSyncTotalValue datas is null or empty", "answer": "{variables} datas is null or empty"}
+{"query": "flushTempCacheToDB by stand", "answer": "flushTempCacheToDB by {variables}"}
+{"query": "getTodaySportData mStepsRecordManager=com.huawei.health.g.c@8a2a501", "answer": "getTodaySportData mStepsRecordManager={variables}"}
+{"query": "getFirstStartDaemonFromUI: true", "answer": "getFirstStartDaemonFromUI: {variables}"}
+{"query": "processHandleBroadcastAction action:com.huawei.health.WIDGET_DISABLE", "answer": "processHandleBroadcastAction action:{variables}"}
+{"query": "setBasicStandardSteps basicStandardStep=3786 restartSteps=0", "answer": "setBasicStandardSteps basicStandardStep={variables} restartSteps={variables}"}
+{"query": "flush sensor data", "answer": "flush sensor data"}
+{"query": "flushTempCacheToDB by ext", "answer": "flushTempCacheToDB by {variables}"}
+{"query": "the first init mLastReportTimeStamp1514100674406", "answer": "the first init {variables}"}
+{"query": "initCacheFromFile enter...", "answer": "initCacheFromFile enter..."}
+{"query": "start compare with midware counter", "answer": "start compare with midware counter"}
+{"query": "bulkSaveDetailHiHealthData() size = 4,totalTime = 26", "answer": "bulkSaveDetailHiHealthData() size = {variables},totalTime = {variables}"}
+{"query": "insertHiHealthData() checkAppType 0 appID = 1", "answer": "insertHiHealthData() checkAppType {variables} appID = {variables}"}
+{"query": "InsertCallBack() onSuccess type = 0 data=true", "answer": "InsertCallBack() onSuccess type = {variables} data={variables}"}
+{"query": "registerLogCallback com.huawei.health.c.c@d990a94", "answer": "registerLogCallback {variables}"}
+{"query": "screen status unknown,think screen on", "answer": "screen status unknown,think screen {variables}"}
+{"query": "setDeviceShutDownValue shutDownTime=0,isShutDown=false", "answer": "setDeviceShutDownValue shutDownTime={variables},isShutDown={variables}"}
+{"query": "getMidWareCache mRemote=com.huawei.health.c.c@d990a94", "answer": "getMidWareCache mRemote={variables}"}
+{"query": "compareMidWareCacheAndLocalCache enter...", "answer": "compareMidWareCacheAndLocalCache enter..."}
+{"query": "startInsertSportSync first 500 steps sync,do all sync", "answer": "startInsertSportSync first {variables} steps sync,do all sync"}
+{"query": "setGoalNotificationShowStatus=true", "answer": "setGoalNotificationShowStatus={variables}"}
+{"query": "getGoalNotificationShowStatus= true", "answer": "getGoalNotificationShowStatus= {variables}"}
+{"query": "processHandleBroadcastAction action:android.intent.action.TIME_TICK", "answer": "processHandleBroadcastAction action:{variables}"}
+{"query": "uploadStaticsToDB() onResult type = 0 obj=true", "answer": "uploadStaticsToDB() onResult type = {variables} obj={variables}"}
+{"query": "onReceive action: android.intent.action.SCREEN_OFF", "answer": "onReceive action: {variables}"}
+{"query": "MyServiceConn connect 1.0.0.0", "answer": "MyServiceConn connect {variables}"}
+{"query": "setGoalNotifiShownRecord 1514044800237 false", "answer": "setGoalNotifiShownRecord {variables}"}
+{"query": "initStepCounter : deviceType 1", "answer": "initStepCounter : deviceType {variables}"}
+{"query": "startStepCounterInter stand", "answer": "startStepCounterInter stand"}
+{"query": "timeStamp back,extendReportTimeStamp=1514173319000", "answer": "timeStamp back,extendReportTimeStamp={variables}"}
+{"query": "getMidWareStepCountService: isSystemApp = true", "answer": "getMidWareStepCountService: isSystemApp = {variables}"}
+{"query": "registersensorsuccess: true", "answer": "registersensorsuccess: {variables}"}
+{"query": "checkSportDataNum setp and calories is too less", "answer": "checkSportDataNum setp and calories is too less"}
+{"query": "setStepCounterStatus=true", "answer": "setStepCounterStatus={variables}"}
+{"query": "saveRealTimeHealthDatasStat() size = 1,totalTime = 20", "answer": "saveRealTimeHealthDatasStat() size = {variables},totalTime = {variables}"}
+{"query": "onBind intent = Intent { act=com.huawei.hihealthservice.HiHealthService pkg=com.huawei.health }", "answer": "onBind intent = Intent { act={variables} pkg={variables} }"}
+{"query": "getIntercepterDistance from Prefence success and intercepterDistanceStr= 1513941509364##0.0", "answer": "getIntercepterDistance from Prefence success and intercepterDistanceStr= {variables}"}

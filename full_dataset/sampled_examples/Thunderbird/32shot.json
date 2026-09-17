@@ -1,0 +1,32 @@
+{"query": "Kickstart Install: pdsh + ssh packages", "answer": "Kickstart Install: {variables}"}
+{"query": "Security Scaffold v1.0.0 initialized", "answer": "Security Scaffold {variables} initialized"}
+{"query": "[ib_sm_discovery.c:422]: Failed to GetPortInfo() - hop_count: 5, direct_path: 0, 1, 15, 15, 1, 2, 0, 0, 0, 0", "answer": "[{variables}]: Failed to GetPortInfo() - hop_count: {variables}, direct_path: {variables}"}
+{"query": "Kickstart: setup soft links and NFS mounts", "answer": "Kickstart: setup soft links and NFS mounts"}
+{"query": "[INFO]: Generate SM IN_SERVICE trap for GID=0x000000fe800000000005ad000004d001", "answer": "[INFO]: Generate SM IN_SERVICE trap for GID={variables}"}
+{"query": "USB Universal Host Controller Interface driver v2.2", "answer": "USB Universal Host Controller Interface driver {variables}"}
+{"query": "Checking aperture...", "answer": "Checking aperture..."}
+{"query": "ntpd shutdown succeeded", "answer": "{variables} shutdown succeeded"}
+{"query": "RNG not detected", "answer": "RNG not detected"}
+{"query": "PCI Root Bridge [PCI0] (00:00)", "answer": "PCI Root Bridge [{variables}] ({variables})"}
+{"query": "Node 0 DMA: 0*4kB 1*8kB 0*16kB 0*32kB 1*64kB 4*128kB 1*256kB 1*512kB 0*1024kB 1*2048kB 2*4096kB = 11592kB", "answer": "Node {variables} DMA: {variables} = {variables}"}
+{"query": "Public key /root/.ssh2/id_dsa_cap_ssh.pub used.", "answer": "Public key {variables} used."}
+{"query": "Now running on #41#'s privileges.", "answer": "Now running on {variables}'s privileges."}
+{"query": "Kickstart Install: Setup to become a Tbird login", "answer": "Kickstart Install: {variables}"}
+{"query": "Timed out waiting for hotplug event 236. Rebasing to 239", "answer": "Timed out waiting for hotplug event {variables}. Rebasing to {variables}"}
+{"query": "Booting processor 1/6 rip 6000 rsp 100bff05f58", "answer": "Booting processor {variables} rip {variables} rsp {variables}"}
+{"query": "[ib_sm_sweep.c:411]: IB node 0x0005AD00000269C3 port 24 is INIT state", "answer": "[{variables}]: IB node {variables} port {variables} is INIT state"}
+{"query": "Device: /dev/sda, opened", "answer": "Device: {variables}, opened"}
+{"query": "BIOS update verification failed. Version expected: A04, Version found: A02", "answer": "BIOS update verification failed. Version expected: {variables}, Version found: {variables}"}
+{"query": "Mounted root (ext2 filesystem).", "answer": "Mounted {variables} ({variables} filesystem)."}
+{"query": "mptbase: Initiating ioc0 bringup", "answer": "mptbase: Initiating {variables} bringup"}
+{"query": "Copyright 2004 Internet Systems Consortium.", "answer": "Copyright {variables} Internet Systems Consortium."}
+{"query": "DMI 2.3 present.", "answer": "DMI {variables} present."}
+{"query": "You can test the MySQL daemon with the benchmarks in the 'sql-bench' directory:", "answer": "You can test the {variables} daemon with the benchmarks in the {variables} directory:"}
+{"query": "[ib_sm_assign.c:122]: Failed to get PortInfo - GUID=66a100400017e, port=1", "answer": "[{variables}]: Failed to get PortInfo - GUID={variables}, port={variables}"}
+{"query": "failed to contact portmap (errno -101).", "answer": "failed to contact portmap (errno {variables})."}
+{"query": "MegaRAID Model: LD 0 RAID1 139G Rev: 516A", "answer": "MegaRAID Model: LD {variables} RAID1 {variables} Rev: {variables}"}
+{"query": "Can't callback 127.0.0.1 (100021,4), giving up.", "answer": "Can't callback {variables} ({variables}), giving up."}
+{"query": "httpd shutdown succeeded", "answer": "{variables} shutdown succeeded"}
+{"query": "Lustre: Routing socket NAL loaded (Routing disabled, initial mem 0, incarnation 0x40525da327a8c)", "answer": "Lustre: Routing socket NAL loaded (Routing disabled, initial mem {variables}, incarnation {variables})"}
+{"query": "dcevt32d startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "uhci_hcd 0000:00:1d.0: UHCI Host Controller", "answer": "uhci_hcd {variables}: UHCI Host Controller"}

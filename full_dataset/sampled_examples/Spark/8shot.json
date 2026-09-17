@@ -1,0 +1,8 @@
+{"query": "Partition rdd_2952_20 not found, computing it", "answer": "Partition {variables} not found, computing it"}
+{"query": "Block broadcast_4_piece65 stored as bytes in memory (estimated size 4.0 MB, free 3.5 GB)", "answer": "Block {variables} stored as bytes in memory (estimated size {variables}, free {variables})"}
+{"query": "Deleting staging directory .sparkStaging/application_1485248649253_0174", "answer": "Deleting staging directory {variables}"}
+{"query": "Created broadcast 0 from textFile at NativeMethodAccessorImpl.java:-2", "answer": "Created broadcast {variables} from textFile at {variables}"}
+{"query": "Removed TaskSet 219.0, whose tasks have all completed, from pool", "answer": "Removed TaskSet {variables}, whose tasks have all completed, from pool"}
+{"query": "Created local directory at /opt/hdfs/nodemanager/usercache/curi/appcache/application_1485248649253_0035/blockmgr-daa7d5b9-e5f4-427d-a63c-1ae98c17cf2c", "answer": "Created local directory at {variables}"}
+{"query": "Asked to send map output locations for shuffle 53 to mesos-slave-25:55646", "answer": "Asked to send map output locations for shuffle {variables} to {variables}"}
+{"query": "YarnClusterScheduler.postStartHook done", "answer": "YarnClusterScheduler.postStartHook done"}

@@ -1,0 +1,32 @@
+{"query": "Starting Socket Reader #1 for port 62260", "answer": "Starting Socket Reader {variables} for port {variables}"}
+{"query": "In stop, writing event MAP_ATTEMPT_FAILED", "answer": "In stop, writing event {variables}"}
+{"query": "IPC Server listener on 19051: starting", "answer": "IPC Server listener on {variables}: starting"}
+{"query": "(RESET) equator 58254176 kv 14563540(58254160) kvi 12520912(50083648)", "answer": "(RESET) equator {variables} kv {variables}({variables}) kvi {variables}({variables})"}
+{"query": "Read completed tasks from history 1", "answer": "Read completed tasks from history {variables}"}
+{"query": "Task 'attempt_1445087491445_0002_r_000000_1000' done.", "answer": "Task {variables} done."}
+{"query": "ProcfsBasedProcessTree currently is supported only on Linux.", "answer": "ProcfsBasedProcessTree currently is supported only on Linux."}
+{"query": "RMCommunicator notified that shouldUnregistered is: true", "answer": "RMCommunicator notified that shouldUnregistered is: {variables}"}
+{"query": "Read 217015232 bytes from map-output for attempt_1445175094696_0002_m_000008_0", "answer": "Read {variables} bytes from map-output for {variables}"}
+{"query": "Assigned to reduce", "answer": "Assigned to reduce"}
+{"query": "assigned 1 of 1 to MSRA-SA-41.fareast.corp.microsoft.com:13562 to fetcher#1", "answer": "assigned {variables} of {variables} to {variables} to fetcher#{variables}"}
+{"query": "Extract jar:file:/D:/hadoop-2.6.0-localbox/share/hadoop/yarn/hadoop-yarn-common-2.6.0-SNAPSHOT.jar!/webapps/mapreduce to C:\\Users\\msrabi\\AppData\\Local\\Temp\\4\\Jetty_0_0_0_0_30604_mapreduce____.k5qrms\\webapp", "answer": "Extract jar:{variables} to {variables}"}
+{"query": "Processing split: hdfs://msra-sa-41:9000/wordcount2.txt:402653184+134217728", "answer": "Processing split: {variables}+{variables}"}
+{"query": "Upper limit on the thread pool size is 500", "answer": "Upper limit on the thread pool size is {variables}"}
+{"query": "We are finishing cleanly so this is the last retry", "answer": "We are finishing cleanly so this is the last retry"}
+{"query": "Auth successful for job_1445175094696_0002 (auth:SIMPLE)", "answer": "Auth successful for {variables} (auth:{variables})"}
+{"query": "MergerManager: memoryLimit=130652568, maxSingleShuffleLimit=32663142, mergeThreshold=86230696, ioSortFactor=10, memToMemMergeOutputsThreshold=10", "answer": "MergerManager: memoryLimit={variables}, maxSingleShuffleLimit={variables}, mergeThreshold={variables}, ioSortFactor={variables}, memToMemMergeOutputsThreshold={variables}"}
+{"query": "Registering class org.apache.hadoop.mapreduce.v2.app.job.event.JobFinishEvent$Type for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$JobFinishEventHandler", "answer": "Registering class {variables} for class {variables}"}
+{"query": "Number of reduces for job job_1445062781478_0011 = 1", "answer": "Number of reduces for job {variables} = {variables}"}
+{"query": "Diagnostics report from attempt_1445144423722_0020_m_000004_0: cleanup failed for container container_1445144423722_0020_01_000006 : java.lang.IllegalArgumentException: java.net.UnknownHostException: MSRA-SA-41.fareast.corp.microsoft.com", "answer": "Diagnostics report from {variables}: cleanup failed for container {variables} : java.lang.IllegalArgumentException: java.net.UnknownHostException: {variables}"}
+{"query": "finalMerge called with 0 in-memory map-outputs and 10 on-disk map-outputs", "answer": "finalMerge called with {variables} in-memory map-outputs and {variables} on-disk map-outputs"}
+{"query": "TaskAttempt killed because it ran on unusable node MININT-FNANLI5.fareast.corp.microsoft.com:55629. AttemptId:attempt_1445087491445_0002_m_000006_1", "answer": "TaskAttempt killed because it ran on unusable node {variables}. AttemptId:{variables}"}
+{"query": "Executing with tokens:", "answer": "Executing with tokens:"}
+{"query": "Recovering task task_1445062781478_0018_m_000009 from prior app attempt, status was SUCCEEDED", "answer": "Recovering task {variables} from prior app attempt, status was {variables}"}
+{"query": "Failed to connect to /172.22.149.145:50010 for block, add to deadNodes and continue. java.net.NoRouteToHostException: No route to host: no further information", "answer": "Failed to connect to {variables} for block, add to deadNodes and continue. java.net.NoRouteToHostException: No route to host: no further information"}
+{"query": "Merging 10 files, 2125289789 bytes from disk", "answer": "Merging {variables} files, {variables} bytes from disk"}
+{"query": "Stopping MapTask metrics system...", "answer": "Stopping {variables} metrics system..."}
+{"query": "(EQUATOR) 0 kvi 26214396(104857584)", "answer": "(EQUATOR) {variables} kvi {variables}({variables})"}
+{"query": "TaskAttempt: [attempt_1445144423722_0020_m_000001_1000] using containerId: [container_1445144423722_0020_02_000003 on NM: [MSRA-SA-39.fareast.corp.microsoft.com:28345]", "answer": "TaskAttempt: [{variables}] using containerId: [{variables} on NM: [{variables}]"}
+{"query": "Using callQueue class java.util.concurrent.LinkedBlockingQueue", "answer": "Using callQueue class {variables}"}
+{"query": "Slow ReadProcessor read fields took 65020ms (threshold=30000ms); ack: seqno: -2 status: SUCCESS status: ERROR downstreamAckTimeNanos: 0, targets: [10.86.169.121:50010, 10.190.173.170:50010]", "answer": "Slow ReadProcessor read fields took {variables} (threshold={variables}); ack: seqno: {variables} status: {variables} status: {variables} downstreamAckTimeNanos: {variables}, targets: [{variables}, {variables}]"}
+{"query": "Processing the event EventType: CONTAINER_REMOTE_LAUNCH for container container_1445087491445_0005_01_000005 taskAttempt attempt_1445087491445_0005_m_000002_0", "answer": "Processing the event EventType: {variables} for container {variables} taskAttempt {variables}"}

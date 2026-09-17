@@ -1,0 +1,64 @@
+{"query": "THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/hob_comm.c[2363]: XHH_hob_fatal_err_thread: RECEIVED FATAL ERROR WAKEUP", "answer": "THH({variables}): {variables}[{variables}]: XHH_hob_fatal_err_thread: RECEIVED FATAL ERROR WAKEUP"}
+{"query": "time reset -0.132495 s", "answer": "time reset {variables} s"}
+{"query": "Disk quotas dquot_6.5.1", "answer": "Disk quotas {variables}"}
+{"query": "Instrumentation Service EventID: 1306 Redundancy lost Redundancy unit: BMC PS Redundancy Chassis location: Main System Chassis Previous redundancy state was: Unknown", "answer": "Instrumentation Service EventID: {variables} Redundancy lost Redundancy unit: {variables} Redundancy Chassis location: {variables} System Chassis Previous redundancy state was: {variables}"}
+{"query": "usbcore: registered new driver hiddev", "answer": "usbcore: registered new driver hiddev"}
+{"query": "Wait for ready failed before probe !", "answer": "Wait for ready failed before probe !"}
+{"query": "[INFO]: Receive SystemImageGUID change trap from port (LID= 29)", "answer": "[INFO]: Receive SystemImageGUID change trap from port (LID= {variables})"}
+{"query": "Received signal 15; terminating.", "answer": "Received signal {variables}; terminating."}
+{"query": "checking TSC synchronization across 2 CPUs: passed.", "answer": "checking TSC synchronization across {variables} CPUs: passed."}
+{"query": "Memory: 6106088k/7340032k available (2076k kernel code, 0k reserved, 1278k data, 188k init)", "answer": "Memory: {variables} available ({variables} kernel code, {variables} reserved, {variables} data, {variables} init)"}
+{"query": "Lustre: 6176:0:(module.c:530:init_libcfs_module()) maximum lustre stack 6912", "answer": "Lustre: {variables}:({variables}) maximum lustre stack {variables}"}
+{"query": "ttyS0 at I/O 0x3f8 (irq = 4) is a NS16550A", "answer": "{variables} at I/O {variables} (irq = {variables}) is a {variables}"}
+{"query": "process_limit: processing hard nofile 32768 for DEFAULT", "answer": "process_limit: processing hard nofile {variables} for DEFAULT"}
+{"query": "rpc.mountd shutdown succeeded", "answer": "{variables} shutdown succeeded"}
+{"query": "#39# (Release Date: Mon Sep 27 22:15:07 EDT 2004)", "answer": "{variables} (Release Date: {variables})"}
+{"query": "Free pages: 14112kB (0kB HighMem)", "answer": "Free pages: {variables} ({variables} HighMem)"}
+{"query": "Key exchange failed in remote: 'Key exchange failed.'", "answer": "Key exchange failed in remote: {variables}"}
+{"query": "Configuration file /etc/smartd.conf parsed.", "answer": "Configuration file {variables} parsed."}
+{"query": "Sending on LPF/eth1/00:11:43:e3:ba:df/C_net", "answer": "Sending on {variables}"}
+{"query": "Physical Processor ID: 0", "answer": "Physical Processor ID: {variables}"}
+{"query": "acpid startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "PCI: Using configuration type 1", "answer": "PCI: Using configuration type {variables}"}
+{"query": "Checking aperture...", "answer": "Checking aperture..."}
+{"query": "pan_common: load aborted", "answer": "pan_common: load aborted"}
+{"query": "pan_kmod: done quiescing subdev 0x78 (\"PANASAS kernel trace facility\")", "answer": "pan_kmod: done quiescing subdev {variables} (\"{variables}\")"}
+{"query": "START: tftp pid=31897 from=10.100.4.251", "answer": "START: tftp pid={variables} from={variables}"}
+{"query": "[ib_sm_bringup.c:450]: Active state mismatch GUID=8066020000ad0500, port=8, state 1, GUID=4c98030000ad0500, port=1, state 4", "answer": "[{variables}]: Active state mismatch GUID={variables}, port={variables}, state {variables}, GUID={variables}, port={variables}, state {variables}"}
+{"query": "FAIL: rsync service_limit from=10.100.33.71", "answer": "FAIL: rsync service_limit from={variables}"}
+{"query": "Kickstart Install: tbird kernel package", "answer": "Kickstart Install: {variables}"}
+{"query": "Losing some ticks... checking if CPU frequency changed.", "answer": "Losing some ticks... checking if CPU frequency changed."}
+{"query": "usb 1-3: new high speed USB device using address 2", "answer": "usb {variables}: new high speed USB device using address {variables}"}
+{"query": "rpc.mountd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "you want, please write a subnet declaration", "answer": "you want, please write a subnet declaration"}
+{"query": "[ib_sm_sweep.c:1831]: ********************** NEW SWEEP ********************", "answer": "[{variables}]: ********************** NEW SWEEP ********************"}
+{"query": "kernel time sync disabled 0041", "answer": "kernel time sync disabled {variables}"}
+{"query": "Kickstart: setup the cisco (topspin) ib stack", "answer": "Kickstart: setup the cisco (topspin) ib stack"}
+{"query": "Using IO APIC NMI watchdog", "answer": "Using IO APIC NMI watchdog"}
+{"query": "Bootmem setup node 0 0000000000000000-00000001c0000000", "answer": "Bootmem setup node {variables} {variables}"}
+{"query": "Kickstart Install: Torque Mom and Maui speconf Tree", "answer": "Kickstart Install: {variables}"}
+{"query": "irqbalance startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "ntpd exiting on signal 15", "answer": "{variables} exiting on signal {variables}"}
+{"query": "The latest information about MySQL is available on the web at", "answer": "The latest information about {variables} is available on the web at"}
+{"query": "megaraid: probe new device 0x1028:0x0013:0x1028:0x016c: bus 2:slot 14:func 0", "answer": "megaraid: probe new device {variables}: bus {variables}:slot {variables}:func {variables}"}
+{"query": "Free swap: 0kB", "answer": "Free swap: {variables}"}
+{"query": "Kickstart/Yast Install: Finished installation on localhost.localdomain", "answer": "Kickstart/Yast Install: Finished installation on {variables}"}
+{"query": "uhci_hcd 0000:00:1d.2: irq 185, io base 000000000000aca0", "answer": "uhci_hcd {variables}: irq {variables}, io base {variables}"}
+{"query": "EXT3-fs: mounted filesystem with ordered data mode.", "answer": "EXT3-fs: mounted filesystem with ordered data mode."}
+{"query": "cd sql-bench ; perl run-all-tests", "answer": "cd {variables} ; perl {variables}"}
+{"query": "started, listening on port 988", "answer": "started, listening on port {variables}"}
+{"query": "Transparent bridge - 0000:00:1e.0", "answer": "Transparent bridge - {variables}"}
+{"query": "smartd has fork()ed into background mode. New PID=1952.", "answer": "smartd has fork()ed into background mode. New PID={variables}."}
+{"query": "nfsd shutdown succeeded", "answer": "{variables} shutdown succeeded"}
+{"query": "Found 2, no active local ports, check cables", "answer": "Found {variables}, no active local ports, check cables"}
+{"query": "gmetad startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "Searching for custom.cnf. . .", "answer": "Searching for custom.cnf. . ."}
+{"query": "THH(1): OUT MAILBOX dump END", "answer": "THH({variables}): OUT MAILBOX dump END"}
+{"query": "Active:835760 inactive:655381 dirty:0 writeback:0 unstable:0 free:3528 slab:8100 mapped:1490468 pagetables:10191", "answer": "Active:{variables} inactive:{variables} dirty:{variables} writeback:{variables} unstable:{variables} free:{variables} slab:{variables} mapped:{variables} pagetables:{variables}"}
+{"query": "PanFS Client version: rhel_4_amd64/release 2.3.1-171331.15 SMP", "answer": "PanFS Client version: {variables} SMP"}
+{"query": "Using HPET based timekeeping.", "answer": "Using HPET based timekeeping."}
+{"query": "THH(2): [XHH_qpm_process_local_mad]: ERROR on port 1: 259", "answer": "THH({variables}): [XHH_qpm_process_local_mad]: ERROR on port {variables}: {variables}"}
+{"query": "audit(1131646465.367:1): initialized", "answer": "audit({variables}): initialized"}
+{"query": "Intel(R) PRO/1000 Network Driver - version 6.0.54-k2-NAPI", "answer": "Intel(R) PRO/{variables} Network Driver - version {variables}"}
+{"query": "nfs: server nfs1 not responding, still trying", "answer": "nfs: server {variables} not responding, still trying"}
+{"query": "jADBPUuJ026143: low on space (SMTP-DAEMON needs 0 bytes + 100 blocks in /var/spool/clientmqueue), max avail: 0", "answer": "{variables}: low on space (SMTP-DAEMON needs {variables} bytes + {variables} blocks in {variables}), max avail: {variables}"}

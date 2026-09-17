@@ -1,0 +1,8 @@
+{"query": "mod_jk child init 1 -2", "answer": "mod_jk child init {variables} {variables}"}
+{"query": "child process 25353 still did not exit, sending a SIGTERM", "answer": "child process {variables} still did not exit, sending a SIGTERM"}
+{"query": "[client 210.245.151.81] Attempt to serve directory: /var/www/html/", "answer": "[client {variables}] Attempt to serve directory: {variables}"}
+{"query": "mod_python: Creating 32 session mutexes based on 150 max processes and 0 max threads.", "answer": "mod_python: Creating {variables} session mutexes based on {variables} max processes and {variables} max threads."}
+{"query": "Apache/2.0.49 (Fedora) configured -- resuming normal operations", "answer": "Apache/{variables} configured -- resuming normal operations"}
+{"query": "Digest: generating secret for digest authentication ...", "answer": "Digest: generating secret for digest authentication ..."}
+{"query": "env.createBean2(): Factory error creating channel.jni:jni ( channel.jni, jni)", "answer": "env.createBean2(): Factory error creating {variables} ({variables}, {variables})"}
+{"query": "Graceful restart requested, doing restart", "answer": "Graceful restart requested, doing restart"}

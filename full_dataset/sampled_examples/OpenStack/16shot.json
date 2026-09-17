@@ -1,0 +1,16 @@
+{"query": "[instance: 9c9c9fd8-bef9-4fb4-835f-6be8ba1d20b9] Creating image", "answer": "[instance: {variables}] Creating image"}
+{"query": "[instance: adf0afa9-65e3-4df0-ac45-4a62e86825a1] Took 0.48 seconds to deallocate network for instance.", "answer": "[instance: {variables}] Took {variables} seconds to deallocate network for instance."}
+{"query": "HTTP exception thrown: No instances found for any event", "answer": "HTTP exception thrown: No instances found for any event"}
+{"query": "10.11.10.1 \"GET /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/detail HTTP/1.1\" status: 200 len: 1893 time: 0.3877091", "answer": "{variables} \"GET {variables} {variables}\" status: {variables} len: {variables} time: {variables}"}
+{"query": "The instance sync for host 'cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us' did not match. Re-created its InstanceList.", "answer": "The instance sync for host {variables} did not match. Re-created its InstanceList."}
+{"query": "[instance: be793e89-2cc3-4f99-9884-9c6a624a84bc] memory limit: 96258.00 MB, free: 95746.00 MB", "answer": "[instance: {variables}] memory limit: {variables} MB, free: {variables} MB"}
+{"query": "[instance: aa47a63c-6ec2-40ff-a523-ed316c2f59b1] Claim successful", "answer": "[instance: {variables}] Claim successful"}
+{"query": "Removable base files: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742", "answer": "Removable base files: {variables}"}
+{"query": "[instance: d3747576-c833-4991-bc57-13509ca489fc] VM Resumed (Lifecycle Event)", "answer": "[instance: {variables}] VM Resumed (Lifecycle Event)"}
+{"query": "Successfully synced instances from host 'cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us'.", "answer": "Successfully synced instances from host '{variables}'."}
+{"query": "Total usable vcpus: 16, total allocated vcpus: 1", "answer": "Total usable vcpus: {variables}, total allocated vcpus: {variables}"}
+{"query": "Creating event network-vif-plugged:084e408f-1bb0-47ea-9163-54c8105ed089 for instance af9d460c-89bf-4b71-b362-0b10adc2ff37", "answer": "Creating event {variables} for instance {variables}"}
+{"query": "[instance: f49bf478-6840-49bc-9d59-80cb8066e190] disk limit not specified, defaulting to unlimited", "answer": "[instance: {variables}] disk limit not specified, defaulting to unlimited"}
+{"query": "[instance: 96d9b9d1-5b9b-47f4-a693-f752a845c2db] Deleting instance files /var/lib/nova/instances/96d9b9d1-5b9b-47f4-a693-f752a845c2db_del", "answer": "[instance: {variables}] Deleting instance files {variables}"}
+{"query": "[instance: 32546cbe-eed6-49e5-8f00-52a865a79a1e] Terminating instance", "answer": "[instance: {variables}] Terminating instance"}
+{"query": "[instance: f2e0fa0f-941a-41f3-b5e9-3a75e46ac4e3] Attempting claim: memory 2048 MB, disk 20 GB, vcpus 1 CPU", "answer": "[instance: {variables}] Attempting claim: memory {variables} MB, disk {variables} GB, vcpus {variables} CPU"}

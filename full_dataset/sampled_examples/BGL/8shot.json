@@ -1,0 +1,8 @@
+{"query": "rts internal error", "answer": "rts internal error"}
+{"query": "disable all access to cache directory....0", "answer": "disable all access to cache directory....{variables}"}
+{"query": "program interrupt: trap instruction.........0", "answer": "program interrupt: trap instruction.........{variables}"}
+{"query": "data storage interrupt", "answer": "data storage interrupt"}
+{"query": "L3 ecc control register: 00000000", "answer": "L3 ecc control register: {variables}"}
+{"query": "memory and bus summary...........................0", "answer": "memory and bus summary...........................{variables}"}
+{"query": "Ido chip status changed: FF:F2:9F:16:E7:14:00:0D:60:E9:18:EB ip=10.1.1.75 v=13 t=4 status=M Fri Jun 17 07:25:00 PDT 2005", "answer": "Ido chip status changed: {variables} ip={variables} v={variables} t={variables} status={variables} {variables}"}
+{"query": "ciod: cpu 0 at treeaddr 442 sent unrecognized message 0xffffffff", "answer": "ciod: cpu {variables} at treeaddr {variables} sent unrecognized message {variables}"}

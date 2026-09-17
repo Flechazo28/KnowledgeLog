@@ -1,0 +1,16 @@
+{"query": "jk2_init() Can't find child 2437 in scoreboard", "answer": "jk2_init() Can't find child {variables} in scoreboard"}
+{"query": "[client 218.144.240.75] attempt to invoke directory as script: /var/www/cgi-bin/", "answer": "[client {variables}] attempt to invoke directory as script: {variables}"}
+{"query": "jk2_init() Found child 12565 in scoreboard slot 2", "answer": "jk2_init() Found child {variables} in scoreboard slot {variables}"}
+{"query": "workerEnv.init() ok /etc/httpd/conf/workers2.properties", "answer": "workerEnv.init() ok {variables}"}
+{"query": "mod_jk child init 1 -2", "answer": "mod_jk child init {variables} {variables}"}
+{"query": "mod_python: Creating 32 session mutexes based on 150 max processes and 0 max threads.", "answer": "mod_python: Creating {variables} session mutexes based on {variables} max processes and {variables} max threads."}
+{"query": "Digest: generating secret for digest authentication ...", "answer": "Digest: generating secret for digest authentication ..."}
+{"query": "env.createBean2(): Factory error creating channel.jni:jni ( channel.jni, jni)", "answer": "env.createBean2(): Factory error creating {variables} ({variables}, {variables})"}
+{"query": "[client 65.69.87.247] File does not exist: /var/www/html/c", "answer": "[client {variables}] File does not exist: {variables}"}
+{"query": "child process 18806 still did not exit, sending a SIGTERM", "answer": "child process {variables} still did not exit, sending a SIGTERM"}
+{"query": "mod_jk2 Shutting down", "answer": "mod_jk2 Shutting down"}
+{"query": "Apache/2.0.49 (Fedora) configured -- resuming normal operations", "answer": "Apache/{variables} configured -- resuming normal operations"}
+{"query": "suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)", "answer": "suEXEC mechanism enabled (wrapper: {variables})"}
+{"query": "env.createBean2(): Factory error creating worker.jni:onStartup ( worker.jni, onStartup)", "answer": "env.createBean2(): Factory error creating {variables} ({variables}, {variables})"}
+{"query": "config.update(): Can't create vm:", "answer": "config.update(): Can't create {variables}"}
+{"query": "config.update(): Can't create worker.jni:onShutdown", "answer": "config.update(): Can't create {variables}"}

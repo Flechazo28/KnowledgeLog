@@ -1,0 +1,64 @@
+{"query": "ciod: for node 8, read continuation request but ioState is 0", "answer": "ciod: for node {variables} read continuation request but ioState is {variables}"}
+{"query": "L3 correctable errors exceeds threshold (iar 0xf003da3c lr 0xf003de50)", "answer": "L3 correctable errors exceeds threshold (iar {variables} lr {variables})"}
+{"query": "machine state register: 0x00002000", "answer": "machine state register: {variables}"}
+{"query": "MidplaneSwitchController performing bit sparing on R27-M1-L3-U18-C bit 3", "answer": "MidplaneSwitchController performing bit sparing on {variables} bit {variables}"}
+{"query": "regctl scancom interface.........................0", "answer": "regctl scancom interface.........................{variables}"}
+{"query": "instruction address: 0x00004ed8", "answer": "instruction address: {variables}"}
+{"query": "max number of outstanding prefetches.....7", "answer": "max number of outstanding prefetches.....{variables}"}
+{"query": "memory manager store buffer parity...............0", "answer": "memory manager store buffer parity...............{variables}"}
+{"query": "Controlling BG/L rows [ 0 1 2 3 ]", "answer": "Controlling BG/L rows [ {variables} ]"}
+{"query": "d-cache flush parity error........1", "answer": "d-cache flush parity error.......{variables}"}
+{"query": "1 tree receiver 2 in re-synch state event(s) (dcr 0x019a) detected", "answer": "{variables} tree receiver {variables} in re-synch state event(s) (dcr {variables}) detected"}
+{"query": "correctable error detected in directory 1......0", "answer": "correctable error detected in directory {variables}"}
+{"query": "4 floating point alignment exceptions", "answer": "{variables} floating point alignment exceptions"}
+{"query": "idoproxydb has been started: $Name: DRV142_2005 $ Input parameters: -enableflush -loguserinfo db.properties BlueGene1", "answer": "idoproxydb has been started: $Name: {variables} $ Input parameters: {variables}"}
+{"query": "i-cache parity error..............0", "answer": "i-cache parity error..............{variables}"}
+{"query": "program interrupt: imprecise exception......0", "answer": "program interrupt: imprecise exception......{variables}"}
+{"query": "byte ordering exception.....................0", "answer": "byte ordering exception.....................{variables}"}
+{"query": "number of lines with parity errors written to L3 EDRAMs...0", "answer": "number of lines with parity errors written to L3 EDRAMs...{variables}"}
+{"query": "BglIdoChip table has 2 IDOs with the same IP address (10.0.1.12)", "answer": "BglIdoChip table has {variables} IDOs with the same IP address {variables}"}
+{"query": "core configuration register: 0x00002000", "answer": "core configuration register: {variables}"}
+{"query": "error threshold, consider replacing the card", "answer": "error threshold, consider replacing the card"}
+{"query": "prefetch depth for core 1................1", "answer": "prefetch depth for core {variables}................{variables}"}
+{"query": "instruction plb error.............0", "answer": "instruction plb error.............{variables}"}
+{"query": "floating point operation....................0", "answer": "floating point operation....................{variables}"}
+{"query": "parity error in bank 0.........................0", "answer": "parity error in bank {variables}.........................{variables}"}
+{"query": "L3 global control register: 0x001249f0", "answer": "L3 global control register: {variables}"}
+{"query": "memory manager RMW buffer parity.................0", "answer": "memory manager RMW buffer parity.................{variables}"}
+{"query": "rror threshold, consider replacing the card", "answer": "rror threshold, consider replacing the card"}
+{"query": "Ido chip status changed: FF:F2:9F:16:C9:63:00:0D:60:E9:36:9C ip=10.3.1.147 v=13 t=4 status=M Tue Jun 21 07:36:58 PDT 2005", "answer": "Ido chip status changed: {variables} ip={variables} v={variables} t={variables} status={variables} {variables}"}
+{"query": "data address space................0", "answer": "data address space................{variables}"}
+{"query": "general purpose registers:", "answer": "general purpose registers:"}
+{"query": "machine check interrupt (bit=0x06): L3 major internal error", "answer": "machine check interrupt (bit={variables}): L3 major internal error"}
+{"query": "uncorrectable error detected in EDRAM bank 0...0", "answer": "uncorrectable error detected in EDRAM bank {variables}...{variables}"}
+{"query": "address parity error..0", "answer": "address parity error..{variables}"}
+{"query": "ciod: pollControlDescriptors: Detected the debugger died.", "answer": "ciod: pollControlDescriptors: Detected the debugger died."}
+{"query": "external input interrupt (unit=0x02 bit=0x0b): torus sender y+ retransmission error was corrected", "answer": "external input interrupt (unit={variables} bit={variables}): torus sender {variables} retransmission error was corrected"}
+{"query": "size of scratchpad portion of L3.........0 (0M)", "answer": "size of scratchpad portion of L3.........{variables} ({variables})"}
+{"query": "guaranteed instruction cache block touch.0", "answer": "guaranteed instruction cache block touch.{variables}"}
+{"query": "machine check status register: 0xa0000000", "answer": "machine check status register: {variables}"}
+{"query": "critical input interrupt enable...0", "answer": "critical input interrupt enable...{variables}"}
+{"query": "data write plb error..............0", "answer": "data write plb error..............{variables}"}
+{"query": "ciod: Error loading /home/draeger/testQboxhang-nozerobytebug-nosleepnocomm: invalid or missing program image, No such file or directory", "answer": "ciod: Error loading {variables}: invalid or missing program image, No such file or directory"}
+{"query": "memory manager miscompare........................0", "answer": "memory manager miscompare........................{variables}"}
+{"query": "1969920 double-hummer alignment exceptions", "answer": "{variables} double-hummer alignment exceptions"}
+{"query": "ciod: Unexpected eof at line 8193 of node map file /p/gb2/cabot/miranda/newmaps/8k_128x64x1_8x4x4.map", "answer": "ciod: Unexpected eof at line {variables} of node map file {variables}"}
+{"query": "external input interrupt enable...0", "answer": "external input interrupt enable...{variables}"}
+{"query": "debug wait enable.................0", "answer": "debug wait enable.................{variables}"}
+{"query": "d-cache search parity error.......0", "answer": "d-cache search parity error.......{variables}"}
+{"query": "memory manager address error.....................0", "answer": "memory manager address error.....................{variables}"}
+{"query": "imprecise machine check...........0", "answer": "imprecise machine check...........{variables}"}
+{"query": "memory and bus summary...........................0", "answer": "memory and bus summary...........................{variables}"}
+{"query": "disable store gathering..................0", "answer": "disable store gathering..................{variables}"}
+{"query": "machine check interrupt", "answer": "machine check interrupt"}
+{"query": "program interrupt: illegal instruction......0", "answer": "program interrupt: illegal instruction......{variables}"}
+{"query": "number of correctable errors detected in L3 EDRAMs........0", "answer": "number of correctable errors detected in L3 EDRAMs........{variables}"}
+{"query": "memory manager uncorrectable error...............1", "answer": "memory manager uncorrectable error...............{variables}"}
+{"query": "Starting SystemController", "answer": "Starting SystemController"}
+{"query": "external input interrupt (unit=0x01 bit=0x09): number of corrected SRAM errors has exceeded threshold", "answer": "external input interrupt (unit={variables} bit={variables}): number of corrected SRAM errors has exceeded threshold"}
+{"query": "guaranteed data cache block touch........1", "answer": "guaranteed data cache block touch........{variables}"}
+{"query": "EndServiceAction is restarting the NodeCards in midplane R02-M1 as part of Service Action 223", "answer": "EndServiceAction is restarting the NodeCards in midplane {variables} as part of Service Action {variables}"}
+{"query": "rts panic! - stopping execution", "answer": "rts panic! - stopping execution"}
+{"query": "SerialNumber(000000000000000000000000fff29f16eb54000d60e914ab) IpAddress(10.0.0.237) Status(A)", "answer": "SerialNumber({variables}) IpAddress({variables}) Status({variables})"}
+{"query": "ciod: Error creating node map from file /p/gb2/cabot/miranda/newmaps/8k_128x64x1_8x4x4.map: No child processes", "answer": "ciod: Error creating node map from file {variables}: No child processes"}
+{"query": "L3 ecc control register: 00000000", "answer": "L3 ecc control register: {variables}"}

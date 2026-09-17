@@ -1,0 +1,16 @@
+{"query": "uncorrectable error detected in directory 1....0", "answer": "uncorrectable error detected in directory {variables}....{variables}"}
+{"query": "imprecise machine check...........0", "answer": "imprecise machine check...........{variables}"}
+{"query": "instruction cache parity error corrected", "answer": "instruction cache parity error corrected"}
+{"query": "uncorrectable error detected in external DDR...1", "answer": "uncorrectable error detected in external DDR...{variables}"}
+{"query": "disable store gathering..................0", "answer": "disable store gathering..................{variables}"}
+{"query": "memory and bus summary...........................0", "answer": "memory and bus summary...........................{variables}"}
+{"query": "disable apu instruction broadcast........0", "answer": "disable apu instruction broadcast........{variables}"}
+{"query": "memory manager store buffer parity...............0", "answer": "memory manager store buffer parity...............{variables}"}
+{"query": "data TLB error interrupt", "answer": "data TLB error interrupt"}
+{"query": "lr:00004ed0 cr:28244842 xer:20000002 ctr:00086000", "answer": "lr:{variables} cr:{variables} xer:{variables} ctr:{variables}"}
+{"query": "L3 ecc control register: 00000000", "answer": "L3 ecc control register: {variables}"}
+{"query": "data store interrupt caused by icbi.........0", "answer": "data store interrupt caused by icbi.........{variables}"}
+{"query": "data write plb error..............0", "answer": "data write plb error..............{variables}"}
+{"query": "machine check interrupt", "answer": "machine check interrupt"}
+{"query": "257196447 double-hummer alignment exceptions", "answer": "{variables} double-hummer alignment exceptions"}
+{"query": "uncorrectable error detected in EDRAM bank 1...0", "answer": "uncorrectable error detected in EDRAM bank {variables}...{variables}"}

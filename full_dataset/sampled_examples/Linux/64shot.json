@@ -1,0 +1,64 @@
+{"query": "creating device node '/udev/vcsa3'", "answer": "creating device node {variables}"}
+{"query": "input: ImPS/2 Logitech Wheel Mouse on isa0060/serio1", "answer": "input: {variables} on {variables}"}
+{"query": "inserting floppy driver for 2.6.5-1.358", "answer": "inserting floppy driver for {variables}"}
+{"query": "selinux_register_security: Registering secondary module capability", "answer": "selinux_register_security: Registering secondary module capability"}
+{"query": "ACPI: ACPI tables contain no PCI IRQ routing entries", "answer": "ACPI: ACPI tables contain no PCI IRQ routing entries"}
+{"query": "kernel time sync disabled 0041", "answer": "kernel time sync disabled {variables}"}
+{"query": "gpm startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "Mount-cache hash table entries: 512 (order: 0, 4096 bytes)", "answer": "Mount-cache hash table entries: {variables} (order: {variables}, {variables} bytes)"}
+{"query": "klogd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "htt startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "Total HugeTLB memory allocated, 0", "answer": "Total HugeTLB memory allocated, {variables}"}
+{"query": "Authentication failed from 163.27.187.39 (163.27.187.39): Software caused connection abort", "answer": "Authentication failed from {variables} ({variables}): Software caused connection abort"}
+{"query": "kernel time sync status 0040", "answer": "kernel time sync status {variables}"}
+{"query": "uhci_hcd 0000:00:1f.2: irq 11, io base 0000ff80", "answer": "uhci_hcd {variables}: irq {variables}, io base {variables}"}
+{"query": "file descriptor of service comsat has been closed", "answer": "file descriptor of service comsat has been closed"}
+{"query": "Memory: 125312k/129720k available (1540k kernel code, 3860k reserved, 599k data, 144k init, 0k highmem)", "answer": "Memory: {variables} available ({variables} kernel code, {variables} reserved, {variables} data, {variables} init, {variables} highmem)"}
+{"query": "EXT3-fs: recovery complete.", "answer": "EXT3-fs: recovery complete."}
+{"query": "zapping low mappings.", "answer": "zapping low mappings."}
+{"query": "BIOS-e820: 0000000000100000 - 0000000007eae000 (usable)", "answer": "BIOS-e820: {variables} - {variables} (usable)"}
+{"query": "bad username []", "answer": "bad username [{variables}]"}
+{"query": "irqbalance startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "session opened for user test by (uid=509)", "answer": "session opened for user {variables} by {variables}"}
+{"query": "rpc.statd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "ttloop: peer died: Invalid or incomplete multibyte or wide character", "answer": "ttloop: peer died: Invalid or incomplete multibyte or wide character"}
+{"query": "Detected 731.217 MHz processor.", "answer": "Detected {variables} MHz processor."}
+{"query": "Opened configuration file /etc/smartd.conf", "answer": "Opened configuration file {variables}"}
+{"query": "apmd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "Bluetooth: RFCOMM TTY layer initialized", "answer": "Bluetooth: RFCOMM TTY layer initialized"}
+{"query": "md: Autodetecting RAID arrays.", "answer": "md: Autodetecting RAID arrays."}
+{"query": "Bluetooth: HCI device and connection manager initialized", "answer": "Bluetooth: HCI device and connection manager initialized"}
+{"query": "Security Scaffold v1.0.0 initialized", "answer": "Security Scaffold {variables} initialized"}
+{"query": "User unknown timed out after 900 seconds at Thu Sep 15 17:45:15 2005", "answer": "User {variables} timed out after {variables} seconds at {variables}"}
+{"query": "SELinux: Disabled at runtime.", "answer": "SELinux: Disabled at runtime."}
+{"query": "bind failed (Address already in use (errno = 98)). service = telnet", "answer": "bind failed (Address already in use (errno = {variables})). service = {variables}"}
+{"query": "smartd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "warning: can't get client address: Connection reset by peer", "answer": "warning: can't get client address: Connection reset by peer"}
+{"query": "Bringing up loopback interface: succeeded", "answer": "Bringing up loopback interface: succeeded"}
+{"query": "Floppy drive(s): fd0 is 1.44M", "answer": "Floppy drive(s): {variables} is {variables}"}
+{"query": "parport0: PC-style at 0x378 (0x778) [PCSPP,TRISTATE,EPP]", "answer": "parport0: PC-style at {variables} ({variables}) [{variables}]"}
+{"query": "SELinux: Registering netfilter hooks", "answer": "SELinux: Registering netfilter hooks"}
+{"query": "Real Time Clock Driver v1.12", "answer": "Real Time Clock Driver {variables}"}
+{"query": "BIOS-provided physical RAM map:", "answer": "BIOS-provided physical RAM map:"}
+{"query": "Transparent bridge - 0000:00:1e.0", "answer": "Transparent bridge - {variables}"}
+{"query": "EXT3-fs: write access will be enabled during recovery.", "answer": "EXT3-fs: write access will be enabled during recovery."}
+{"query": "BIOS-e820: 00000000ffb00000 - 0000000100000000 (reserved)", "answer": "BIOS-e820: {variables} - {variables} (reserved)"}
+{"query": "IPv6 over IPv4 tunneling driver", "answer": "IPv6 over IPv4 tunneling driver"}
+{"query": "microcode: CPU0 already at revision 0x8 (current=0x8)", "answer": "microcode: CPU0 already at revision {variables} (current={variables})"}
+{"query": "privoxy startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "ide-floppy driver 0.99.newide", "answer": "ide-floppy driver {variables}"}
+{"query": "messagebus startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "audit: initializing netlink socket (disabled)", "answer": "audit: initializing netlink socket (disabled)"}
+{"query": "apm: BIOS version 1.2 Flags 0x03 (Driver version 1.16ac)", "answer": "apm: BIOS version {variables} Flags {variables} (Driver version {variables})"}
+{"query": "VFS: Disk quotas dquot_6.5.1", "answer": "VFS: Disk quotas {variables}"}
+{"query": "loading configuration from '/etc/named.conf'", "answer": "loading configuration from {variables}"}
+{"query": "Configuration file /etc/smartd.conf parsed.", "answer": "Configuration file {variables} parsed."}
+{"query": "Initializing random number generator: succeeded", "answer": "Initializing random number generator: succeeded"}
+{"query": "sdpd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "precision = 2.000 usec", "answer": "precision = {variables} usec"}
+{"query": "Freeing unused kernel memory: 144k freed", "answer": "Freeing unused kernel memory: {variables} freed"}
+{"query": "rsyncd version 2.6.2 starting, listening on port 873", "answer": "rsyncd version {variables} starting, listening on port {variables}"}
+{"query": "tty2: invalid character 0x1b in login name", "answer": "tty2: invalid character {variables} in login name"}
+{"query": "hda: 29336832 sectors (15020 MB) w/1916KiB Cache, CHS=29104/16/63, UDMA(66)", "answer": "hda: {variables} sectors ({variables} MB) w/{variables} Cache, CHS={variables}, UDMA({variables})"}
+{"query": "session closed for user root", "answer": "session closed for user {variables}"}
+{"query": "Device: /dev/hda, found in smartd database.", "answer": "Device: {variables}, found in smartd database."}

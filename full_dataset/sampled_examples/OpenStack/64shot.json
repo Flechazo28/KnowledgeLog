@@ -1,0 +1,64 @@
+{"query": "[instance: e128341d-b2c8-4edd-b80f-d1c70b303500] Took 20.35 seconds to build instance.", "answer": "[instance: {variables}] Took {variables} seconds to build instance."}
+{"query": "[instance: fac7db77-5f4b-46dd-b3ad-6f54fd90a6cf] Took 20.07 seconds to build instance.", "answer": "[instance: {variables}] Took {variables} seconds to build instance."}
+{"query": "[instance: a6c5e900-d575-4447-a815-3e156c84aa90] vcpu limit not specified, defaulting to unlimited", "answer": "[instance: {variables}] vcpu limit not specified, defaulting to unlimited"}
+{"query": "[instance: fc1e0afa-e01f-4892-85f5-83742a69a416] vcpu limit not specified, defaulting to unlimited", "answer": "[instance: {variables}] vcpu limit not specified, defaulting to unlimited"}
+{"query": "Compute_service record updated for cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us:cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us", "answer": "Compute_service record updated for {variables}"}
+{"query": "Compute_service record updated for cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us:cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us", "answer": "Compute_service record updated for {variables}"}
+{"query": "Removing base or swap file: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742", "answer": "Removing base or swap file: {variables}"}
+{"query": "Removing base or swap file: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742", "answer": "Removing base or swap file: {variables}"}
+{"query": "[instance: db03eac2-0e34-406b-82d8-b373515d81f9] Terminating instance", "answer": "[instance: {variables}] Terminating instance"}
+{"query": "[instance: 0b058ca8-a3b0-444c-bb6e-c8eb1b7a71b7] Terminating instance", "answer": "[instance: {variables}] Terminating instance"}
+{"query": "Successfully synced instances from host 'cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us'.", "answer": "Successfully synced instances from host '{variables}'."}
+{"query": "Successfully synced instances from host 'cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us'.", "answer": "Successfully synced instances from host '{variables}'."}
+{"query": "10.11.10.1 \"GET /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/detail HTTP/1.1\" status: 200 len: 1892 time: 0.2613919", "answer": "{variables} \"GET {variables} {variables}\" status: {variables} len: {variables} time: {variables}"}
+{"query": "10.11.10.1 \"GET /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/7eb500e0-477a-4997-b827-d28ab286cf0c HTTP/1.1\" status: 200 len: 1708 time: 0.1965110", "answer": "{variables} \"GET {variables} {variables}\" status: {variables} len: {variables} time: {variables}"}
+{"query": "[instance: 620fe77d-bd27-4f1c-af47-0e09596b3fa3] Took 0.44 seconds to deallocate network for instance.", "answer": "[instance: {variables}] Took {variables} seconds to deallocate network for instance."}
+{"query": "[instance: 0ec63168-2016-4294-ab6d-4100b6a848aa] Took 0.57 seconds to deallocate network for instance.", "answer": "[instance: {variables}] Took {variables} seconds to deallocate network for instance."}
+{"query": "Base or swap file too young to remove: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742", "answer": "Base or swap file too young to remove: {variables}"}
+{"query": "Base or swap file too young to remove: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742", "answer": "Base or swap file too young to remove: {variables}"}
+{"query": "[instance: bd41cb5b-551a-4276-9d71-568a8f7b12f6] Claim successful", "answer": "[instance: {variables}] Claim successful"}
+{"query": "[instance: 4ac5aa23-b924-453a-a0f1-85ce8bd12432] Claim successful", "answer": "[instance: {variables}] Claim successful"}
+{"query": "Removable base files: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742", "answer": "Removable base files: {variables}"}
+{"query": "Removable base files: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742", "answer": "Removable base files: {variables}"}
+{"query": "couldn't obtain the vcpu count from domain id: 98e9712a-cd1a-4619-9590-2be57eb33299, exception: Requested operation is not valid: cpu affinity is not supported", "answer": "couldn't obtain the vcpu count from domain id: {variables} exception: Requested operation is not valid: cpu affinity is not supported"}
+{"query": "couldn't obtain the vcpu count from domain id: 98e9712a-cd1a-4619-9590-2be57eb33299, exception: Requested operation is not valid: cpu affinity is not supported", "answer": "couldn't obtain the vcpu count from domain id: {variables} exception: Requested operation is not valid: cpu affinity is not supported"}
+{"query": "[instance: a1bd5ca3-5be7-49aa-baea-066d58fd97ac] Total disk: 15 GB, used: 0.00 GB", "answer": "[instance: {variables}] Total disk: {variables} GB, used: {variables} GB"}
+{"query": "[instance: 7e5b2dc3-4b3a-427b-8cdf-69e08b803e39] Total disk: 15 GB, used: 0.00 GB", "answer": "[instance: {variables}] Total disk: {variables} GB, used: {variables} GB"}
+{"query": "[instance: c20cd3d4-8761-4424-a780-4be1baa40253] VM Resumed (Lifecycle Event)", "answer": "[instance: {variables}] VM Resumed (Lifecycle Event)"}
+{"query": "[instance: 7437a827-71de-4ac4-88b0-417b05020651] VM Paused (Lifecycle Event)", "answer": "[instance: {variables}] VM Paused (Lifecycle Event)"}
+{"query": "HTTP exception thrown: No instances found for any event", "answer": "HTTP exception thrown: No instances found for any event"}
+{"query": "HTTP exception thrown: No instances found for any event", "answer": "HTTP exception thrown: No instances found for any event"}
+{"query": "[instance: d7d68893-c44f-4e7c-8d4b-0e7801d62776] Creating image", "answer": "[instance: {variables}] Creating image"}
+{"query": "[instance: a1541bc9-921f-40be-b524-3bb60e25abf6] Creating image", "answer": "[instance: {variables}] Creating image"}
+{"query": "[instance: 5b539639-bf20-486e-be9c-fe8ebb07e39f] Instance spawned successfully.", "answer": "[instance: {variables}] Instance spawned successfully."}
+{"query": "[instance: 748f18b4-88e3-4b60-822a-f2b25fac50b2] Instance spawned successfully.", "answer": "[instance: {variables}] Instance spawned successfully."}
+{"query": "[instance: 7bccebe9-5c54-474e-9612-d7f554e0c92d] Attempting claim: memory 2048 MB, disk 20 GB, vcpus 1 CPU", "answer": "[instance: {variables}] Attempting claim: memory {variables} MB, disk {variables} GB, vcpus {variables} CPU"}
+{"query": "[instance: 5f70629e-2759-4e41-b89d-25a1f4d16399] Attempting claim: memory 2048 MB, disk 20 GB, vcpus 1 CPU", "answer": "[instance: {variables}] Attempting claim: memory {variables} MB, disk {variables} GB, vcpus {variables} CPU"}
+{"query": "Auditing locally available compute resources for node cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us", "answer": "Auditing locally available compute resources for node {variables}"}
+{"query": "Auditing locally available compute resources for node cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us", "answer": "Auditing locally available compute resources for node {variables}"}
+{"query": "[instance: 6bdd55a4-bfe0-45b8-86c2-3af3e994e240] Deleting instance files /var/lib/nova/instances/6bdd55a4-bfe0-45b8-86c2-3af3e994e240_del", "answer": "[instance: {variables}] Deleting instance files {variables}"}
+{"query": "[instance: e3607331-6b83-4b6c-b406-a3cc471cc461] Deleting instance files /var/lib/nova/instances/e3607331-6b83-4b6c-b406-a3cc471cc461_del", "answer": "[instance: {variables}] Deleting instance files {variables}"}
+{"query": "[instance: 5536b893-6159-45aa-8ef5-01090df08d54] memory limit: 96258.00 MB, free: 95746.00 MB", "answer": "[instance: {variables}] memory limit: {variables} MB, free: {variables} MB"}
+{"query": "[instance: 3a4bafe4-4893-4ed2-b1be-e88f355b1055] memory limit: 96258.00 MB, free: 95746.00 MB", "answer": "[instance: {variables}] memory limit: {variables} MB, free: {variables} MB"}
+{"query": "image 0673dd71-34c5-4fbb-86c4-40623fbe45b4 at (/var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742): in use: on this node 1 local, 0 on other nodes sharing this instance storage", "answer": "image {variables} at ({variables}): in use: on this node {variables} local, {variables} on other nodes sharing this instance storage"}
+{"query": "image 0673dd71-34c5-4fbb-86c4-40623fbe45b4 at (/var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742): in use: on this node 1 local, 0 on other nodes sharing this instance storage", "answer": "image {variables} at ({variables}): in use: on this node {variables} local, {variables} on other nodes sharing this instance storage"}
+{"query": "[instance: 1b403aac-3d6e-49de-aacf-4548fb97f58d] Total vcpu: 16 VCPU, used: 0.00 VCPU", "answer": "[instance: {variables}] Total vcpu: {variables} VCPU, used: {variables} VCPU"}
+{"query": "[instance: edbdf46f-f748-42a1-923f-14a30cfe6ffe] Total vcpu: 16 VCPU, used: 0.00 VCPU", "answer": "[instance: {variables}] Total vcpu: {variables} VCPU, used: {variables} VCPU"}
+{"query": "[instance: 33db54c5-9dc3-455f-b8aa-01c7122add3a] disk limit not specified, defaulting to unlimited", "answer": "[instance: {variables}] disk limit not specified, defaulting to unlimited"}
+{"query": "[instance: 1c8ffc22-6cc5-401d-958c-868ab9751dfa] disk limit not specified, defaulting to unlimited", "answer": "[instance: {variables}] disk limit not specified, defaulting to unlimited"}
+{"query": "While synchronizing instance power states, found 1 instances in the database and 0 instances on the hypervisor.", "answer": "While synchronizing instance power states, found {variables} instances in the database and {variables} instances on the hypervisor."}
+{"query": "While synchronizing instance power states, found 1 instances in the database and 0 instances on the hypervisor.", "answer": "While synchronizing instance power states, found {variables} instances in the database and {variables} instances on the hypervisor."}
+{"query": "Unknown base file: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742", "answer": "Unknown base file: {variables}"}
+{"query": "Unknown base file: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742", "answer": "Unknown base file: {variables}"}
+{"query": "Active base files: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742", "answer": "Active base files: {variables}"}
+{"query": "Active base files: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742", "answer": "Active base files: {variables}"}
+{"query": "Creating event network-vif-plugged:521028d6-4cf0-4c88-b9c8-631cc5d28f58 for instance c075ca86-6e43-45c7-b075-9032b87748cd", "answer": "Creating event {variables} for instance {variables}"}
+{"query": "Creating event network-vif-plugged:dcbb0378-a8ce-42a6-b13a-38164dd9306c for instance e128341d-b2c8-4edd-b80f-d1c70b303500", "answer": "Creating event {variables} for instance {variables}"}
+{"query": "Running instance usage audit for host cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us from 2017-05-15 01:00:00 to 2017-05-15 02:00:00. 88 instances.", "answer": "Running instance usage audit for host {variables} from {variables} to {variables}. {variables} instances."}
+{"query": "Running instance usage audit for host cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us from 2017-05-16 06:00:00 to 2017-05-16 07:00:00. 87 instances.", "answer": "Running instance usage audit for host {variables} from {variables} to {variables}. {variables} instances."}
+{"query": "image 0673dd71-34c5-4fbb-86c4-40623fbe45b4 at (/var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742): checking", "answer": "image {variables} at ({variables}): checking"}
+{"query": "Total usable vcpus: 16, total allocated vcpus: 1", "answer": "Total usable vcpus: {variables}, total allocated vcpus: {variables}"}
+{"query": "[instance: f62173ce-6976-4b89-949e-491776eddf4a] During sync_power_state the instance has a pending task (spawning). Skip.", "answer": "[instance: {variables}] During sync_power_state the instance has a pending task (spawning). Skip."}
+{"query": "Final resource view: name=cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us phys_ram=64172MB used_ram=2560MB phys_disk=15GB used_disk=20GB total_vcpus=16 used_vcpus=1 pci_stats=[]", "answer": "Final resource view: name={variables} phys_ram={variables} used_ram={variables} phys_disk={variables} used_disk={variables} total_vcpus={variables} used_vcpus={variables} pci_stats={variables}"}
+{"query": "[instance: a1bd5ca3-5be7-49aa-baea-066d58fd97ac] Deletion of /var/lib/nova/instances/a1bd5ca3-5be7-49aa-baea-066d58fd97ac_del complete", "answer": "[instance: {variables}] Deletion of {variables} complete"}
+{"query": "The instance sync for host 'cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us' did not match. Re-created its InstanceList.", "answer": "The instance sync for host {variables} did not match. Re-created its InstanceList."}

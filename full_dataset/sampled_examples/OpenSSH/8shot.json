@@ -1,0 +1,8 @@
+{"query": "Invalid user gitlab from 175.207.12.37", "answer": "Invalid user {variables} from {variables}"}
+{"query": "Disconnecting: Too many authentication failures for root [preauth]", "answer": "Disconnecting: Too many authentication failures for {variables} [preauth]"}
+{"query": "Accepted password for fztu from 119.137.63.195 port 52239 ssh2", "answer": "Accepted password for {variables} from {variables} port {variables} ssh2"}
+{"query": "Failed password for sshd from 103.99.0.122 port 65243 ssh2", "answer": "Failed password for {variables} from {variables} port {variables} ssh2"}
+{"query": "Connection closed by 183.63.172.52 [preauth]", "answer": "Connection closed by {variables} [preauth]"}
+{"query": "pam_unix(sshd:session): session closed for user jmzhu", "answer": "pam_unix(sshd:session): session closed for user {variables}"}
+{"query": "Did not receive identification string from 103.207.39.16", "answer": "Did not receive identification string from {variables}"}
+{"query": "Received disconnect from 119.7.221.129: 11: Bye Bye [preauth]", "answer": "Received disconnect from {variables}: {variables}: Bye Bye [preauth]"}

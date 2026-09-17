@@ -1,0 +1,8 @@
+{"query": "AppleActuatorHIDEventDriver: stop", "answer": "AppleActuatorHIDEventDriver: stop"}
+{"query": "Finder(4133) System Policy: deny file-write-create /Volumes/Recovery HD/.Trashes/501", "answer": "Finder({variables}) System Policy: deny file-write-create {variables}"}
+{"query": "<IMMacNotificationCenterManager: 0x7ff1b2e00ba0>: NC Disabled: NO", "answer": "<IMMacNotificationCenterManager: {variables}: NC Disabled: {variables}"}
+{"query": "no sleep images for WillPowerOffWithImages", "answer": "no sleep images for {variables}"}
+{"query": "en0: BSSID changed to 5c:50:15:4c:18:1c", "answer": "{variables}: BSSID changed to {variables}"}
+{"query": "**** [IOBluetoothFamily][ProcessBluetoothTransportShowsUpActionWL] -- Connected to the transport successfully -- 0x5fd0 -- 0x9a00 -- 0x3800 ****", "answer": "**** [IOBluetoothFamily][ProcessBluetoothTransportShowsUpActionWL] -- Connected to the transport successfully -- {variables} -- {variables} -- {variables} ****"}
+{"query": "Sandbox: com.apple.Addres(646) deny(1) mach-lookup com.apple.cdp.daemon", "answer": "Sandbox: com.apple.Addres({variables}) deny({variables}) mach-lookup {variables}"}
+{"query": "Telling CSI to exit low power.", "answer": "Telling CSI to exit low power."}

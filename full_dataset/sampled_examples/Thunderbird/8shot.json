@@ -1,0 +1,8 @@
+{"query": "messagebus -TERM succeeded", "answer": "{variables} -TERM succeeded"}
+{"query": "scsi[0]: scanning scsi channel 1 [virtual] for logical drives", "answer": "scsi[{variables}]: scanning scsi channel {variables} [virtual] for logical drives"}
+{"query": "lockd -KILL succeeded", "answer": "lockd -KILL succeeded"}
+{"query": "many lost ticks.", "answer": "many lost ticks."}
+{"query": "Configuration file /etc/smartd.conf parsed.", "answer": "Configuration file {variables} parsed."}
+{"query": "PCI: Transparent bridge - 0000:00:1e.0", "answer": "PCI: Transparent bridge - {variables}"}
+{"query": "usb 3-1: device not accepting address 3, error -71", "answer": "usb {variables}: device not accepting address {variables}, error {variables}"}
+{"query": "User #92#, coming from #148#, authenticated.", "answer": "User {variables}, coming from {variables}, authenticated."}

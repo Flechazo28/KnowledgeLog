@@ -64,7 +64,7 @@ def load_regs():
 
 class LogParser:
     def __init__(self, log_format, indir='./', outdir='./result/', rex=None,
-                 data_type='2k', model="gpt-3.5-turbo", run_id=None):
+                 data_type='full', model="gpt-3.5-turbo", run_id=None):
         self.path = indir
         self.outdir = outdir
         self.df_log = None

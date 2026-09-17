@@ -1,0 +1,16 @@
+{"query": "currentEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation", "answer": "currentEpoch not found! Creating with a reasonable default of {variables}. This should only happen when you are upgrading your installation"}
+{"query": "Server environment:os.name=Linux", "answer": "Server environment:os.name={variables}"}
+{"query": "Getting a diff from the leader 0x0", "answer": "Getting a diff from the leader {variables}"}
+{"query": "FOLLOWING - LEADER ELECTION TOOK - 46837", "answer": "FOLLOWING - LEADER ELECTION TOOK - {variables}"}
+{"query": "Server environment:java.version=1.7.0_79", "answer": "Server environment:java.version={variables}"}
+{"query": "Starting quorum peer", "answer": "Starting quorum peer"}
+{"query": "Cannot open channel to 2 at election address /10.10.34.12:3888", "answer": "Cannot open channel to {variables} at election address {variables}"}
+{"query": "tickTime set to 2000", "answer": "tickTime set to {variables}"}
+{"query": "Server environment:user.home=/var/lib/zookeeper", "answer": "Server environment:user.home={variables}"}
+{"query": "Interrupted while waiting for message on queue", "answer": "Interrupted while waiting for message on queue"}
+{"query": "binding to port 0.0.0.0/0.0.0.0:2181", "answer": "binding to port {variables}"}
+{"query": "Defaulting to majority quorums", "answer": "Defaulting to majority quorums"}
+{"query": "Server environment:user.name=zookeeper", "answer": "Server environment:user.name={variables}"}
+{"query": "Server environment:os.arch=amd64", "answer": "Server environment:os.arch={variables}"}
+{"query": "Connection broken for id 188978561024, my id = 1, error =", "answer": "Connection broken for id {variables}, my id = {variables}, error ={variables}"}
+{"query": "Server environment:user.dir=/", "answer": "Server environment:user.dir={variables}"}

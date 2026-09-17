@@ -1,0 +1,8 @@
+{"query": "No such internal service: services/stream - DISABLING", "answer": "No such internal service: {variables} - DISABLING"}
+{"query": "POSIX conformance testing by UNIFIX", "answer": "POSIX conformance testing by UNIFIX"}
+{"query": "ACPI: ACPI tables contain no PCI IRQ routing entries", "answer": "ACPI: ACPI tables contain no PCI IRQ routing entries"}
+{"query": "input: AT Translated Set 2 keyboard on isa0060/serio0", "answer": "input: {variables} on {variables}"}
+{"query": "Kerberos authentication failed", "answer": "Kerberos authentication failed"}
+{"query": "126MB LOWMEM available.", "answer": "{variables} LOWMEM available."}
+{"query": "frequency initialized 0.000 PPM from /var/lib/ntp/drift", "answer": "frequency initialized {variables} PPM from {variables}"}
+{"query": "BIOS-provided physical RAM map:", "answer": "BIOS-provided physical RAM map:"}

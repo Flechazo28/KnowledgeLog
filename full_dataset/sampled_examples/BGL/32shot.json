@@ -1,0 +1,32 @@
+{"query": "rror threshold, consider replacing the card", "answer": "rror threshold, consider replacing the card"}
+{"query": "size of scratchpad portion of L3.........0 (0M)", "answer": "size of scratchpad portion of L3.........{variables} ({variables})"}
+{"query": "exception syndrome register: 0x00800000", "answer": "exception syndrome register: {variables}"}
+{"query": "size of DDR we are caching...............1 (512M)", "answer": "size of DDR we are caching...............{variables} ({variables})"}
+{"query": "program interrupt: illegal instruction......0", "answer": "program interrupt: illegal instruction......{variables}"}
+{"query": "Can not get assembly information for node card", "answer": "Can not get assembly information for node card"}
+{"query": "Ido chip status changed: FF:F2:9F:16:E7:14:00:0D:60:E9:18:EB ip=10.1.1.75 v=13 t=4 status=M Fri Jun 17 07:25:00 PDT 2005", "answer": "Ido chip status changed: {variables} ip={variables} v={variables} t={variables} status={variables} {variables}"}
+{"query": "turn on hidden refreshes.................1", "answer": "turn on hidden refreshes.................{variables}"}
+{"query": "external input interrupt (unit=0x01 bit=0x09): number of corrected SRAM errors has exceeded threshold", "answer": "external input interrupt (unit={variables} bit={variables}): number of corrected SRAM errors has exceeded threshold"}
+{"query": "EndServiceAction is restarting the NodeCards in midplane R37-M1 as part of Service Action 222", "answer": "EndServiceAction is restarting the NodeCards in midplane {variables} as part of Service Action {variables}"}
+{"query": "number of lines with parity errors written to L3 EDRAMs...0", "answer": "number of lines with parity errors written to L3 EDRAMs...{variables}"}
+{"query": "instruction plb error.............1", "answer": "instruction plb error.............{variables}"}
+{"query": "L3 ecc status register: 00200000", "answer": "L3 ecc status register: {variables}"}
+{"query": "ciod: LOGIN chdir(/p/gb2/cjmundy/RUN_MED) failed: Permission denied", "answer": "ciod: LOGIN chdir({variables}) failed: Permission denied"}
+{"query": "Starting SystemController", "answer": "Starting SystemController"}
+{"query": "ciod: pollControlDescriptors: Detected the debugger died.", "answer": "ciod: pollControlDescriptors: Detected the debugger died."}
+{"query": "memory manager strobe gate.......................0", "answer": "memory manager strobe gate.......................{variables}"}
+{"query": "CE sym 22, at 0x0e784740, mask 0x80", "answer": "CE sym {variables}, at {variables}, mask {variables}"}
+{"query": "Running as background command", "answer": "Running as background command"}
+{"query": "parity error in bank 1.........................0", "answer": "parity error in bank {variables}.........................{variables}"}
+{"query": "memory manager address parity error..............0", "answer": "memory manager address parity error..............{variables}"}
+{"query": "ciod: cpu 0 at treeaddr 176 sent unrecognized message 0xffffffff", "answer": "ciod: cpu {variables} at treeaddr {variables} sent unrecognized message {variables}"}
+{"query": "disable flagging of DDR UE's as major internal error.0", "answer": "disable flagging of DDR UE's as major internal error.{variables}"}
+{"query": "BglIdoChip table has 2 IDOs with the same IP address (10.0.1.8)", "answer": "BglIdoChip table has {variables} IDOs with the same IP address {variables}"}
+{"query": "data storage interrupt", "answer": "data storage interrupt"}
+{"query": "L3 global control register: 0x001249f0", "answer": "L3 global control register: {variables}"}
+{"query": "disable apu instruction broadcast........0", "answer": "disable apu instruction broadcast........{variables}"}
+{"query": "instruction cache parity error corrected", "answer": "instruction cache parity error corrected"}
+{"query": "problem state (0=sup,1=usr).......0", "answer": "problem state ({variables}=sup,{variables}=usr).......{variables}"}
+{"query": "disable trace broadcast..................0", "answer": "disable trace broadcast..................{variables}"}
+{"query": "disable store gathering..................0", "answer": "disable store gathering..................{variables}"}
+{"query": "floating point operation....................0", "answer": "floating point operation....................{variables}"}

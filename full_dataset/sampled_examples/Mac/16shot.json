@@ -1,0 +1,16 @@
+{"query": "AppleActuatorDeviceUserClient::stop Entered", "answer": "AppleActuatorDeviceUserClient::{variables} Entered"}
+{"query": "hibernate_page_list_setall(preflight 0) start", "answer": "hibernate_page_list_setall(preflight {variables}) start"}
+{"query": "WARNING: hibernate_page_list_setall skipped 39171 xpmapped pages", "answer": "WARNING: hibernate_page_list_setall skipped {variables} xpmapped pages"}
+{"query": "[21:14:16.876] <<<< IQ-CA >>>> piqca_setUsePreQueue: (0x7fce14a31200) rejecting report of layer being serviced - IQ has not yet begun to update", "answer": "[{variables}] <<<< IQ-CA >>>> piqca_setUsePreQueue: {variables} rejecting report of layer being serviced - IQ has not yet begun to update"}
+{"query": "ERROR | -[LWBuiltInScreenLockAuthLion askForPasswordBuiltIn:] | Attempted to add an observer when already observing", "answer": "ERROR | -[LWBuiltInScreenLockAuthLion {variables} | Attempted to add an observer when already observing"}
+{"query": "2017/07/01 10:31:07.710 | I | VoipWrapper | DAVEngineImpl.cpp:1400:Close | close video chat. llFriendUIN = 1742124257.", "answer": "{variables} {variables} | I | VoipWrapper | DAVEngineImpl.cpp:{variables}:Close | close video chat. llFriendUIN = {variables}"}
+{"query": "XPC Activity invoked with state=2", "answer": "XPC Activity invoked with state={variables}"}
+{"query": "[HID] [MT] AppleMultitouchDevice::willTerminate entered", "answer": "[HID] [MT] AppleMultitouchDevice::willTerminate entered"}
+{"query": "***** Received request to scan at 30ms/60ms *****", "answer": "***** Received request to scan at {variables} *****"}
+{"query": "doSaveChannels@286: Will write to: /Library/Logs/CrashReporter/CoreCapture/IOReporters/[2017-07-01_09,59,39.745538] - RoamFail:sts:1_rsn:1.xml", "answer": "doSaveChannels@{variables}: Will write to: {variables} - {variables}"}
+{"query": "[22:24:03.499] <<<< CRABS >>>> crabsFlumeConnectionToHostLost: [0x7fce15fda600] Byte flume reports connection to host lost. No error specified, using kCFURLErrorCannotConnectToHost.", "answer": "[{variables}] <<<< CRABS >>>> crabsFlumeConnectionToHostLost: [{variables}] Byte flume reports connection to host lost. No error specified, using kCFURLErrorCannotConnectToHost."}
+{"query": "hibernate_rebuild started", "answer": "hibernate_rebuild started"}
+{"query": "[Accounts] Current connection, <NSXPCConnection: 0x7fda72614240> connection from pid 30318, doesn't have account access.", "answer": "[Accounts] Current connection, <NSXPCConnection: {variables} connection from pid {variables}, doesn't have account access."}
+{"query": "Actually performing action comment for 22589429328", "answer": "Actually performing action comment for {variables}"}
+{"query": "ASL Sender Statistics", "answer": "ASL Sender Statistics"}
+{"query": "-[ABAddressBook save] failed. (<ABAddressBook: 0x7fc35551c5c0>)", "answer": "-[ABAddressBook save] failed. ({variables})"}

@@ -1,0 +1,8 @@
+{"query": "queue: default", "answer": "queue: {variables}"}
+{"query": "The job-conf file on the remote FS is /tmp/hadoop-yarn/staging/msrabi/.staging/job_1445144423722_0020/job.xml", "answer": "The job-conf file on the remote FS is {variables}"}
+{"query": "ProcfsBasedProcessTree currently is supported only on Linux.", "answer": "ProcfsBasedProcessTree currently is supported only on Linux."}
+{"query": "Assigned to reduce", "answer": "Assigned to reduce"}
+{"query": "Reduce slow start threshold reached. Scheduling reduces.", "answer": "Reduce slow start threshold reached. Scheduling reduces."}
+{"query": "Upper limit on the thread pool size is 500", "answer": "Upper limit on the thread pool size is {variables}"}
+{"query": "Communication exception: java.net.ConnectException: Call From MSRA-SA-39/172.22.149.145 to minint-fnanli5.fareast.corp.microsoft.com:49594 failed on connection exception: java.net.ConnectException: Connection timed out: no further information; For more details see: http://wiki.apache.org/hadoop/ConnectionRefused", "answer": "Communication exception: java.net.ConnectException: Call From {variables} to {variables} failed on connection exception: java.net.ConnectException: Connection timed out: no further information; For more details see: {variables}"}
+{"query": "Reduce slow start threshold not met. completedMapsForReduceSlowstart 1", "answer": "Reduce slow start threshold not met. completedMapsForReduceSlowstart {variables}"}

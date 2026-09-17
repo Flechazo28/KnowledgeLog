@@ -1,8 +1,7 @@
-# Secrets and local environment
+# Local environment and credentials
 .env
 .env.*
 !.env.example
-openai_key.txt
 *.pem
 *.key
 
@@ -16,62 +15,28 @@ __pycache__/
 venv/
 env/
 
-# Editor and local agent state
+# Editors and local agent state
 .vscode/
 .idea/
 .agents/
 .codex/
 .DS_Store
 
-# Runtime logs, caches, and temporary files
-*.log
+# Runtime and generated files
 *.out
 *.pid
 *.tmp
-*.sh
-temp/
-tmp/
-cache/
-cached_log.txt
-
-# Generated experiment/evaluation outputs
-/result/*
-results/
-output/
-outputs/
-runs/
-checkpoints/
-
-# Local datasets and generated tabular artifacts
-/2k_datasets/
-/full_dataset/*
-/build_2k_datasets.py
-*.csv
-*.parquet
-*.npy
-*.npz
 *.pkl
-!/result/20260906_200634_14datasets/
-!/result/20260906_200634_14datasets/summary_\[otc=False,complex=0,frequent=0\].csv
-!/result/summary_metrics/
-!/result/summary_metrics/KnowledgeLog_full_complex=0_frequent=0_gpt-3.5-turbo.csv
-!/full_dataset/Apache/
-!/full_dataset/Apache/**
+temp/*
+!temp/.gitkeep
+result/*
+!result/.gitkeep
+!result/20260906_200634_14datasets/
+!result/20260906_200634_14datasets/summary_\[otc=False,complex=0,frequent=0\].csv
+!result/summary_metrics/
+!result/summary_metrics/KnowledgeLog_full_complex=0_frequent=0_gpt-3.5-turbo.csv
 
-# Model weights and archives
-*.pt
-*.pth
-*.ckpt
-*.safetensors
-*.bin
-*.zip
-*.tar
-*.tar.gz
-
-# Papers and local research notes (not source code)
-/gap_analysis/
-/others/
-/历史问题/
-
-# Archived implementation snapshots
-/benchmark/logparser/KnowledgeLog/oldfiles/
+# Local research material
+gap_analysis/
+others/
+历史问题/

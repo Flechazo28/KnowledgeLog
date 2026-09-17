@@ -1,0 +1,16 @@
+{"query": "getMidWareStepCountService: pkgName = com.huawei.systemserver, service = com.huawei.systemserver.ihealth.connectivity.HwStepCounterService", "answer": "getMidWareStepCountService: pkgName = {variables}, service = {variables}"}
+{"query": "start compare with midware counter", "answer": "start compare with midware counter"}
+{"query": "onBind intent = Intent { act=com.huawei.hihealthservice.HiHealthService pkg=com.huawei.health }", "answer": "onBind intent = Intent { act={variables} pkg={variables} }"}
+{"query": "writeDataToDB size 1053", "answer": "writeDataToDB size {variables}"}
+{"query": "startStepCounterInter stand", "answer": "startStepCounterInter stand"}
+{"query": "getTodayNoSyncTotalValue datas is null or empty", "answer": "{variables} datas is null or empty"}
+{"query": "next day:steps0mLastReport16920", "answer": "next day:{variables}"}
+{"query": "checkFirstSyncByType no such data in db ,type is 1 deviceCode is 0", "answer": "checkFirstSyncByType no such data in db ,type is {variables} deviceCode is {variables}"}
+{"query": "startInsertSportSync start auto sync,app is 1", "answer": "startInsertSportSync start auto sync,app is {variables}"}
+{"query": "processHandleBroadcastAction action:com.huawei.health.WIDGET_DISABLE", "answer": "processHandleBroadcastAction action:{variables}"}
+{"query": "flushTempCacheToDB by ext", "answer": "flushTempCacheToDB by {variables}"}
+{"query": "setGoalNotifiShownRecord 1514112824312 true", "answer": "setGoalNotifiShownRecord {variables}"}
+{"query": "startStepCounter enter...", "answer": "startStepCounter enter..."}
+{"query": "isScreenOn false", "answer": "isScreenOn {variables}"}
+{"query": "flushTempCacheToDB by stand", "answer": "flushTempCacheToDB by {variables}"}
+{"query": "checkInsertStatus stepSum or calorieSum is enough", "answer": "checkInsertStatus stepSum or calorieSum is enough"}

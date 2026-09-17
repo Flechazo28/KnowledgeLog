@@ -1,0 +1,16 @@
+{"query": "Diagnostics report from attempt_1445144423722_0020_m_000008_0: cleanup failed for container container_1445144423722_0020_01_000010 : java.lang.IllegalArgumentException: java.net.UnknownHostException: MSRA-SA-39.fareast.corp.microsoft.com", "answer": "Diagnostics report from {variables}: cleanup failed for container {variables} : java.lang.IllegalArgumentException: java.net.UnknownHostException: {variables}"}
+{"query": "Error communicating with RM: Could not contact RM after 360000 milliseconds.", "answer": "Error communicating with RM: Could not contact RM after {variables} milliseconds."}
+{"query": "Container complete event for unknown container id container_1445144423722_0020_01_000012", "answer": "Container complete event for unknown container id {variables}"}
+{"query": "TaskAttempt killed because it ran on unusable node MININT-FNANLI5.fareast.corp.microsoft.com:55629. AttemptId:attempt_1445087491445_0002_m_000006_1", "answer": "TaskAttempt killed because it ran on unusable node {variables}. AttemptId:{variables}"}
+{"query": "nodeBlacklistingEnabled:true", "answer": "nodeBlacklistingEnabled:{variables}"}
+{"query": "kvstart = 19181660(76726640); kvend = 10271780(41087120); length = 8909881/6553600", "answer": "kvstart = {variables}({variables}); kvend = {variables}({variables}); length = {variables}"}
+{"query": "Registering class org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncher$EventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$ContainerLauncherRouter", "answer": "Registering class {variables} for class {variables}"}
+{"query": "Added attempt_1445144423722_0020_m_000002_1 to list of failed maps", "answer": "Added {variables} to list of failed maps"}
+{"query": "Processing split: hdfs://msra-sa-41:9000/pageinput2.txt:805306368+134217728", "answer": "Processing split: {variables}+{variables}"}
+{"query": "getResources() for application_1445144423722_0020: ask=4 release= 0 newContainers=0 finishedContainers=0 resourcelimit=<memory:0, vCores:-27> knownNMs=4", "answer": "getResources() for {variables}: ask={variables} release= {variables} newContainers={variables} finishedContainers={variables} resourcelimit=<memory:{variables}, vCores:{variables} knownNMs={variables}"}
+{"query": "attempt_1445087491445_0005_m_000006_0 TaskAttempt Transitioned from KILL_TASK_CLEANUP to KILLED", "answer": "{variables} TaskAttempt Transitioned from {variables} to {variables}"}
+{"query": "Web app /mapreduce started at 19058", "answer": "Web app {variables} started at {variables}"}
+{"query": "ProcfsBasedProcessTree currently is supported only on Linux.", "answer": "ProcfsBasedProcessTree currently is supported only on Linux."}
+{"query": "Failed to connect to /10.190.173.170:50010 for block, add to deadNodes and continue. java.net.NoRouteToHostException: No route to host: no further information", "answer": "Failed to connect to {variables} for block, add to deadNodes and continue. java.net.NoRouteToHostException: No route to host: no further information"}
+{"query": "finalMerge called with 0 in-memory map-outputs and 10 on-disk map-outputs", "answer": "finalMerge called with {variables} in-memory map-outputs and {variables} on-disk map-outputs"}
+{"query": "Exception in getting events", "answer": "Exception in getting events"}

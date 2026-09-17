@@ -88,12 +88,6 @@ def common_args():
     parser.add_argument('-otc', '--oracle_template_correction',
                         help="Set this if you want to use corrected oracle templates",
                         default=False, action='store_true')
-    parser.add_argument('-full', '--full_data',
-                        help="Set this if you want to test on full dataset",
-                        default=False, action='store_true')
-    parser.add_argument('--lunar_data',
-                        help="Set this if you want to test on lunar_dataset",
-                        default=False, action='store_true')
     parser.add_argument('--complex', type=int,
                         help="Set this if you want to test on complex dataset",
                         default=0)

@@ -1,0 +1,8 @@
+{"query": "Server environment:java.home=/usr/lib/jvm/java-7-openjdk-amd64/jre", "answer": "Server environment:java.home={variables}"}
+{"query": "Snapshotting: 0x0 to /var/lib/zookeeper/version-2/snapshot.0", "answer": "Snapshotting: {variables} to {variables}"}
+{"query": "My election bind port: 0.0.0.0/0.0.0.0:3888", "answer": "My election bind port: {variables}"}
+{"query": "TCP NoDelay set to: true", "answer": "TCP NoDelay set to: {variables}"}
+{"query": "autopurge.purgeInterval set to 0", "answer": "autopurge.purgeInterval set to {variables}"}
+{"query": "Send worker leaving thread", "answer": "Send worker leaving thread"}
+{"query": "New election. My id = 1, proposed zxid=0x0", "answer": "New election. My id = {variables}, proposed {variables}"}
+{"query": "Server environment:os.arch=amd64", "answer": "Server environment:os.arch={variables}"}

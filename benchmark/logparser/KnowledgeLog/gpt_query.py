@@ -1,22 +1,15 @@
 import openai
 import json
-import os
 import re
-import signal
 import time
 import string
-from contextlib import contextmanager
-from dataclasses import dataclass
 from pathlib import Path
-from typing import List, Optional, Sequence, Tuple
+from typing import Optional
 
 from .parsing_cache import ParsingCache
 from .post_process import correct_single_template
 
 
-# =============================================================================
-# Basic configuration
-# =============================================================================
 
 VARIABLE_PLACEHOLDER = "{variables}"
 FINAL_PLACEHOLDER = "<*>"
@@ -26,320 +19,79 @@ DEFAULT_MAX_TOKENS = 512
 DEFAULT_REQUEST_TIMEOUT = 300
 DEFAULT_RETRY_TIMES = 3
 DEFAULT_RETRY_SLEEP_SECONDS = 2
-PROJECT_ROOT = Path(__file__).resolve().parents[3]
+OPENAI_KEY_PATH = Path(__file__).resolve().parents[3] / "openai_key.txt"
 
 
-class APICallWallClockTimeout(TimeoutError):
-    """Raised when an API attempt exceeds its wall-clock deadline."""
 
+def get_openai_key(model: str = DEFAULT_MODEL):
+    """Read the model configuration from the project key file.
 
-@contextmanager
-def api_call_wall_clock_timeout(seconds: int):
-    """Enforce a real deadline even if requests/urllib3 stops honoring timeout.
-
-    KnowledgeLog performs model calls in the main thread of its parser child on
-    Linux, where SIGALRM can safely interrupt a stuck Python/network code path.
-    Keep a no-op fallback for platforms or threads without setitimer support.
+    ``openai_key.txt`` contains exactly three lines in this order: model name,
+    API base, and API key.
     """
-    if not hasattr(signal, "setitimer"):
-        yield
-        return
+    if not OPENAI_KEY_PATH.is_file():
+        raise FileNotFoundError(f"API configuration file not found: {OPENAI_KEY_PATH}")
 
-    def handle_timeout(_signum, _frame):
-        raise APICallWallClockTimeout(
-            f"API call exceeded the {seconds}-second wall-clock deadline"
+    with OPENAI_KEY_PATH.open("r", encoding="utf-8") as file:
+        lines = [line.strip() for line in file if line.strip()]
+
+    if len(lines) != 3:
+        raise ValueError(
+            f"Invalid API configuration in {OPENAI_KEY_PATH}: "
+            "expected exactly three non-empty lines: model, API base, and API key"
         )
 
-    previous_handler = signal.getsignal(signal.SIGALRM)
-    signal.signal(signal.SIGALRM, handle_timeout)
-    previous_timer = signal.setitimer(signal.ITIMER_REAL, seconds)
-    try:
-        yield
-    finally:
-        signal.setitimer(signal.ITIMER_REAL, 0)
-        signal.signal(signal.SIGALRM, previous_handler)
-        if previous_timer[0] > 0:
-            signal.setitimer(signal.ITIMER_REAL, *previous_timer)
+    configured_model, api_base, api_key = lines
+    if configured_model != model:
+        raise ValueError(
+            f"Configured model {configured_model!r} does not match requested "
+            f"model {model!r}"
+        )
+    if not api_base.startswith(("http://", "https://")):
+        raise ValueError(f"Invalid API base in {OPENAI_KEY_PATH}")
+
+    return api_base, api_key
 
 
-def reset_openai_http_session():
-    """Discard OpenAI 0.x's thread-local requests session before each attempt."""
-    try:
-        from openai.api_requestor import _thread_context
-    except ImportError:
-        return
-    session = getattr(_thread_context, "session", None)
-    if session is not None:
-        session.close()
-        delattr(_thread_context, "session")
-    if hasattr(_thread_context, "session_create_time"):
-        delattr(_thread_context, "session_create_time")
-
-
-def env_list(name: str, default: Sequence[str]) -> Tuple[str, ...]:
-    raw = os.environ.get(name)
-    if raw is None:
-        return tuple(default)
-    raw = raw.strip()
-    if not raw or raw.lower() in {"0", "false", "no", "off", "none", "empty"}:
-        return ()
-    return tuple(item.strip() for item in re.split(r"[,;:\s]+", raw) if item.strip())
-
-# =============================================================================
-# OpenAI key loading
-# =============================================================================
-
-
-def get_openai_key(file_path: str, model: str = DEFAULT_MODEL):
-    candidates = [
-        file_path,
-        PROJECT_ROOT / "openai_key.txt",
-    ]
-    for candidate in candidates:
-        if os.path.exists(candidate):
-            with open(candidate, "r") as file:
-                lines = [line.strip() for line in file if line.strip()]
-            if len(lines) < 2:
-                raise ValueError(f"Invalid OpenAI key file format: {candidate}")
-
-            # Support multiple blocks: model, API base, API key.
-            for index in range(0, len(lines) - 2, 3):
-                configured_model, api_base, key_str = lines[index:index + 3]
-                if configured_model == model and api_base.startswith("http"):
-                    return api_base, key_str
-
-            # Backward-compatible two-line format: API base, API key.
-            if lines[0].startswith("http"):
-                return lines[0], lines[1]
-
-            raise ValueError(
-                f"No API configuration found for model {model!r} in {candidate}"
-            )
-    raise FileNotFoundError(f"Cannot find OpenAI key file from candidates: {candidates}")
-
-
-def configure_local_api_no_proxy(api_base: str):
-    """Ensure localhost model requests are not routed through an HTTP proxy."""
-    if not api_base.startswith(("http://127.0.0.1", "http://localhost")):
-        return
-    for env_name in ("no_proxy", "NO_PROXY"):
-        entries = [item.strip() for item in os.environ.get(env_name, "").split(",") if item.strip()]
-        for host in ("localhost", "127.0.0.1"):
-            if host not in entries:
-                entries.append(host)
-        os.environ[env_name] = ",".join(entries)
-
-
-# =============================================================================
-# Curated prompt-level domain knowledge
-# =============================================================================
 
 DOMAIN_KNOWLEDGE_PATH = Path(__file__).with_name("domain_knowledge.json")
 
-def load_domain_knowledge(path: Path = DOMAIN_KNOWLEDGE_PATH):
-    """Load and validate data-only prompt and preprocessing knowledge."""
-    try:
-        with path.open("r", encoding="utf-8") as handle:
-            payload = json.load(handle)
-    except (OSError, json.JSONDecodeError) as exc:
-        raise RuntimeError(f"Unable to load domain knowledge from {path}: {exc}") from exc
-
-    if not isinstance(payload, dict):
-        raise ValueError("Domain knowledge must be a JSON object.")
-    expected_keys = {"prompt_rules", "preprocessing_rules"}
-    if set(payload) != expected_keys:
-        raise ValueError(
-            "Domain knowledge keys must be exactly "
-            f"{sorted(expected_keys)}; got {sorted(payload)}"
-        )
-    prompt_rules = payload["prompt_rules"]
-    preprocessing_rules = payload["preprocessing_rules"]
-    if not isinstance(prompt_rules, list) or not prompt_rules:
-        raise ValueError("prompt_rules must be a non-empty list.")
-    if not all(isinstance(rule, str) and rule.strip() for rule in prompt_rules):
-        raise ValueError("Every prompt rule must be a non-empty string.")
-    if not isinstance(preprocessing_rules, list) or not preprocessing_rules:
-        raise ValueError("preprocessing_rules must be a non-empty list.")
-    return payload
-
-
-_DOMAIN_KNOWLEDGE = load_domain_knowledge()
+with DOMAIN_KNOWLEDGE_PATH.open("r", encoding="utf-8") as handle:
+    _DOMAIN_KNOWLEDGE = json.load(handle)
 CURATED_PROMPT_RULES = list(_DOMAIN_KNOWLEDGE["prompt_rules"])
 
-PROMPT_GROUPS = {"curated": CURATED_PROMPT_RULES}
-DEFAULT_ENABLED_PROMPT_GROUPS = env_list("KNOWLEDGELOG_PROMPT_GROUPS", ("curated",))
-
-
-def build_final_domain_knowledge(
-    enabled_prompt_groups: Sequence[str] = DEFAULT_ENABLED_PROMPT_GROUPS,
-) -> str:
-    """Build the source-traceable curated prompt knowledge."""
-    rules: List[str] = []
-    for group_name in enabled_prompt_groups:
-        rules.extend(PROMPT_GROUPS.get(group_name, []))
-
-    numbered_rules = "\n".join(f"{i + 1}. {rule}" for i, rule in enumerate(rules))
+def build_final_domain_knowledge() -> str:
+    numbered_rules = "\n".join(
+        f"{i + 1}. {rule}" for i, rule in enumerate(CURATED_PROMPT_RULES)
+    )
     return "\nYou must follow these final domain knowledge rules:\n" + numbered_rules + "\n"
 
 
-# =============================================================================
-# Modular preprocessing
-# =============================================================================
-# Avoid broad regexes that match dotted non-network tokens such as java.io.IOException,
-# zookeeper.version, os.name, user.home. Endpoints must have a scheme or an explicit port.
-
-
-@dataclass(frozen=True)
-class RegexRule:
-    name: str
-    pattern: str
-    replacement: str
-    flags: int = 0
-
-    def apply(self, text: str) -> str:
-        return re.sub(self.pattern, self.replacement, text, flags=self.flags)
-
-
-SUPPORTED_REGEX_FLAGS = {
-    "IGNORECASE": re.IGNORECASE,
-}
-
 
 def build_preprocessing_rules(entries):
-    """Construct RegexRule objects from the minimal JSON representation."""
     rules = []
-    names = set()
-    required_keys = {"name", "pattern", "replacement"}
-    allowed_keys = required_keys | {"flags"}
-    for index, entry in enumerate(entries):
-        if not isinstance(entry, dict):
-            raise ValueError(f"preprocessing_rules[{index}] must be an object.")
-        keys = set(entry)
-        missing = required_keys - keys
-        extra = keys - allowed_keys
-        if missing or extra:
-            raise ValueError(
-                f"Invalid preprocessing rule at index {index}: "
-                f"missing={sorted(missing)}, extra={sorted(extra)}"
-            )
-        name = entry["name"]
-        pattern = entry["pattern"]
-        replacement = entry["replacement"]
-        if not all(isinstance(value, str) for value in (name, pattern, replacement)):
-            raise ValueError(
-                f"name, pattern, and replacement must be strings at index {index}."
-            )
-        if not name or not pattern:
-            raise ValueError(f"Rule name and pattern cannot be empty at index {index}.")
-        if name in names:
-            raise ValueError(f"Duplicate preprocessing rule name: {name}")
-        names.add(name)
-
-        flag_name = entry.get("flags")
-        if flag_name is None:
-            flags = 0
-        elif flag_name in SUPPORTED_REGEX_FLAGS:
-            flags = SUPPORTED_REGEX_FLAGS[flag_name]
-        else:
-            raise ValueError(
-                f"Unsupported regex flag {flag_name!r} in preprocessing rule {name!r}."
-            )
-        try:
-            re.compile(pattern, flags=flags)
-        except re.error as exc:
-            raise ValueError(
-                f"Invalid regex pattern in preprocessing rule {name!r}: {exc}"
-            ) from exc
-        rules.append(
-            RegexRule(
-                name=name,
-                pattern=pattern,
-                replacement=replacement,
-                flags=flags,
-            )
-        )
+    for entry in entries:
+        flags = re.IGNORECASE if entry.get("flags") == "IGNORECASE" else 0
+        rules.append((re.compile(entry["pattern"], flags), entry["replacement"]))
     return rules
 
 
-PREPROCESSING_RULE_GROUPS = {
-    "curated": build_preprocessing_rules(
-        _DOMAIN_KNOWLEDGE["preprocessing_rules"]
-    ),
-}
-
-DEFAULT_ENABLED_PREPROCESSING_GROUPS = env_list(
-    "KNOWLEDGELOG_PREPROCESSING_GROUPS",
-    ("curated",),
+CURATED_PREPROCESSING_RULES = build_preprocessing_rules(
+    _DOMAIN_KNOWLEDGE["preprocessing_rules"]
 )
 
-
-def apply_preprocessing_group(text: str, group_name: str) -> str:
-    for rule in PREPROCESSING_RULE_GROUPS.get(group_name, []):
-        text = rule.apply(text)
-    return text
-
-
-def apply_final_domain_preprocessing(
-    log_message: str,
-    enabled_groups: Sequence[str] = DEFAULT_ENABLED_PREPROCESSING_GROUPS,
-) -> str:
+def apply_final_domain_preprocessing(log_message: str) -> str:
     query = log_message
-    for group_name in enabled_groups:
-        query = apply_preprocessing_group(query, group_name)
+    for pattern, replacement in CURATED_PREPROCESSING_RULES:
+        query = pattern.sub(replacement, query)
     return query
 
 
-# =============================================================================
-# Modular postprocessing
-# =============================================================================
-# Default postprocessing is intentionally limited to output-format cleanup.
-# Domain-specific content changes should happen through prompt rules or generic
-# preprocessing.
 
-
-def normalize_template_placeholders(
-    template: str,
-    _log_message: Optional[str] = None,
-) -> str:
+def normalize_template_placeholders(template: str) -> str:
     template = re.sub(r"\{(?!variables\})[A-Za-z_][A-Za-z0-9_.-]*\}", VARIABLE_PLACEHOLDER, template)
     template = re.sub(r"\{\{\s*variables\s*\}\}", VARIABLE_PLACEHOLDER, template)
     return template
-
-
-POSTPROCESSING_RULE_GROUPS = {
-    "safe_format": [normalize_template_placeholders],
-}
-
-DEFAULT_ENABLED_POSTPROCESSING_GROUPS = env_list(
-    "KNOWLEDGELOG_POSTPROCESSING_GROUPS",
-    ("safe_format",),
-)
-
-
-def apply_postprocessing_group(template: str, log_message: Optional[str], group_name: str) -> str:
-    for rule in POSTPROCESSING_RULE_GROUPS.get(group_name, []):
-        template = rule(template, log_message)
-    return template
-
-
-def apply_final_domain_postprocessing(
-    template: str,
-    log_message: Optional[str] = None,
-    enabled_groups: Sequence[str] = DEFAULT_ENABLED_POSTPROCESSING_GROUPS,
-) -> str:
-    for group_name in enabled_groups:
-        template = apply_postprocessing_group(template, log_message, group_name)
-    return template
-
-
-# =============================================================================
-# OpenAI inference and parser interface
-# =============================================================================
-
-
-def is_chat_model(model: str) -> bool:
-    normalized_model = model.lower()
-    return any(name in normalized_model for name in ("turbo", "gpt", "qwen", "glm", "llama"))
 
 
 def infer_llm(
@@ -353,55 +105,31 @@ def infer_llm(
     request_timeout: int = DEFAULT_REQUEST_TIMEOUT,
     retry_times: int = DEFAULT_RETRY_TIMES,
 ):
-    # Select the API credentials that correspond to the requested model.
-    api_base, api_key = get_openai_key(PROJECT_ROOT / "openai_key.txt", model)
+    api_base, api_key = get_openai_key(model)
     openai.api_base = api_base
     openai.api_key = api_key
-    configure_local_api_no_proxy(api_base)
-    chat_model = is_chat_model(model)
-    if chat_model:
-        messages = [
-            {"role": "system", "content": "You are an expert of log parsing."},
-            {"role": "user", "content": instruction + knowledge},
-            {"role": "assistant", "content": "Sure, I can help you with log parsing."},
-            {"role": "user", "content": query},
-        ]
-    else:
-        messages = f"{instruction}\nPlease parse the following log message:\n{query}\n"
+    messages = [
+        {"role": "system", "content": "You are an expert of log parsing."},
+        {"role": "user", "content": instruction + knowledge},
+        {"role": "assistant", "content": "Sure, I can help you with log parsing."},
+        {"role": "user", "content": query},
+    ]
 
     print("model: ", model)
     for attempt in range(1, retry_times + 1):
         try:
-            # A fresh connection prevents a stale keep-alive socket from
-            # spinning in CLOSE_WAIT after many sequential template queries.
-            reset_openai_http_session()
-            if chat_model:
-                with api_call_wall_clock_timeout(request_timeout):
-                    answers = openai.ChatCompletion.create(
-                        model=model,
-                        messages=messages,
-                        temperature=temperature,
-                        max_tokens=max_tokens,
-                        stream=False,
-                        request_timeout=request_timeout,
-                    )
-                choices = [
-                    response["message"]["content"]
-                    for response in answers["choices"]
-                    if response.get("finish_reason") != "length"
-                ]
-                if choices:
-                    return choices[0]
-                raise RuntimeError("No complete response choices returned by the chat API.")
-            with api_call_wall_clock_timeout(request_timeout):
-                response = openai.Completion.create(
-                    model=model,
-                    prompt=messages,
-                    temperature=temperature,
-                    max_tokens=max_tokens,
-                    request_timeout=request_timeout,
-                )
-            return response["choices"][0]["text"].strip()
+            answers = openai.ChatCompletion.create(
+                model=model,
+                messages=messages,
+                temperature=temperature,
+                max_tokens=max_tokens,
+                stream=False,
+                request_timeout=request_timeout,
+            )
+            for response in answers["choices"]:
+                if response.get("finish_reason") != "length":
+                    return response["message"]["content"]
+            raise RuntimeError("No complete response choices returned by the chat API.")
         except Exception as e:
             print(f"Exception on API attempt {attempt}/{retry_times}: {e}")
             if attempt < retry_times:
@@ -415,8 +143,6 @@ def get_response_from_openai_key(
     query: str,
     model: str = DEFAULT_MODEL,
     temperature: float = DEFAULT_TEMPERATURE,
-    enabled_prompt_groups: Sequence[str] = DEFAULT_ENABLED_PROMPT_GROUPS,
-    enabled_preprocessing_groups: Sequence[str] = DEFAULT_ENABLED_PREPROCESSING_GROUPS,
 ):
     original_log = query
     instruction = (
@@ -427,13 +153,8 @@ def get_response_from_openai_key(
         "in logs. You must print the input log's template following this exact "
         "format: 'Log template:`...`'"
     )
-    knowledge = build_final_domain_knowledge(
-        enabled_prompt_groups=enabled_prompt_groups,
-    )
-    preprocessed_query = apply_final_domain_preprocessing(
-        query,
-        enabled_groups=enabled_preprocessing_groups,
-    )
+    knowledge = build_final_domain_knowledge()
+    preprocessed_query = apply_final_domain_preprocessing(query)
     question = "Log message: `{}`".format(preprocessed_query)
     return infer_llm(
         instruction,
@@ -487,44 +208,9 @@ def query_template_from_gpt(log_message, model=DEFAULT_MODEL):
     return log_message, False
 
 
-ROLE_SPAN_RE = re.compile(r"^[A-Za-z]+(?:\s+[A-Za-z]+)*$")
-WORKER_THREAD_RE = re.compile(r"(?:worker|thread)", re.IGNORECASE)
-IDENTITY_CONTEXT_RE = re.compile(
-    r"\b(?:user|login|account|principal|for)\s+$",
-    re.IGNORECASE,
-)
 EMPTY_RHS_LOG_RE = re.compile(
     r"\b(?P<key>[A-Za-z_][A-Za-z0-9_.-]*)\s*=\s*$"
 )
-
-
-def restore_fixed_role_spans(
-    template: str,
-    log_message: Optional[str],
-) -> str:
-    """Restore fixed worker/thread role names that the LLM over-abstracted."""
-    if not log_message or FINAL_PLACEHOLDER not in template:
-        return template
-
-    parts = template.split(FINAL_PLACEHOLDER)
-    pattern = "(.*?)".join(re.escape(part) for part in parts)
-    match = re.fullmatch(pattern, log_message)
-    if match is None:
-        return template
-
-    output = [parts[0]]
-    for index, (span, suffix) in enumerate(
-        zip(match.groups(), parts[1:]),
-        start=1,
-    ):
-        prefix = log_message[:match.start(index)]
-        preserve = bool(
-            ROLE_SPAN_RE.fullmatch(span)
-            and WORKER_THREAD_RE.search(span)
-            and not IDENTITY_CONTEXT_RE.search(prefix)
-        )
-        output.extend([span if preserve else FINAL_PLACEHOLDER, suffix])
-    return "".join(output)
 
 
 def normalize_empty_rhs_placeholder(
@@ -551,20 +237,14 @@ def post_process_template(
     template,
     regs_common=None,
     log_message=None,
-    enabled_postprocessing_groups: Sequence[str] = DEFAULT_ENABLED_POSTPROCESSING_GROUPS,
 ):
     if regs_common is None:
         regs_common = []
-    template = apply_final_domain_postprocessing(
-        template,
-        log_message,
-        enabled_groups=enabled_postprocessing_groups,
-    )
+    template = normalize_template_placeholders(template)
     template = re.sub(r"\{(\w+)\}", FINAL_PLACEHOLDER, template)
     for reg in regs_common:
         template = reg.sub(FINAL_PLACEHOLDER, template)
     template = correct_single_template(template)
-    template = restore_fixed_role_spans(template, log_message)
     template = normalize_empty_rhs_placeholder(template, log_message)
     static_part = template.replace(FINAL_PLACEHOLDER, "")
     if any(character != " " and character not in string.punctuation for character in static_part):

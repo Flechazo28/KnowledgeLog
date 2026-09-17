@@ -1,0 +1,16 @@
+{"query": "sda: assuming drive cache: write through", "answer": "{variables}: assuming drive cache: write through"}
+{"query": "[ib_sm_routing.c:3050]: Failed to set LFT to switch=5ad0000027e0e", "answer": "[{variables}]: Failed to set LFT to switch={variables}"}
+{"query": "Remote host disconnected: Disconnect requested by Windows SSH Client.", "answer": "Remote host disconnected: Disconnect requested by Windows SSH Client."}
+{"query": "per-CPU timeslice cutoff: 852.05 usecs.", "answer": "per-CPU timeslice cutoff: {variables} usecs."}
+{"query": "syslogd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "[ib_sm_sweep.c:144]: A new IB node 0x0005AD00000399E1 was discovered and assigned LID 3230", "answer": "[{variables}]: A new IB node {variables} was discovered and assigned LID {variables}"}
+{"query": "LustreError: 30413:0:(obd_config.c:636:class_process_config()) no device for: ECHO_client", "answer": "LustreError: {variables}:({variables}) no device for: {variables}"}
+{"query": "Listening on LPF/eth1/00:11:43:e3:b9:ec/C_net", "answer": "Listening on {variables}"}
+{"query": "Total HugeTLB memory allocated, 0", "answer": "Total HugeTLB memory allocated, {variables}"}
+{"query": "Kickstart Install: Setup to become a Tbird login", "answer": "Kickstart Install: {variables}"}
+{"query": "Device: /dev/sda, Bad IEC (SMART) mode page, err=5, skip device", "answer": "Device: {variables}, Bad IEC (SMART) mode page, err={variables}, skip device"}
+{"query": "Received signal 15; terminating.", "answer": "Received signal {variables}; terminating."}
+{"query": "THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/cmdif_comm.c[1395]: outstanding i=1, token=0x1681", "answer": "THH({variables}): {variables}[{variables}]: outstanding i={variables}, token={variables}"}
+{"query": "IOAPIC[0]: apic_id 7, version 32, address 0xfec00000, GSI 0-23", "answer": "IOAPIC[{variables}]: apic_id {variables}, version {variables}, address {variables}, GSI {variables}"}
+{"query": "jAAB24FD021623: 1: fl=0x8002, mode=20666: CHR: dev=0/13, ino=1282, nlink=1, u/gid=0/0, size=0", "answer": "{variables}: {variables}: fl={variables}, mode={variables}: CHR: dev={variables}, ino={variables}, nlink={variables}, u/gid={variables}, size={variables}"}
+{"query": "Unmounting PanFS filesystems: succeeded", "answer": "Unmounting {variables} filesystems: {variables}"}

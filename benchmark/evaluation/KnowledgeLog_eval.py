@@ -29,23 +29,6 @@ from evaluation.utils.evaluator_main import evaluator, prepare_results
 from evaluation.utils.postprocess import post_average
 
 
-datasets_2k = [
-    "Proxifier",
-    "Linux",
-    "Apache",
-    "Zookeeper",
-    "Hadoop",
-    "HealthApp",
-    "OpenStack",
-    "HPC",
-    "Mac",
-    "OpenSSH",
-    "Spark",
-    "Thunderbird",
-    "BGL",
-    "HDFS",
-]
-
 datasets_full = [
     "Proxifier",
     "Apache",
@@ -63,28 +46,12 @@ datasets_full = [
     "Thunderbird",
 ]
 
-datasets_lunar = [
-    "CTS",
-    "HiBench",
-    "LoFI",
-]
-
 if __name__ == "__main__":
     args = common_args()
-    data_type = "lunar" if args.lunar_data else ("full" if args.full_data else "2k")
+    data_type = "full"
     run_time = datetime.now().strftime("%Y%m%d_%H%M%S")
-    if args.lunar_data:
-        input_dir = PROJECT_ROOT / "others" / "lunar_dataset"
-    elif args.full_data:
-        input_dir = PROJECT_ROOT / "full_dataset"
-    else:
-        input_dir = PROJECT_ROOT / "2k_datasets"
-    if args.lunar_data:
-        datasets = datasets_lunar
-    elif args.full_data:
-        datasets = datasets_full
-    else:
-        datasets = datasets_2k
+    input_dir = PROJECT_ROOT / "full_dataset"
+    datasets = datasets_full
     if args.datasets:
         requested_datasets = []
         for item in args.datasets:
@@ -108,7 +75,7 @@ if __name__ == "__main__":
 
     for dataset in datasets:
         setting = benchmark_settings[dataset]
-        log_file = setting['log_file'] if args.lunar_data else setting['log_file'].replace("_2k", f"_{data_type}")
+        log_file = setting['log_file'].replace("_2k", "_full")
         indir = os.path.join(input_dir, os.path.dirname(log_file))
         log_file_basename = os.path.basename(log_file)
         if os.path.exists(os.path.join(output_dir, f"{log_file_basename}_structured.csv")):
@@ -116,7 +83,7 @@ if __name__ == "__main__":
             print("Parsing result exists.")
         else:
             parser = LogParser
-        # run evaluator for a dataset
+
         evaluator(
             dataset=dataset,
             input_dir=input_dir,
