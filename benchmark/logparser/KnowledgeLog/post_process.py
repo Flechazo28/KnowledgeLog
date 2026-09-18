@@ -7,8 +7,6 @@ param_regex = [
 
 
 def correct_single_template(template, user_strings=None):
-    """Normalize spacing, numeric fields, and adjacent variables in a template."""
-
     path_delimiters = {
         r'\s', r'\,', r'\!', r'\;', r'\:',
         r'\=', r'\|', r'\"', r'\'',

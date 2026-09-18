@@ -24,11 +24,6 @@ OPENAI_KEY_PATH = Path(__file__).resolve().parents[3] / "openai_key.txt"
 
 
 def get_openai_key(model: str = DEFAULT_MODEL):
-    """Read the model configuration from the project key file.
-
-    ``openai_key.txt`` contains exactly three lines in this order: model name,
-    API base, and API key.
-    """
     if not OPENAI_KEY_PATH.is_file():
         raise FileNotFoundError(f"API configuration file not found: {OPENAI_KEY_PATH}")
 

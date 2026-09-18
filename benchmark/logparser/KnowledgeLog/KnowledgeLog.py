@@ -139,7 +139,6 @@ class LogParser:
 
 
     def process_log(self, cache, log, log_messages, log_templates, idx, regs_common, total_line):
-        # A cache hit is final; query the model only when no template matches.
         results = cache.match_event(log)
         if results[0] == "NoMatch":
             print("===========================================")
