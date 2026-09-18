@@ -109,10 +109,6 @@ class LogParser:
 
         num_query = 0
         total_line = len(self.df_log)
-        # Persist three intermediate checkpoints (roughly 25%, 50%, and 75%).
-        # Together with the final save below, this performs four full cache
-        # writes per fresh run. Rewriting the complete accumulated cache every
-        # 10,000 lines caused quadratic I/O on multi-million-line datasets.
         checkpoint_indices = {
             (total_line * part + 3) // 4
             for part in range(1, 4)
