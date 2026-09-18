@@ -109,10 +109,14 @@ class LogParser:
 
         num_query = 0
         total_line = len(self.df_log)
-        # Full datasets can take hours and make many remote calls. Persist at
-        # least every 10k lines so one bad API connection cannot discard an
-        # entire 20% partition of completed work.
-        cache_step = max(1, min(total_line // 5, 10_000))
+        # Persist three intermediate checkpoints (roughly 25%, 50%, and 75%).
+        # Together with the final save below, this performs four full cache
+        # writes per fresh run. Rewriting the complete accumulated cache every
+        # 10,000 lines caused quadratic I/O on multi-million-line datasets.
+        checkpoint_indices = {
+            (total_line * part + 3) // 4
+            for part in range(1, 4)
+        }
         if idx + 1 < total_line:
             for log in list(self.df_log[idx:]['Content']):
                 flag = self.process_log(cache, log, log_messages, log_templates, idx, regs_common, total_line)
@@ -120,7 +124,7 @@ class LogParser:
                 if flag:
                     num_query += 1
                     print("Query times: ", num_query)
-                if idx % cache_step == 0:
+                if idx in checkpoint_indices:
                     print("Finished processing line: ", idx)
                     cache_to_file(log_messages, cached_log)
                     cache_to_file(log_templates, cached_template)
