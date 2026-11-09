@@ -1,16 +1,16 @@
-{"query": "Received SNMP packet(s) from 67.170.148.126", "answer": "Received SNMP packet(s) from {variables}"}
-{"query": "Version 1.0.6 Starting", "answer": "Version {variables} Starting"}
-{"query": "SELinux: Starting in permissive mode", "answer": "SELinux: Starting in permissive mode"}
-{"query": "ACPI: Subsystem revision 20040326", "answer": "ACPI: Subsystem revision {variables}"}
-{"query": "NET-SNMP version 5.1.1", "answer": "NET-SNMP version {variables}"}
-{"query": "listening on IPv4 interface eth0:4, 63.126.79.72#53", "answer": "listening on IPv4 interface {variables}, {variables}"}
-{"query": "Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2", "answer": "Uniform Multi-Platform E-IDE driver Revision: {variables}"}
-{"query": "cdrom: open failed.", "answer": "cdrom: open failed."}
-{"query": "ICH: IDE controller at PCI slot 0000:00:1f.1", "answer": "ICH: IDE controller at PCI slot {variables}"}
-{"query": "spamd startup succeeded", "answer": "{variables} startup succeeded"}
-{"query": "bad username []", "answer": "bad username [{variables}]"}
-{"query": "mapped 4G/4G trampoline to ffff3000.", "answer": "mapped {variables} trampoline to {variables}."}
-{"query": "md: Autodetecting RAID arrays.", "answer": "md: Autodetecting RAID arrays."}
-{"query": "audit(1122475266.4294965305:0): initialized", "answer": "audit({variables}): initialized"}
-{"query": "Failure registering capabilities with the kernel", "answer": "Failure registering capabilities with the kernel"}
-{"query": "PCI: Using IRQ router PIIX/ICH [8086/2410] at 0000:00:1f.0", "answer": "PCI: Using IRQ router PIIX/ICH [{variables}] at {variables}"}
+{"query": "EXT3-fs: recovery complete.", "answer": "EXT3-fs: recovery complete."}
+{"query": "ide0 at 0x1f0-0x1f7,0x3f6 on irq 14", "answer": "ide0 at {variables} on irq {variables}"}
+{"query": "Kernel command line: ro root=LABEL=/ rhgb quiet", "answer": "Kernel command line: ro root={variables} rhgb quiet"}
+{"query": "rpc.idmapd startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "No such internal service: services/stream - DISABLING", "answer": "No such internal service: {variables} - DISABLING"}
+{"query": "smartd has fork()ed into background mode. New PID=1757.", "answer": "smartd has fork()ed into background mode. New PID={variables}."}
+{"query": "ide: Assuming 33MHz system bus speed for PIO modes; override with idebus=xx", "answer": "ide: Assuming {variables} system bus speed for PIO modes; override with idebus={variables}"}
+{"query": "hda: max request size: 128KiB", "answer": "hda: max request size: {variables}"}
+{"query": "usbcore: registered new driver hid", "answer": "usbcore: registered new driver {variables}"}
+{"query": "privoxy startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "microcode: No suitable data for cpu 0", "answer": "microcode: No suitable data for cpu {variables}"}
+{"query": "Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)", "answer": "Dentry cache hash table entries: {variables} (order: {variables}, {variables} bytes)"}
+{"query": "PCI: Probing PCI hardware", "answer": "PCI: Probing PCI hardware"}
+{"query": "couldn't add command channel 127.0.0.1#953: not found", "answer": "couldn't add command channel {variables} not found"}
+{"query": "rsyncd version 2.6.2 starting, listening on port 873", "answer": "rsyncd version {variables} starting, listening on port {variables}"}
+{"query": "sendmail startup succeeded", "answer": "{variables} startup succeeded"}

@@ -1,16 +1,16 @@
 {"query": "Diagnostics report from attempt_1445144423722_0020_m_000008_0: cleanup failed for container container_1445144423722_0020_01_000010 : java.lang.IllegalArgumentException: java.net.UnknownHostException: MSRA-SA-39.fareast.corp.microsoft.com", "answer": "Diagnostics report from {variables}: cleanup failed for container {variables} : java.lang.IllegalArgumentException: java.net.UnknownHostException: {variables}"}
-{"query": "Error communicating with RM: Could not contact RM after 360000 milliseconds.", "answer": "Error communicating with RM: Could not contact RM after {variables} milliseconds."}
-{"query": "Container complete event for unknown container id container_1445144423722_0020_01_000012", "answer": "Container complete event for unknown container id {variables}"}
-{"query": "TaskAttempt killed because it ran on unusable node MININT-FNANLI5.fareast.corp.microsoft.com:55629. AttemptId:attempt_1445087491445_0002_m_000006_1", "answer": "TaskAttempt killed because it ran on unusable node {variables}. AttemptId:{variables}"}
-{"query": "nodeBlacklistingEnabled:true", "answer": "nodeBlacklistingEnabled:{variables}"}
-{"query": "kvstart = 19181660(76726640); kvend = 10271780(41087120); length = 8909881/6553600", "answer": "kvstart = {variables}({variables}); kvend = {variables}({variables}); length = {variables}"}
-{"query": "Registering class org.apache.hadoop.mapreduce.v2.app.launcher.ContainerLauncher$EventType for class org.apache.hadoop.mapreduce.v2.app.MRAppMaster$ContainerLauncherRouter", "answer": "Registering class {variables} for class {variables}"}
-{"query": "Added attempt_1445144423722_0020_m_000002_1 to list of failed maps", "answer": "Added {variables} to list of failed maps"}
-{"query": "Processing split: hdfs://msra-sa-41:9000/pageinput2.txt:805306368+134217728", "answer": "Processing split: {variables}+{variables}"}
-{"query": "getResources() for application_1445144423722_0020: ask=4 release= 0 newContainers=0 finishedContainers=0 resourcelimit=<memory:0, vCores:-27> knownNMs=4", "answer": "getResources() for {variables}: ask={variables} release= {variables} newContainers={variables} finishedContainers={variables} resourcelimit=<memory:{variables}, vCores:{variables} knownNMs={variables}"}
-{"query": "attempt_1445087491445_0005_m_000006_0 TaskAttempt Transitioned from KILL_TASK_CLEANUP to KILLED", "answer": "{variables} TaskAttempt Transitioned from {variables} to {variables}"}
-{"query": "Web app /mapreduce started at 19058", "answer": "Web app {variables} started at {variables}"}
-{"query": "ProcfsBasedProcessTree currently is supported only on Linux.", "answer": "ProcfsBasedProcessTree currently is supported only on Linux."}
-{"query": "Failed to connect to /10.190.173.170:50010 for block, add to deadNodes and continue. java.net.NoRouteToHostException: No route to host: no further information", "answer": "Failed to connect to {variables} for block, add to deadNodes and continue. java.net.NoRouteToHostException: No route to host: no further information"}
-{"query": "finalMerge called with 0 in-memory map-outputs and 10 on-disk map-outputs", "answer": "finalMerge called with {variables} in-memory map-outputs and {variables} on-disk map-outputs"}
+{"query": "MRAppMaster metrics system started", "answer": "{variables} metrics system started"}
+{"query": "Slow ReadProcessor read fields took 65020ms (threshold=30000ms); ack: seqno: -2 status: SUCCESS status: ERROR downstreamAckTimeNanos: 0, targets: [10.86.169.121:50010, 10.190.173.170:50010]", "answer": "Slow ReadProcessor read fields took {variables} (threshold={variables}); ack: seqno: {variables} status: {variables} status: {variables} downstreamAckTimeNanos: {variables}, targets: [{variables}, {variables}]"}
+{"query": "Abandoning BP-1347369012-10.190.173.170-1444972147527:blk_1073742515_1710", "answer": "Abandoning {variables}"}
+{"query": "Previous history file is at hdfs://msra-sa-41:9000/tmp/hadoop-yarn/staging/msrabi/.staging/job_1445062781478_0018/job_1445062781478_0018_1.jhist", "answer": "Previous history file is at {variables}"}
+{"query": "blacklistDisablePercent is 33", "answer": "blacklistDisablePercent is {variables}"}
+{"query": "MSRA-SA-41.fareast.corp.microsoft.com:13562 freed by fetcher#2 in 2902ms", "answer": "{variables} freed by fetcher#{variables} in {variables}"}
 {"query": "Exception in getting events", "answer": "Exception in getting events"}
+{"query": "Not uberizing job_1445087491445_0002 because: not enabled; too many maps; too much input;", "answer": "Not uberizing {variables} because: not enabled; too many maps; too much input;"}
+{"query": "Started HttpServer2$SelectChannelConnectorWithSafeStartup@0.0.0.0:61652", "answer": "Started {variables}"}
+{"query": "Web app /mapreduce started at 61652", "answer": "Web app {variables} started at {variables}"}
+{"query": "Adding #0 tokens and #1 secret keys for NM use for launching container", "answer": "Adding {variables} tokens and {variables} secret keys for NM use for launching container"}
+{"query": "DFS chooseDataNode: got # 1 IOException, will wait for 723.7852941897946 msec.", "answer": "DFS chooseDataNode: got # {variables} IOException, will wait for {variables} msec."}
+{"query": "Added filter AM_PROXY_FILTER (class=org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter) to context mapreduce", "answer": "Added filter {variables} (class={variables}) to context {variables}"}
+{"query": "DefaultSpeculator.addSpeculativeAttempt -- we are speculating task_1445062781478_0016_m_000000", "answer": "DefaultSpeculator.addSpeculativeAttempt -- we are speculating {variables}"}
+{"query": "Assigned container container_1445144423722_0020_01_000010 to attempt_1445144423722_0020_m_000008_0", "answer": "Assigned container {variables} to {variables}"}

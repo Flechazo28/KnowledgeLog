@@ -1,16 +1,16 @@
-{"query": "sda: assuming drive cache: write through", "answer": "{variables}: assuming drive cache: write through"}
-{"query": "[ib_sm_routing.c:3050]: Failed to set LFT to switch=5ad0000027e0e", "answer": "[{variables}]: Failed to set LFT to switch={variables}"}
-{"query": "Remote host disconnected: Disconnect requested by Windows SSH Client.", "answer": "Remote host disconnected: Disconnect requested by Windows SSH Client."}
-{"query": "per-CPU timeslice cutoff: 852.05 usecs.", "answer": "per-CPU timeslice cutoff: {variables} usecs."}
-{"query": "syslogd startup succeeded", "answer": "{variables} startup succeeded"}
-{"query": "[ib_sm_sweep.c:144]: A new IB node 0x0005AD00000399E1 was discovered and assigned LID 3230", "answer": "[{variables}]: A new IB node {variables} was discovered and assigned LID {variables}"}
-{"query": "LustreError: 30413:0:(obd_config.c:636:class_process_config()) no device for: ECHO_client", "answer": "LustreError: {variables}:({variables}) no device for: {variables}"}
-{"query": "Listening on LPF/eth1/00:11:43:e3:b9:ec/C_net", "answer": "Listening on {variables}"}
-{"query": "Total HugeTLB memory allocated, 0", "answer": "Total HugeTLB memory allocated, {variables}"}
-{"query": "Kickstart Install: Setup to become a Tbird login", "answer": "Kickstart Install: {variables}"}
-{"query": "Device: /dev/sda, Bad IEC (SMART) mode page, err=5, skip device", "answer": "Device: {variables}, Bad IEC (SMART) mode page, err={variables}, skip device"}
-{"query": "Received signal 15; terminating.", "answer": "Received signal {variables}; terminating."}
-{"query": "THH(1): mnt_projects/sysapps/src/ib/topspin/topspin-src-3.2.0-16/third_party/thca4_linux/kernel/mlxhh/thh/obj_host_amd64_custom1_rhel4/mod_thh/cmdif_comm.c[1395]: outstanding i=1, token=0x1681", "answer": "THH({variables}): {variables}[{variables}]: outstanding i={variables}, token={variables}"}
-{"query": "IOAPIC[0]: apic_id 7, version 32, address 0xfec00000, GSI 0-23", "answer": "IOAPIC[{variables}]: apic_id {variables}, version {variables}, address {variables}, GSI {variables}"}
-{"query": "jAAB24FD021623: 1: fl=0x8002, mode=20666: CHR: dev=0/13, ino=1282, nlink=1, u/gid=0/0, size=0", "answer": "{variables}: {variables}: fl={variables}, mode={variables}: CHR: dev={variables}, ino={variables}, nlink={variables}, u/gid={variables}, size={variables}"}
-{"query": "Unmounting PanFS filesystems: succeeded", "answer": "Unmounting {variables} filesystems: {variables}"}
+{"query": "Intel(R) PRO/1000 Network Driver - version 6.0.54-k2-NAPI", "answer": "Intel(R) PRO/{variables} Network Driver - version {variables}"}
+{"query": "ACPI: PCI Root Bridge [PCI0] (00:00)", "answer": "ACPI: PCI Root Bridge [{variables}] ({variables})"}
+{"query": "EXT3-fs: write access #15# be enabled during recovery.", "answer": "EXT3-fs: write access {variables} be enabled during recovery."}
+{"query": "kernel.sysrq = 0", "answer": "kernel.sysrq = {variables}"}
+{"query": "Your time source seems to be instable or some driver is hogging interupts", "answer": "Your time source seems to be instable or some driver is hogging interupts"}
+{"query": "Error accepting AF_UNIX connection, opened connections: 100, max: 100", "answer": "Error accepting AF_UNIX connection, opened connections: {variables}, max: {variables}"}
+{"query": "pan_ips: error -- real init, 0x5 (Out of memory), err_loc=3, rhel_4_amd64/release/build/panfs/ips/pan_ips.c:143 <11>Nov 10 18:13:22 mount.panfs: bindcache: failed init IPS: 0x5 (Out of memory)", "answer": "pan_ips: error -- real init, {variables} (Out of memory), err_loc={variables}, {variables}"}
+{"query": "Home page is http://#20#/", "answer": "Home page is {variables}"}
+{"query": "RRD_update (/var/lib/ganglia/rrds/unspecified/badmin3/disk_total.rrd): illegal attempt to update using time 1131674273 when last update time is 1131674273 (minimum one second step)", "answer": "RRD_update ({variables}): illegal attempt to update using time {variables} when last update time is {variables} (minimum one second step)"}
+{"query": "Disabled at runtime.", "answer": "Disabled at runtime."}
+{"query": "klogd 1.4.1, log source = /proc/kmsg started.", "answer": "klogd {variables}, log source = {variables} started."}
+{"query": "Compressed image found at block 0", "answer": "Compressed image found at block {variables}"}
+{"query": "LustreError: 12053:0:(obd_config.c:249:class_detach()) OBD device 30 still set up", "answer": "LustreError: {variables}:({variables}) OBD device {variables} still set up"}
+{"query": "Unmounting NFS filesystems (retry): succeeded", "answer": "Unmounting NFS filesystems (retry): {variables}"}
+{"query": "tftp: client does not accept options", "answer": "tftp: client does not accept options"}
+{"query": "Timed out waiting for hotplug event 236. Rebasing to 239", "answer": "Timed out waiting for hotplug event {variables}. Rebasing to {variables}"}

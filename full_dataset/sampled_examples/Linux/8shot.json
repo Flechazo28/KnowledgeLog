@@ -1,8 +1,8 @@
 {"query": "No such internal service: services/stream - DISABLING", "answer": "No such internal service: {variables} - DISABLING"}
-{"query": "POSIX conformance testing by UNIFIX", "answer": "POSIX conformance testing by UNIFIX"}
-{"query": "ACPI: ACPI tables contain no PCI IRQ routing entries", "answer": "ACPI: ACPI tables contain no PCI IRQ routing entries"}
-{"query": "input: AT Translated Set 2 keyboard on isa0060/serio0", "answer": "input: {variables} on {variables}"}
-{"query": "Kerberos authentication failed", "answer": "Kerberos authentication failed"}
-{"query": "126MB LOWMEM available.", "answer": "{variables} LOWMEM available."}
-{"query": "frequency initialized 0.000 PPM from /var/lib/ntp/drift", "answer": "frequency initialized {variables} PPM from {variables}"}
-{"query": "BIOS-provided physical RAM map:", "answer": "BIOS-provided physical RAM map:"}
+{"query": "Kernel command line: ro root=LABEL=/ rhgb quiet", "answer": "Kernel command line: ro root={variables} rhgb quiet"}
+{"query": "Uniform Multi-Platform E-IDE driver Revision: 7.00alpha2", "answer": "Uniform Multi-Platform E-IDE driver Revision: {variables}"}
+{"query": "SELinux: Initializing.", "answer": "SELinux: Initializing."}
+{"query": "xfs startup succeeded", "answer": "{variables} startup succeeded"}
+{"query": "Initializing CPU#0", "answer": "Initializing CPU#{variables}"}
+{"query": "SELinux: Starting in permissive mode", "answer": "SELinux: Starting in permissive mode"}
+{"query": "ACPI disabled because your bios is from 2000 and too old", "answer": "ACPI disabled because your bios is from {variables} and too old"}

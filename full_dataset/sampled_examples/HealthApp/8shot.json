@@ -1,8 +1,8 @@
-{"query": "initDataPrivacy the dataPrivacy is true", "answer": "initDataPrivacy the dataPrivacy is {variables}"}
-{"query": "new date =20171225, type=40004,48.0,old=null", "answer": "new date ={variables}, type={variables},old={variables}"}
-{"query": "startStepCounterInter mStandStepCounter = com.huawei.health.b.b.a@c83b4a6", "answer": "startStepCounterInter mStandStepCounter = {variables}"}
-{"query": "insertHiHealthData() bulkSaveDetailHiHealthData fail errorCode = 4,errorMessage = ERR_DATA_INSERT", "answer": "insertHiHealthData() bulkSaveDetailHiHealthData fail errorCode = {variables},errorMessage = {variables}"}
-{"query": "stepSyncOrNot appSynTimes is 0, statsyncTimes is 0", "answer": "stepSyncOrNot appSynTimes is {variables}, statsyncTimes is {variables}"}
-{"query": "compareMidWareCacheAndLocalCache enter...", "answer": "compareMidWareCacheAndLocalCache enter..."}
-{"query": "saveHealthDetailData() saveOneDetailData fail hiHealthData = 1514131200000,type = 40005", "answer": "saveHealthDetailData() saveOneDetailData fail hiHealthData = {variables},type = {variables}"}
-{"query": "setGoalNotifiShownRecord 1514131200374 false", "answer": "setGoalNotifiShownRecord {variables}"}
+{"query": "start compare with midware counter", "answer": "start compare with midware counter"}
+{"query": "checkFirstSyncByType no such data in db ,type is 1 deviceCode is 0", "answer": "checkFirstSyncByType no such data in db ,type is {variables} deviceCode is {variables}"}
+{"query": "theDayChanged 1514044800216", "answer": "theDayChanged {variables}"}
+{"query": "getStepCounterStatus", "answer": "getStepCounterStatus"}
+{"query": "initUserPrivacy the userPrivacy is true", "answer": "initUserPrivacy the userPrivacy is {variables}"}
+{"query": "insertHiHealthData() checkAppType 0 appID = 1", "answer": "insertHiHealthData() checkAppType {variables} appID = {variables}"}
+{"query": "MyGetDetailDataCallback onResult bundle == null", "answer": "MyGetDetailDataCallback onResult bundle == {variables}"}
+{"query": "flushTempCacheToDB by ext", "answer": "flushTempCacheToDB by {variables}"}

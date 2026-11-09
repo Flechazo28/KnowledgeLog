@@ -1,16 +1,16 @@
-{"query": "Registered executor NettyRpcEndpointRef(null) (mesos-slave-21:44975) with ID 1", "answer": "Registered executor NettyRpcEndpointRef({variables}) ({variables}) with ID {variables}"}
-{"query": "Starting remoting", "answer": "Starting remoting"}
-{"query": "Starting job: collect at pnmf4.py:297", "answer": "Starting job: collect at {variables}"}
-{"query": "Resubmitting ShuffleMapStage 4 (reduceByKey at pnmf4.py:371) because some of its tasks had failed: 1", "answer": "Resubmitting ShuffleMapStage {variables} (reduceByKey at {variables}) because some of its tasks had failed: {variables}"}
-{"query": "Running Spark version 1.6.0", "answer": "Running Spark version {variables}"}
-{"query": "Reporting 1066 blocks to the master.", "answer": "Reporting {variables} blocks to the master."}
-{"query": "Starting executor ID 2 on host mesos-slave-26", "answer": "Starting executor ID {variables} on host {variables}"}
-{"query": "error=2, No such file or directory", "answer": "error={variables}, No such file or directory"}
-{"query": "YarnClusterScheduler.postStartHook done", "answer": "YarnClusterScheduler.postStartHook done"}
-{"query": "Cancelling stage 3", "answer": "Cancelling stage {variables}"}
-{"query": "Started 7 remote fetches in 2 ms", "answer": "Started {variables} remote fetches in {variables} ms"}
-{"query": "Got job 0 (collect at pnmf4.py:292) with 2 output partitions", "answer": "Got job {variables} (collect at {variables}) with {variables} output partitions"}
-{"query": "SparkListenerBus has already stopped! Dropping event SparkListenerBlockUpdated(BlockUpdatedInfo(BlockManagerId(21, mesos-slave-13, 57719),broadcast_5_piece323,StorageLevel(false, true, false, false, 1),4194304,0,0))", "answer": "SparkListenerBus has already stopped! Dropping event {variables}"}
-{"query": "Ignored failure: java.io.IOException: Connection from mesos-master-1/10.10.34.11:34641 closed", "answer": "Ignored failure: java.io.IOException: Connection from {variables} closed"}
-{"query": "SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8", "answer": "SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: {variables}"}
-{"query": "Invoking stop() from shutdown hook", "answer": "Invoking stop() from shutdown hook"}
+{"query": "Reading broadcast variable 1155 took 4 ms", "answer": "Reading broadcast variable {variables} took {variables} ms"}
+{"query": "Registering block manager 10.10.34.16:58162 with 36.4 GB RAM, BlockManagerId(driver, 10.10.34.16, 58162)", "answer": "Registering block manager {variables} with {variables} RAM, BlockManagerId(driver, {variables}, {variables})"}
+{"query": "Connection to mesos-master-1/10.10.34.11:34641 has been quiet for 120000 ms while there are outstanding requests. Assuming connection is dead; please adjust spark.network.timeout if this is wrong.", "answer": "Connection to {variables} has been quiet for {variables} ms while there are outstanding requests. Assuming connection is dead; please adjust spark.network.timeout if this is wrong."}
+{"query": "Received 5 containers from YARN, launching executors on 5 of them.", "answer": "Received {variables} containers from YARN, launching executors on {variables} of them."}
+{"query": "Got job 0 (collect at pnmf4.py:221) with 2 output partitions", "answer": "Got job {variables} (collect at {variables}) with {variables} output partitions"}
+{"query": "Stage 5 contains a task of very large size (1181 KB). The maximum recommended task size is 100 KB.", "answer": "Stage {variables} contains a task of very large size ({variables} KB). The maximum recommended task size is {variables} KB."}
+{"query": "Waiting for spark context initialization", "answer": "Waiting for spark context initialization"}
+{"query": "Launching ExecutorRunnable. driverUrl: spark://CoarseGrainedScheduler@10.10.34.11:34641, executorHostname: mesos-slave-17", "answer": "Launching ExecutorRunnable. driverUrl: {variables}, executorHostname: {variables}"}
+{"query": "Told to re-register on heartbeat", "answer": "Told to re-register on heartbeat"}
+{"query": "Prepared Local resources Map(__spark__.jar -> resource { scheme: \"hdfs\" host: \"10.10.34.11\" port: 9000 file: \"/user/curi/.sparkStaging/application_1485248649253_0035/spark-assembly-1.6.0-hadoop2.2.0.jar\" } size: 109525492 timestamp: 1490060937215 type: FILE visibility: PRIVATE, pyspark.zip -> resource { scheme: \"hdfs\" host: \"10.10.34.11\" port: 9000 file: \"/user/curi/.sparkStaging/application_1485248649253_0035/pyspark.zip\" } size: 355358 timestamp: 1490060937316 type: FILE visibility: PRIVATE, py4j-0.9-src.zip -> resource { scheme: \"hdfs\" host: \"10.10.34.11\" port: 9000 file: \"/user/curi/.sparkStaging/application_1485248649253_0035/py4j-0.9-src.zip\" } size: 44846 timestamp: 1490060937339 type: FILE visibility: PRIVATE)", "answer": "Prepared Local resources Map(__spark__.jar -> resource { scheme: {variables} host: {variables} port: {variables} file: {variables} } size: {variables} timestamp: {variables} type: {variables} visibility: {variables}, pyspark.zip -> resource { scheme: {variables} host: {variables} port: {variables} file: {variables} } size: {variables} timestamp: {variables} type: {variables} visibility: {variables}, py4j-{variables}-src.zip -> resource { scheme: {variables} host: {variables} port: {variables} file: {variables} } size: {variables} timestamp: {variables} type: {variables} visibility: {variables})"}
+{"query": "Deleting staging directory .sparkStaging/application_1485248649253_0170", "answer": "Deleting staging directory {variables}"}
+{"query": "Driver commanded a shutdown", "answer": "Driver commanded a shutdown"}
+{"query": "Executor lost: 10 (epoch 7)", "answer": "Executor lost: {variables} (epoch {variables})"}
+{"query": "Total input paths to process : 1", "answer": "Total input paths to process : {variables}"}
+{"query": "Removing RDD 97 from persistence list", "answer": "Removing RDD {variables}"}
+{"query": "Starting Executor Container", "answer": "Starting Executor Container"}

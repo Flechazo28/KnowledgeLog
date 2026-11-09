@@ -1,8 +1,8 @@
-{"query": "The instance sync for host 'cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us' did not match. Re-created its InstanceList.", "answer": "The instance sync for host {variables} did not match. Re-created its InstanceList."}
-{"query": "[instance: f8d60f95-a764-4415-8ce4-d2a5a003fe4f] Attempting claim: memory 2048 MB, disk 20 GB, vcpus 1 CPU", "answer": "[instance: {variables}] Attempting claim: memory {variables} MB, disk {variables} GB, vcpus {variables} CPU"}
-{"query": "[instance: b4b6cba0-4f87-4656-8e4d-f7e5c428ccf9] Took 20.93 seconds to build instance.", "answer": "[instance: {variables}] Took {variables} seconds to build instance."}
-{"query": "[instance: caa5ea26-441f-472f-addc-7ce062d2d400] Terminating instance", "answer": "[instance: {variables}] Terminating instance"}
-{"query": "couldn't obtain the vcpu count from domain id: 98e9712a-cd1a-4619-9590-2be57eb33299, exception: Requested operation is not valid: cpu affinity is not supported", "answer": "couldn't obtain the vcpu count from domain id: {variables} exception: Requested operation is not valid: cpu affinity is not supported"}
-{"query": "Total usable vcpus: 16, total allocated vcpus: 1", "answer": "Total usable vcpus: {variables}, total allocated vcpus: {variables}"}
-{"query": "Successfully synced instances from host 'cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us'.", "answer": "Successfully synced instances from host '{variables}'."}
-{"query": "Auditing locally available compute resources for node cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us", "answer": "Auditing locally available compute resources for node {variables}"}
+{"query": "[instance: e12e5464-bd8e-4095-8218-21171941b19c] Terminating instance", "answer": "[instance: {variables}] Terminating instance"}
+{"query": "Removable base files: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742", "answer": "Removable base files: {variables}"}
+{"query": "Base or swap file too young to remove: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742", "answer": "Base or swap file too young to remove: {variables}"}
+{"query": "[instance: 0f3cf877-c7b0-4300-a738-ca9954a9f85f] Deletion of /var/lib/nova/instances/0f3cf877-c7b0-4300-a738-ca9954a9f85f_del complete", "answer": "[instance: {variables}] Deletion of {variables} complete"}
+{"query": "[instance: 6cd76e8f-4bd0-4710-b0f6-266e7e2e9833] Instance spawned successfully.", "answer": "[instance: {variables}] Instance spawned successfully."}
+{"query": "[instance: 63a0d960-70b6-44c6-b606-491478a5cadf] disk limit not specified, defaulting to unlimited", "answer": "[instance: {variables}] disk limit not specified, defaulting to unlimited"}
+{"query": "[instance: b7e1f95e-76ca-47ef-9167-029a982e8afb] vcpu limit not specified, defaulting to unlimited", "answer": "[instance: {variables}] vcpu limit not specified, defaulting to unlimited"}
+{"query": "[instance: caa5ea26-441f-472f-addc-7ce062d2d400] Deleting instance files /var/lib/nova/instances/caa5ea26-441f-472f-addc-7ce062d2d400_del", "answer": "[instance: {variables}] Deleting instance files {variables}"}

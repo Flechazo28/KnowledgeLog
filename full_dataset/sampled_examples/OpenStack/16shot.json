@@ -1,16 +1,16 @@
-{"query": "[instance: 9c9c9fd8-bef9-4fb4-835f-6be8ba1d20b9] Creating image", "answer": "[instance: {variables}] Creating image"}
-{"query": "[instance: adf0afa9-65e3-4df0-ac45-4a62e86825a1] Took 0.48 seconds to deallocate network for instance.", "answer": "[instance: {variables}] Took {variables} seconds to deallocate network for instance."}
-{"query": "HTTP exception thrown: No instances found for any event", "answer": "HTTP exception thrown: No instances found for any event"}
-{"query": "10.11.10.1 \"GET /v2/54fadb412c4e40cdbaed9335e4c35a9e/servers/detail HTTP/1.1\" status: 200 len: 1893 time: 0.3877091", "answer": "{variables} \"GET {variables} {variables}\" status: {variables} len: {variables} time: {variables}"}
+{"query": "[instance: bbac58ce-003a-4a2b-9558-bc1b9d791fd9] Attempting claim: memory 2048 MB, disk 20 GB, vcpus 1 CPU", "answer": "[instance: {variables}] Attempting claim: memory {variables} MB, disk {variables} GB, vcpus {variables} CPU"}
 {"query": "The instance sync for host 'cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us' did not match. Re-created its InstanceList.", "answer": "The instance sync for host {variables} did not match. Re-created its InstanceList."}
-{"query": "[instance: be793e89-2cc3-4f99-9884-9c6a624a84bc] memory limit: 96258.00 MB, free: 95746.00 MB", "answer": "[instance: {variables}] memory limit: {variables} MB, free: {variables} MB"}
-{"query": "[instance: aa47a63c-6ec2-40ff-a523-ed316c2f59b1] Claim successful", "answer": "[instance: {variables}] Claim successful"}
-{"query": "Removable base files: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742", "answer": "Removable base files: {variables}"}
-{"query": "[instance: d3747576-c833-4991-bc57-13509ca489fc] VM Resumed (Lifecycle Event)", "answer": "[instance: {variables}] VM Resumed (Lifecycle Event)"}
-{"query": "Successfully synced instances from host 'cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us'.", "answer": "Successfully synced instances from host '{variables}'."}
-{"query": "Total usable vcpus: 16, total allocated vcpus: 1", "answer": "Total usable vcpus: {variables}, total allocated vcpus: {variables}"}
-{"query": "Creating event network-vif-plugged:084e408f-1bb0-47ea-9163-54c8105ed089 for instance af9d460c-89bf-4b71-b362-0b10adc2ff37", "answer": "Creating event {variables} for instance {variables}"}
-{"query": "[instance: f49bf478-6840-49bc-9d59-80cb8066e190] disk limit not specified, defaulting to unlimited", "answer": "[instance: {variables}] disk limit not specified, defaulting to unlimited"}
-{"query": "[instance: 96d9b9d1-5b9b-47f4-a693-f752a845c2db] Deleting instance files /var/lib/nova/instances/96d9b9d1-5b9b-47f4-a693-f752a845c2db_del", "answer": "[instance: {variables}] Deleting instance files {variables}"}
-{"query": "[instance: 32546cbe-eed6-49e5-8f00-52a865a79a1e] Terminating instance", "answer": "[instance: {variables}] Terminating instance"}
-{"query": "[instance: f2e0fa0f-941a-41f3-b5e9-3a75e46ac4e3] Attempting claim: memory 2048 MB, disk 20 GB, vcpus 1 CPU", "answer": "[instance: {variables}] Attempting claim: memory {variables} MB, disk {variables} GB, vcpus {variables} CPU"}
+{"query": "[instance: b13f2dad-09de-4145-a610-e04c251352e9] VM Resumed (Lifecycle Event)", "answer": "[instance: {variables}] VM Resumed (Lifecycle Event)"}
+{"query": "couldn't obtain the vcpu count from domain id: b93203d4-c79b-41fe-8090-5f2b89b0d081, exception: Requested operation is not valid: cpu affinity is not supported", "answer": "couldn't obtain the vcpu count from domain id: {variables} exception: Requested operation is not valid: cpu affinity is not supported"}
+{"query": "[instance: 7cf01089-eb76-48c5-a272-6ccad4ff738d] disk limit not specified, defaulting to unlimited", "answer": "[instance: {variables}] disk limit not specified, defaulting to unlimited"}
+{"query": "Total usable vcpus: 16, total allocated vcpus: 0", "answer": "Total usable vcpus: {variables}, total allocated vcpus: {variables}"}
+{"query": "[instance: a529384c-3150-495d-bf63-586ef57eb7d3] Terminating instance", "answer": "[instance: {variables}] Terminating instance"}
+{"query": "[instance: eb66c600-0e79-43e3-ac0d-9f6118679f76] memory limit: 96258.00 MB, free: 95746.00 MB", "answer": "[instance: {variables}] memory limit: {variables} MB, free: {variables} MB"}
+{"query": "image 0673dd71-34c5-4fbb-86c4-40623fbe45b4 at (/var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742): in use: on this node 1 local, 0 on other nodes sharing this instance storage", "answer": "image {variables} at ({variables}): in use: on this node {variables} local, {variables} on other nodes sharing this instance storage"}
+{"query": "Base or swap file too young to remove: /var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742", "answer": "Base or swap file too young to remove: {variables}"}
+{"query": "[instance: 09b7ff78-c305-473d-acc8-da3b23f5aaa9] Total memory: 64172 MB, used: 512.00 MB", "answer": "[instance: {variables}] Total memory: {variables} MB, used: {variables} MB"}
+{"query": "Running instance usage audit for host cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us from 2017-05-16 06:00:00 to 2017-05-16 07:00:00. 87 instances.", "answer": "Running instance usage audit for host {variables} from {variables} to {variables}. {variables} instances."}
+{"query": "Final resource view: name=cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us phys_ram=64172MB used_ram=2560MB phys_disk=15GB used_disk=20GB total_vcpus=16 used_vcpus=1 pci_stats=[]", "answer": "Final resource view: name={variables} phys_ram={variables} used_ram={variables} phys_disk={variables} used_disk={variables} total_vcpus={variables} used_vcpus={variables} pci_stats={variables}"}
+{"query": "Compute_service record updated for cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us:cp-1.slowvm1.tcloud-pg0.utah.cloudlab.us", "answer": "Compute_service record updated for {variables}"}
+{"query": "[instance: 61e4de4e-0d2b-44ff-abe4-a80a69fb401e] Total vcpu: 16 VCPU, used: 0.00 VCPU", "answer": "[instance: {variables}] Total vcpu: {variables} VCPU, used: {variables} VCPU"}
+{"query": "Creating event network-vif-plugged:41352114-3b30-4134-b7c6-cd1504863b4b for instance 61e4de4e-0d2b-44ff-abe4-a80a69fb401e", "answer": "Creating event {variables} for instance {variables}"}

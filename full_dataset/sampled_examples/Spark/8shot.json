@@ -1,8 +1,8 @@
-{"query": "Partition rdd_2952_20 not found, computing it", "answer": "Partition {variables} not found, computing it"}
-{"query": "Block broadcast_4_piece65 stored as bytes in memory (estimated size 4.0 MB, free 3.5 GB)", "answer": "Block {variables} stored as bytes in memory (estimated size {variables}, free {variables})"}
-{"query": "Deleting staging directory .sparkStaging/application_1485248649253_0174", "answer": "Deleting staging directory {variables}"}
+{"query": "Launching container container_1485248649253_0099_01_000049 for on host mesos-slave-06", "answer": "Launching container {variables} for on host {variables}"}
+{"query": "Removing RDD 75 from persistence list", "answer": "Removing RDD {variables}"}
 {"query": "Created broadcast 0 from textFile at NativeMethodAccessorImpl.java:-2", "answer": "Created broadcast {variables} from textFile at {variables}"}
-{"query": "Removed TaskSet 219.0, whose tasks have all completed, from pool", "answer": "Removed TaskSet {variables}, whose tasks have all completed, from pool"}
-{"query": "Created local directory at /opt/hdfs/nodemanager/usercache/curi/appcache/application_1485248649253_0035/blockmgr-daa7d5b9-e5f4-427d-a63c-1ae98c17cf2c", "answer": "Created local directory at {variables}"}
-{"query": "Asked to send map output locations for shuffle 53 to mesos-slave-25:55646", "answer": "Asked to send map output locations for shuffle {variables} to {variables}"}
-{"query": "YarnClusterScheduler.postStartHook done", "answer": "YarnClusterScheduler.postStartHook done"}
+{"query": "Input split: Paths:/yxsu/dataset/ImageNet/ILSVRC2012_img_test/ILSVRC2012_test_00036008.JPEG:0+158115", "answer": "Input split: {variables}+{variables}"}
+{"query": "Told to re-register on heartbeat", "answer": "Told to re-register on heartbeat"}
+{"query": "Failed to get block(s) from mesos-master-1:45950", "answer": "Failed to get block(s) from {variables}"}
+{"query": "Still have 1 requests outstanding when connection from mesos-slave-21/10.10.34.31:53449 is closed", "answer": "Still have {variables} requests outstanding when connection from {variables} is closed"}
+{"query": "Opening proxy : mesos-slave-27:49350", "answer": "Opening proxy : {variables}"}
