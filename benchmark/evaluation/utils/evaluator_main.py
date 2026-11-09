@@ -34,7 +34,7 @@ def prepare_results(output_dir, otc, complex, frequent, overwrite=True):
         return result_file
     with open(os.path.join(output_dir, result_file), 'w') as csv_file:
         fw = csv.writer(csv_file, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-        fw.writerow(['Dataset', 'parse_time', 'identified_templates',
+        fw.writerow(['Dataset', 'identified_templates',
                      'ground_templates', 'GA', 'PA', 'FGA', 'PTA', 'RTA', 'FTA'])
 
     return result_file
@@ -75,7 +75,6 @@ def evaluator(
 
     parsedresult = os.path.join(output_dir, log_file_basename + '_structured.csv')
     # identify templates using Drain
-    start_time = time.time()
     if LogParser is not None:
         print("start parsing.")
         parser = LogParser(**param_dict)
@@ -89,16 +88,11 @@ def evaluator(
                 pass
             return
         print("end parsing.")
-        parse_time = time.time() - start_time  # end_time is the wall-clock time in seconds
-    else:
-        parse_time = -1
-    print("parsing time: ", parse_time)
 
     print(parsedresult)
     if not os.path.exists(parsedresult) or is_file_empty(parsedresult):
         print("No output file generated.")
         result = dataset + ',' + \
-                "None" + ',' + \
                 "None" + ',' + \
                 "None" + ',' + \
                 "None" + ',' + \
@@ -150,7 +144,6 @@ def evaluator(
                 "None" + ',' + \
                 "None" + ',' + \
                 "None" + ',' + \
-                "None" + ',' + \
                 "None" + '\n'
 
         with open(os.path.join(output_dir, result_file), 'a') as summary_file:
@@ -186,7 +179,6 @@ def evaluator(
     print('Template-level accuracy calculation done. [Time taken: {:.3f}]'.format(TA_end_time))
 
     result = dataset + ',' + \
-             "{:.2f}".format(parse_time) + ',' + \
              str(tool_templates) + ',' + \
              str(ground_templates) + ',' + \
              "{:.3f}".format(GA) + ',' + \
